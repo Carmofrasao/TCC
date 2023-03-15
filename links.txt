@@ -3,10 +3,39 @@ https://github.com/twosixlabs/acsploit
 https://youtu.be/FAVD_awNeeA 
 https://youtu.be/UdTpa-n9L-g
 
-op1: Fazer um levantamento de algoritmos que não estão presentes no framework, e podem ser avaliados para ataques de complexidade (Hashes, sort, tree, and string) . Posteriormente podemos avaliar onde estes algoritmos estão sendo aplicados e qual é o impacto de um ataque de complexidade nesta infraestrutura. 
-op2: Estudar os outputs do ACSplit para mapear aplicações de rede que possam ser vulneráveis a este tipo de ataque. Um exemplo seria databases como Memcached, ou aplicações que processam informações e sejam vulneráveis. 
+op1: Fazer um levantamento de algoritmos que não estão presentes no framework, e podem ser avaliados para ataques de complexidade 
+(Hashes, sort, tree, and string) . Posteriormente podemos avaliar onde estes algoritmos estão sendo aplicados e qual é o impacto 
+de um ataque de complexidade nesta infraestrutura. 
+
+Algoritmos de Hashes:
+* Blake3
+* Argon2
+* BLAKE2s
+
+Algoritmos de Sort:
+* Radix sort
+* Counting sort
+* Bucket sort
+
+Algoritmos de Tree:
+* Splay tree
+* AVL tree
+* Trie
+
+Algoritmos de String:
+* Boyer-Moore
+* Knuth-Morris-Pratt
+* Rabin-Karp
+
+op2: Estudar os outputs do ACSplit para mapear aplicações de rede que possam ser vulneráveis a este tipo de ataque. 
+Um exemplo seria databases como Memcached, ou aplicações que processam informações e sejam vulneráveis. 
 
 - Link Docker 
 
-Container engine (comunicação): Identificar uma maneira de coletar informações de uma aplicação que esteja rodando dentro do ambiente de container. Seguindo a segunda e terceira proposta do artigo ISCC2021 (a ideia é ficar dentro do ambiente do container). Tipo de informações que são interessantes, comunicação do container com o container engine (esperado), strace, e logging.
+Container engine (comunicação): Identificar uma maneira de coletar informações de uma aplicação que esteja rodando dentro do 
+ambiente de container. Seguindo a segunda e terceira proposta do artigo ISCC2021 (a ideia é ficar dentro do ambiente do container). 
+Tipo de informações que são interessantes, comunicação do container com o container engine (esperado), strace, e logging.
 
+* Fluentd 
+* Logspout 
+* Logstash

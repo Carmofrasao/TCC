@@ -8,27 +8,54 @@ op1: Fazer um levantamento de algoritmos que não estão presentes no framework,
 de um ataque de complexidade nesta infraestrutura. 
 
 Algoritmos de Hashes:
-* Blake3
-* Argon2
-* BLAKE2s
+* Blake3: uma função de hash criptográfica rápida e segura que oferece alta velocidade e segurança.
+* Argon2: um algoritmo de hashing de senhas que é considerado um dos mais seguros atualmente.
+* BLAKE2s: uma variação da função de hash BLAKE2 que é otimizada para sistemas com processadores de 32 bits.
 
 Algoritmos de Sort:
-* Radix sort
-* Counting sort
-* Bucket sort
+* Radix sort: um algoritmo de ordenação não comparativo que usa o posicionamento relativo dos dígitos para ordenar.
+* Counting sort: um algoritmo de ordenação que classifica os elementos de um array baseado em sua contagem.
+* Bucket sort: um algoritmo de ordenação que divide os elementos em "buckets" com base em seus valores e, em seguida, 
+ordena os elementos dentro de cada bucket.
 
 Algoritmos de Tree:
-* Splay tree
-* AVL tree
-* Trie
+* Splay tree: uma estrutura de dados de árvore binária de busca autoajustável que reorganiza os nós para melhorar o desempenho 
+de acesso a dados comuns.
+* AVL tree: uma estrutura de dados de árvore binária de busca balanceada que garante que a altura da subárvore esquerda e 
+direita difira em no máximo 1.
+* Trie: uma estrutura de dados de árvore que permite recuperar, inserir e pesquisar strings de maneira eficiente.
 
 Algoritmos de String:
-* Boyer-Moore
-* Knuth-Morris-Pratt
-* Rabin-Karp
+* Boyer-Moore: um algoritmo de busca de substring que usa a heurística de "mover mais à direita" para aumentar a eficiência.
+* Knuth-Morris-Pratt: um algoritmo de busca de substring que usa uma tabela de falhas para evitar retroceder na pesquisa.
+* Rabin-Karp: um algoritmo de busca de substring que usa uma função hash para encontrar correspondências de padrão em uma string.
 
-op2: Estudar os outputs do ACSplit para mapear aplicações de rede que possam ser vulneráveis a este tipo de ataque. 
-Um exemplo seria databases como Memcached, ou aplicações que processam informações e sejam vulneráveis. 
+op2: Estudar os outputs do ACSplit para mapear aplicações de rede que possam ser vulneráveis a este tipo de 
+ataque. Um exemplo seria databases como Memcached, ou aplicações que processam informações e sejam vulneráveis. 
+
+* Servidores de login: Ataques de complexidade podem ser usados para explorar vulnerabilidades em servidores 
+de login. Por exemplo, um atacante pode tentar enviar várias solicitações de login incorretas com senhas 
+longas ou entradas inválidas, o que pode levar o servidor a gastar recursos desnecessários para autenticar as 
+solicitações.
+
+* Servidores web: Ataques de complexidade também podem ser usados para explorar vulnerabilidades em servidores 
+web. Por exemplo, um atacante pode enviar solicitações HTTP maliciosas ou pesadas para um servidor, o que pode 
+sobrecarregá-lo e causar falhas de sistema.
+
+* Redes de IoT (Internet das Coisas): Dispositivos de IoT, como câmeras de segurança ou sistemas de controle 
+de temperatura, podem ser vulneráveis a ataques de complexidade. Os atacantes podem enviar solicitações 
+pesadas ou enviar uma grande quantidade de dados para o dispositivo, o que pode sobrecarregá-lo e torná-lo 
+inoperante.
+
+* Sistemas de gerenciamento de banco de dados: Ataques de complexidade também podem ser usados para explorar 
+vulnerabilidades em sistemas de gerenciamento de banco de dados. Por exemplo, um atacante pode enviar uma 
+consulta SQL maliciosa que contém um grande número de subconsultas aninhadas ou operações de junção, o que 
+pode causar um alto consumo de recursos do servidor e diminuir sua capacidade de resposta.
+
+* Redes de criptografia: As redes de criptografia podem ser vulneráveis a ataques de complexidade que visam 
+quebrar a criptografia e acessar informações confidenciais. Por exemplo, um atacante pode enviar solicitações 
+para decodificar senhas ou chaves criptográficas complexas, o que pode sobrecarregar o servidor e expor 
+informações confidenciais.
 
 - Link Docker 
 

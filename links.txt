@@ -15,6 +15,30 @@ O que é novo?
 container image (aplicação) <- (alguem aki no meio) -> container engine
 
 - pluging que permite coletar informações/interações entre container e o container engine
+    * CAdvisor: O Container Advisor é um plugin que coleta e expõe informações sobre o desempenho do container, como uso de CPU, 
+    memória, rede e disco.
+    * Logspout: O Logspout é um plugin que coleta logs de vários containers e os envia para uma saída centralizada, como o 
+    Elasticsearch.
+    * Prometheus: O Prometheus é uma ferramenta de monitoramento que coleta métricas de vários componentes do sistema, incluindo 
+    contêineres. Existem vários plugins disponíveis para integrar o Prometheus com contêineres.
+
 - se existe já alguma implementação propria para o docker e o kubernetes
+    * Kubernetes Metrics Server: é uma ferramenta nativa do Kubernetes que coleta e expõe métricas de recursos do cluster, como 
+    uso de CPU e memória por pod, node, namespace, etc.
+    * Docker Stats: O Docker Stats é um comando nativo do Docker que fornece informações sobre o desempenho do container, como 
+    CPU e uso de memória.
+    * Docker Events: O Docker Events é outro comando nativo do Docker que fornece informações sobre eventos relacionados a 
+    contêineres, como criação, reinicialização e parada.
+
 - olhar se não existe nenhuma proposta similar no Scholar. Como pesquisar: host-based intrusion detection system (HIDS) para 
 docker/container e ver qual tipo de informação e método de coleta de dados esta sendo utilizado 
+    * "Protecting Docker Containers with a Host-based Intrusion Detection System": Este artigo da SANS Institute fornece uma 
+    visão geral do uso de um HIDS para monitorar containers Docker em tempo real.
+    * "Securing Docker Containers with OSSEC HIDS": Este artigo do blog Sysdig fornece um guia passo a passo sobre como configurar 
+    o OSSEC HIDS para monitorar e proteger containers Docker.
+    * "Detecting Intrusions in Docker Containers with Auditd": Este artigo do blog Sysdig descreve como usar o Auditd para coletar 
+    informações sobre atividades de contêineres e detectar intrusões.
+    * "Effective Docker Security Strategies: Host-based Intrusion Detection": Este artigo do blog Red Canary fornece uma visão 
+    geral de como usar um HIDS para detectar e responder a ameaças em containers Docker.
+    * "Implementing HIDS for Docker Containers": Este artigo da RevBits fornece uma visão geral dos principais recursos e 
+    benefícios de usar um HIDS para proteger e monitorar containers Docker.

@@ -1,6 +1,5 @@
 - Link Docker 
 https://docs.docker.com/config/containers/runmetrics/
-https://docs.docker.com/config/daemon/prometheus/
 https://kubernetes.io/docs/concepts/security/overview/
 https://docs.docker.com/engine/security/
 
@@ -10,15 +9,12 @@ ambiente de container. Seguindo a segunda e terceira proposta do artigo ISCC2021
 Tipo de informações que são interessantes, comunicação do container com o container engine (esperado), strace, e logging.
 
 * Fluentd 
-* Logspout 
+
 * Logstash
 
 O que é novo?
 
 container image (aplicação) <- (alguem aki no meio) -> container engine
-
-- playlist sobre o assunto
-https://www.youtube.com/playlist?list=PLf-O3X2-mxDls9uH8gyCQTnyXNMe10iml
 
 - pluging que permite coletar informações/interações entre container e o container engine
     * CAdvisor: O Container Advisor é um plugin que coleta e expõe informações sobre o desempenho do container, como uso de CPU, 
@@ -27,15 +23,23 @@ https://www.youtube.com/playlist?list=PLf-O3X2-mxDls9uH8gyCQTnyXNMe10iml
     Elasticsearch.
     * Prometheus: O Prometheus é uma ferramenta de monitoramento que coleta métricas de vários componentes do sistema, incluindo 
     contêineres. Existem vários plugins disponíveis para integrar o Prometheus com contêineres.
-
-- se existe já alguma implementação propria para o docker e o kubernetes
-    * Kubernetes Metrics Server: é uma ferramenta nativa do Kubernetes que coleta e expõe métricas de recursos do cluster, como 
-    uso de CPU e memória por pod, node, namespace, etc.
-    * Docker Stats: O Docker Stats é um comando nativo do Docker que fornece informações sobre o desempenho do container, como 
-    CPU e uso de memória.
-    * Docker Events: O Docker Events é outro comando nativo do Docker que fornece informações sobre eventos relacionados a 
-    contêineres, como criação, reinicialização e parada.
+    https://docs.docker.com/config/daemon/prometheus/
 
 - olhar se não existe nenhuma proposta similar no Scholar. Como pesquisar: host-based intrusion detection system (HIDS) para 
 docker/container e ver qual tipo de informação e método de coleta de dados esta sendo utilizado 
     Não consegui achar os artigos que estavam aqui!
+    Procuraar no Google scholar!
+
+- Reunião 25/03/2023
+
+    - Ler documentação docker plugin (https://docs.docker.com/engine/) 
+        - Olhar plugin que consigam capturar interações entre o docker image (running) e o docker engine 
+        (https://docs.docker.com/engine/extend/legacy_plugins/) . Quais tipo de informações, acesso a disco, informações de 
+        comunicação de rede, permissões...
+
+    - Sysdig (tentar executar pra ver informações que conseguimos extrair) 
+    - Valgrind
+    - ftrace (?, olhar se não é system call)... ltrace
+    - perf para os containers (https://github.com/brendangregg/perf-tools)
+
+    - Aplicação para rodar no container Wordpress 

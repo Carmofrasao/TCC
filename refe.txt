@@ -1,6 +1,6 @@
 - Link Docker 
-https://docs.docker.com/config/containers/runmetrics/
-https://kubernetes.io/docs/concepts/security/overview/
+https://docs.docker.com/config/containers/runmetrics/ (Em ultimo caso, usar isso)
+https://kubernetes.io/docs/concepts/security/overview/ 
 https://docs.docker.com/engine/security/
 
 
@@ -9,7 +9,6 @@ ambiente de container. Seguindo a segunda e terceira proposta do artigo ISCC2021
 Tipo de informações que são interessantes, comunicação do container com o container engine (esperado), strace, e logging.
 
 * Fluentd 
-
 * Logstash
 
 O que é novo?
@@ -43,3 +42,18 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
     - perf para os containers (https://github.com/brendangregg/perf-tools)
 
     - Aplicação para rodar no container Wordpress 
+    https://hub.docker.com/_/wordpress 
+    (nesse lugar, a instalação não funcionou, outras onfiguraçẽs provavelente funcionam)
+
+---------------------------------------------------------------------------------------------------------------
+
+    usei a instalação desse lugar:
+        https://www.hostinger.com.br/tutoriais/como-instalar-wordpress-no-docker-windows-macos-e-linux#:~:text=Existem%20dois%20m%C3%A9todos%20de%20configurar,usado%20como%20exemplo%20neste%20tutorial.
+
+    Meu wordpress:
+        Site Title      TCC
+        Username        eu
+        Password        TCCAnderson.
+
+    Para subir o container:
+        docker-compose up

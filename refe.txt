@@ -37,6 +37,22 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
         comunicação de rede, permissões...
 
     - Sysdig (tentar executar pra ver informações que conseguimos extrair) 
+        https://github.com/draios/sysdig/wiki/Getting-Started
+        https://github.com/draios/sysdig/wiki/Sysdig-Examples
+
+        - Veja o uso da CPU dos processos em execução dentro do contêiner wordpress1
+            sudo sysdig -pc -c topprocs_cpu container.name=wordpress1
+        - Veja o uso da largura de banda da rede dos processos em execução no contêiner wordpress1
+            sudo sysdig -pc -c topprocs_net container.name=wordpress1
+        - Veja os processos usando a maior largura de banda da rede dentro do contêiner wordpress1
+            sudo sysdig -pc -c topprocs_net container.name=wordpress1
+        - Veja os arquivos superiores em termos de bytes de E / S dentro do contêiner wordpress1
+            sudo sysdig -pc -c topfiles_bytes container.name=wordpress1
+        - Veja as conexões de rede superiores dentro do contêiner wordpress1
+            sudo sysdig -pc -c topconns container.name=wordpress1
+        - Mostrar todos os comandos interativos executados dentro do contêiner wordpress1
+            sudo sysdig -pc -c spy_users container.name=wordpress1
+
     - Valgrind
     - ftrace (?, olhar se não é system call)... ltrace
     - perf para os containers (https://github.com/brendangregg/perf-tools)

@@ -59,8 +59,11 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
         - Mostrar todos os comandos interativos executados dentro do contêiner wordpress1
             sudo sysdig -pc -c spy_users container.name=wordpress1
 
+        Bom, não consegui arrumar os erros que aapareceram, então desisti do sysdig
+
     - Valgrind
         https://valgrind.org/
+        Valgrind me parece ser generico, pegar info de memoria, processammento, leak, etc...
     
     - ftrace (?, olhar se não é system call)... ltrace
         https://www.kernel.org/doc/html/v5.0/trace/ftrace.html
@@ -73,6 +76,10 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
     - Aplicação para rodar no container Wordpress 
         https://hub.docker.com/_/wordpress 
         (nesse lugar, a instalação não funcionou, outras onfiguraçẽs provavelente funcionam)
+
+
+    - Zabbix
+        https://www.youtube.com/watch?v=V1oz0B2xHGo&ab_channel=IagoFerreiraTI-AprendaCloudeDevOpsdoZERO
 
 ---------------------------------------------------------------------------------------------------------------
 

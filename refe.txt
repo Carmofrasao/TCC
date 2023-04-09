@@ -39,6 +39,8 @@ container image (aplicação) <- (alguem aki no meio) -> container engine
     memória, rede e disco.
         https://github.com/google/cadvisor
 
+        cadvisor               | W0409 19:21:43.287200       1 manager.go:159] Cannot detect current cgroup on cgroup v2
+
         Usarei com o grafana
         https://www.letscloud.io/community/how-to-install-grafana-740-on-ubuntu-2004
 
@@ -54,12 +56,18 @@ container image (aplicação) <- (alguem aki no meio) -> container engine
     * Logspout: O Logspout é um plugin que coleta logs de vários containers e os envia para uma saída centralizada, como o 
     Elasticsearch.
         https://github.com/gliderlabs/logspout
+
+        Consegui instalar, porém não consegui usar!
+        (Nem deu erro, eu só não consegui usar mesmo)
         
     ------------------------------------------------------------------------------------------------
 
     * Prometheus: O Prometheus é uma ferramenta de monitoramento que coleta métricas de vários componentes do sistema, incluindo 
     contêineres. Existem vários plugins disponíveis para integrar o Prometheus com contêineres.
         https://docs.docker.com/config/daemon/prometheus/
+
+        Consegui instalar, porém não consegui usar!
+        (prometheus.txt)
 
     ------------------------------------------------------------------------------------------------
 
@@ -96,6 +104,8 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
 
         - Mostrar todas as interações do container
             sudo sysdig -pc container.name=wordpress-wordpress-1
+
+        sysdig.log
     
     ------------------------------------------------------------------------------------------------
 
@@ -109,22 +119,35 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
 
         Parece promissor
 
+        Nao tem logs, são valores, então vale mais analizar a definição de cada vaalor 
+        (As definições estão no segundo link)
+
         ------------------------------------------------------------------------------------------------
 
         https://gitlab.com/cespedes/ltrace
         https://sergioprado.org/analisando-aplicacoes-linux-com-strace-e-ltrace/
+
+        Parece uma boa opção, mas não consegui usar
+
+        ltrace nc localhost 9000
 
         ------------------------------------------------------------------------------------------------
 
     - perf para os containers 
         https://github.com/brendangregg/perf-tools
         https://perf.wiki.kernel.org/index.php/Main_Page
+        
         Application
         System lib
         System call
         VFS
         File Systems
         Volume mnager
+
+        sudo perf record
+        perf report
+
+        perf.log
 
     ------------------------------------------------------------------------------------------------
 

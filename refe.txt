@@ -16,6 +16,9 @@ Tipo de informações que são interessantes, comunicação do container com o c
     Consegui instalar, porém não consegui usar!
     (fluentd.txt)
 
+    https://stackoverflow.com/questions/33601843/how-to-config-fluentd-with-docker
+    https://www.digitalocean.com/community/tutorials/how-to-centralize-your-docker-logs-with-fluentd-and-elasticsearch-on-ubuntu-16-04
+
 ------------------------------------------------------------------------------------------------
 
 * Logstash
@@ -24,6 +27,8 @@ Tipo de informações que são interessantes, comunicação do container com o c
 
     Consegui instalar, porém não consegui usar!
     (logstash.txt)
+
+    https://discuss.elastic.co/t/failed-to-fetch-x-pack-information-from-elasticsearch/227712/3
 
 ------------------------------------------------------------------------------------------------
 
@@ -41,6 +46,9 @@ container image (aplicação) <- (alguem aki no meio) -> container engine
 
         cadvisor               | W0409 19:21:43.287200       1 manager.go:159] Cannot detect current cgroup on cgroup v2
 
+        alterar permissoes (chwon)
+        --privileged
+
         Usarei com o grafana
         https://www.letscloud.io/community/how-to-install-grafana-740-on-ubuntu-2004
 
@@ -53,21 +61,16 @@ container image (aplicação) <- (alguem aki no meio) -> container engine
 
     ------------------------------------------------------------------------------------------------
 
-    * Logspout: O Logspout é um plugin que coleta logs de vários containers e os envia para uma saída centralizada, como o 
-    Elasticsearch.
-        https://github.com/gliderlabs/logspout
-
-        Consegui instalar, porém não consegui usar!
-        (Nem deu erro, eu só não consegui usar mesmo)
-        
-    ------------------------------------------------------------------------------------------------
-
     * Prometheus: O Prometheus é uma ferramenta de monitoramento que coleta métricas de vários componentes do sistema, incluindo 
     contêineres. Existem vários plugins disponíveis para integrar o Prometheus com contêineres.
         https://docs.docker.com/config/daemon/prometheus/
 
         Consegui instalar, porém não consegui usar!
         (prometheus.txt)
+
+        arquivos de conf
+
+        https://hub.docker.com/r/prom/prometheus
 
     ------------------------------------------------------------------------------------------------
 
@@ -106,32 +109,8 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
             sudo sysdig -pc container.name=wordpress-wordpress-1
 
         sysdig.log
-    
+
     ------------------------------------------------------------------------------------------------
-
-    - ftrace (?, olhar se não é system call)... ltrace
-
-        Não achei especificamente o ftrace, achei o kernelshark-git, mas não entendi como usar (não usar)
-        Tiago indicou bpftrace
-
-        https://bpftrace.org/
-        https://github.com/iovisor/bpftrace/blob/master/docs/tutorial_one_liners.md
-
-        Parece promissor
-
-        Nao tem logs, são valores, então vale mais analizar a definição de cada vaalor 
-        (As definições estão no segundo link)
-
-        ------------------------------------------------------------------------------------------------
-
-        https://gitlab.com/cespedes/ltrace
-        https://sergioprado.org/analisando-aplicacoes-linux-com-strace-e-ltrace/
-
-        Parece uma boa opção, mas não consegui usar
-
-        ltrace nc localhost 9000
-
-        ------------------------------------------------------------------------------------------------
 
     - perf para os containers 
         https://github.com/brendangregg/perf-tools
@@ -157,13 +136,6 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
 
     ------------------------------------------------------------------------------------------------
 
-    - Zabbix
-        https://www.youtube.com/watch?v=V1oz0B2xHGo&ab_channel=IagoFerreiraTI-AprendaCloudeDevOpsdoZERO
-
-        Não consegui configurar
-
-    ------------------------------------------------------------------------------------------------
-
 - Reunião 01/04/2023
 
     - https://youtu.be/sSLUjr3PQmM
@@ -180,7 +152,8 @@ docker/container e ver qual tipo de informação e método de coleta de dados es
         Password        TCCAnderson.
 
     Para subir o container:
-        docker-compose up
+        docker compose up
 
+    buscar possiveis plugins para o docker
 
     https://blog.saninternet.com/lista-de-plugins-wordpress-com-vulnerabilidades

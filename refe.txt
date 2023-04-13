@@ -18,6 +18,13 @@ Tipo de informações que são interessantes, comunicação do container com o c
 
     https://stackoverflow.com/questions/33601843/how-to-config-fluentd-with-docker
     https://www.digitalocean.com/community/tutorials/how-to-centralize-your-docker-logs-with-fluentd-and-elasticsearch-on-ubuntu-16-04
+    https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+
+    docker run -d -p 9200:9200 -p 9300:9300 elasticsearch
+    ERROR: Elasticsearch exited unexpectedly (Dura alguns segundos e para)
+
+    curl -XGET 'http://localhost:9200/_all/_search?q=*'
+    curl: (56) Recv failure: Conexão fechada pela outra ponta
 
 ------------------------------------------------------------------------------------------------
 

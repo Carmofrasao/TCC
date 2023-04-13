@@ -24,6 +24,17 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
 
+  fluentd:
+    image: fluent/fluentd:latest
+    ports:
+      - 24224:24224
+    volumes:
+      - "$PWD/fluentd:/fluentd/etc"
+    environment:
+      - FLUENTD_CONF=fluent.docker.conf
+      # Set verbose output
+      - FLUENTD_OPT=-v
+
 volumes:
   db_data:
 # deixar uma agradecimento especial ao Fernado K

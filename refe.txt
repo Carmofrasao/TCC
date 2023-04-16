@@ -30,6 +30,7 @@ Tipo de informações que são interessantes, comunicação do container com o c
     https://docs.fluentd.org/configuration/config-file
 
     docker run -p 9880:9880 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
+    curl -X POST -d 'json={"json":"message"}' http://127.0.0.1:9880/sample.test
     Isso funciona, mas não direto no docker
 
 ------------------------------------------------------------------------------------------------

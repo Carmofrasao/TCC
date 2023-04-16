@@ -27,13 +27,14 @@ services:
   fluentd:
     image: fluent/fluentd:edge-debian
     ports:
-      - 9880:9880
+      - "24224:24224"
+      - "24224:24224/udp"
     volumes:
       - "$PWD/tmp:/fluentd/etc"
     environment:
-      - FLUENTD_CONF=fluent.conf
       # Set verbose output
       - FLUENTD_OPT=-v
+    command: ["fluentd", "-c", "/fluentd/etc/fluentd.conf"]
 
 volumes:
   db_data:

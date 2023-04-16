@@ -26,6 +26,8 @@ Tipo de informações que são interessantes, comunicação do container com o c
     curl -XGET 'http://localhost:9200/_all/_search?q=*'
     curl: (56) Recv failure: Conexão fechada pela outra ponta
 
+    https://docs.fluentd.org/container-deployment/install-by-docker
+
     docker run -p 9880:9880 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
     Isso funciona, mas não direto no docker
 

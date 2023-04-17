@@ -23,9 +23,35 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
+      LOGSTASH_HOST: logstash
+      LOGSTASH_PORT: 5044
     logging:
       driver: fluentd
       # driver: logstash
+
+  logstash:
+    depends_on:
+      - elasticsearch
+    image: docker.elastic.co/logstash/logstash:7.12.0
+    volumes:
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    environment:
+      - ELASTICSEARCH_HOST=container-elasticsearch
+      - ELASTICSEARCH_PORT=9200
+      - "LOGSTASH_LISTENERS=http://0.0.0.0:5044"
+  
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+    environment:
+      - "discovery.type=single-node"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
 
 volumes:
   db_data:

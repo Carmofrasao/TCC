@@ -25,15 +25,15 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
 
   fluentd:
-    image: fluent/fluentd:edge-debian
+    image: fluent/fluentd:v1.13-debian-1
+    volumes:
+      - "$PWD/tmp:/fluentd/etc"
+    depends_on:
+      - db
+      - wordpress
     ports:
       - "24224:24224"
       - "24224:24224/udp"
-    volumes:
-      - "$PWD/tmp:/fluentd/etc"
-    environment:
-      # Set verbose output
-      - FLUENTD_OPT=-v
     command: ["fluentd", "-c", "/fluentd/etc/fluentd.conf"]
 
 volumes:

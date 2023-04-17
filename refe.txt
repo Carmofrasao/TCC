@@ -13,25 +13,21 @@ Tipo de informações que são interessantes, comunicação do container com o c
 * Fluentd 
     https://www.fluentd.org/architecture
 
-    Consegui instalar, porém não consegui usar!
-    (fluentd.txt)
-
     https://stackoverflow.com/questions/33601843/how-to-config-fluentd-with-docker
     https://www.digitalocean.com/community/tutorials/how-to-centralize-your-docker-logs-with-fluentd-and-elasticsearch-on-ubuntu-16-04
     https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
-    docker run -d -p 9200:9200 -p 9300:9300 elasticsearch
-    ERROR: Elasticsearch exited unexpectedly (Dura alguns segundos e para)
-
-    curl -XGET 'http://localhost:9200/_all/_search?q=*'
-    curl: (56) Recv failure: Conexão fechada pela outra ponta
-
     https://docs.fluentd.org/container-deployment/install-by-docker
     https://docs.fluentd.org/configuration/config-file
 
+    COLOCAR ISSO VVVVV PARA RODAR, DAE RODAR O WORDPRESS 
+
     docker run -p 24224:24224 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
+
+    mensagem de teste, @FLUENT_LOG nãoesta mais configurado (fluent.conf)
     echo '{"json":"message"}' | fluent-cat @FLUENT_LOG -p 24224
-    Isso funciona, mas não direto no docker
+
+    Não consegui configurar um arquivo de log
 
 ------------------------------------------------------------------------------------------------
 
@@ -43,6 +39,12 @@ Tipo de informações que são interessantes, comunicação do container com o c
     (logstash.txt)
 
     https://discuss.elastic.co/t/failed-to-fetch-x-pack-information-from-elasticsearch/227712/3
+
+    docker build -t logstash .
+
+    docker run --name container-logstash -p 5044:5044 --link container-elasticsearch:elasticsearch logstash
+
+    não consegui integrar no docker compose
 
 ------------------------------------------------------------------------------------------------
 

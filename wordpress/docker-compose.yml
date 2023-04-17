@@ -23,18 +23,9 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
-
-  fluentd:
-    image: fluent/fluentd:v1.13-debian-1
-    volumes:
-      - "$PWD/tmp:/fluentd/etc"
-    depends_on:
-      - db
-      - wordpress
-    ports:
-      - "24224:24224"
-      - "24224:24224/udp"
-    command: ["fluentd", "-c", "/fluentd/etc/fluentd.conf"]
+    logging:
+      driver: fluentd
+      # driver: logstash
 
 volumes:
   db_data:

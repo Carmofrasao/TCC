@@ -56,40 +56,6 @@ container image (aplicação) <- (alguem aki no meio) -> container engine
 
     ------------------------------------------------------------------------------------------------
 
-    * CAdvisor: O Container Advisor é um plugin que coleta e expõe informações sobre o desempenho do container, como uso de CPU, 
-    memória, rede e disco.
-        https://github.com/google/cadvisor
-
-        cadvisor               | W0409 19:21:43.287200       1 manager.go:159] Cannot detect current cgroup on cgroup v2
-
-        alterar permissoes (chwon)
-        --privileged
-
-        Usarei com o grafana
-        https://www.letscloud.io/community/how-to-install-grafana-740-on-ubuntu-2004
-
-        http://localhost:3000/login
-
-        user: admin
-        senha: padrao
-
-        tem que ver como ligar o grafana no cadvisor
-
-    ------------------------------------------------------------------------------------------------
-
-    * Prometheus: O Prometheus é uma ferramenta de monitoramento que coleta métricas de vários componentes do sistema, incluindo 
-    contêineres. Existem vários plugins disponíveis para integrar o Prometheus com contêineres.
-        https://docs.docker.com/config/daemon/prometheus/
-
-        Consegui instalar, porém não consegui usar!
-        (prometheus.txt)
-
-        arquivos de conf
-
-        https://hub.docker.com/r/prom/prometheus
-
-    ------------------------------------------------------------------------------------------------
-
 - olhar se não existe nenhuma proposta similar no Scholar. Como pesquisar: host-based intrusion detection system (HIDS) para 
 docker/container e ver qual tipo de informação e método de coleta de dados esta sendo utilizado 
     Não consegui achar os artigos que estavam aqui!

@@ -86,9 +86,12 @@ Meu wordpress:
     Username        eu
     Password        TCCAnderson.
 
-* Para subir o container:
+Para subir o container:
+
     docker compose up
 
-* docker rmi $(docker images -q)
+Para remover as imagens que estão rodando:
+
+    docker rmi $(docker images -q)
 
 * Gerar novos logs

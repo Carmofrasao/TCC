@@ -79,7 +79,7 @@ Mostrar todas as interações do container
 
 https://www.hostinger.com.br/tutoriais/como-instalar-wordpress-no-docker-windows-macos-e-linux#:~:text=Existem%20dois%20m%C3%A9todos%20de%20configurar,usado%20como%20exemplo%20neste%20tutorial.
 
-* Meu wordpress:
+Meu wordpress:
 
     Link            http://localhost:9000/wp-admin/
     Site Title      TCC

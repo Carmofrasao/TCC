@@ -1,0 +1,38 @@
+version: '3'
+services:
+  wordpress:
+    image: wordpress
+    ports:
+      - 8080:80
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_PASSWORD=password
+      - WORDPRESS_DB_NAME=wordpress
+    volumes:
+      - ./wordpress:/var/www/html
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=wordpress
+    volumes:
+      - ./db:/var/lib/mysql
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.14.0
+    environment:
+      - discovery.type=single-node
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.14.0
+    volumes:
+      - ./logstash:/usr/share/logstash/pipeline
+  fluentd:
+    image: fluent/fluentd
+    volumes:
+      - ./fluentd:/fluentd/etc
+  sysdig:
+    image: sysdig/sysdig
+    privileged: true
+    pid: "host"
+    volumes:
+      - /var/run/docker.sock:/host/var/run/docker.sock

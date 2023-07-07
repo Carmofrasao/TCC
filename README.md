@@ -40,33 +40,29 @@ Não consegui configurar um arquivo de log
 * https://github.com/draios/sysdig
 * https://github.com/draios/sysdig/wiki/Container-Enabled-Chisels
 
-Veja o uso da CPU dos processos em execução dentro do contêiner wordpress1
+Veja o uso da CPU dos processos em execução dentro do contêiner wordpress
 
-    sudo sysdig -pc -c topprocs_cpu container.name=wordpress-wordpress-1
+    sudo sysdig -pc -c topprocs_cpu container.name=wordpress
 
-Veja o uso da largura de banda da rede dos processos em execução no contêiner wordpress1
+Veja os processos usando a maior largura de banda da rede dentro do contêiner wordpress
 
-    sudo sysdig -pc -c topprocs_net container.name=wordpress-wordpress-1
+    sudo sysdig -pc -c topprocs_net container.name=wordpress
 
-Veja os processos usando a maior largura de banda da rede dentro do contêiner wordpress1
+Veja os arquivos superiores em termos de bytes de E / S dentro do contêiner wordpress
 
-    sudo sysdig -pc -c topprocs_net container.name=wordpress-wordpress-1
+    sudo sysdig -pc -c topfiles_bytes container.name=wordpress
 
-Veja os arquivos superiores em termos de bytes de E / S dentro do contêiner wordpress1
+Veja as conexões de rede superiores dentro do contêiner wordpress
 
-    sudo sysdig -pc -c topfiles_bytes container.name=wordpress-wordpress-1
+    sudo sysdig -pc -c topconns container.name=wordpress
 
-Veja as conexões de rede superiores dentro do contêiner wordpress1
+Mostrar todos os comandos interativos executados dentro do contêiner wordpress
 
-    sudo sysdig -pc -c topconns container.name=wordpress-wordpress-1
-
-Mostrar todos os comandos interativos executados dentro do contêiner wordpress1
-
-    sudo sysdig -pc -c spy_users container.name=wordpress-wordpress-1
+    sudo sysdig -pc -c spy_users container.name=wordpress
 
 Mostrar todas as interações do container
 
-    sudo sysdig -pc container.name=wordpress-wordpress-1
+    sudo sysdig -pc container.name=wordpress
 
 ## Plugins vulneravei para Wordpress
 
@@ -77,7 +73,7 @@ Mostrar todas as interações do container
 
 * Usei a instalação desse lugar:
 
-https://www.hostinger.com.br/tutoriais/como-instalar-wordpress-no-docker-windows-macos-e-linux#:~:text=Existem%20dois%20m%C3%A9todos%20de%20configurar,usado%20como%20exemplo%20neste%20tutorial.
+https://hub.docker.com/_/wordpress/
 
 Meu wordpress:
 
@@ -92,6 +88,6 @@ Para subir o container:
 
 Para remover as imagens que estão rodando:
 
-    docker rmi $(docker images -q)
+    docker system prune
 
 * Gerar novos logs

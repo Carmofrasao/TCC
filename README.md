@@ -82,12 +82,17 @@ Meu wordpress:
     Username        eu
     Password        TCCAnderson.
 
+Buldando o container:
+
+    docker build -t wordpress .
+
 Para subir o container:
 
-    docker compose up
+    docker run -p 9000:80 wordpress
 
 Para remover as imagens que estão rodando:
 
     docker system prune
+    docker rmi $(docker images -q)
 
 * Gerar novos logs

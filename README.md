@@ -19,16 +19,21 @@ https://www.elastic.co/guide/en/logstash/current/docker-config.html
 talvez consegui integrar no docker compose
 
 ### Fluentd 
+
+#### Referencias
+
 * https://www.fluentd.org/architecture
-* https://stackoverflow.com/questions/33601843/how-to-config-fluentd-with-docker
-* https://www.digitalocean.com/community/tutorials/how-to-centralize-your-docker-logs-with-fluentd-and-elasticsearch-on-ubuntu-16-04
 * https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 * https://docs.fluentd.org/container-deployment/install-by-docker
 * https://docs.fluentd.org/configuration/config-file
 
-COLOCAR ISSO VVVVV PARA RODAR, DAE RODAR O WORDPRESS 
+#### Instalação
 
-    docker run -p 24224:24224 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
+    sudo docker pull fluent/fluentd:edge-debian
+
+#### Uso (Deve ser executado antes de subir o wordpress)
+
+    docker run -p 9880:9880 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
 
 mensagem de teste, @FLUENT_LOG nãoesta mais configurado (fluent.conf)
 
@@ -92,7 +97,6 @@ Para subir o container:
 
 Para remover as imagens que estão rodando:
 
-    docker system prune
-    docker rmi $(docker images -q)
+    sudo docker system prune && sudo docker rmi $(sudo docker images -q)
 
 * Gerar novos logs

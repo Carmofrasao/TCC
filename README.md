@@ -103,3 +103,4 @@ Para remover as imagens que estão rodando:
     sudo docker system prune && sudo docker rmi $(sudo docker images -q)
 
 * Gerar novos logs
+* Falta o Logstash

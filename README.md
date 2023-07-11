@@ -12,9 +12,9 @@ https://www.elastic.co/pt/logstash/
 
 https://www.elastic.co/guide/en/logstash/current/docker-config.html
 
-    docker build -t logstash .
+    sudo docker build -t logstash .
 
-    docker run --name container-logstash -p 5044:5044 --link container-elasticsearch:elasticsearch logstash
+    sudo docker run --name container-logstash -p 5044:5044 --link container-elasticsearch:elasticsearch logstash
 
 talvez consegui integrar no docker compose
 
@@ -29,21 +29,32 @@ talvez consegui integrar no docker compose
 
 #### Instalação
 
-    sudo docker pull fluent/fluentd:edge-debian
+Identifique o ID do container wordpress:
+
+    sudo docker ps
+
+Substitua o ID que esta em `/wordpress/tmp/fluentd.conf`
 
 #### Uso (Deve ser executado antes de subir o wordpress)
 
-    docker run -p 9880:9880 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
+    sudo docker run -p 24224:24224 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
 
-mensagem de teste, @FLUENT_LOG nãoesta mais configurado (fluent.conf)
-
-    echo '{"json":"message"}' | fluent-cat @FLUENT_LOG -p 24224
+Após esse passo, inicialize o container.
 
 Não consegui configurar um arquivo de log
 
 ### Sysdig
+
+#### Referencias
+
 * https://github.com/draios/sysdig
 * https://github.com/draios/sysdig/wiki/Container-Enabled-Chisels
+
+#### Instalação
+
+    sudo apt-get install sysdig
+
+#### Uso
 
 Veja o uso da CPU dos processos em execução dentro do contêiner wordpress
 
@@ -76,10 +87,6 @@ Mostrar todas as interações do container
 
 ## Wordpress
 
-* Usei a instalação desse lugar:
-
-https://hub.docker.com/_/wordpress/
-
 Meu wordpress:
 
     Link            http://localhost:9000/wp-admin/
@@ -87,13 +94,9 @@ Meu wordpress:
     Username        eu
     Password        TCCAnderson.
 
-Buldando o container:
-
-    docker build -t wordpress .
-
 Para subir o container:
 
-    docker run -p 9000:80 wordpress
+    sudo docker-compose up
 
 Para remover as imagens que estão rodando:
 

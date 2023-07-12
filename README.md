@@ -3,27 +3,7 @@
 Container engine (comunicação): Identificar uma maneira de coletar informações de uma aplicação que esteja rodando dentro do 
 ambiente de container. Seguindo a segunda e terceira proposta do artigo ISCC2021 (a ideia é ficar dentro do ambiente do container). 
 
-Tipo de informações que são interessantes, comunicação do container com o container engine (esperado), strace, e logging.
-
 ## Pluging que permite coletar informações/interações entre container e o container engine
-
-### Logstash
-
-#### Referencias
-
-* https://www.elastic.co/pt/logstash/ 
-* https://www.elastic.co/guide/en/logstash/current/docker-config.html
-* https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-20-04-pt
-
-#### Instalação
-
-    sudo docker build -t logstash .
-
-#### Uso
-
-    sudo docker run --name container-logstash -p 5044:5044 --link container-elasticsearch:elasticsearch logstash
-
-talvez consegui integrar no docker compose
 
 ### Fluentd 
 

@@ -8,11 +8,18 @@ Tipo de informações que são interessantes, comunicação do container com o c
 ## Pluging que permite coletar informações/interações entre container e o container engine
 
 ### Logstash
-https://www.elastic.co/pt/logstash/ 
 
-https://www.elastic.co/guide/en/logstash/current/docker-config.html
+#### Referencias
+
+* https://www.elastic.co/pt/logstash/ 
+* https://www.elastic.co/guide/en/logstash/current/docker-config.html
+* https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-20-04-pt
+
+#### Instalação
 
     sudo docker build -t logstash .
+
+#### Uso
 
     sudo docker run --name container-logstash -p 5044:5044 --link container-elasticsearch:elasticsearch logstash
 
@@ -22,8 +29,6 @@ talvez consegui integrar no docker compose
 
 #### Referencias
 
-* https://www.fluentd.org/architecture
-* https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 * https://docs.fluentd.org/container-deployment/install-by-docker
 * https://docs.fluentd.org/configuration/config-file
 

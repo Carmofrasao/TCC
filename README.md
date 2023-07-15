@@ -12,7 +12,7 @@ ambiente de container. Seguindo a segunda e terceira proposta do artigo ISCC2021
 * https://docs.fluentd.org/container-deployment/install-by-docker
 * https://docs.fluentd.org/configuration/config-file
 
-#### Instalação
+#### Instalação e Uso (Deve ser executado antes de subir o wordpress)
 
 Identifique o ID do container wordpress:
 
@@ -20,13 +20,11 @@ Identifique o ID do container wordpress:
 
 Substitua o ID que esta em `/wordpress/tmp/fluentd.conf`
 
-#### Uso (Deve ser executado antes de subir o wordpress)
+Rode:
 
     sudo docker run -p 24224:24224 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
 
 Após esse passo, inicialize o container.
-
-Não consegui configurar um arquivo de log
 
 ### Sysdig
 
@@ -75,11 +73,15 @@ Mostrar todas as interações do container
 
 Wordpress: 4.9.14
 
+sha1='2ba546bb27a053a74d493413bb3cd2d3def80fb6';
+
 * CVE-2019-9978 - Plugin Social Warfare (Versão: <= 3.5.3). Permite a execução de código arbitrário no alvo em uma funcionalidade que gerencia a importação de configurações.
 
 ##### Dataset Versão 2
 
 Wordpress: 4.9.2 
+
+sha1='96e0b38028b0b2d00209290ebac20cb9f4a6d085';
 
 * CVE-2019-9978 – A mesma vulnerabilidade explorada na formação do comportamento anômalo da primeira versão do dataset;
 * CVE-2020-25213 – O plugin File Manager (wp-file-manager) anterior à versão 6.9 permite o upload e execução código PHP arbitrário;
@@ -89,22 +91,36 @@ Wordpress: 4.9.2
 
 ## Wordpress
 
-Meu wordpress:
+### Dockerfile
+
+Buldando o container:
+
+    docker build -t wordpress .
+
+Para subir o container:
+
+    docker run -p 9000:80 wordpress
+
+------------------------------------------------------
+
+### docker-compose
+
+Para subir o container:
+
+    sudo docker-compose up
+
+------------------------------------------------------
+
+### Meu wordpress:
 
     Link            http://localhost:9000/wp-admin/
     Site Title      TCC
     Username        eu
     Password        TCCAnderson.
 
-Para subir o container:
-
-    sudo docker-compose up
+------------------------------------------------------
 
 Para remover as imagens que estão rodando:
 
     sudo docker system prune && sudo docker rmi $(sudo docker images -q)
     
-
-https://www.youtube.com/watch?v=p4wyhk8NZyI
-
-WP Downgrade

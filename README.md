@@ -91,11 +91,11 @@ Wordpress: 4.9.2
 
 Buldando o container:
 
-    docker build -t wordpress .
+    sudo docker build -t wordpress .
 
 Para subir o container:
 
-    docker run -p 9000:80 wordpress
+    sudo docker run -p 9000:80 wordpress
 
 ------------------------------------------------------
 

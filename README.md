@@ -18,7 +18,7 @@ Identifique o ID do container wordpress:
 
     sudo docker ps
 
-Substitua o ID que esta em `/wordpress/tmp/fluentd.conf`
+Substitua o ID que esta em `./tmp/fluentd.conf`
 
 Rode:
 

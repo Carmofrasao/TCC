@@ -69,12 +69,6 @@ Mostrar todas as interações do container
 
 ### Ruschel:
 
-##### Dataset Versão 1
-
-Wordpress: 4.9.14
-
-* CVE-2019-9978 - Plugin Social Warfare (Versão: <= 3.5.3). Permite a execução de código arbitrário no alvo em uma funcionalidade que gerencia a importação de configurações.
-
 ##### Dataset Versão 2
 
 Wordpress: 4.9.2 
@@ -86,20 +80,6 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Simple File List (simple-file-list) com versão anterior à 4.2.3, que falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
 
 ## Wordpress
-
-### Dockerfile
-
-Buldando o container:
-
-    sudo docker build -t wordpress .
-
-Para subir o container:
-
-    sudo docker run -p 9000:80 wordpress
-
-------------------------------------------------------
-
-### docker-compose
 
 Para subir o container:
 

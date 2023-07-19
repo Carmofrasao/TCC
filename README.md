@@ -76,7 +76,7 @@ Wordpress: 4.9.2
 * CVE-2019-9978 - Plugin Social Warfare (Versão: <= 3.5.3). Permite a execução de código arbitrário no alvo em uma funcionalidade que gerencia a importação de configurações;
 * CVE-2020-25213 – O plugin File Manager (wp-file-manager) anterior à versão 6.9 permite o upload e execução código PHP arbitrário;
 * CVE-2020-12800 – O plugin Drag and Drop Multiple File Upload – Contact Form 7 anterior à versão 1.3.3.3 permite o upload de arquivos sem restrição, o que permite a execução de código PHP arbitrário;
-* Vulnerabilidade encontrada no plugin AIT CSV Import/Export com versão menor ou igual a 3.0.3, que permite o upload e execução de código PHP, por conta de uma falha do plugin em verificar e validar os arquivos enviados; e
+* Vulnerabilidade encontrada no plugin AIT CSV Import/Export com versão menor ou igual a 3.0.3, que permite o upload e execução de código PHP, por conta de uma falha do plugin em verificar e validar os arquivos enviados (https://www.infosecmatter.com/metasploit-module-library/?mm=exploit/multi/http/wp_ait_csv_rce); e
 * Vulnerabilidade presente no plugin Simple File List (simple-file-list) com versão anterior à 4.2.3, que falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
 
 ## Wordpress

@@ -94,3 +94,22 @@ Para remover as imagens que estão rodando:
 
     sudo docker system prune && sudo docker rmi $(sudo docker images -q)
     
+------------------------------------------------------
+
+Caso as imagens sejam removidas, sera necessario configurar o container para colocar o plugin File Manager (pois ele é grande).
+
+Siga os seguintes passos:
+
+1. Acesse o container Docker do WordPress:
+```
+sudo docker exec -it wordpress bash
+```
+2. Crie o arquivo php.ini:
+```
+touch /usr/local/etc/php/php.ini
+```
+3. Aumente o tamanho máximo de upload de arquivos:
+```
+echo "upload_max_filesize = 100M" > /usr/local/etc/php/php.ini
+```
+4. Reinicie o container do WordPress.

@@ -130,14 +130,14 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/51042
     </br></br>
-* CVE-2020-35749 – O plugin Simple Job Board (versão: 2.9.3).
+*  – O plugin wpDiscuz (versão: 7.0.4).
 
     Uso comum:
     * 
     </br></br>
 
     Ataque:
-    * https://www.exploit-db.com/exploits/49450
+    * https://www.exploit-db.com/exploits/49401
     </br></br>
 * Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). 
 

@@ -67,17 +67,101 @@ Mostrar todas as interações do container
 
 Wordpress: 4.9.2 
 
-* CVE-2019-9978 - Plugin Social Warfare (Versão: <= 3.5.3). Permite a execução de código arbitrário no alvo em uma funcionalidade que gerencia a importação de configurações;
-* CVE-2020-25213 – O plugin File Manager (wp-file-manager) anterior à versão 6.9 permite o upload e execução código PHP arbitrário;
-* CVE-2020-12800 – O plugin Drag and Drop Multiple File Upload – Contact Form 7 anterior à versão 1.3.3.3 permite o upload de arquivos sem restrição, o que permite a execução de código PHP arbitrário;
-* Vulnerabilidade encontrada no plugin AIT CSV Import/Export com versão menor ou igual a 3.0.3, que permite o upload e execução de código PHP, por conta de uma falha do plugin em verificar e validar os arquivos enviados (https://www.infosecmatter.com/metasploit-module-library/?mm=exploit/multi/http/wp_ait_csv_rce); e
-* Vulnerabilidade presente no plugin Simple File List (simple-file-list) com versão anterior à 4.2.3, que falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
+* CVE-2019-9978 - Plugin Social Warfare (Versão: < 3.5.3). Permite a execução de código arbitrário no alvo em uma funcionalidade que gerencia a importação de configurações;
+
+    Uso comum:
+    * https://www.youtube.com/watch?v=Ks2787CrqA8
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/46794
+    </br></br>
+* CVE-2020-25213 – O plugin File Manager (wp-file-manager) (versão: <= 6.9). Permite o upload e execução código PHP arbitrário;
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/51224
+    </br></br>
+* CVE-2020-12800 – O plugin Drag and Drop Multiple File Upload – Contact Form 7 (versão: < 1.3.3.3). Permite o upload de arquivos sem restrição, o que permite a execução de código PHP arbitrário;
+
+    Uso comum:
+    * https://www.estoucriando.com/2021/12/criar-drag-and-drop-de-arquivos-no.html
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/48520
+    </br></br>
+* Vulnerabilidade presente no plugin Simple File List (simple-file-list) (versão: < 4.2.3). Falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/48979
+    </br></br>
+* CVE-2023-23488 – O plugin Paid Memberships Pro (versão: 2.9.8). 
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/51235
+    </br></br>
+* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). 
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/51043
+    </br></br>
+* CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). 
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/51042
+    </br></br>
+* CVE-2020-35749 – O plugin Simple Job Board (versão: 2.9.3).
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/49450
+    </br></br>
+* Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). 
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/50246
+    </br></br>
+* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5).
+
+    Uso comum:
+    * 
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/49406
 
 ## Wordpress
 
 Para subir o container:
 
-    sudo docker-compose up
+    sudo docker-compose up -d
 
 ------------------------------------------------------
 

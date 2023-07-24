@@ -79,7 +79,7 @@ Wordpress: 4.9.2
 * CVE-2020-25213 – O plugin File Manager (wp-file-manager) (versão: <= 6.9). Permite o upload e execução código PHP arbitrário;
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:
@@ -97,25 +97,25 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Simple File List (simple-file-list) (versão: < 4.2.3). Falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:
     * https://www.exploit-db.com/exploits/48979
     </br></br>
-* CVE-2023-23488 – O plugin Paid Memberships Pro (versão: 2.9.8). 
+* Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17).
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:
-    * https://www.exploit-db.com/exploits/51235
+    * https://www.exploit-db.com/exploits/42431
     </br></br>
 * CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). 
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:
@@ -124,16 +124,16 @@ Wordpress: 4.9.2
 * CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). 
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:
     * https://www.exploit-db.com/exploits/51042
     </br></br>
-*  – O plugin wpDiscuz (versão: 7.0.4).
+*  Vulnerabilidade presente no plugin wpDiscuz (versão: 7.0.4).
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:
@@ -142,7 +142,7 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). 
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:
@@ -151,7 +151,7 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5).
 
     Uso comum:
-    * 
+    * link
     </br></br>
 
     Ataque:

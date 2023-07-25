@@ -79,7 +79,7 @@ Wordpress: 4.9.2
 * CVE-2020-25213 – O plugin File Manager (wp-file-manager) (versão: <= 6.9). Permite o upload e execução código PHP arbitrário;
 
     Uso comum:
-    * link
+    * https://www.youtube.com/watch?v=5-iZX2sUHuQ
     </br></br>
 
     Ataque:
@@ -88,7 +88,7 @@ Wordpress: 4.9.2
 * CVE-2020-12800 – O plugin Drag and Drop Multiple File Upload – Contact Form 7 (versão: < 1.3.3.3). Permite o upload de arquivos sem restrição, o que permite a execução de código PHP arbitrário;
 
     Uso comum:
-    * https://www.estoucriando.com/2021/12/criar-drag-and-drop-de-arquivos-no.html
+    * https://www.youtube.com/watch?time_continue=16&v=eUQK7gsLevs
     </br></br>
 
     Ataque:
@@ -97,7 +97,7 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Simple File List (simple-file-list) (versão: < 4.2.3). Falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
 
     Uso comum:
-    * link
+    * https://simplefilelist.com/pt/
     </br></br>
 
     Ataque:
@@ -106,7 +106,7 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17).
 
     Uso comum:
-    * link
+    * https://easy-modal.com/getting-started/how-to-make-a-pop-up
     </br></br>
 
     Ataque:
@@ -115,7 +115,7 @@ Wordpress: 4.9.2
 * CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). 
 
     Uso comum:
-    * link
+    * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
     </br></br>
 
     Ataque:

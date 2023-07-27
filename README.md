@@ -22,7 +22,7 @@ Substitua o ID que esta em `./tmp/fluentd.conf`
 
 Rode:
 
-    sudo docker run -p 24224:24224 -v $(pwd)/../tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
+    sudo docker run -p 24224:24224 -v $(pwd)/tmp:/fluentd/etc fluent/fluentd:edge-debian -c /fluentd/etc/fluentd.conf
 
 Após esse passo, inicialize o container.
 

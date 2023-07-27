@@ -3,7 +3,7 @@
 Container engine (comunicação): Identificar uma maneira de coletar informações de uma aplicação que esteja rodando dentro do 
 ambiente de container. Seguindo a segunda e terceira proposta do artigo ISCC2021 (a ideia é ficar dentro do ambiente do container). 
 
-## Pluging que permite coletar informações/interações entre container e o container engine
+## Plugin que permite coletar informações/interações entre container e o container engine
 
 ### Fluentd 
 

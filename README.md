@@ -124,7 +124,7 @@ Wordpress: 4.9.2
 * CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). 
 
     Uso comum:
-    * link
+    * https://www.youtube.com/watch?v=9qW7cZfdxQ8
     </br></br>
 
     Ataque:
@@ -133,7 +133,7 @@ Wordpress: 4.9.2
 *  Vulnerabilidade presente no plugin wpDiscuz (versão: 7.0.4).
 
     Uso comum:
-    * link
+    * https://www.youtube.com/watch?v=woPqPgvkkQ8
     </br></br>
 
     Ataque:
@@ -142,7 +142,7 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). 
 
     Uso comum:
-    * link
+    * https://www.youtube.com/watch?v=gGtehIjDG3E&t=80s
     </br></br>
 
     Ataque:
@@ -151,7 +151,7 @@ Wordpress: 4.9.2
 * Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5).
 
     Uso comum:
-    * link
+    * https://br.wordpress.org/plugins/custom-global-variables/
     </br></br>
 
     Ataque:

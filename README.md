@@ -103,7 +103,7 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/48979
     </br></br>
-* Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17).
+* Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17). Injeção de SQL com escalada de privilegio.
 
     Uso comum:
     * https://easy-modal.com/getting-started/how-to-make-a-pop-up
@@ -112,7 +112,7 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/42431
     </br></br>
-* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). 
+* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
 
     Uso comum:
     * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
@@ -121,7 +121,7 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/51043
     </br></br>
-* CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). 
+* CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). Injeção de SQL autenticada.
 
     Uso comum:
     * https://www.youtube.com/watch?v=9qW7cZfdxQ8
@@ -130,7 +130,7 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/51042
     </br></br>
-*  Vulnerabilidade presente no plugin wpDiscuz (versão: 7.0.4).
+*  Vulnerabilidade presente no plugin wpDiscuz (versão: 7.0.4). Upload de arquivo arbitrário, permitindo upload de arquivos PHP, e execução remota de código.
 
     Uso comum:
     * https://www.youtube.com/watch?v=woPqPgvkkQ8
@@ -139,7 +139,7 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/49401
     </br></br>
-* Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). 
+* Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). Injeção de código arbitrario.
 
     Uso comum:
     * https://www.youtube.com/watch?v=gGtehIjDG3E&t=80s
@@ -148,7 +148,7 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/50246
     </br></br>
-* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5).
+* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5). Injeção de código arbitrario.
 
     Uso comum:
     * https://br.wordpress.org/plugins/custom-global-variables/

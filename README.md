@@ -184,15 +184,15 @@ Para remover as imagens que estão rodando:
     
 ------------------------------------------------------
 
-Caso as imagens sejam removidas, sera necessario configurar o container para colocar o plugin File Manager (pois ele é grande).
+Caso as imagens sejam removidas, sera necessario algumas configurações no container. 
 
-Siga os seguintes passos:
+* Para colocar o plugin File Manager (pois ele é grande), siga os seguintes passos:
 
 1. Acesse o container Docker do WordPress:
 ```
 sudo docker exec -it wordpress bash
 ```
-2. Crie o arquivo php.ini:
+2. Crie o arquivo `php.ini``:
 ```
 touch /usr/local/etc/php/php.ini
 ```
@@ -201,3 +201,55 @@ touch /usr/local/etc/php/php.ini
 echo "upload_max_filesize = 100M" > /usr/local/etc/php/php.ini
 ```
 4. Reinicie o container do WordPress.
+
+* Para rodar scripts python:
+
+1. Acesse o container Docker do WordPress:
+```
+sudo docker exec -it wordpress bash
+```
+2. Edite o arquivo `/etc/apt/sources.list`:
+```
+sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+sed -i s/security.debian.org/archive.debian.org/g /etc/apt/sources.list
+```
+3. Atualize o sistema:
+```
+apt-get update
+```
+4. Instale o python:
+```
+apt-get install python3-pip
+```
+
+## Coleta de dados e treinamnto do modelo
+
+0. 
+    1x10 mali.  
+    1x10 comp. Normais  
+
+    uma coleta  
+
+1. gerar trace  
+open(..)  
+mmap(..)  
+mmap(..)  
+read()  
+read()  
+fseek()  
+exit  
+
+2. criar janelas  
+overlap = 1  
+
+3. treinar modelo  
+.csv  
+ID feature1, f2, f3  
+1 [open mmap mmap]  
+1 [mmap read read]  
+1 [read fseek exit]  
+-> ML  
+
+    ML <- f1,f2,f3  
+    result = .predict()  
+    result.XXX(ID)  

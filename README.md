@@ -192,7 +192,7 @@ Caso as imagens sejam removidas, sera necessario algumas configurações no cont
 ```
 sudo docker exec -it wordpress bash
 ```
-2. Crie o arquivo `php.ini``:
+2. Crie o arquivo `php.ini`:
 ```
 touch /usr/local/etc/php/php.ini
 ```

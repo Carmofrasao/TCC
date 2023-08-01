@@ -1,0 +1,37 @@
+fluentd -c /fluentd/etc/fluentd.conf
+2023-08-01 18:18:20 +0000 [info]: init supervisor logger path=nil rotate_age=nil rotate_size=nil
+2023-08-01 18:18:20 +0000 [info]: parsing config file is succeeded path="/fluentd/etc/fluentd.conf"
+2023-08-01 18:18:20 +0000 [info]: gem 'fluentd' version '1.16.2'
+2023-08-01 18:18:20 +0000 [info]: using configuration file: <ROOT>
+  <source>
+    @type forward
+    port 24224
+    bind "0.0.0.0"
+  </source>
+  <match cdab6c786756.**>
+    @type stdout
+  </match>
+</ROOT>
+2023-08-01 18:18:20 +0000 [info]: starting fluentd-1.16.2 pid=6 ruby="3.1.4"
+2023-08-01 18:18:20 +0000 [info]: spawn command to main:  cmdline=["/usr/local/bin/ruby", "-Eascii-8bit:ascii-8bit", "/usr/local/bundle/bin/fluentd", "-c", "/fluentd/etc/fluentd.conf", "--plugin", "/fluentd/plugins", "--under-supervisor"]
+2023-08-01 18:18:21 +0000 [info]: #0 init worker0 logger path=nil rotate_age=nil rotate_size=nil
+2023-08-01 18:18:21 +0000 [info]: adding match pattern="cdab6c786756.**" type="stdout"
+2023-08-01 18:18:21 +0000 [info]: adding source type="forward"
+2023-08-01 18:18:21 +0000 [info]: #0 starting fluentd worker pid=15 ppid=6 worker=0
+2023-08-01 18:18:21 +0000 [info]: #0 listening port port=24224 bind="0.0.0.0"
+2023-08-01 18:18:21 +0000 [info]: #0 fluentd worker is now running worker=0
+2023-08-01 18:18:44.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:18:44 +0000] \"GET /wp-admin/admin.php?page=wp_file_manager HTTP/1.1\" 200 11333 \"http://localhost:9000/wp-admin/index.php\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\""}
+2023-08-01 18:18:44.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:18:44 +0000] \"GET /wp-content/plugins/wp-file-manager/js/file_manager_free_shortcode_admin.js?ver=1824 HTTP/1.1\" 200 1475 \"http://localhost:9000/wp-admin/admin.php?page=wp_file_manager\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\""}
+2023-08-01 18:18:45.000000000 +0000 cdab6c786756: {"container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:18:45 +0000] \"GET /favicon.ico HTTP/1.1\" 200 227 \"http://localhost:9000/wp-admin/admin.php?page=wp_file_manager\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\"","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968"}
+2023-08-01 18:18:45.000000000 +0000 cdab6c786756: {"log":"172.18.0.1 - - [01/Aug/2023:18:18:45 +0000] \"GET /wp-admin/css/theme.css HTTP/1.1\" 301 393 \"http://localhost:9000/wp-admin/admin.php?page=wp_file_manager\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\"","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout"}
+2023-08-01 18:18:45.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:18:45 +0000] \"GET /wp-admin/admin-ajax.php?action=mk_file_folder_manager&_wpnonce=281c060485&cmd=open&target=l1_d3AtY29udGVudC9wbHVnaW5zL3NvY2lhbC13YXJmYXJlL2xhbmd1YWdlcw&init=1&tree=1&_=1690913925202 HTTP/1.1\" 200 7977 \"http://localhost:9000/wp-admin/admin.php?page=wp_file_manager\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\""}
+2023-08-01 18:18:45.000000000 +0000 cdab6c786756: {"source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:18:45 +0000] \"GET /wp-admin/css/theme.css/ HTTP/1.1\" 200 28026 \"http://localhost:9000/wp-admin/admin.php?page=wp_file_manager\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\"","container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress"}
+2023-08-01 18:18:46.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:18:45 +0000] \"GET /wp-admin/admin-ajax.php?action=mk_file_folder_manager&_wpnonce=281c060485&cmd=parents&target=l1_d3AtY29udGVudC9wbHVnaW5zL3NvY2lhbC13YXJmYXJlL2xhbmd1YWdlcw&reqid=189b252eb5020d HTTP/1.1\" 200 7163 \"http://localhost:9000/wp-admin/admin.php?page=wp_file_manager\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\""}
+2023-08-01 18:19:23.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:19:23 +0000] \"POST /wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php HTTP/1.1\" 200 1225 \"-\" \"python-requests/2.31.0\""}
+2023-08-01 18:19:45.000000000 +0000 cdab6c786756: {"container_id":"cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989ab1038487615968","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [01/Aug/2023:18:19:45 +0000] \"POST /wp-admin/admin-ajax.php HTTP/1.1\" 200 509 \"http://localhost:9000/wp-admin/admin.php?page=wp_file_manager\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0\""}
+2023-08-01 18:19:54 +0000 [info]: Received graceful stop
+2023-08-01 18:19:55 +0000 [info]: #0 fluentd worker is now stopping worker=0
+2023-08-01 18:19:55 +0000 [info]: #0 shutting down fluentd worker worker=0
+2023-08-01 18:19:55 +0000 [info]: #0 shutting down input plugin type=:forward plugin_id="object:884"
+2023-08-01 18:19:55 +0000 [info]: #0 shutting down output plugin type=:stdout plugin_id="object:85c"
+2023-08-01 18:19:55 +0000 [info]: Worker 0 finished with status 0

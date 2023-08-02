@@ -63,6 +63,67 @@ Mostrar todas as interações do container
 
     sudo sysdig -pc container.name=wordpress
 
+## Wordpress
+
+Para subir o container:
+
+    sudo docker-compose up -d
+
+------------------------------------------------------
+
+### Meu wordpress:
+
+    Link            http://localhost:9000/wp-admin/
+    Site Title      TCC
+    Username        eu
+    Password        TCCAnderson.
+
+------------------------------------------------------
+
+Para remover as imagens que estão rodando:
+
+    sudo docker system prune && sudo docker rmi $(sudo docker images -q)
+    
+------------------------------------------------------
+
+Caso as imagens sejam removidas, sera necessario algumas configurações no container. 
+
+* Para colocar o plugin File Manager (pois ele é grande), siga os seguintes passos:
+
+1. Acesse o container Docker do WordPress:
+```
+sudo docker exec -it wordpress bash
+```
+2. Crie o arquivo `php.ini`:
+```
+touch /usr/local/etc/php/php.ini
+```
+3. Aumente o tamanho máximo de upload de arquivos:
+```
+echo "upload_max_filesize = 100M" > /usr/local/etc/php/php.ini
+```
+4. Reinicie o container do WordPress.
+
+* Para rodar scripts python:
+
+1. Acesse o container Docker do WordPress:
+```
+sudo docker exec -it wordpress bash
+```
+2. Edite o arquivo `/etc/apt/sources.list`:
+```
+sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+sed -i s/security.debian.org/archive.debian.org/g /etc/apt/sources.list
+```
+3. Atualize o sistema:
+```
+apt-get update
+```
+4. Instale o python:
+```
+apt-get install python3-pip
+```
+
 ## Plugins vulneravei para Wordpress
 
 Em ultimo caso:
@@ -160,67 +221,6 @@ Wordpress: 4.9.2
 
     Ataque:
     * https://www.exploit-db.com/exploits/49406
-
-## Wordpress
-
-Para subir o container:
-
-    sudo docker-compose up -d
-
-------------------------------------------------------
-
-### Meu wordpress:
-
-    Link            http://localhost:9000/wp-admin/
-    Site Title      TCC
-    Username        eu
-    Password        TCCAnderson.
-
-------------------------------------------------------
-
-Para remover as imagens que estão rodando:
-
-    sudo docker system prune && sudo docker rmi $(sudo docker images -q)
-    
-------------------------------------------------------
-
-Caso as imagens sejam removidas, sera necessario algumas configurações no container. 
-
-* Para colocar o plugin File Manager (pois ele é grande), siga os seguintes passos:
-
-1. Acesse o container Docker do WordPress:
-```
-sudo docker exec -it wordpress bash
-```
-2. Crie o arquivo `php.ini`:
-```
-touch /usr/local/etc/php/php.ini
-```
-3. Aumente o tamanho máximo de upload de arquivos:
-```
-echo "upload_max_filesize = 100M" > /usr/local/etc/php/php.ini
-```
-4. Reinicie o container do WordPress.
-
-* Para rodar scripts python:
-
-1. Acesse o container Docker do WordPress:
-```
-sudo docker exec -it wordpress bash
-```
-2. Edite o arquivo `/etc/apt/sources.list`:
-```
-sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
-sed -i s/security.debian.org/archive.debian.org/g /etc/apt/sources.list
-```
-3. Atualize o sistema:
-```
-apt-get update
-```
-4. Instale o python:
-```
-apt-get install python3-pip
-```
 
 ## Coleta de dados e treinamnto do modelo
 

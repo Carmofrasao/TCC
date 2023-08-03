@@ -150,15 +150,6 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/51224
     </br></br>
-* CVE-2020-12800 – O plugin Drag and Drop Multiple File Upload – Contact Form 7 (versão: < 1.3.3.3). Permite o upload de arquivos sem restrição, o que permite a execução de código PHP arbitrário;
-
-    Uso comum:
-    * https://www.youtube.com/watch?time_continue=16&v=eUQK7gsLevs
-    </br></br>
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/48520
-    </br></br>
 * Vulnerabilidade presente no plugin Simple File List (simple-file-list) (versão: < 4.2.3). Falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
 
     Uso comum:

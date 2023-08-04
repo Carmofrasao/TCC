@@ -161,6 +161,8 @@ Wordpress: 4.9.2
     </br></br>
 * Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17). Injeção de SQL com escalada de privilegio.
 
+    ### Não consegui usar...
+
     Uso comum:
     * https://easy-modal.com/getting-started/how-to-make-a-pop-up
     </br></br>
@@ -170,6 +172,8 @@ Wordpress: 4.9.2
     </br></br>
 * CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
 
+    ### Não consegui usar, precisa entender como usar BurpSuite...
+
     Uso comum:
     * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
     </br></br>
@@ -178,6 +182,8 @@ Wordpress: 4.9.2
     * https://www.exploit-db.com/exploits/51043
     </br></br>
 * CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). Injeção de SQL autenticada.
+
+    ### Não consegui usar, precisa entender como usar BurpSuite...
 
     Uso comum:
     * https://www.youtube.com/watch?v=9qW7cZfdxQ8

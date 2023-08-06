@@ -194,6 +194,8 @@ Wordpress: 4.9.2
     </br></br>
 *  Vulnerabilidade presente no plugin wpDiscuz (versão: 7.0.4). Upload de arquivo arbitrário, permitindo upload de arquivos PHP, e execução remota de código.
 
+    ### Não consegui usar...
+
     Uso comum:
     * https://www.youtube.com/watch?v=woPqPgvkkQ8
     </br></br>

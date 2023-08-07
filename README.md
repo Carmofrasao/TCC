@@ -159,16 +159,25 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/48979
     </br></br>
-* Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17). Injeção de SQL com escalada de privilegio.
+* Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). Injeção de código arbitrario.
+
+    Uso comum:
+    * https://www.youtube.com/watch?v=gGtehIjDG3E&t=80s
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/50246
+    </br></br>
+* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5). Injeção de código arbitrario.
 
     ### Não consegui usar...
 
     Uso comum:
-    * https://easy-modal.com/getting-started/how-to-make-a-pop-up
+    * https://br.wordpress.org/plugins/custom-global-variables/
     </br></br>
 
     Ataque:
-    * https://www.exploit-db.com/exploits/42431
+    * https://www.exploit-db.com/exploits/49406
     </br></br>
 * CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
 
@@ -203,23 +212,16 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/49401
     </br></br>
-* Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). Injeção de código arbitrario.
+* Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17). Injeção de SQL com escalada de privilegio.
+
+    ### Não consegui usar...
 
     Uso comum:
-    * https://www.youtube.com/watch?v=gGtehIjDG3E&t=80s
+    * https://easy-modal.com/getting-started/how-to-make-a-pop-up
     </br></br>
 
     Ataque:
-    * https://www.exploit-db.com/exploits/50246
-    </br></br>
-* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5). Injeção de código arbitrario.
-
-    Uso comum:
-    * https://br.wordpress.org/plugins/custom-global-variables/
-    </br></br>
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/49406
+    * https://www.exploit-db.com/exploits/42431
 
 ## Coleta de dados e treinamnto do modelo
 

@@ -177,6 +177,15 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/51042
     </br></br>
+* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
+
+    Uso comum:
+    * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/51043
+    </br></br>
 *  Vulnerabilidade presente no plugin wpDiscuz (versão: 7.0.4). Upload de arquivo arbitrário, permitindo upload de arquivos PHP, e execução remota de código.
 
     ### Não consegui usar...
@@ -209,17 +218,6 @@ Wordpress: 4.9.2
 
     Ataque:
     * https://www.exploit-db.com/exploits/49406
-    </br></br>
-* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
-
-    ### Não consegui usar...
-
-    Uso comum:
-    * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
-    </br></br>
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/51043
 
 ## Coleta de dados e treinamnto do modelo
 

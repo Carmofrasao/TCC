@@ -170,8 +170,6 @@ Wordpress: 4.9.2
     </br></br>
 * CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). Injeção de SQL autenticada.
 
-    ### Não consegui usar, precisa entender como usar BurpSuite...
-
     Uso comum:
     * https://www.youtube.com/watch?v=9qW7cZfdxQ8
     </br></br>

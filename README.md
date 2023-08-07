@@ -134,90 +134,53 @@ Wordpress: 4.9.2
 
 * CVE-2019-9978 - Plugin Social Warfare (Versão: < 3.5.3). Permite a execução de código arbitrário no alvo em uma funcionalidade que gerencia a importação de configurações;
 
-    Uso comum:
-    * https://www.youtube.com/watch?v=Ks2787CrqA8
-    </br></br>
-
     Ataque:
     * https://www.exploit-db.com/exploits/46794
     </br></br>
 * CVE-2020-25213 – O plugin File Manager (wp-file-manager) (versão: <= 6.9). Permite o upload e execução código PHP arbitrário;
-
-    Uso comum:
-    * https://www.youtube.com/watch?v=5-iZX2sUHuQ
-    </br></br>
 
     Ataque:
     * https://www.exploit-db.com/exploits/51224
     </br></br>
 * Vulnerabilidade presente no plugin Simple File List (simple-file-list) (versão: < 4.2.3). Falha em validar extensões de arquivos ao renomear, permitindo o upload e execução de arquivos PHP.
 
-    Uso comum:
-    * https://simplefilelist.com/pt/
-    </br></br>
-
     Ataque:
     * https://www.exploit-db.com/exploits/48979
     </br></br>
 * Vulnerabilidade presente no plugin Payments forms (versão: 2.4.6). Injeção de código arbitrario.
-
-    Uso comum:
-    * https://www.youtube.com/watch?v=gGtehIjDG3E&t=80s
-    </br></br>
 
     Ataque:
     * https://www.exploit-db.com/exploits/50246
     </br></br>
 * CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). Injeção de SQL autenticada.
 
-    Uso comum:
-    * https://www.youtube.com/watch?v=9qW7cZfdxQ8
-    </br></br>
-
     Ataque:
     * https://www.exploit-db.com/exploits/51042
     </br></br>
 * CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
 
-    Uso comum:
-    * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
-    </br></br>
-
     Ataque:
     * https://www.exploit-db.com/exploits/51043
     </br></br>
-*  Vulnerabilidade presente no plugin wpDiscuz (versão: 7.0.4). Upload de arquivo arbitrário, permitindo upload de arquivos PHP, e execução remota de código.
-
-    ### Não consegui usar...
-
-    Uso comum:
-    * https://www.youtube.com/watch?v=woPqPgvkkQ8
-    </br></br>
+*  Vulnerabilidade presente no plugin Survey & Poll (versão: 1.5.7.3). 'sss_params' SQL Injection.
 
     Ataque:
-    * https://www.exploit-db.com/exploits/49401
+    * https://www.exploit-db.com/exploits/45411
     </br></br>
-* Vulnerabilidade presente no plugin Easy Modal (versão: = 2.0.17). Injeção de SQL com escalada de privilegio.
-
-    ### Não consegui usar...
-
-    Uso comum:
-    * https://easy-modal.com/getting-started/how-to-make-a-pop-up
-    </br></br>
+* Vulnerabilidade presente no plugin Mail Masta (versão: 1.0). Local File Inclusion.
 
     Ataque:
-    * https://www.exploit-db.com/exploits/42431
+    * https://www.exploit-db.com/exploits/40290
     </br></br>
-* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5). Injeção de código arbitrario.
-
-    ### Não consegui usar...
-
-    Uso comum:
-    * https://br.wordpress.org/plugins/custom-global-variables/
-    </br></br>
+* Vulnerabilidade presente no plugin My Calendar (versão: 2.4.10). Multiple Vulnerabilities.
 
     Ataque:
-    * https://www.exploit-db.com/exploits/49406
+    * https://www.exploit-db.com/exploits/38648
+    </br></br>
+* Vulnerabilidade presente no plugin Really Simple Guest Post (versão: 1.0.6). Local File Inclusion.
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/37209
 
 ## Coleta de dados e treinamnto do modelo
 

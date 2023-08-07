@@ -212,6 +212,8 @@ Wordpress: 4.9.2
     </br></br>
 * CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
 
+    ### Não consegui usar...
+
     Uso comum:
     * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
     </br></br>

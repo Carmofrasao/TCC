@@ -168,28 +168,6 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/50246
     </br></br>
-* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5). Injeção de código arbitrario.
-
-    ### Não consegui usar...
-
-    Uso comum:
-    * https://br.wordpress.org/plugins/custom-global-variables/
-    </br></br>
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/49406
-    </br></br>
-* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
-
-    ### Não consegui usar, precisa entender como usar BurpSuite...
-
-    Uso comum:
-    * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
-    </br></br>
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/51043
-    </br></br>
 * CVE-2022-3142 – O plugin NEX-Forms (versão: < 7.9.7). Injeção de SQL autenticada.
 
     ### Não consegui usar, precisa entender como usar BurpSuite...
@@ -222,6 +200,26 @@ Wordpress: 4.9.2
 
     Ataque:
     * https://www.exploit-db.com/exploits/42431
+    </br></br>
+* Vulnerabilidade presente no plugin Custom Global Variables (versão: 1.0.5). Injeção de código arbitrario.
+
+    ### Não consegui usar...
+
+    Uso comum:
+    * https://br.wordpress.org/plugins/custom-global-variables/
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/49406
+    </br></br>
+* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
+
+    Uso comum:
+    * https://www.youtube.com/watch?v=pUlYisvBm8g&t=2s
+    </br></br>
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/51043
 
 ## Coleta de dados e treinamnto do modelo
 

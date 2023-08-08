@@ -164,10 +164,12 @@ Wordpress: 4.9.2
     </br></br>
 *  Vulnerabilidade presente no plugin Survey & Poll (versão: 1.5.7.3). Permite que um invasor injete comandos sql usando o valor de um parâmetro de cookie.
 
+    ### Não conseegui... (acho que nem da na verdade)
+
     Ataque:
     * https://www.exploit-db.com/exploits/45411
     </br></br>
-* Vulnerabilidade presente no plugin Mail Masta (versão: 1.0). Local File Inclusion.
+* Vulnerabilidade presente no plugin Mail Masta (versão: 1.0). Permite inclusão de arquivo, geralmente explorando um mecanismo de "inclusão dinâmica de arquivos" implementado no aplicativo de destino.
 
     Ataque:
     * https://www.exploit-db.com/exploits/40290

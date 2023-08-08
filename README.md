@@ -172,6 +172,11 @@ Wordpress: 4.9.2
 
     Ataque:
     * https://www.exploit-db.com/exploits/37253
+    </br></br>
+* Vulnerabilidade presente no plugin Simple:Press Forum. Permite inclusão de arquivo.
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/37682
 
 ## Coleta de dados e treinamnto do modelo
 

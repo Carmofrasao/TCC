@@ -167,24 +167,10 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/40290
     </br></br>
-* Vulnerabilidade presente no plugin My Calendar (versão: 2.4.10). Multiple Vulnerabilities.
-
-    ### Não conseegui... (parece q não faz nada)
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/38648
-    </br></br>
 * Vulnerabilidade presente no plugin Really Simple Guest Post (versão: 1.0.6). Local File Inclusion.
 
     Ataque:
     * https://www.exploit-db.com/exploits/37209
-    </br></br>
-*  Vulnerabilidade presente no plugin Survey & Poll (versão: 1.5.7.3). Permite que um invasor injete comandos sql usando o valor de um parâmetro de cookie.
-
-    ### Não conseegui... (acho que nem da na verdade)
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/45411
 
 ## Coleta de dados e treinamnto do modelo
 

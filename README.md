@@ -126,10 +126,6 @@ apt-get install python3-pip
 
 ## Plugins vulneravei para Wordpress
 
-Em ultimo caso:
-
-https://wpscan.com/plugins
-
 Wordpress: 4.9.2 
 
 * CVE-2019-9978 - Plugin Social Warfare (Versão: < 3.5.3). Permite a execução de código arbitrário no alvo em uma funcionalidade que gerencia a importação de configurações;

@@ -167,6 +167,11 @@ Wordpress: 4.9.2
 
     Ataque:
     * https://www.exploit-db.com/exploits/37209
+        </br></br>
+* CVE: 2015-5065 – O plugin Paypal Currency Converter Basic For WooCommerce - File Read (versão: < 1.4). Download remoto de arquivos.
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/37253
 
 ## Coleta de dados e treinamnto do modelo
 

@@ -162,7 +162,7 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/51043
     </br></br>
-*  Vulnerabilidade presente no plugin Survey & Poll (versão: 1.5.7.3). 'sss_params' SQL Injection.
+*  Vulnerabilidade presente no plugin Survey & Poll (versão: 1.5.7.3). Permite que um invasor injete comandos sql usando o valor de um parâmetro de cookie.
 
     Ataque:
     * https://www.exploit-db.com/exploits/45411

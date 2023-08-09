@@ -172,7 +172,12 @@ Wordpress: 4.9.2
 
     Ataque:
     * https://www.exploit-db.com/exploits/37253
+    </br></br>
+* Vulnerabilidade presente no plugin LeagueManager (versão: 3.9.11). SQL Injection .
 
+    Ataque:
+    * https://www.exploit-db.com/exploits/37182
+    
 ## Coleta de dados e treinamnto do modelo
 
 0. 

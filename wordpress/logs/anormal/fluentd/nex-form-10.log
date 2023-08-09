@@ -1,0 +1,32 @@
+fluentd -c /fluentd/etc/fluentd.conf
+2023-08-09 20:55:41 +0000 [info]: init supervisor logger path=nil rotate_age=nil rotate_size=nil
+2023-08-09 20:55:41 +0000 [info]: parsing config file is succeeded path="/fluentd/etc/fluentd.conf"
+2023-08-09 20:55:41 +0000 [info]: gem 'fluentd' version '1.16.2'
+2023-08-09 20:55:41 +0000 [info]: using configuration file: <ROOT>
+  <source>
+    @type forward
+    port 24224
+    bind "0.0.0.0"
+  </source>
+  <match 4d81cb26c662.**>
+    @type stdout
+  </match>
+</ROOT>
+2023-08-09 20:55:41 +0000 [info]: starting fluentd-1.16.2 pid=7 ruby="3.1.4"
+2023-08-09 20:55:41 +0000 [info]: spawn command to main:  cmdline=["/usr/local/bin/ruby", "-Eascii-8bit:ascii-8bit", "/usr/local/bundle/bin/fluentd", "-c", "/fluentd/etc/fluentd.conf", "--plugin", "/fluentd/plugins", "--under-supervisor"]
+2023-08-09 20:55:43 +0000 [info]: #0 init worker0 logger path=nil rotate_age=nil rotate_size=nil
+2023-08-09 20:55:43 +0000 [info]: adding match pattern="4d81cb26c662.**" type="stdout"
+2023-08-09 20:55:43 +0000 [info]: adding source type="forward"
+2023-08-09 20:55:43 +0000 [info]: #0 starting fluentd worker pid=16 ppid=7 worker=0
+2023-08-09 20:55:43 +0000 [info]: #0 listening port port=24224 bind="0.0.0.0"
+2023-08-09 20:55:43 +0000 [info]: #0 fluentd worker is now running worker=0
+2023-08-09 20:55:48.000000000 +0000 4d81cb26c662: {"source":"stdout","log":"127.0.0.1 - - [09/Aug/2023:20:55:48 +0000] \"OPTIONS * HTTP/1.0\" 200 126 \"-\" \"Apache/2.4.25 (Debian) PHP/7.2.1 (internal dummy connection)\"","container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress"}
+2023-08-09 20:55:58.000000000 +0000 4d81cb26c662: {"log":"172.18.0.1 - - [09/Aug/2023:20:55:58 +0000] \"GET /wp-admin/admin.php?page=nex-forms-dashboard&form_id=1 HTTP/1.1\" 302 450 \"http://localhost:9000/wp-admin/admin.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36\"","container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress","source":"stdout"}
+2023-08-09 20:56:01.000000000 +0000 4d81cb26c662: {"log":"172.18.0.1 - - [09/Aug/2023:20:56:01 +0000] \"GET /wp-login.php?redirect_to=http%3A%2F%2Flocalhost%3A9000%2Fwp-admin%2Fadmin.php%3Fpage%3Dnex-forms-dashboard%26form_id%3D1&reauth=1 HTTP/1.1\" 200 3468 \"http://localhost:9000/wp-admin/admin.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Safari/537.36\"","container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress","source":"stdout"}
+2023-08-09 20:56:15.000000000 +0000 4d81cb26c662: {"container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress","source":"stderr","log":"[Wed Aug 09 20:56:15.636761 2023] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down"}
+2023-08-09 20:56:20 +0000 [info]: Received graceful stop
+2023-08-09 20:56:21 +0000 [info]: #0 fluentd worker is now stopping worker=0
+2023-08-09 20:56:21 +0000 [info]: #0 shutting down fluentd worker worker=0
+2023-08-09 20:56:21 +0000 [info]: #0 shutting down input plugin type=:forward plugin_id="object:884"
+2023-08-09 20:56:21 +0000 [info]: #0 shutting down output plugin type=:stdout plugin_id="object:85c"
+2023-08-09 20:56:22 +0000 [info]: Worker 0 finished with status 0

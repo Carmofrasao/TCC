@@ -153,11 +153,6 @@ Wordpress: 4.9.2
     Ataque:
     * https://www.exploit-db.com/exploits/51042
     </br></br>
-* CVE-2022-3141 – O plugin Translate Multilingual sites (versão: < 2.3.3). Injeção de SQL autenticada.
-
-    Ataque:
-    * https://www.exploit-db.com/exploits/51043
-    </br></br>
 * Vulnerabilidade presente no plugin Mail Masta (versão: 1.0). Permite inclusão de arquivo, geralmente explorando um mecanismo de "inclusão dinâmica de arquivos" implementado no aplicativo de destino.
 
     Ataque:

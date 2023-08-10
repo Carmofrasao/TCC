@@ -83,3 +83,10 @@ fluentd -c /fluentd/etc/fluentd.conf
 2023-08-10 14:33:59.000000000 +0000 4d81cb26c662: {"container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [10/Aug/2023:14:33:58 +0000] \"POST /wp-admin/admin-ajax.php HTTP/1.1\" 200 491 \"http://localhost:9000/wp-admin/admin.php?page=social-warfare\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/116.0\""}
 2023-08-10 14:35:00.000000000 +0000 4d81cb26c662: {"container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [10/Aug/2023:14:34:59 +0000] \"POST /wp-admin/admin-ajax.php HTTP/1.1\" 200 491 \"http://localhost:9000/wp-admin/admin.php?page=social-warfare\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/116.0\""}
 2023-08-10 14:35:13.000000000 +0000 4d81cb26c662: {"container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress","source":"stdout","log":"172.18.0.1 - - [10/Aug/2023:14:35:13 +0000] \"POST /wp-admin/admin-ajax.php HTTP/1.1\" 200 440 \"http://localhost:9000/wp-admin/admin.php?page=social-warfare\" \"Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/116.0\""}
+2023-08-10 14:35:41.000000000 +0000 4d81cb26c662: {"log":"[Thu Aug 10 14:35:41.023729 2023] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down","container_id":"4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325a3cfb035b0a147f","container_name":"/wordpress","source":"stderr"}
+2023-08-10 14:35:46 +0000 [info]: Received graceful stop
+2023-08-10 14:35:47 +0000 [info]: #0 fluentd worker is now stopping worker=0
+2023-08-10 14:35:47 +0000 [info]: #0 shutting down fluentd worker worker=0
+2023-08-10 14:35:47 +0000 [info]: #0 shutting down input plugin type=:forward plugin_id="object:884"
+2023-08-10 14:35:47 +0000 [info]: #0 shutting down output plugin type=:stdout plugin_id="object:85c"
+2023-08-10 14:35:47 +0000 [info]: Worker 0 finished with status 0

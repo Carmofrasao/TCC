@@ -172,6 +172,11 @@ Wordpress: 4.9.2
 
     Ataque:
     * https://www.exploit-db.com/exploits/37182
+    </br></br>
+* Vulnerabilidade presente no plugin CodeArt Google MP3 Player. File Disclosure Download.
+
+    Ataque:
+    * https://www.exploit-db.com/exploits/35460
     
 ## Coleta de dados e treinamnto do modelo
 

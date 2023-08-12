@@ -76,7 +76,6 @@
 255111 18:52:16.945923324 3 wordpress (4d81cb26c662) apache2 (665773:74) > madvise 
 255112 18:52:16.945927831 3 wordpress (4d81cb26c662) apache2 (665773:74) < madvise 
 255113 18:52:16.945928959 3 wordpress (4d81cb26c662) apache2 (665773:74) > exit 
-255114 18:52:16.945934256 3 wordpress (4d81cb26c662) apache2 (665773:74) > procexit status=0 
 1623802 18:52:54.913394983 2 wordpress (4d81cb26c662) apache2 (665739:73) < accept fd=10(<4t>172.18.0.1:52352->172.18.0.3:80) tuple=172.18.0.1:52352->172.18.0.3:80 queuepct=0 queuelen=0 queuemax=511 
 1623825 18:52:54.913429814 2 wordpress (4d81cb26c662) apache2 (665739:73) > getsockname 
 1623828 18:52:54.913432420 2 wordpress (4d81cb26c662) apache2 (665739:73) < getsockname 
@@ -225,7 +224,6 @@
 1624233 18:52:54.915979588 2 wordpress (4d81cb26c662) apache2 (665739:73) > times 
 1624234 18:52:54.915982737 2 wordpress (4d81cb26c662) apache2 (665739:73) < times 
 1624241 18:52:54.916000352 2 wordpress (4d81cb26c662) apache2 (665739:73) > poll fds=10:41 timeout=5000 
-1624247 18:52:54.916010893 2 wordpress (4d81cb26c662) apache2 (665739:73) > switch next=0 pgft_maj=0 pgft_min=368 vm_size=383720 vm_rss=13684 vm_swap=0 
 1640286 18:52:54.978639554 2 wordpress (4d81cb26c662) apache2 (665739:73) < poll res=1 fds=10:41 
 1640289 18:52:54.978644815 2 wordpress (4d81cb26c662) apache2 (665739:73) > read fd=10(<4t>172.18.0.1:52352->172.18.0.3:80) size=8000 
 1640290 18:52:54.978649533 2 wordpress (4d81cb26c662) apache2 (665739:73) < read res=860 data=GET /favicon.ico HTTP/1.1..Host: localhost:9000..User-Agent: Mozilla/5.0 (Window 
@@ -338,7 +336,6 @@
 1640453 18:52:54.980397144 2 wordpress (4d81cb26c662) apache2 (665739:73) > times 
 1640454 18:52:54.980400579 2 wordpress (4d81cb26c662) apache2 (665739:73) < times 
 1640457 18:52:54.980412205 2 wordpress (4d81cb26c662) apache2 (665739:73) > poll fds=10:41 timeout=5000 
-1640462 18:52:54.980426925 2 wordpress (4d81cb26c662) apache2 (665739:73) > switch next=660484(IPC) pgft_maj=0 pgft_min=466 vm_size=383784 vm_rss=14260 vm_swap=0 
 1799512 18:52:58.310050057 2 wordpress (4d81cb26c662) apache2 (665739:73) < poll res=1 fds=10:41 
 1799520 18:52:58.310056061 2 wordpress (4d81cb26c662) apache2 (665739:73) > read fd=10(<4t>172.18.0.1:52352->172.18.0.3:80) size=8000 
 1799525 18:52:58.310061539 2 wordpress (4d81cb26c662) apache2 (665739:73) < read res=1096 data=GET /wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd 
@@ -421,7 +418,6 @@
 1799670 18:52:58.310807562 2 wordpress (4d81cb26c662) apache2 (665739:73) > times 
 1799671 18:52:58.310809934 2 wordpress (4d81cb26c662) apache2 (665739:73) < times 
 1799675 18:52:58.310821522 2 wordpress (4d81cb26c662) apache2 (665739:73) > poll fds=10:41 timeout=5000 
-1799681 18:52:58.310830536 2 wordpress (4d81cb26c662) apache2 (665739:73) > switch next=0 pgft_maj=0 pgft_min=471 vm_size=383724 vm_rss=14420 vm_swap=0 
 1809550 18:52:58.362588858 0 wordpress (4d81cb26c662) apache2 (665739:73) < poll res=1 fds=10:41 
 1809552 18:52:58.362593403 0 wordpress (4d81cb26c662) apache2 (665739:73) > read fd=10(<4t>172.18.0.1:52352->172.18.0.3:80) size=8000 
 1809553 18:52:58.362598623 0 wordpress (4d81cb26c662) apache2 (665739:73) < read res=860 data=GET /favicon.ico HTTP/1.1..Host: localhost:9000..User-Agent: Mozilla/5.0 (Window 
@@ -518,7 +514,6 @@
 1809784 18:52:58.363564350 0 wordpress (4d81cb26c662) apache2 (665739:73) > times 
 1809785 18:52:58.363566914 0 wordpress (4d81cb26c662) apache2 (665739:73) < times 
 1809786 18:52:58.363577508 0 wordpress (4d81cb26c662) apache2 (665739:73) > poll fds=10:41 timeout=5000 
-1809787 18:52:58.363586165 0 wordpress (4d81cb26c662) apache2 (665739:73) > switch next=0 pgft_maj=0 pgft_min=471 vm_size=383724 vm_rss=14420 vm_swap=0 
 1993120 18:53:03.365031940 2 wordpress (4d81cb26c662) apache2 (665739:73) < poll res=1 fds=10:41 
 1993123 18:53:03.365050701 2 wordpress (4d81cb26c662) apache2 (665739:73) > read fd=10(<4t>172.18.0.1:52352->172.18.0.3:80) size=8000 
 1993126 18:53:03.365067258 2 wordpress (4d81cb26c662) apache2 (665739:73) < read res=0 data= 
@@ -533,13 +528,9 @@
 1993152 18:53:03.365406111 2 wordpress (4d81cb26c662) apache2 (665739:73) > read fd=4(<p>pipe:[1659624]) size=1 
 1993153 18:53:03.365412859 2 wordpress (4d81cb26c662) apache2 (665739:73) < read res=-11(EAGAIN) data= 
 1993154 18:53:03.365434465 2 wordpress (4d81cb26c662) apache2 (665739:73) > accept flags=0 
-1993155 18:53:03.365473983 2 wordpress (4d81cb26c662) apache2 (665739:73) > switch next=0 pgft_maj=0 pgft_min=471 vm_size=383724 vm_rss=14420 vm_swap=0 
 2492934 18:53:24.583397135 3 wordpress (4d81cb26c662) apache2 (665739:73) < accept fd=-512(ERESTARTSYS) tuple=NULL queuepct=0 queuelen=0 queuemax=511 
-2492935 18:53:24.583406808 3 wordpress (4d81cb26c662) apache2 (665739:73) > signaldeliver spid=1(systemd) dpid=665739(apache2) sig=15(SIGTERM) 
 2492938 18:53:24.583424855 3 wordpress (4d81cb26c662) apache2 (665739:73) > close fd=9 
 2492939 18:53:24.583426425 3 wordpress (4d81cb26c662) apache2 (665739:73) < close res=0 
-2493104 18:53:24.585875605 3 wordpress (4d81cb26c662) apache2 (665739:73) > switch next=18572(gnome-terminal-) pgft_maj=0 pgft_min=776 vm_size=383724 vm_rss=14604 vm_swap=0 
-2493364 18:53:24.589802491 0 wordpress (4d81cb26c662) apache2 (665739:73) > switch next=655175 pgft_maj=0 pgft_min=776 vm_size=383724 vm_rss=14604 vm_swap=0 
 2493367 18:53:24.589976168 0 wordpress (4d81cb26c662) apache2 (665739:73) > munmap addr=7F2E9C05F000 length=134217728 
 2493369 18:53:24.590049483 0 wordpress (4d81cb26c662) apache2 (665739:73) < munmap res=0 vm_size=252652 vm_rss=13692 vm_swap=0 
 2493370 18:53:24.590053813 0 wordpress (4d81cb26c662) apache2 (665739:73) > close fd=8(<f>/tmp/.ZendSem.v7CnEJ (deleted)) 
@@ -595,4 +586,3 @@
 2493494 18:53:24.591900073 0 wordpress (4d81cb26c662) apache2 (665739:73) > futex addr=7F2EAD0EE8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 2493495 18:53:24.591901227 0 wordpress (4d81cb26c662) apache2 (665739:73) < futex res=0 
 2493497 18:53:24.592634023 0 wordpress (4d81cb26c662) apache2 (665739:73) > exit_group 
-2493508 18:53:24.593510781 0 wordpress (4d81cb26c662) apache2 (665739:73) > procexit status=0 

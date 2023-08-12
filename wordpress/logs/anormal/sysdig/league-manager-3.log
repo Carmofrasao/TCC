@@ -78,7 +78,6 @@
 795324 23:19:37.282769809 0 wordpress (4d81cb26c662) apache2 (867535:73) > madvise 
 795325 23:19:37.282776272 0 wordpress (4d81cb26c662) apache2 (867535:73) < madvise 
 795326 23:19:37.282778421 0 wordpress (4d81cb26c662) apache2 (867535:73) > exit 
-795327 23:19:37.282791323 0 wordpress (4d81cb26c662) apache2 (867535:73) > procexit status=0 
 846937 23:19:37.578594730 3 wordpress (4d81cb26c662) apache2 (867532:72) < accept fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) tuple=172.18.0.1:46444->172.18.0.3:80 queuepct=0 queuelen=1 queuemax=511 
 846953 23:19:37.578619907 3 wordpress (4d81cb26c662) apache2 (867532:72) > getsockname 
 846954 23:19:37.578621803 3 wordpress (4d81cb26c662) apache2 (867532:72) < getsockname 
@@ -92,23 +91,18 @@
 846994 23:19:37.578692511 3 wordpress (4d81cb26c662) apache2 (867532:72) < mmap res=7FC1A0C91000 vm_size=383152 vm_rss=8940 vm_swap=0 
 846996 23:19:37.578697049 3 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) size=8000 
 846997 23:19:37.578701406 3 wordpress (4d81cb26c662) apache2 (867532:72) < read res=804 data=GET /wp-includes/js/jquery/ui/position.min.js?ver=1.11.4 HTTP/1.1..Host: localho 
-847027 23:19:37.578776746 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=0 pgft_min=95 vm_size=383152 vm_rss=8940 vm_swap=0 
 847040 23:19:37.578803187 3 wordpress (4d81cb26c662) apache2 (867532:72) > stat 
 847050 23:19:37.578820449 3 wordpress (4d81cb26c662) apache2 (867532:72) < stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/position.min.js 
 847058 23:19:37.578835405 3 wordpress (4d81cb26c662) apache2 (867532:72) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 847060 23:19:37.578838778 3 wordpress (4d81cb26c662) apache2 (867532:72) < mmap res=7FC1A0C8F000 vm_size=383160 vm_rss=8940 vm_swap=0 
 847067 23:19:37.578846984 3 wordpress (4d81cb26c662) apache2 (867532:72) > open 
 847073 23:19:37.578854162 3 wordpress (4d81cb26c662) apache2 (867532:72) < open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
-847076 23:19:37.578866048 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=0 pgft_min=98 vm_size=383160 vm_rss=8940 vm_swap=0 
 847093 23:19:37.578883941 3 wordpress (4d81cb26c662) apache2 (867532:72) > open 
-847102 23:19:37.578899709 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=6004(dockerd) pgft_maj=0 pgft_min=98 vm_size=383160 vm_rss=8940 vm_swap=0 
 847143 23:19:37.578966667 3 wordpress (4d81cb26c662) apache2 (867532:72) < open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=34 
-847150 23:19:37.578973462 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=866441(docker-proxy) pgft_maj=0 pgft_min=98 vm_size=383160 vm_rss=8940 vm_swap=0 
 847589 23:19:37.580257120 3 wordpress (4d81cb26c662) apache2 (867532:72) > fstat fd=11(<f>/var/www/html/.htaccess) 
 847591 23:19:37.580263805 3 wordpress (4d81cb26c662) apache2 (867532:72) < fstat res=0 
 847592 23:19:37.580268864 3 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=11(<f>/var/www/html/.htaccess) size=4096 
 847599 23:19:37.580284504 3 wordpress (4d81cb26c662) apache2 (867532:72) < read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
-847604 23:19:37.580302396 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=0 pgft_min=99 vm_size=383160 vm_rss=8940 vm_swap=0 
 847612 23:19:37.580400402 3 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=11(<f>/var/www/html/.htaccess) size=4096 
 847613 23:19:37.580404413 3 wordpress (4d81cb26c662) apache2 (867532:72) < read res=0 data= 
 847614 23:19:37.580435263 3 wordpress (4d81cb26c662) apache2 (867532:72) > close fd=11(<f>/var/www/html/.htaccess) 
@@ -137,13 +131,9 @@
 847680 23:19:37.580659667 3 wordpress (4d81cb26c662) apache2 (867532:72) < brk res=557303F88000 vm_size=383340 vm_rss=9948 vm_swap=0 
 847682 23:19:37.580667887 3 wordpress (4d81cb26c662) apache2 (867532:72) > brk addr=557303FB8000 
 847683 23:19:37.580669286 3 wordpress (4d81cb26c662) apache2 (867532:72) < brk res=557303FB8000 vm_size=383532 vm_rss=9948 vm_swap=0 
-847784 23:19:37.581044030 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=6003(dockerd) pgft_maj=2 pgft_min=174 vm_size=383532 vm_rss=9948 vm_swap=0 
-848086 23:19:37.581852570 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=2 pgft_min=174 vm_size=383532 vm_rss=9948 vm_swap=0 
 848112 23:19:37.581929015 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC1A0C41000 length=6527 
 848117 23:19:37.581942473 3 wordpress (4d81cb26c662) apache2 (867532:72) < munmap res=0 vm_size=383524 vm_rss=10156 vm_swap=0 
-848147 23:19:37.582021552 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=6003(dockerd) pgft_maj=2 pgft_min=176 vm_size=383524 vm_rss=10156 vm_swap=0 
 848419 23:19:37.582773573 3 wordpress (4d81cb26c662) apache2 (867532:72) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-848421 23:19:37.582781490 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=2 pgft_min=176 vm_size=383524 vm_rss=10156 vm_swap=0 
 848425 23:19:37.582801508 3 wordpress (4d81cb26c662) apache2 (867532:72) < mmap res=7FC1A0C41000 vm_size=383532 vm_rss=10156 vm_swap=0 
 848426 23:19:37.582818659 3 wordpress (4d81cb26c662) apache2 (867532:72) > brk addr=557303F88000 
 848437 23:19:37.582843268 3 wordpress (4d81cb26c662) apache2 (867532:72) < brk res=557303F88000 vm_size=383340 vm_rss=10076 vm_swap=0 
@@ -154,12 +144,9 @@
 848464 23:19:37.582896346 3 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) size=8000 
 848465 23:19:37.582899995 3 wordpress (4d81cb26c662) apache2 (867532:72) < read res=-11(EAGAIN) data= 
 848469 23:19:37.582906107 3 wordpress (4d81cb26c662) apache2 (867532:72) > writev fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) size=2914 
-848488 23:19:37.582981837 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=867089(docker-proxy) pgft_maj=2 pgft_min=180 vm_size=383356 vm_rss=10076 vm_swap=0 
 848522 23:19:37.583063433 3 wordpress (4d81cb26c662) apache2 (867532:72) < writev res=2914 data=HTTP/1.1 200 OK..Date: Thu, 10 Aug 2023 02:19:37 GMT..Server: Apache/2.4.25 (Deb 
 848525 23:19:37.583099436 3 wordpress (4d81cb26c662) apache2 (867532:72) > write fd=7(<p>pipe:[2482996]) size=217 
 848526 23:19:37.583107907 3 wordpress (4d81cb26c662) apache2 (867532:72) < write res=217 data=172.18.0.1 - - [10/Aug/2023:02:19:37 +0000] "GET /wp-includes/js/jquery/ui/posit 
-848527 23:19:37.583110227 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=867119(containerd-shim) pgft_maj=2 pgft_min=182 vm_size=383356 vm_rss=10076 vm_swap=0 
-851145 23:19:37.588291479 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=2 pgft_min=182 vm_size=383356 vm_rss=10076 vm_swap=0 
 851162 23:19:37.588311799 3 wordpress (4d81cb26c662) apache2 (867532:72) > times 
 851165 23:19:37.588313844 3 wordpress (4d81cb26c662) apache2 (867532:72) < times 
 851167 23:19:37.588317342 3 wordpress (4d81cb26c662) apache2 (867532:72) > close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) 
@@ -206,16 +193,13 @@
 851588 23:19:37.589797764 3 wordpress (4d81cb26c662) apache2 (867532:72) < writev res=6645 data=HTTP/1.1 200 OK..Date: Thu, 10 Aug 2023 02:19:37 GMT..Server: Apache/2.4.25 (Deb 
 851591 23:19:37.589815254 3 wordpress (4d81cb26c662) apache2 (867532:72) > write fd=7(<p>pipe:[2482996]) size=216 
 851594 23:19:37.589824804 3 wordpress (4d81cb26c662) apache2 (867532:72) < write res=216 data=172.18.0.1 - - [10/Aug/2023:02:19:37 +0000] "GET /wp-includes/js/jquery/jquery.f 
-851595 23:19:37.589828430 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=867119(containerd-shim) pgft_maj=2 pgft_min=219 vm_size=383356 vm_rss=10152 vm_swap=0 
 852136 23:19:37.591347220 3 wordpress (4d81cb26c662) apache2 (867532:72) > times 
 852138 23:19:37.591349891 3 wordpress (4d81cb26c662) apache2 (867532:72) < times 
 852140 23:19:37.591353541 3 wordpress (4d81cb26c662) apache2 (867532:72) > close fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) 
 852141 23:19:37.591354711 3 wordpress (4d81cb26c662) apache2 (867532:72) < close res=0 
 852145 23:19:37.591367713 3 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) size=8000 
-852148 23:19:37.591377104 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=2 pgft_min=219 vm_size=383356 vm_rss=10152 vm_swap=0 
 852158 23:19:37.591395998 3 wordpress (4d81cb26c662) apache2 (867532:72) < read res=-11(EAGAIN) data= 
 852162 23:19:37.591409125 3 wordpress (4d81cb26c662) apache2 (867532:72) > poll fds=10:41 timeout=5000 
-852165 23:19:37.591416277 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=867479(apache2) pgft_maj=2 pgft_min=219 vm_size=383356 vm_rss=10152 vm_swap=0 
 856523 23:19:37.601182612 3 wordpress (4d81cb26c662) apache2 (867532:72) < poll res=1 fds=10:41 
 856532 23:19:37.601188264 3 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) size=8000 
 856538 23:19:37.601194212 3 wordpress (4d81cb26c662) apache2 (867532:72) < read res=996 data=GET /wp-content/plugins/invoicing/assets/js/payment-forms.js?ver=1691511913 HTTP 
@@ -253,8 +237,6 @@
 856750 23:19:37.601523471 3 wordpress (4d81cb26c662) apache2 (867532:72) < mmap res=7FC1A0C32000 vm_size=383392 vm_rss=10152 vm_swap=0 
 856751 23:19:37.601530128 3 wordpress (4d81cb26c662) apache2 (867532:72) > brk addr=557303FB8000 
 856754 23:19:37.601534689 3 wordpress (4d81cb26c662) apache2 (867532:72) < brk res=557303FB8000 vm_size=383584 vm_rss=10152 vm_swap=0 
-856868 23:19:37.602266467 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=6476(dockerd) pgft_maj=11 pgft_min=244 vm_size=383584 vm_rss=10152 vm_swap=0 
-858004 23:19:37.604615598 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=5971(dockerd) pgft_maj=11 pgft_min=244 vm_size=383584 vm_rss=10152 vm_swap=0 
 858849 23:19:37.605735316 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC1A0C32000 length=34064 
 858875 23:19:37.605756382 3 wordpress (4d81cb26c662) apache2 (867532:72) < munmap res=0 vm_size=383548 vm_rss=10284 vm_swap=0 
 859161 23:19:37.605998558 3 wordpress (4d81cb26c662) apache2 (867532:72) > brk addr=557303F88000 
@@ -270,7 +252,6 @@
 859394 23:19:37.606176703 3 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) size=8000 
 859398 23:19:37.606179601 3 wordpress (4d81cb26c662) apache2 (867532:72) < read res=-11(EAGAIN) data= 
 859411 23:19:37.606189107 3 wordpress (4d81cb26c662) apache2 (867532:72) > poll fds=10:41 timeout=5000 
-859427 23:19:37.606201442 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=865680(docker) pgft_maj=11 pgft_min=254 vm_size=383356 vm_rss=10192 vm_swap=0 
 931568 23:19:37.941914139 3 wordpress (4d81cb26c662) apache2 (867563:74) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=867563(apache2) pid=867563(apache2) ptid=867137(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7636 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=74 vpid=74 
 931572 23:19:37.941953618 3 wordpress (4d81cb26c662) apache2 (867563:74) > set_robust_list 
 931573 23:19:37.941954236 3 wordpress (4d81cb26c662) apache2 (867563:74) < set_robust_list 
@@ -457,7 +438,6 @@
 931798 23:19:37.942589619 3 wordpress (4d81cb26c662) apache2 (867563:74) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 931799 23:19:37.942591318 3 wordpress (4d81cb26c662) apache2 (867563:74) < mmap res=7FC1A0C95000 vm_size=383136 vm_rss=8980 vm_swap=0 
 931800 23:19:37.942598913 3 wordpress (4d81cb26c662) apache2 (867563:74) > accept flags=0 
-931801 23:19:37.942611205 3 wordpress (4d81cb26c662) apache2 (867563:74) > switch next=10072(IPDL) pgft_maj=0 pgft_min=81 vm_size=383136 vm_rss=8980 vm_swap=0 
 1074388 23:19:38.944249552 1 wordpress (4d81cb26c662) apache2 (867660:75) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=867660(apache2) pid=867660(apache2) ptid=867137(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7636 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=75 vpid=75 
 1074390 23:19:38.944286242 1 wordpress (4d81cb26c662) apache2 (867660:75) > set_robust_list 
 1074391 23:19:38.944287010 1 wordpress (4d81cb26c662) apache2 (867660:75) < set_robust_list 
@@ -644,7 +624,6 @@
 1074654 23:19:38.944991709 1 wordpress (4d81cb26c662) apache2 (867660:75) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 1074655 23:19:38.944994281 1 wordpress (4d81cb26c662) apache2 (867660:75) < mmap res=7FC1A0C95000 vm_size=383136 vm_rss=8980 vm_swap=0 
 1074656 23:19:38.945008770 1 wordpress (4d81cb26c662) apache2 (867660:75) > accept flags=0 
-1074657 23:19:38.945025031 1 wordpress (4d81cb26c662) apache2 (867660:75) > switch next=9789(IPC) pgft_maj=0 pgft_min=81 vm_size=383136 vm_rss=8980 vm_swap=0 
 1074736 23:19:38.945285742 3 wordpress (4d81cb26c662) apache2 (867661:76) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=867661(apache2) pid=867661(apache2) ptid=867137(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7636 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=76 vpid=76 
 1074742 23:19:38.945324792 3 wordpress (4d81cb26c662) apache2 (867661:76) > set_robust_list 
 1074743 23:19:38.945325367 3 wordpress (4d81cb26c662) apache2 (867661:76) < set_robust_list 
@@ -831,7 +810,6 @@
 1075005 23:19:38.945997760 3 wordpress (4d81cb26c662) apache2 (867661:76) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 1075006 23:19:38.945999750 3 wordpress (4d81cb26c662) apache2 (867661:76) < mmap res=7FC1A0C95000 vm_size=383136 vm_rss=8980 vm_swap=0 
 1075009 23:19:38.946008093 3 wordpress (4d81cb26c662) apache2 (867661:76) > accept flags=0 
-1075011 23:19:38.946021434 3 wordpress (4d81cb26c662) apache2 (867661:76) > switch next=11412(Softwar~cThread) pgft_maj=0 pgft_min=82 vm_size=383136 vm_rss=8980 vm_swap=0 
 1205119 23:19:39.948464936 0 wordpress (4d81cb26c662) apache2 (867683:77) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=867683(apache2) pid=867683(apache2) ptid=867137(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7636 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=77 vpid=77 
 1205121 23:19:39.948541080 0 wordpress (4d81cb26c662) apache2 (867683:77) > set_robust_list 
 1205122 23:19:39.948542370 0 wordpress (4d81cb26c662) apache2 (867683:77) < set_robust_list 
@@ -1018,7 +996,6 @@
 1205330 23:19:39.950013256 0 wordpress (4d81cb26c662) apache2 (867683:77) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 1205331 23:19:39.950017870 0 wordpress (4d81cb26c662) apache2 (867683:77) < mmap res=7FC1A0C95000 vm_size=383136 vm_rss=8980 vm_swap=0 
 1205332 23:19:39.950033300 0 wordpress (4d81cb26c662) apache2 (867683:77) > accept flags=0 
-1205333 23:19:39.950053402 0 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=82 vm_size=383136 vm_rss=8980 vm_swap=0 
 1205336 23:19:39.950691766 0 wordpress (4d81cb26c662) apache2 (867684:78) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=867684(apache2) pid=867684(apache2) ptid=867137(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7636 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=78 vpid=78 
 1205338 23:19:39.950767655 0 wordpress (4d81cb26c662) apache2 (867684:78) > set_robust_list 
 1205339 23:19:39.950768981 0 wordpress (4d81cb26c662) apache2 (867684:78) < set_robust_list 
@@ -1205,7 +1182,6 @@
 1205564 23:19:39.952102627 0 wordpress (4d81cb26c662) apache2 (867684:78) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 1205565 23:19:39.952109345 0 wordpress (4d81cb26c662) apache2 (867684:78) < mmap res=7FC1A0C95000 vm_size=383136 vm_rss=8980 vm_swap=0 
 1205567 23:19:39.952134463 0 wordpress (4d81cb26c662) apache2 (867684:78) > accept flags=0 
-1205569 23:19:39.952174434 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=81 vm_size=383136 vm_rss=8980 vm_swap=0 
 1205640 23:19:39.953016057 2 wordpress (4d81cb26c662) apache2 (867685:79) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=867685(apache2) pid=867685(apache2) ptid=867137(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7636 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=79 vpid=79 
 1205642 23:19:39.953102580 2 wordpress (4d81cb26c662) apache2 (867685:79) > set_robust_list 
 1205643 23:19:39.953104138 2 wordpress (4d81cb26c662) apache2 (867685:79) < set_robust_list 
@@ -1392,7 +1368,6 @@
 1205828 23:19:39.954627181 2 wordpress (4d81cb26c662) apache2 (867685:79) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 1205829 23:19:39.954630278 2 wordpress (4d81cb26c662) apache2 (867685:79) < mmap res=7FC1A0C95000 vm_size=383136 vm_rss=8980 vm_swap=0 
 1205830 23:19:39.954645133 2 wordpress (4d81cb26c662) apache2 (867685:79) > accept flags=0 
-1205831 23:19:39.954669381 2 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=0 pgft_maj=0 pgft_min=82 vm_size=383136 vm_rss=8980 vm_swap=0 
 1205834 23:19:39.955125312 2 wordpress (4d81cb26c662) apache2 (867686:80) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=867686(apache2) pid=867686(apache2) ptid=867137(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7636 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-4d81cb26c66231747b04db742cd4f8fff01cc68354eaa9325... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=80 vpid=80 
 1205843 23:19:39.955209238 2 wordpress (4d81cb26c662) apache2 (867686:80) > set_robust_list 
 1205844 23:19:39.955210751 2 wordpress (4d81cb26c662) apache2 (867686:80) < set_robust_list 
@@ -1579,12 +1554,10 @@
 1206190 23:19:39.957242723 2 wordpress (4d81cb26c662) apache2 (867686:80) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 1206191 23:19:39.957251988 2 wordpress (4d81cb26c662) apache2 (867686:80) < mmap res=7FC1A0C95000 vm_size=383136 vm_rss=8980 vm_swap=0 
 1206193 23:19:39.957271998 2 wordpress (4d81cb26c662) apache2 (867686:80) > accept flags=0 
-1206195 23:19:39.957305223 2 wordpress (4d81cb26c662) apache2 (867686:80) > switch next=0 pgft_maj=0 pgft_min=81 vm_size=383136 vm_rss=8980 vm_swap=0 
 1378045 23:19:42.607983443 0 wordpress (4d81cb26c662) apache2 (867532:72) < poll res=0 fds= 
 1378047 23:19:42.608009659 0 wordpress (4d81cb26c662) apache2 (867532:72) > shutdown fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) how=1(SHUT_WR) 
 1378049 23:19:42.608058292 0 wordpress (4d81cb26c662) apache2 (867532:72) < shutdown res=0 
 1378053 23:19:42.608065750 0 wordpress (4d81cb26c662) apache2 (867532:72) > poll fds=10:41 timeout=2000 
-1378054 23:19:42.608080757 0 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=0 pgft_maj=11 pgft_min=254 vm_size=383356 vm_rss=10192 vm_swap=0 
 1378127 23:19:42.608579391 1 wordpress (4d81cb26c662) apache2 (867532:72) < poll res=1 fds=10:421 
 1378130 23:19:42.608590575 1 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=10(<4t>172.18.0.1:46444->172.18.0.3:80) size=512 
 1378131 23:19:42.608599595 1 wordpress (4d81cb26c662) apache2 (867532:72) < read res=0 data= 
@@ -1593,7 +1566,6 @@
 1378144 23:19:42.608629521 1 wordpress (4d81cb26c662) apache2 (867532:72) > read fd=4(<p>pipe:[2485261]) size=1 
 1378145 23:19:42.608633442 1 wordpress (4d81cb26c662) apache2 (867532:72) < read res=-11(EAGAIN) data= 
 1378150 23:19:42.608650219 1 wordpress (4d81cb26c662) apache2 (867532:72) > accept flags=0 
-1378164 23:19:42.608684476 1 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=867088(docker-proxy) pgft_maj=11 pgft_min=254 vm_size=383356 vm_rss=10192 vm_swap=0 
 1398045 23:19:42.958664260 3 wordpress (4d81cb26c662) apache2 (867563:74) < accept fd=10(<4t>127.0.0.1:46608->127.0.0.1:80) tuple=127.0.0.1:46608->127.0.0.1:80 queuepct=0 queuelen=0 queuemax=511 
 1398050 23:19:42.958746907 3 wordpress (4d81cb26c662) apache2 (867563:74) > getsockname 
 1398051 23:19:42.958754034 3 wordpress (4d81cb26c662) apache2 (867563:74) < getsockname 
@@ -1668,10 +1640,6 @@
 1399256 23:19:42.977075568 3 wordpress (4d81cb26c662) apache2 (867563:74) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 1399257 23:19:42.977078865 3 wordpress (4d81cb26c662) apache2 (867563:74) < futex res=0 
 1399350 23:19:42.980724439 3 wordpress (4d81cb26c662) apache2 (867563:74) > exit_group 
-1399357 23:19:42.980863864 3 wordpress (4d81cb26c662) apache2 (867563:74) > switch next=12524(AudioIP~ver) pgft_maj=8 pgft_min=879 vm_size=0 vm_rss=0 vm_swap=0 
-1399401 23:19:42.981311634 3 wordpress (4d81cb26c662) apache2 (867563:74) > switch next=12524(AudioIP~ver) pgft_maj=8 pgft_min=879 vm_size=0 vm_rss=0 vm_swap=0 
-1399653 23:19:42.983526373 3 wordpress (4d81cb26c662) apache2 (867563:74) > switch next=732695(TaskCon~ller) pgft_maj=8 pgft_min=879 vm_size=0 vm_rss=0 vm_swap=0 
-1399725 23:19:42.984975383 3 wordpress (4d81cb26c662) apache2 (867563:74) > procexit status=0 
 1448265 23:19:43.960310789 2 wordpress (4d81cb26c662) apache2 (867660:75) < accept fd=10(<4t>127.0.0.1:46612->127.0.0.1:80) tuple=127.0.0.1:46612->127.0.0.1:80 queuepct=0 queuelen=0 queuemax=511 
 1448277 23:19:43.960386950 2 wordpress (4d81cb26c662) apache2 (867660:75) > getsockname 
 1448278 23:19:43.960393633 2 wordpress (4d81cb26c662) apache2 (867660:75) < getsockname 
@@ -1703,8 +1671,6 @@
 1448455 23:19:43.961629116 2 wordpress (4d81cb26c662) apache2 (867660:75) < read res=1 data=! 
 1448456 23:19:43.961646410 2 wordpress (4d81cb26c662) apache2 (867660:75) > close fd=9 
 1448457 23:19:43.961648360 2 wordpress (4d81cb26c662) apache2 (867660:75) < close res=0 
-1448677 23:19:43.963364660 2 wordpress (4d81cb26c662) apache2 (867660:75) > switch next=6005(dockerd) pgft_maj=0 pgft_min=178 vm_size=383168 vm_rss=10652 vm_swap=0 
-1449246 23:19:43.967933732 3 wordpress (4d81cb26c662) apache2 (867660:75) > switch next=836593 pgft_maj=0 pgft_min=331 vm_size=383168 vm_rss=11508 vm_swap=0 
 1449544 23:19:43.972013462 3 wordpress (4d81cb26c662) apache2 (867660:75) > munmap addr=7FC18985F000 length=134217728 
 1449555 23:19:43.972225314 3 wordpress (4d81cb26c662) apache2 (867660:75) < munmap res=0 vm_size=252096 vm_rss=11296 vm_swap=0 
 1449565 23:19:43.972266972 3 wordpress (4d81cb26c662) apache2 (867660:75) > close fd=8(<f>/tmp/.ZendSem.6x49Y0 (deleted)) 
@@ -1721,7 +1687,6 @@
 1450146 23:19:43.978931349 3 wordpress (4d81cb26c662) apache2 (867660:75) < munmap res=0 vm_size=240188 vm_rss=12756 vm_swap=0 
 1450219 23:19:43.980411808 3 wordpress (4d81cb26c662) apache2 (867660:75) > munmap addr=7FC1A0C43000 length=299008 
 1450222 23:19:43.980492470 3 wordpress (4d81cb26c662) apache2 (867660:75) < munmap res=0 vm_size=239896 vm_rss=12568 vm_swap=0 
-1450225 23:19:43.980563690 3 wordpress (4d81cb26c662) apache2 (867660:75) > switch next=19243(ThreadPoolForeg) pgft_maj=0 pgft_min=668 vm_size=239896 vm_rss=12568 vm_swap=0 
 1450238 23:19:43.980782731 3 wordpress (4d81cb26c662) apache2 (867660:75) > munmap addr=7FC192400000 length=2097152 
 1450276 23:19:43.981006706 3 wordpress (4d81cb26c662) apache2 (867660:75) < munmap res=0 vm_size=237848 vm_rss=10520 vm_swap=0 
 1450285 23:19:43.981057300 3 wordpress (4d81cb26c662) apache2 (867660:75) > munmap addr=7FC1A0CB1000 length=323584 
@@ -1749,8 +1714,6 @@
 1450421 23:19:43.982077846 3 wordpress (4d81cb26c662) apache2 (867660:75) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 1450422 23:19:43.982081289 3 wordpress (4d81cb26c662) apache2 (867660:75) < futex res=0 
 1450521 23:19:43.985417909 3 wordpress (4d81cb26c662) apache2 (867660:75) > exit_group 
-1450659 23:19:43.987892052 3 wordpress (4d81cb26c662) apache2 (867660:75) > switch next=836593 pgft_maj=0 pgft_min=883 vm_size=0 vm_rss=0 vm_swap=0 
-1450815 23:19:43.990185813 3 wordpress (4d81cb26c662) apache2 (867660:75) > procexit status=0 
 1500387 23:19:44.961857124 2 wordpress (4d81cb26c662) apache2 (867661:76) < accept fd=10(<4t>127.0.0.1:46622->127.0.0.1:80) tuple=127.0.0.1:46622->127.0.0.1:80 queuepct=0 queuelen=0 queuemax=511 
 1500394 23:19:44.961953221 2 wordpress (4d81cb26c662) apache2 (867661:76) > getsockname 
 1500395 23:19:44.961958881 2 wordpress (4d81cb26c662) apache2 (867661:76) < getsockname 
@@ -1794,7 +1757,6 @@
 1501382 23:19:44.973089798 2 wordpress (4d81cb26c662) apache2 (867661:76) < munmap res=0 vm_size=245192 vm_rss=11400 vm_swap=0 
 1501383 23:19:44.973096985 2 wordpress (4d81cb26c662) apache2 (867661:76) > munmap addr=7FC191A83000 length=2531352 
 1501384 23:19:44.973132699 2 wordpress (4d81cb26c662) apache2 (867661:76) < munmap res=0 vm_size=242716 vm_rss=11372 vm_swap=0 
-1501464 23:19:44.975780102 2 wordpress (4d81cb26c662) apache2 (867661:76) > switch next=741502(MediaDe~hine) pgft_maj=0 pgft_min=649 vm_size=242716 vm_rss=12816 vm_swap=0 
 1501696 23:19:44.977903704 0 wordpress (4d81cb26c662) apache2 (867661:76) > munmap addr=7FC192188000 length=2584984 
 1501708 23:19:44.978049067 0 wordpress (4d81cb26c662) apache2 (867661:76) < munmap res=0 vm_size=240188 vm_rss=12760 vm_swap=0 
 1501882 23:19:44.979728076 0 wordpress (4d81cb26c662) apache2 (867661:76) > munmap addr=7FC1A0C43000 length=299008 
@@ -1825,9 +1787,7 @@
 1501973 23:19:44.980387031 0 wordpress (4d81cb26c662) apache2 (867661:76) < close res=0 
 1501992 23:19:44.981162799 0 wordpress (4d81cb26c662) apache2 (867661:76) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 1501993 23:19:44.981166892 0 wordpress (4d81cb26c662) apache2 (867661:76) < futex res=0 
-1502032 23:19:44.981552720 0 wordpress (4d81cb26c662) apache2 (867661:76) > switch next=733202(AudioIP~allback) pgft_maj=0 pgft_min=727 vm_size=237468 vm_rss=10484 vm_swap=0 
 1502320 23:19:44.984909196 0 wordpress (4d81cb26c662) apache2 (867661:76) > exit_group 
-1502635 23:19:44.988630961 0 wordpress (4d81cb26c662) apache2 (867661:76) > procexit status=0 
 2119806 23:19:51.344376553 0 wordpress (4d81cb26c662) apache2 (867683:77) < accept fd=10(<4t>172.18.0.1:40278->172.18.0.3:80) tuple=172.18.0.1:40278->172.18.0.3:80 queuepct=0 queuelen=0 queuemax=511 
 2119812 23:19:51.344402197 0 wordpress (4d81cb26c662) apache2 (867683:77) > getsockname 
 2119813 23:19:51.344404005 0 wordpress (4d81cb26c662) apache2 (867683:77) < getsockname 
@@ -2060,14 +2020,12 @@
 2120087 23:19:51.347365030 0 wordpress (4d81cb26c662) apache2 (867683:77) > sendmmsg 
 2120088 23:19:51.347406469 0 wordpress (4d81cb26c662) apache2 (867683:77) < sendmmsg 
 2120090 23:19:51.347407750 0 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:41 timeout=5000 
-2120092 23:19:51.347416506 0 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=532 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120140 23:19:51.347562325 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120142 23:19:51.347565792 1 wordpress (4d81cb26c662) apache2 (867683:77) > ioctl fd=11(<4u>127.0.0.1:55966->127.0.0.11:53) request=541B argument=7FFC9CB94048 
 2120143 23:19:51.347567789 1 wordpress (4d81cb26c662) apache2 (867683:77) < ioctl res=0 
 2120144 23:19:51.347569326 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4u>127.0.0.1:55966->127.0.0.11:53) size=2048 
 2120146 23:19:51.347572844 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=20 data=.]...........db..... tuple=127.0.0.11:53->127.0.0.1:55966 
 2120147 23:19:51.347578708 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:41 timeout=4999 
-2120149 23:19:51.347583532 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=532 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120163 23:19:51.347607438 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120166 23:19:51.347609787 1 wordpress (4d81cb26c662) apache2 (867683:77) > ioctl fd=11(<4u>127.0.0.1:55966->127.0.0.11:53) request=541B argument=7FFC9CB95A9C 
 2120168 23:19:51.347611048 1 wordpress (4d81cb26c662) apache2 (867683:77) < ioctl res=0 
@@ -2094,7 +2052,6 @@
 2120198 23:19:51.347776385 1 wordpress (4d81cb26c662) apache2 (867683:77) > setsockopt 
 2120199 23:19:51.347778133 1 wordpress (4d81cb26c662) apache2 (867683:77) < setsockopt res=0 fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) level=1(SOL_SOCKET) optname=9(SO_KEEPALIVE) val=1 optlen=4 
 2120201 23:19:51.347804497 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120202 23:19:51.347814663 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=537 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120236 23:19:51.348094968 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120237 23:19:51.348097586 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=4 
 2120238 23:19:51.348100095 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=4 data=J... tuple=NULL 
@@ -2105,7 +2062,6 @@
 2120248 23:19:51.348128068 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=112 tuple=NULL 
 2120252 23:19:51.348160445 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=112 data=l...................................wordpress.......`...k......JX...mysql_native 
 2120254 23:19:51.348163506 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120257 23:19:51.348167452 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=538 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120261 23:19:51.348210640 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120262 23:19:51.348212613 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=4 
 2120263 23:19:51.348214203 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=4 data=.... tuple=NULL 
@@ -2116,7 +2072,6 @@
 2120273 23:19:51.348383493 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=22 tuple=NULL 
 2120277 23:19:51.348405351 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=22 data=.....SET NAMES utf8mb4 
 2120281 23:19:51.348409509 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120283 23:19:51.348414045 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=545 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120289 23:19:51.348475835 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120290 23:19:51.348477876 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=71 
 2120291 23:19:51.348479843 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=11 data=........... tuple=NULL 
@@ -2127,14 +2082,12 @@
 2120300 23:19:51.348845647 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=57 tuple=NULL 
 2120303 23:19:51.348871230 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=57 data=5....SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_520_ci' 
 2120305 23:19:51.348875285 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120307 23:19:51.348880064 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=559 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120341 23:19:51.348960597 0 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120344 23:19:51.348964145 0 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=60 
 2120346 23:19:51.348966745 0 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=11 data=........... tuple=NULL 
 2120354 23:19:51.348981752 0 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=30 tuple=NULL 
 2120361 23:19:51.349002699 0 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=30 data=.....SELECT @@SESSION.sql_mode 
 2120366 23:19:51.349008311 0 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120373 23:19:51.349013975 0 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=559 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120413 23:19:51.349126556 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120415 23:19:51.349129609 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=49 
 2120421 23:19:51.349132208 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=49 data=.....(....def....@@SESSION.sql_mode....$......... tuple=NULL 
@@ -2149,14 +2102,12 @@
 2120445 23:19:51.349202950 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=113 tuple=NULL 
 2120452 23:19:51.349226250 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=113 data=m....SET SESSION sql_mode='NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CR 
 2120455 23:19:51.349229966 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120458 23:19:51.349234590 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=561 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120466 23:19:51.349305470 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120467 23:19:51.349307547 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=134 
 2120468 23:19:51.349309501 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=11 data=........... tuple=NULL 
 2120474 23:19:51.349327065 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=14 tuple=NULL 
 2120480 23:19:51.349344481 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=14 data=.....wordpress 
 2120483 23:19:51.349348193 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120490 23:19:51.349354762 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=561 vm_size=385668 vm_rss=16960 vm_swap=0 
 2120530 23:19:51.349439294 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120532 23:19:51.349442233 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=123 
 2120536 23:19:51.349444754 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=11 data=........... tuple=NULL 
@@ -2177,7 +2128,6 @@
 2120557 23:19:51.350835752 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=76 tuple=NULL 
 2120558 23:19:51.350866208 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=76 data=H....SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes' 
 2120560 23:19:51.350871389 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120563 23:19:51.350877963 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=678 vm_size=385668 vm_rss=17308 vm_swap=0 
 2120573 23:19:51.351342084 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120574 23:19:51.351345920 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=112 
 2120576 23:19:51.351382892 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=112 data=.....I....def.wordpress.wp_options.wp_options.option_name.option_name.........@. tuple=NULL 
@@ -2222,7 +2172,6 @@
 2120615 23:19:51.351533743 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=9278 
 2120616 23:19:51.351536642 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=3817 data= wp:categories /--></div><!-- /wp:group -->";}s:12:"_multiwidget";i:1;}...g.side tuple=NULL 
 2120618 23:19:51.351557053 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120619 23:19:51.351563126 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=688 vm_size=385668 vm_rss=17308 vm_swap=0 
 2120621 23:19:51.351579925 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120622 23:19:51.351581873 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=23868 
 2120623 23:19:51.351584925 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=14480 data=037;a:1:{s:26:"upgrader_scheduled_cleanup";a:1:{s:32:"dd07e4db14c3f5ea561b3bed74 tuple=NULL 
@@ -2243,7 +2192,6 @@
 2120645 23:19:51.351896377 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=56636 
 2120646 23:19:51.351899638 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=8288 data=ient to expire in 1 hours.";i:10;s:23:"FFMPEG is not supported";}}s:16:"2023-08- tuple=NULL 
 2120647 23:19:51.351912941 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2120648 23:19:51.351917906 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=732 vm_size=385668 vm_rss=17688 vm_swap=0 
 2120662 23:19:51.352282547 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2120663 23:19:51.352285553 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=48348 
 2120664 23:19:51.352293612 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=42958 data=22:"Version 4.1.3 (DB 4.1)";i:2;s:23:"ABSPATH: /var/www/html/";i:3;s:16:"Running tuple=NULL 
@@ -2870,21 +2818,18 @@
 2121386 23:19:51.358863260 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=88 tuple=NULL 
 2121387 23:19:51.358912925 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=88 data=T....SELECT option_value FROM wp_options WHERE option_name = 'uninstall_plugins' 
 2121389 23:19:51.358929757 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2121391 23:19:51.358938327 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=1070 vm_size=387968 vm_rss=26192 vm_swap=0 
 2121399 23:19:51.359148466 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2121400 23:19:51.359151687 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=5390 
 2121401 23:19:51.359154449 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=308 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2121406 23:19:51.359303322 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=112 tuple=NULL 
 2121407 23:19:51.359334247 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=112 data=l....SELECT `title`, `id`, `seasons`, `settings` FROM wp_leaguemanager_leagues W 
 2121409 23:19:51.359339212 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2121412 23:19:51.359344501 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=1073 vm_size=387968 vm_rss=26192 vm_swap=0 
 2121463 23:19:51.360371833 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2121464 23:19:51.360376612 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=5082 
 2121465 23:19:51.360380046 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=557 data=.....Y....def.wordpress.wp_leaguemanager_leagues.wp_leaguemanager_leagues.title. tuple=NULL 
 2121470 23:19:51.360532863 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=112 tuple=NULL 
 2121471 23:19:51.360561400 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=112 data=l....SELECT `title`, `id`, `seasons`, `settings` FROM wp_leaguemanager_leagues W 
 2121473 23:19:51.360566756 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2121476 23:19:51.360573141 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=1073 vm_size=387968 vm_rss=26192 vm_swap=0 
 2121483 23:19:51.360736030 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2121484 23:19:51.360739171 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=4525 
 2121486 23:19:51.360741865 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=557 data=.....Y....def.wordpress.wp_leaguemanager_leagues.wp_leaguemanager_leagues.title. tuple=NULL 
@@ -2925,7 +2870,6 @@
 2121524 23:19:51.361094825 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=91 tuple=NULL 
 2121525 23:19:51.361119855 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=91 data=W....SELECT option_value FROM wp_options WHERE option_name = 'masta-active-check 
 2121527 23:19:51.361124858 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2121530 23:19:51.361130872 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=1080 vm_size=387968 vm_rss=26192 vm_swap=0 
 2121537 23:19:51.361258928 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2121538 23:19:51.361262049 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=3968 
 2121540 23:19:51.361264678 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -3010,7 +2954,6 @@
 2121632 23:19:51.362688702 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=94 tuple=NULL 
 2121633 23:19:51.362726119 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=94 data=Z....SELECT option_value FROM wp_options WHERE option_name = 'dismiss_nf_notice_ 
 2121635 23:19:51.362731350 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2121637 23:19:51.362740656 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=1106 vm_size=387968 vm_rss=26192 vm_swap=0 
 2121645 23:19:51.362910095 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2121646 23:19:51.362912630 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=3866 
 2121647 23:19:51.362915101 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -3264,7 +3207,6 @@
 2122297 23:19:51.366378671 3 wordpress (4d81cb26c662) apache2 (867683:77) < read res=0 data= 
 2122298 23:19:51.366386920 3 wordpress (4d81cb26c662) apache2 (867683:77) > close fd=13(<f>/var/www/html/wp-content/languages/admin-pt_BR.mo) 
 2122299 23:19:51.366388051 3 wordpress (4d81cb26c662) apache2 (867683:77) < close res=0 
-2125034 23:19:51.382272910 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=741586(MediaSu~isor) pgft_maj=0 pgft_min=1146 vm_size=390080 vm_rss=31028 vm_swap=0 
 2125063 23:19:51.382345435 3 wordpress (4d81cb26c662) apache2 (867683:77) > mmap addr=0 length=2097152 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 2125069 23:19:51.382354726 3 wordpress (4d81cb26c662) apache2 (867683:77) < mmap res=7FC189000000 vm_size=392128 vm_rss=31028 vm_swap=0 
 2125070 23:19:51.382356760 3 wordpress (4d81cb26c662) apache2 (867683:77) > madvise 
@@ -3322,7 +3264,6 @@
 2125533 23:19:51.384290692 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=38 tuple=NULL 
 2125540 23:19:51.384359264 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=38 data="....SHOW TABLES LIKE 'wp_wpfm_backup' 
 2125542 23:19:51.384366621 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2125546 23:19:51.384375703 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=1170 vm_size=392128 vm_rss=33076 vm_swap=0 
 2131874 23:19:51.434958557 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2131875 23:19:51.434963354 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=3764 
 2131876 23:19:51.434966472 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=154 data=.....l....def.information_schema.TABLE_NAMES.TABLE_NAMES$Tables_in_wordpress (wp tuple=NULL 
@@ -4153,7 +4094,6 @@
 2133772 23:19:51.452533839 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=305 tuple=NULL 
 2133780 23:19:51.452590092 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=305 data=-....SELECT   wp_posts.ID FROM wp_posts  INNER JOIN wp_postmeta ON ( wp_posts.ID 
 2133783 23:19:51.452596521 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2133785 23:19:51.452607861 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=0 pgft_min=1329 vm_size=394468 vm_rss=41776 vm_swap=0 
 2133864 23:19:51.453068170 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2133865 23:19:51.453072406 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=3610 
 2133868 23:19:51.453076277 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=78 data=.....3....def.wordpress.wp_posts.wp_posts.ID.ID.?......!...................... tuple=NULL 
@@ -4414,7 +4354,6 @@
 2137509 23:19:51.473375203 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=117 tuple=NULL 
 2137517 23:19:51.473427859 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=117 data=q....SELECT * FROM wp_masta_campaign WHERE campaign_type = 2 AND STATUS = 5 AND  
 2137520 23:19:51.473436699 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2137524 23:19:51.473444932 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=7 pgft_min=1384 vm_size=396516 vm_rss=46476 vm_swap=0 
 2137689 23:19:51.474375236 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2137691 23:19:51.474380715 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=3532 
 2137695 23:19:51.474384675 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=1318 data=.....O....def.wordpress.wp_masta_campaign.wp_masta_campaign.camp_id.camp_id.?... tuple=NULL 
@@ -4449,14 +4388,12 @@
 2137885 23:19:51.475688160 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=35 tuple=NULL 
 2137894 23:19:51.475729801 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=35 data=.....SELECT * from wp_masta_support 
 2137897 23:19:51.475737999 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2137901 23:19:51.475745851 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=14 pgft_min=1390 vm_size=396516 vm_rss=47592 vm_swap=0 
 2138078 23:19:51.476486628 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2138080 23:19:51.476491297 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=2214 
 2138081 23:19:51.476494535 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=895 data=.....C....def.wordpress.wp_masta_support.wp_masta_support.id.id.?.......B...K... tuple=NULL 
 2138098 23:19:51.476593116 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=74 tuple=NULL 
 2138106 23:19:51.476619496 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=74 data=F....SELECT * from  wp_masta_responder where responder_type=2 and status=5 
 2138108 23:19:51.476624383 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2138112 23:19:51.476630587 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=14 pgft_min=1390 vm_size=396516 vm_rss=47592 vm_swap=0 
 2138224 23:19:51.477188146 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2138226 23:19:51.477192579 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=1319 
 2138227 23:19:51.477195430 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=1319 data=.....[....def.wordpress.wp_masta_responder.wp_masta_responder.responder_id.respo tuple=NULL 
@@ -4467,7 +4404,6 @@
 2138258 23:19:51.477353954 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=69 tuple=NULL 
 2138261 23:19:51.477376705 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=69 data=A......                DELETE FROM wp_masta_support where id in().... 
 2138264 23:19:51.477381792 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2138268 23:19:51.477387684 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=14 pgft_min=1390 vm_size=396516 vm_rss=47592 vm_swap=0 
 2138309 23:19:51.477631517 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2138310 23:19:51.477635172 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=56494 
 2138312 23:19:51.477637968 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=160 data=.....(.#42000You have an error in your SQL syntax; check the manual that corresp tuple=NULL 
@@ -4500,14 +4436,12 @@
 2138843 23:19:51.480248292 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=114 tuple=NULL 
 2138850 23:19:51.480297462 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=114 data=n....SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout 
 2138852 23:19:51.480306004 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2138856 23:19:51.480314024 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=16 pgft_min=1398 vm_size=396516 vm_rss=47592 vm_swap=0 
 2138894 23:19:51.480538355 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2138895 23:19:51.480541935 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=56334 
 2138896 23:19:51.480544809 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=117 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2138919 23:19:51.480663999 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=106 tuple=NULL 
 2138922 23:19:51.480688717 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=106 data=f....SELECT option_value FROM wp_options WHERE option_name = '_transient_eeSFL-1 
 2138925 23:19:51.480693923 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2138929 23:19:51.480699700 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=16 pgft_min=1398 vm_size=396516 vm_rss=47592 vm_swap=0 
 2138953 23:19:51.480839810 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2138955 23:19:51.480843576 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=56217 
 2138957 23:19:51.480846518 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=143 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -4568,20 +4502,17 @@
 2139236 23:19:51.482135807 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=95 tuple=NULL 
 2139250 23:19:51.482191031 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=95 data=[....SELECT option_value FROM wp_options WHERE option_name = 'wp-font-awesome-se 
 2139254 23:19:51.482196830 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2139257 23:19:51.482204155 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=867466(mysqld) pgft_maj=16 pgft_min=1398 vm_size=396516 vm_rss=47592 vm_swap=0 
 2139386 23:19:51.482470680 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2139389 23:19:51.482473773 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=56074 
 2139394 23:19:51.482477187 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2139439 23:19:51.482685842 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=90 tuple=NULL 
 2139446 23:19:51.482714254 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=90 data=V....SELECT option_value FROM wp_options WHERE option_name = 'ayecode-ui-setting 
 2139449 23:19:51.482719849 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2139453 23:19:51.482728299 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=16 pgft_min=1398 vm_size=396516 vm_rss=47592 vm_swap=0 
 2139493 23:19:51.482920672 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2139496 23:19:51.482924241 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=55972 
 2139497 23:19:51.482926829 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2139666 23:19:51.484177362 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=471 tuple=NULL 
 2139675 23:19:51.484238340 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=471 data=.....SELECT SQL_CALC_FOUND_ROWS  wp_posts.ID FROM wp_posts  WHERE 1=1  AND wp_po 
-2139676 23:19:51.484242667 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=867466(mysqld) pgft_maj=16 pgft_min=1400 vm_size=396516 vm_rss=47592 vm_swap=0 
 2139857 23:19:51.485009807 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
 2139858 23:19:51.485013963 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2139860 23:19:51.485015829 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=55870 
@@ -4589,33 +4520,27 @@
 2139886 23:19:51.485172974 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=24 tuple=NULL 
 2139891 23:19:51.485247483 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=24 data=.....SELECT FOUND_ROWS() 
 2139892 23:19:51.485254691 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2139896 23:19:51.485265305 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=16 pgft_min=1400 vm_size=396516 vm_rss=47592 vm_swap=0 
 2139918 23:19:51.485396478 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2139920 23:19:51.485402196 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=55779 
 2139921 23:19:51.485405750 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=67 data=....."....def....FOUND_ROWS()..?.........................2......... tuple=NULL 
 2139938 23:19:51.485534053 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=55 tuple=NULL 
 2139947 23:19:51.485571311 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=55 data=3....SELECT wp_posts.* FROM wp_posts WHERE ID IN (56,1) 
 2139949 23:19:51.485577013 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2139951 23:19:51.485597902 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=16 pgft_min=1400 vm_size=396516 vm_rss=47592 vm_swap=0 
 2139994 23:19:51.485995602 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2139996 23:19:51.486006789 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=55712 
 2139997 23:19:51.486016494 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=2304 data=.....3....def.wordpress.wp_posts.wp_posts.ID.ID.?......#B...E....def.wordpress.w tuple=NULL 
 2140049 23:19:51.486512931 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=310 tuple=NULL 
 2140058 23:19:51.486576069 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=310 data=2....SELECT  t.*, tt.*, tr.object_id FROM wp_terms AS t  INNER JOIN wp_term_taxo 
 2140061 23:19:51.486586139 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2140063 23:19:51.486596040 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=16 pgft_min=1402 vm_size=396516 vm_rss=47592 vm_swap=0 
 2140177 23:19:51.487483826 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2140179 23:19:51.487490371 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=53408 
 2140180 23:19:51.487495700 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=862 data=.....6....def.wordpress.t.wp_terms.term_id.term_id.?......!....0....def.wordpres tuple=NULL 
-2140220 23:19:51.487878974 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=14 pgft_maj=16 pgft_min=1403 vm_size=396516 vm_rss=47592 vm_swap=0 
 2140249 23:19:51.488003874 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=103 tuple=NULL 
 2140267 23:19:51.488085075 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=103 data=c....SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1,5 
-2140270 23:19:51.488088722 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=867466(mysqld) pgft_maj=16 pgft_min=1403 vm_size=396516 vm_rss=47592 vm_swap=0 
 2140341 23:19:51.488823383 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
 2140342 23:19:51.488827470 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2140344 23:19:51.488830369 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=52546 
 2140345 23:19:51.488834768 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=752 data=.....C....def.wordpress.wp_postmeta.wp_postmeta.post_id.post_id.?......)@...E... tuple=NULL 
-2140420 23:19:51.489450038 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=18572(gnome-terminal-) pgft_maj=16 pgft_min=1405 vm_size=396516 vm_rss=47592 vm_swap=0 
 2141000 23:19:51.493045434 3 wordpress (4d81cb26c662) apache2 (867683:77) > stat 
 2141006 23:19:51.493061302 3 wordpress (4d81cb26c662) apache2 (867683:77) < stat res=0 path=/var/www/html/wp-includes/template-loader.php 
 2141232 23:19:51.494091915 3 wordpress (4d81cb26c662) apache2 (867683:77) > access mode=0(F_OK) 
@@ -4638,14 +4563,12 @@
 2141256 23:19:51.494215713 3 wordpress (4d81cb26c662) apache2 (867683:77) < stat res=0 path=/var/www/html/wp-content/themes/twentyseventeen/header.php 
 2141373 23:19:51.495073111 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=82 tuple=NULL 
 2141385 23:19:51.495150213 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=82 data=N....SELECT option_value FROM wp_options WHERE option_name = 'aui_options' LIMIT 
-2141387 23:19:51.495154431 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=867466(mysqld) pgft_maj=17 pgft_min=1416 vm_size=396516 vm_rss=47592 vm_swap=0 
 2141454 23:19:51.495466842 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
 2141456 23:19:51.495469759 3 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2141457 23:19:51.495471947 3 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=51794 
 2141458 23:19:51.495475132 3 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2141508 23:19:51.495805236 3 wordpress (4d81cb26c662) apache2 (867683:77) > mmap addr=0 length=65536 prot=7(PROT_READ|PROT_WRITE|PROT_EXEC) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 2141513 23:19:51.495813994 3 wordpress (4d81cb26c662) apache2 (867683:77) < mmap res=7FC1A0C01000 vm_size=396580 vm_rss=47592 vm_swap=0 
-2141532 23:19:51.495866283 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=14 pgft_maj=17 pgft_min=1420 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142144 23:19:51.499345040 3 wordpress (4d81cb26c662) apache2 (867683:77) > access mode=0(F_OK) 
 2142145 23:19:51.499366055 3 wordpress (4d81cb26c662) apache2 (867683:77) < access res=0 name=/var/www/html/wp-content/themes/twentyseventeen/assets/css/ie8.css 
 2142146 23:19:51.499394367 3 wordpress (4d81cb26c662) apache2 (867683:77) > access mode=0(F_OK) 
@@ -4661,21 +4584,18 @@
 2142162 23:19:51.499775276 3 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=122 tuple=NULL 
 2142166 23:19:51.499834334 3 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=122 data=v....SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout 
 2142168 23:19:51.499841411 3 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2142170 23:19:51.499853333 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=17 pgft_min=1427 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142217 23:19:51.500204664 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2142218 23:19:51.500208982 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=51692 
 2142219 23:19:51.500211830 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=117 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2142242 23:19:51.500391309 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=114 tuple=NULL 
 2142244 23:19:51.500433598 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=114 data=n....SELECT option_value FROM wp_options WHERE option_name = '_transient_wp-font 
 2142246 23:19:51.500438691 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2142248 23:19:51.500446264 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=17 pgft_min=1427 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142273 23:19:51.500753377 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2142276 23:19:51.500757225 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=51575 
 2142278 23:19:51.500759986 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=112 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2142280 23:19:51.501739302 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=91 tuple=NULL 
 2142281 23:19:51.501781590 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=91 data=W....SELECT option_value FROM wp_options WHERE option_name = 'can_compress_scrip 
 2142282 23:19:51.501786761 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2142285 23:19:51.501794896 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=17 pgft_min=1430 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142297 23:19:51.502049015 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2142298 23:19:51.502053153 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=51463 
 2142299 23:19:51.502056212 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=108 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -4703,7 +4623,6 @@
 2142364 23:19:51.502861631 1 wordpress (4d81cb26c662) apache2 (867683:77) < lstat res=0 path=/var/www/html/wp-content/plugins/invoicing/templates 
 2142366 23:19:51.502867775 1 wordpress (4d81cb26c662) apache2 (867683:77) > stat 
 2142368 23:19:51.502872600 1 wordpress (4d81cb26c662) apache2 (867683:77) < stat res=0 path=/var/www/html/wp-content/plugins/invoicing/templates/frontend-head.php 
-2142374 23:19:51.502922880 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=132 pgft_maj=17 pgft_min=1431 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142496 23:19:51.503970611 1 wordpress (4d81cb26c662) apache2 (867683:77) > access mode=0(F_OK) 
 2142497 23:19:51.503980777 1 wordpress (4d81cb26c662) apache2 (867683:77) < access res=0 name=/var/www/html/wp-content/themes/twentyseventeen/template-parts/header/header-image.php 
 2142498 23:19:51.504001482 1 wordpress (4d81cb26c662) apache2 (867683:77) > lstat 
@@ -4723,15 +4642,12 @@
 2142524 23:19:51.504685592 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=42 tuple=NULL 
 2142525 23:19:51.504739995 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=42 data=&....SELECT * FROM wp_users WHERE ID = '1' 
 2142527 23:19:51.504746792 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2142530 23:19:51.504756338 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=17 pgft_min=1432 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142551 23:19:51.505200351 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2142552 23:19:51.505204797 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=51355 
 2142553 23:19:51.505207925 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=870 data=.....3....def.wordpress.wp_users.wp_users.ID.ID.?......#B...C....def.wordpress.w tuple=NULL 
-2142554 23:19:51.505289067 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=6142(W#04-wlp3s0) pgft_maj=17 pgft_min=1432 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142558 23:19:51.505391351 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=101 tuple=NULL 
 2142559 23:19:51.505434793 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=101 data=a....SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN (1)  
 2142560 23:19:51.505439347 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=11:431 timeout=86400000 
-2142562 23:19:51.505445033 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=17 pgft_min=1432 vm_size=396580 vm_rss=47592 vm_swap=0 
 2142579 23:19:51.505884212 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=11:41 
 2142580 23:19:51.505888215 1 wordpress (4d81cb26c662) apache2 (867683:77) > recvfrom fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=50485 
 2142581 23:19:51.505892127 1 wordpress (4d81cb26c662) apache2 (867683:77) < recvfrom res=3104 data=.....C....def.wordpress.wp_usermeta.wp_usermeta.user_id.user_id.?......)@...E... tuple=NULL 
@@ -4801,17 +4717,14 @@
 2143048 23:19:51.512688798 1 wordpress (4d81cb26c662) apache2 (867683:77) < brk res=55730400D000 vm_size=396860 vm_rss=48752 vm_swap=0 
 2143049 23:19:51.512696719 1 wordpress (4d81cb26c662) apache2 (867683:77) > brk addr=55730404D000 
 2143050 23:19:51.512697438 1 wordpress (4d81cb26c662) apache2 (867683:77) < brk res=55730404D000 vm_size=397116 vm_rss=48752 vm_swap=0 
-2143360 23:19:51.515865298 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=858335 pgft_maj=17 pgft_min=1539 vm_size=397116 vm_rss=49084 vm_swap=0 
 2143576 23:19:51.519220414 1 wordpress (4d81cb26c662) apache2 (867683:77) > setitimer 
 2143578 23:19:51.519223509 1 wordpress (4d81cb26c662) apache2 (867683:77) < setitimer 
 2143584 23:19:51.519264070 1 wordpress (4d81cb26c662) apache2 (867683:77) > close fd=12(<d>/var/www/html/wp-content/plugins/leaguemanager/sports) 
 2143585 23:19:51.519266310 1 wordpress (4d81cb26c662) apache2 (867683:77) < close res=0 
 2143608 23:19:51.519487531 1 wordpress (4d81cb26c662) apache2 (867683:77) > sendto fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) size=5 tuple=NULL 
 2143624 23:19:51.519597525 1 wordpress (4d81cb26c662) apache2 (867683:77) < sendto res=5 data=..... 
-2143625 23:19:51.519601993 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=867466(mysqld) pgft_maj=17 pgft_min=1543 vm_size=397116 vm_rss=49084 vm_swap=0 
 2143661 23:19:51.519834165 1 wordpress (4d81cb26c662) apache2 (867683:77) > close fd=11(<4t>172.18.0.3:40464->172.18.0.2:3306) 
 2143662 23:19:51.519836633 1 wordpress (4d81cb26c662) apache2 (867683:77) < close res=0 
-2143668 23:19:51.519927181 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=22 pgft_maj=17 pgft_min=1543 vm_size=397116 vm_rss=49084 vm_swap=0 
 2143682 23:19:51.520139993 1 wordpress (4d81cb26c662) apache2 (867683:77) > fcntl fd=8(<f>/tmp/.ZendSem.6x49Y0 (deleted)) cmd=8(F_SETLK) 
 2143683 23:19:51.520147990 1 wordpress (4d81cb26c662) apache2 (867683:77) < fcntl res=0(<f>/dev/null) 
 2143686 23:19:51.520174853 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC189200000 length=2097152 
@@ -4837,7 +4750,6 @@
 2143843 23:19:51.520949156 1 wordpress (4d81cb26c662) apache2 (867683:77) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 2143845 23:19:51.520950891 1 wordpress (4d81cb26c662) apache2 (867683:77) < mmap res=7FC1A0BD3000 vm_size=390764 vm_rss=43032 vm_swap=0 
 2143847 23:19:51.520959715 1 wordpress (4d81cb26c662) apache2 (867683:77) > writev fd=10(<4t>172.18.0.1:40278->172.18.0.3:80) size=26831 
-2143860 23:19:51.521069990 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=867092(docker-proxy) pgft_maj=17 pgft_min=1558 vm_size=390764 vm_rss=43032 vm_swap=0 
 2143893 23:19:51.521166256 1 wordpress (4d81cb26c662) apache2 (867683:77) < writev res=26831 data=HTTP/1.1 200 OK..Date: Thu, 10 Aug 2023 02:19:51 GMT..Server: Apache/2.4.25 (Deb 
 2143899 23:19:51.521196548 1 wordpress (4d81cb26c662) apache2 (867683:77) > write fd=7(<p>pipe:[2482996]) size=181 
 2143904 23:19:51.521209740 1 wordpress (4d81cb26c662) apache2 (867683:77) < write res=181 data=172.18.0.1 - - [10/Aug/2023:02:19:51 +0000] "GET /?season=1&league_id=1&match_da 
@@ -4845,9 +4757,7 @@
 2143908 23:19:51.521214605 1 wordpress (4d81cb26c662) apache2 (867683:77) < times 
 2143912 23:19:51.521228887 1 wordpress (4d81cb26c662) apache2 (867683:77) > shutdown fd=10(<4t>172.18.0.1:40278->172.18.0.3:80) how=1(SHUT_WR) 
 2143921 23:19:51.521257025 1 wordpress (4d81cb26c662) apache2 (867683:77) < shutdown res=0 
-2143924 23:19:51.521259778 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=867092(docker-proxy) pgft_maj=17 pgft_min=1558 vm_size=390764 vm_rss=43032 vm_swap=0 
 2143951 23:19:51.521333097 1 wordpress (4d81cb26c662) apache2 (867683:77) > poll fds=10:41 timeout=2000 
-2143953 23:19:51.521341451 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=17 pgft_min=1558 vm_size=390764 vm_rss=43032 vm_swap=0 
 2144328 23:19:51.523385671 1 wordpress (4d81cb26c662) apache2 (867683:77) < poll res=1 fds=10:421 
 2144330 23:19:51.523391345 1 wordpress (4d81cb26c662) apache2 (867683:77) > read fd=10(<4t>172.18.0.1:40278->172.18.0.3:80) size=512 
 2144334 23:19:51.523395628 1 wordpress (4d81cb26c662) apache2 (867683:77) < read res=0 data= 
@@ -4856,7 +4766,6 @@
 2144340 23:19:51.523410905 1 wordpress (4d81cb26c662) apache2 (867683:77) > read fd=4(<p>pipe:[2485261]) size=1 
 2144341 23:19:51.523413204 1 wordpress (4d81cb26c662) apache2 (867683:77) < read res=-11(EAGAIN) data= 
 2144343 23:19:51.523422415 1 wordpress (4d81cb26c662) apache2 (867683:77) > accept flags=0 
-2144344 23:19:51.523434871 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=0 pgft_maj=17 pgft_min=1558 vm_size=390764 vm_rss=43032 vm_swap=0 
 2761437 23:19:59.786902727 0 wordpress (4d81cb26c662) apache2 (867684:78) < accept fd=10(<4t>172.18.0.1:40280->172.18.0.3:80) tuple=172.18.0.1:40280->172.18.0.3:80 queuepct=0 queuelen=0 queuemax=511 
 2761445 23:19:59.786942469 0 wordpress (4d81cb26c662) apache2 (867684:78) > getsockname 
 2761447 23:19:59.786946310 0 wordpress (4d81cb26c662) apache2 (867684:78) < getsockname 
@@ -5089,14 +4998,12 @@
 2762001 23:19:59.793075784 0 wordpress (4d81cb26c662) apache2 (867684:78) > sendmmsg 
 2762002 23:19:59.793134248 0 wordpress (4d81cb26c662) apache2 (867684:78) < sendmmsg 
 2762003 23:19:59.793136732 0 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:41 timeout=5000 
-2762007 23:19:59.793146813 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=539 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762069 23:19:59.793385464 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762070 23:19:59.793390226 1 wordpress (4d81cb26c662) apache2 (867684:78) > ioctl fd=11(<4u>127.0.0.1:57537->127.0.0.11:53) request=541B argument=7FFC9CB94048 
 2762071 23:19:59.793392758 1 wordpress (4d81cb26c662) apache2 (867684:78) < ioctl res=0 
 2762072 23:19:59.793394613 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4u>127.0.0.1:57537->127.0.0.11:53) size=2048 
 2762073 23:19:59.793399571 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=38 data=.y...........db......db........X...... tuple=127.0.0.11:53->127.0.0.1:57537 
 2762075 23:19:59.793406562 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:41 timeout=4999 
-2762076 23:19:59.793413442 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=539 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762082 23:19:59.793430836 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762087 23:19:59.793433958 1 wordpress (4d81cb26c662) apache2 (867684:78) > ioctl fd=11(<4u>127.0.0.1:57537->127.0.0.11:53) request=541B argument=7FFC9CB95A9C 
 2762088 23:19:59.793435372 1 wordpress (4d81cb26c662) apache2 (867684:78) < ioctl res=0 
@@ -5123,7 +5030,6 @@
 2762129 23:19:59.793693135 1 wordpress (4d81cb26c662) apache2 (867684:78) > setsockopt 
 2762131 23:19:59.793695971 1 wordpress (4d81cb26c662) apache2 (867684:78) < setsockopt res=0 fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) level=1(SOL_SOCKET) optname=9(SO_KEEPALIVE) val=1 optlen=4 
 2762136 23:19:59.793735662 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762137 23:19:59.793742140 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=544 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762152 23:19:59.793931840 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762153 23:19:59.793935131 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=4 
 2762154 23:19:59.793938424 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=4 data=J... tuple=NULL 
@@ -5134,7 +5040,6 @@
 2762164 23:19:59.793969513 1 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=112 tuple=NULL 
 2762165 23:19:59.794015794 1 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=112 data=l...................................wordpress............Pa.X..b..j.mysql_native 
 2762166 23:19:59.794020184 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762167 23:19:59.794025299 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=544 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762177 23:19:59.794148045 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762178 23:19:59.794150970 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=4 
 2762179 23:19:59.794153424 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=4 data=.... tuple=NULL 
@@ -5145,7 +5050,6 @@
 2762188 23:19:59.794380601 1 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=22 tuple=NULL 
 2762189 23:19:59.794413156 1 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=22 data=.....SET NAMES utf8mb4 
 2762190 23:19:59.794419283 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762191 23:19:59.794425126 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=551 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762201 23:19:59.794585087 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762202 23:19:59.794588214 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=71 
 2762203 23:19:59.794591241 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=11 data=........... tuple=NULL 
@@ -5156,14 +5060,12 @@
 2762232 23:19:59.795171257 1 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=57 tuple=NULL 
 2762237 23:19:59.795208785 1 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=57 data=5....SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_520_ci' 
 2762239 23:19:59.795215035 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762242 23:19:59.795222219 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=560 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762279 23:19:59.795384961 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762282 23:19:59.795391071 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=60 
 2762284 23:19:59.795395764 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=11 data=........... tuple=NULL 
 2762288 23:19:59.795415968 1 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=30 tuple=NULL 
 2762297 23:19:59.795461743 1 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=30 data=.....SELECT @@SESSION.sql_mode 
 2762298 23:19:59.795470280 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762299 23:19:59.795476366 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=560 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762325 23:19:59.795676015 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762326 23:19:59.795680033 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=49 
 2762327 23:19:59.795683152 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=49 data=.....(....def....@@SESSION.sql_mode....$......... tuple=NULL 
@@ -5178,14 +5080,12 @@
 2762336 23:19:59.795764641 1 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=113 tuple=NULL 
 2762337 23:19:59.795798792 1 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=113 data=m....SET SESSION sql_mode='NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CR 
 2762340 23:19:59.795803762 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762343 23:19:59.795810139 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=561 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762352 23:19:59.795922670 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762354 23:19:59.795926797 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=134 
 2762357 23:19:59.795930519 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=11 data=........... tuple=NULL 
 2762359 23:19:59.795963494 1 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=14 tuple=NULL 
 2762360 23:19:59.795998918 1 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=14 data=.....wordpress 
 2762363 23:19:59.796003931 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762367 23:19:59.796010991 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=561 vm_size=385668 vm_rss=16968 vm_swap=0 
 2762376 23:19:59.796075206 1 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762378 23:19:59.796078698 1 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=123 
 2762380 23:19:59.796081760 1 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=11 data=........... tuple=NULL 
@@ -5206,7 +5106,6 @@
 2762500 23:19:59.798322416 1 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=76 tuple=NULL 
 2762501 23:19:59.798366170 1 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=76 data=H....SELECT option_name, option_value FROM wp_options WHERE autoload = 'yes' 
 2762502 23:19:59.798373236 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762503 23:19:59.798382205 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=678 vm_size=385668 vm_rss=17576 vm_swap=0 
 2762660 23:19:59.799459547 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762662 23:19:59.799465687 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=112 
 2762665 23:19:59.799539289 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=112 data=.....I....def.wordpress.wp_options.wp_options.option_name.option_name.........@. tuple=NULL 
@@ -5249,7 +5148,6 @@
 2762705 23:19:59.799811270 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2762706 23:19:59.799813238 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762707 23:19:59.799815277 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=9278 
-2762710 23:19:59.799879862 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=34 pgft_maj=0 pgft_min=685 vm_size=385668 vm_rss=17576 vm_swap=0 
 2762714 23:19:59.799898600 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=9278 data= wp:categories /--></div><!-- /wp:group -->";}s:12:"_multiwidget";i:1;}...g.side tuple=NULL 
 2762716 23:19:59.799939084 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2762717 23:19:59.799941309 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
@@ -5268,12 +5166,9 @@
 2762744 23:19:59.800465863 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=56636 
 2762745 23:19:59.800476332 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=19149 data=:"On";s:3:"off";s:3:"Off";}}s:13:"last_migrated";a:2:{s:4:"type";s:4:"none";s:6: tuple=NULL 
 2762746 23:19:59.800583029 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2762748 23:19:59.800592555 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=753 vm_size=385668 vm_rss=17696 vm_swap=0 
 2762821 23:19:59.800974011 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2762823 23:19:59.800979488 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=37487 
 2762826 23:19:59.800986259 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=7640 data=anslatePress->General tab and Save Settings.";s:9:"date_time";s:19:"2023-08-09 2 tuple=NULL 
-2762961 23:19:59.801863363 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=9789(IPC) pgft_maj=0 pgft_min=812 vm_size=385668 vm_rss=17712 vm_swap=0 
-2763030 23:19:59.802179562 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=9789(IPC) pgft_maj=0 pgft_min=822 vm_size=385668 vm_rss=17712 vm_swap=0 
 2763117 23:19:59.802850329 3 wordpress (4d81cb26c662) apache2 (867684:78) > lstat 
 2763120 23:19:59.802867223 3 wordpress (4d81cb26c662) apache2 (867684:78) < lstat res=0 path=/var/www/html/wp-includes/class-wp-walker.php 
 2763122 23:19:59.802879842 3 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
@@ -5732,7 +5627,6 @@
 2763974 23:19:59.807125176 3 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=-2(ENOENT) path=/var/www/html/wp-content/mu-plugins 
 2764034 23:19:59.807372699 3 wordpress (4d81cb26c662) apache2 (867684:78) > lstat 
 2764035 23:19:59.807385860 3 wordpress (4d81cb26c662) apache2 (867684:78) < lstat res=0 path=/var/www/html/wp-includes/vars.php 
-2764039 23:19:59.807397365 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=132 pgft_maj=0 pgft_min=1032 vm_size=387968 vm_rss=24840 vm_swap=0 
 2764043 23:19:59.807432776 3 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
 2764045 23:19:59.807441813 3 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-includes/vars.php 
 2764254 23:19:59.808911665 3 wordpress (4d81cb26c662) apache2 (867684:78) > access mode=0(F_OK) 
@@ -5898,14 +5792,12 @@
 2764672 23:19:59.810941398 3 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=88 tuple=NULL 
 2764680 23:19:59.811001553 3 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=88 data=T....SELECT option_value FROM wp_options WHERE option_name = 'uninstall_plugins' 
 2764682 23:19:59.811008902 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2764685 23:19:59.811021258 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1066 vm_size=387968 vm_rss=24840 vm_swap=0 
 2764722 23:19:59.811288617 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2764724 23:19:59.811292982 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=29847 
 2764725 23:19:59.811296469 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=308 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2764751 23:19:59.811484403 3 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=249 tuple=NULL 
 2764756 23:19:59.811516422 3 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=249 data=.....SELECT `title`, `id`, `seasons`, `settings` FROM wp_leaguemanager_leagues W 
 2764758 23:19:59.811523160 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2764761 23:19:59.811530623 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1069 vm_size=387968 vm_rss=24840 vm_swap=0 
 2765232 23:19:59.814830488 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2765233 23:19:59.814836701 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=29539 
 2765234 23:19:59.814840611 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=64 data=<......#42000FUNCTION wordpress.JSON_STORAGE_FREE does not exist tuple=NULL 
@@ -5921,12 +5813,10 @@
 2765294 23:19:59.815160148 3 wordpress (4d81cb26c662) apache2 (867684:78) < mmap res=7FC1A0C1F000 vm_size=387976 vm_rss=24840 vm_swap=0 
 2765353 23:19:59.815345534 3 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=112 tuple=NULL 
 2765368 23:19:59.815403247 3 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=112 data=l....SELECT `title`, `id`, `seasons`, `settings` FROM wp_leaguemanager_leagues W 
-2765369 23:19:59.815406589 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1075 vm_size=387976 vm_rss=24840 vm_swap=0 
 2765473 23:19:59.815787807 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2765475 23:19:59.815793199 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2765476 23:19:59.815795897 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=29475 
 2765478 23:19:59.815799384 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=557 data=.....Y....def.wordpress.wp_leaguemanager_leagues.wp_leaguemanager_leagues.title. tuple=NULL 
-2765487 23:19:59.815872267 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=836593 pgft_maj=0 pgft_min=1075 vm_size=387976 vm_rss=24840 vm_swap=0 
 2765497 23:19:59.815940956 3 wordpress (4d81cb26c662) apache2 (867684:78) > lstat 
 2765500 23:19:59.815959319 3 wordpress (4d81cb26c662) apache2 (867684:78) < lstat res=0 path=/var/www/html/wp-content/plugins/mail-masta/plugin-interface.php 
 2765502 23:19:59.815963512 3 wordpress (4d81cb26c662) apache2 (867684:78) > lstat 
@@ -5963,7 +5853,6 @@
 2765599 23:19:59.816260143 3 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/mail-masta/amazon_api/SimpleEmailServiceMessage.php 
 2765653 23:19:59.816486155 3 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=91 tuple=NULL 
 2765667 23:19:59.816549500 3 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=91 data=W....SELECT option_value FROM wp_options WHERE option_name = 'masta-active-check 
-2765671 23:19:59.816554080 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1082 vm_size=387976 vm_rss=27796 vm_swap=0 
 2765736 23:19:59.816873205 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2765737 23:19:59.816876209 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2765738 23:19:59.816878387 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=28918 
@@ -6011,7 +5900,6 @@
 2766142 23:19:59.818456539 3 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=94 tuple=NULL 
 2766152 23:19:59.818503227 3 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=94 data=Z....SELECT option_value FROM wp_options WHERE option_name = 'dismiss_nf_notice_ 
 2766155 23:19:59.818511520 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2766157 23:19:59.818518975 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1108 vm_size=387976 vm_rss=27796 vm_swap=0 
 2766188 23:19:59.818711797 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2766189 23:19:59.818715286 3 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=28816 
 2766191 23:19:59.818718211 3 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -6249,9 +6137,7 @@
 2768724 23:19:59.831263478 3 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-admin/includes/schema.php 
 2768755 23:19:59.831381402 3 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=38 tuple=NULL 
 2768778 23:19:59.831450136 3 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=38 data="....SHOW TABLES LIKE 'wp_wpfm_backup' 
-2768779 23:19:59.831454135 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1173 vm_size=392136 vm_rss=33784 vm_swap=0 
 2770127 23:19:59.838914854 1 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2770128 23:19:59.838923806 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=741502(MediaDe~hine) pgft_maj=0 pgft_min=1173 vm_size=392136 vm_rss=33784 vm_swap=0 
 2773194 23:19:59.873497795 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2773195 23:19:59.873511639 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=28714 
 2773196 23:19:59.873515187 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=154 data=.....l....def.information_schema.TABLE_NAMES.TABLE_NAMES$Tables_in_wordpress (wp tuple=NULL 
@@ -6427,7 +6313,6 @@
 2774125 23:19:59.882083086 2 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/invoicing/vendor/ayecode/wp-super-duper/wp-super-duper.php 
 2774134 23:19:59.882139991 2 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
 2774138 23:19:59.882147790 2 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/invoicing/widgets/invoice-history.php 
-2774144 23:19:59.882156235 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=19078(code) pgft_maj=0 pgft_min=1262 vm_size=392428 vm_rss=35540 vm_swap=0 
 2774186 23:19:59.882289356 0 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
 2774191 23:19:59.882301224 0 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/invoicing/widgets/invoice-receipt.php 
 2774192 23:19:59.882316641 0 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
@@ -7032,7 +6917,6 @@
 2775524 23:19:59.888853613 0 wordpress (4d81cb26c662) apache2 (867684:78) < read res=0 data= 
 2775525 23:19:59.888858235 0 wordpress (4d81cb26c662) apache2 (867684:78) > close fd=13(<f>/var/www/html/wp-content/plugins/social-warfare/languages/social-warfare-pt_BR.mo) 
 2775526 23:19:59.888859504 0 wordpress (4d81cb26c662) apache2 (867684:78) < close res=0 
-2775590 23:19:59.889093660 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=733202(AudioIP~allback) pgft_maj=0 pgft_min=1304 vm_size=394476 vm_rss=40188 vm_swap=0 
 2777630 23:19:59.899095488 0 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
 2777635 23:19:59.899112303 0 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/social-warfare/assets/js/post-editor/blocks.php 
 2777643 23:19:59.899169297 0 wordpress (4d81cb26c662) apache2 (867684:78) > access mode=4(R_OK) 
@@ -7081,10 +6965,8 @@
 2777746 23:19:59.899643891 0 wordpress (4d81cb26c662) apache2 (867684:78) < read res=0 data= 
 2777748 23:19:59.899648003 0 wordpress (4d81cb26c662) apache2 (867684:78) > close fd=13(<f>/var/www/html/wp-content/languages/plugins/invoicing-pt_BR.mo) 
 2777749 23:19:59.899649369 0 wordpress (4d81cb26c662) apache2 (867684:78) < close res=0 
-2778876 23:19:59.907860195 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867838(sqlmap) pgft_maj=0 pgft_min=1321 vm_size=394476 vm_rss=40188 vm_swap=0 
 2779482 23:19:59.912247500 0 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=305 tuple=NULL 
 2779488 23:19:59.912322443 0 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=305 data=-....SELECT   wp_posts.ID FROM wp_posts  INNER JOIN wp_postmeta ON ( wp_posts.ID 
-2779490 23:19:59.912325988 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1329 vm_size=394476 vm_rss=40188 vm_swap=0 
 2779595 23:19:59.913001167 0 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2779597 23:19:59.913004307 0 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2779598 23:19:59.913006131 0 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=28560 
@@ -7173,7 +7055,6 @@
 2780022 23:19:59.915587166 0 wordpress (4d81cb26c662) apache2 (867684:78) < read res=0 data= 
 2780024 23:19:59.915592534 0 wordpress (4d81cb26c662) apache2 (867684:78) > close fd=13(<f>/var/www/html/wp-content/languages/pt_BR.mo) 
 2780025 23:19:59.915593684 0 wordpress (4d81cb26c662) apache2 (867684:78) < close res=0 
-2781004 23:19:59.920343954 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=12483(JS) pgft_maj=0 pgft_min=1331 vm_size=396524 vm_rss=42236 vm_swap=0 
 2781999 23:19:59.929218978 0 wordpress (4d81cb26c662) apache2 (867684:78) > access mode=4(R_OK) 
 2782000 23:19:59.929230461 0 wordpress (4d81cb26c662) apache2 (867684:78) < access res=-2(ENOENT) name=/var/www/html/wp-content/languages/pt_BR.php 
 2782001 23:19:59.929402162 0 wordpress (4d81cb26c662) apache2 (867684:78) > open 
@@ -7225,14 +7106,12 @@
 2782047 23:19:59.930289319 0 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=132 tuple=NULL 
 2782048 23:19:59.930354577 0 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=132 data=.....SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout 
 2782050 23:19:59.930361784 0 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2782052 23:19:59.930373180 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1338 vm_size=396524 vm_rss=42236 vm_swap=0 
 2782064 23:19:59.930605360 0 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2782065 23:19:59.930608763 0 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=28482 
 2782066 23:19:59.930611529 0 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2782071 23:19:59.930721835 0 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=124 tuple=NULL 
 2782072 23:19:59.930746688 0 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=124 data=x....SELECT option_value FROM wp_options WHERE option_name = '_transient_wpi_tra 
 2782074 23:19:59.930751626 0 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2782077 23:19:59.930757473 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1338 vm_size=396524 vm_rss=42236 vm_swap=0 
 2782084 23:19:59.930886710 0 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2782085 23:19:59.930889652 0 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=28380 
 2782086 23:19:59.930892295 0 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -7308,11 +7187,9 @@
 2782737 23:19:59.937862740 0 wordpress (4d81cb26c662) apache2 (867684:78) < lstat res=0 path=/var/www/html/wp-content/plugins/invoicing/includes/gateways/class-getpaid-authorize-net-legacy-gateway.php 
 2782738 23:19:59.937867222 0 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
 2782739 23:19:59.937872404 0 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/invoicing/includes/gateways/class-getpaid-authorize-net-legacy-gateway.php 
-2782980 23:19:59.939868442 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=15 pgft_maj=0 pgft_min=1351 vm_size=396524 vm_rss=45076 vm_swap=0 
 2783071 23:19:59.940907681 0 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=117 tuple=NULL 
 2783074 23:19:59.940975289 0 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=117 data=q....SELECT * FROM wp_masta_campaign WHERE campaign_type = 2 AND STATUS = 5 AND  
 2783076 23:19:59.940984468 0 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2783079 23:19:59.940993262 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1352 vm_size=396524 vm_rss=45076 vm_swap=0 
 2783120 23:19:59.941442135 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2783121 23:19:59.941447602 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=28278 
 2783122 23:19:59.941451859 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=1318 data=.....O....def.wordpress.wp_masta_campaign.wp_masta_campaign.camp_id.camp_id.?... tuple=NULL 
@@ -7328,14 +7205,12 @@
 2783132 23:19:59.941589188 2 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/mail-masta/inc/autoresponder/campaign/cron_autoresponder.php 
 2783134 23:19:59.941690871 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=35 tuple=NULL 
 2783139 23:19:59.941746231 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=35 data=.....SELECT * from wp_masta_support 
-2783140 23:19:59.941749426 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1354 vm_size=396524 vm_rss=45076 vm_swap=0 
 2783184 23:19:59.942065423 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2783185 23:19:59.942068187 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2783186 23:19:59.942070260 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=26960 
 2783187 23:19:59.942073323 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=895 data=.....C....def.wordpress.wp_masta_support.wp_masta_support.id.id.?.......B...K... tuple=NULL 
 2783201 23:19:59.942182850 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=74 tuple=NULL 
 2783208 23:19:59.942215424 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=74 data=F....SELECT * from  wp_masta_responder where responder_type=2 and status=5 
-2783209 23:19:59.942218616 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1354 vm_size=396524 vm_rss=45076 vm_swap=0 
 2783284 23:19:59.942569534 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2783285 23:19:59.942571913 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2783286 23:19:59.942573362 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=26065 
@@ -7343,7 +7218,6 @@
 2783292 23:19:59.942710115 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=69 tuple=NULL 
 2783297 23:19:59.942735403 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=69 data=A......                DELETE FROM wp_masta_support where id in().... 
 2783299 23:19:59.942739995 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2783303 23:19:59.942747928 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1354 vm_size=396524 vm_rss=45076 vm_swap=0 
 2783311 23:19:59.942821696 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2783313 23:19:59.942824782 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=24604 
 2783316 23:19:59.942827390 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=160 data=.....(.#42000You have an error in your SQL syntax; check the manual that corresp tuple=NULL 
@@ -7372,14 +7246,12 @@
 2783667 23:19:59.944740612 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=114 tuple=NULL 
 2783687 23:19:59.944797530 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=114 data=n....SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout 
 2783693 23:19:59.944807528 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2783699 23:19:59.944816211 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1359 vm_size=396524 vm_rss=45076 vm_swap=0 
 2783715 23:19:59.945037977 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2783716 23:19:59.945041741 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=24444 
 2783719 23:19:59.945044704 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=117 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2783737 23:19:59.945176814 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=106 tuple=NULL 
 2783738 23:19:59.945203559 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=106 data=f....SELECT option_value FROM wp_options WHERE option_name = '_transient_eeSFL-1 
 2783740 23:19:59.945208439 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2783743 23:19:59.945214917 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1359 vm_size=396524 vm_rss=45076 vm_swap=0 
 2783750 23:19:59.945388033 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2783751 23:19:59.945391747 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=24327 
 2783752 23:19:59.945394252 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=143 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -7440,51 +7312,41 @@
 2784344 23:19:59.947663735 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=95 tuple=NULL 
 2784345 23:19:59.947738460 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=95 data=[....SELECT option_value FROM wp_options WHERE option_name = 'wp-font-awesome-se 
 2784346 23:19:59.947746182 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2784347 23:19:59.947757962 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=15903(sqldb:c~lite) pgft_maj=0 pgft_min=1359 vm_size=396524 vm_rss=45076 vm_swap=0 
 2785061 23:19:59.950056111 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2785062 23:19:59.950060662 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=24184 
 2785063 23:19:59.950063456 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2785198 23:19:59.950378095 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=90 tuple=NULL 
 2785219 23:19:59.950421918 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=90 data=V....SELECT option_value FROM wp_options WHERE option_name = 'ayecode-ui-setting 
 2785223 23:19:59.950427729 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2785229 23:19:59.950437332 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867484(sysdig) pgft_maj=0 pgft_min=1359 vm_size=396524 vm_rss=45076 vm_swap=0 
 2785418 23:19:59.950827641 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2785419 23:19:59.950838020 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=24082 
 2785422 23:19:59.950841807 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
-2785450 23:19:59.950996565 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=12525(AudioIP~allback) pgft_maj=0 pgft_min=1359 vm_size=396524 vm_rss=45076 vm_swap=0 
-2785476 23:19:59.951114501 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=12525(AudioIP~allback) pgft_maj=0 pgft_min=1360 vm_size=396524 vm_rss=45076 vm_swap=0 
-2785623 23:19:59.951451848 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=859282 pgft_maj=0 pgft_min=1360 vm_size=396524 vm_rss=45076 vm_swap=0 
 2785864 23:19:59.952521768 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=471 tuple=NULL 
 2785878 23:19:59.952585253 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=471 data=.....SELECT SQL_CALC_FOUND_ROWS  wp_posts.ID FROM wp_posts  WHERE 1=1  AND wp_po 
-2785880 23:19:59.952589140 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1361 vm_size=396524 vm_rss=45076 vm_swap=0 
 2786108 23:19:59.953309458 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2786109 23:19:59.953312509 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2786111 23:19:59.953314600 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=23980 
 2786112 23:19:59.953317646 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=91 data=.....3....def.wordpress.wp_posts.wp_posts.ID.ID.?......#B.................56.... tuple=NULL 
 2786160 23:19:59.953448209 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=24 tuple=NULL 
 2786182 23:19:59.953488614 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=24 data=.....SELECT FOUND_ROWS() 
-2786185 23:19:59.953491809 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1361 vm_size=396524 vm_rss=45076 vm_swap=0 
 2786243 23:19:59.953623975 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2786245 23:19:59.953626683 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2786246 23:19:59.953628332 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=23889 
 2786248 23:19:59.953631016 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=67 data=....."....def....FOUND_ROWS()..?.........................2......... tuple=NULL 
 2786286 23:19:59.953741455 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=55 tuple=NULL 
 2786288 23:19:59.953773131 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=55 data=3....SELECT wp_posts.* FROM wp_posts WHERE ID IN (56,1) 
-2786290 23:19:59.953776520 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1361 vm_size=396524 vm_rss=45076 vm_swap=0 
 2786388 23:19:59.954133843 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2786390 23:19:59.954136583 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2786391 23:19:59.954138473 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=23822 
 2786393 23:19:59.954141682 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=2304 data=.....3....def.wordpress.wp_posts.wp_posts.ID.ID.?......#B...E....def.wordpress.w tuple=NULL 
 2786519 23:19:59.954533389 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=310 tuple=NULL 
 2786523 23:19:59.954573674 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=310 data=2....SELECT  t.*, tt.*, tr.object_id FROM wp_terms AS t  INNER JOIN wp_term_taxo 
-2786524 23:19:59.954576705 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1363 vm_size=396524 vm_rss=45076 vm_swap=0 
 2786707 23:19:59.955536724 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2786708 23:19:59.955539910 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2786709 23:19:59.955542006 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=21518 
 2786710 23:19:59.955545392 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=862 data=.....6....def.wordpress.t.wp_terms.term_id.term_id.?......!....0....def.wordpres tuple=NULL 
 2786758 23:19:59.955923775 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=103 tuple=NULL 
 2786763 23:19:59.955975014 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=103 data=c....SELECT post_id, meta_key, meta_value FROM wp_postmeta WHERE post_id IN (1,5 
-2786764 23:19:59.955978241 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1364 vm_size=396524 vm_rss=45076 vm_swap=0 
 2786803 23:19:59.956436464 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2786804 23:19:59.956439204 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2786805 23:19:59.956441090 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=20656 
@@ -7511,14 +7373,12 @@
 2786945 23:19:59.958114590 2 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/themes/twentyseventeen/header.php 
 2787087 23:19:59.959008581 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=82 tuple=NULL 
 2787105 23:19:59.959076214 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=82 data=N....SELECT option_value FROM wp_options WHERE option_name = 'aui_options' LIMIT 
-2787106 23:19:59.959080100 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1375 vm_size=396524 vm_rss=45076 vm_swap=0 
 2787152 23:19:59.959397889 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2787153 23:19:59.959400935 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2787155 23:19:59.959402751 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=19904 
 2787157 23:19:59.959405756 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=102 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2787189 23:19:59.959758447 2 wordpress (4d81cb26c662) apache2 (867684:78) > mmap addr=0 length=65536 prot=7(PROT_READ|PROT_WRITE|PROT_EXEC) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 2787191 23:19:59.959768420 2 wordpress (4d81cb26c662) apache2 (867684:78) < mmap res=7FC1A0BFF000 vm_size=396588 vm_rss=45076 vm_swap=0 
-2787231 23:19:59.960105401 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=6067(Suricata-Main) pgft_maj=0 pgft_min=1380 vm_size=396588 vm_rss=45076 vm_swap=0 
 2787541 23:19:59.962654632 2 wordpress (4d81cb26c662) apache2 (867684:78) > access mode=0(F_OK) 
 2787542 23:19:59.962668148 2 wordpress (4d81cb26c662) apache2 (867684:78) < access res=0 name=/var/www/html/wp-content/themes/twentyseventeen/assets/css/ie8.css 
 2787543 23:19:59.962716982 2 wordpress (4d81cb26c662) apache2 (867684:78) > access mode=0(F_OK) 
@@ -7533,14 +7393,12 @@
 2787552 23:19:59.963072755 2 wordpress (4d81cb26c662) apache2 (867684:78) < stat res=0 path=/var/www/html/wp-content/plugins/invoicing/assets/js/payment-forms.js 
 2787555 23:19:59.963305051 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=122 tuple=NULL 
 2787556 23:19:59.963377675 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=122 data=v....SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout 
-2787557 23:19:59.963382014 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1386 vm_size=396588 vm_rss=45076 vm_swap=0 
 2787600 23:19:59.963725045 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2787601 23:19:59.963727974 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2787602 23:19:59.963729912 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=19802 
 2787603 23:19:59.963733121 2 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=117 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
 2787628 23:19:59.963931146 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=114 tuple=NULL 
 2787633 23:19:59.963971139 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=114 data=n....SELECT option_value FROM wp_options WHERE option_name = '_transient_wp-font 
-2787634 23:19:59.963974355 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1386 vm_size=396588 vm_rss=45076 vm_swap=0 
 2787662 23:19:59.964200250 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
 2787663 23:19:59.964202481 2 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2787664 23:19:59.964204036 2 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=19685 
@@ -7548,7 +7406,6 @@
 2787706 23:19:59.965167762 2 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=91 tuple=NULL 
 2787712 23:19:59.965218019 2 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=91 data=W....SELECT option_value FROM wp_options WHERE option_name = 'can_compress_scrip 
 2787713 23:19:59.965228138 2 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2787718 23:19:59.965240174 2 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=741515(MediaTimer) pgft_maj=0 pgft_min=1389 vm_size=396588 vm_rss=45076 vm_swap=0 
 2787821 23:19:59.965539452 0 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2787824 23:19:59.965543109 0 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=19573 
 2787826 23:19:59.965545891 0 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=108 data=.....K....def.wordpress.wp_options.wp_options.option_value.option_value......... tuple=NULL 
@@ -7595,14 +7452,12 @@
 2788287 23:19:59.968490728 0 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=42 tuple=NULL 
 2788289 23:19:59.968545602 0 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=42 data=&....SELECT * FROM wp_users WHERE ID = '1' 
 2788291 23:19:59.968554624 0 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2788293 23:19:59.968562672 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1391 vm_size=396588 vm_rss=45076 vm_swap=0 
 2788309 23:19:59.968880507 0 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2788310 23:19:59.968885984 0 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=19465 
 2788311 23:19:59.968890718 0 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=870 data=.....3....def.wordpress.wp_users.wp_users.ID.ID.?......#B...C....def.wordpress.w tuple=NULL 
 2788318 23:19:59.969088689 0 wordpress (4d81cb26c662) apache2 (867684:78) > sendto fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=101 tuple=NULL 
 2788319 23:19:59.969130743 0 wordpress (4d81cb26c662) apache2 (867684:78) < sendto res=101 data=a....SELECT user_id, meta_key, meta_value FROM wp_usermeta WHERE user_id IN (1)  
 2788321 23:19:59.969137899 0 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=11:431 timeout=86400000 
-2788324 23:19:59.969147755 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1391 vm_size=396588 vm_rss=45076 vm_swap=0 
 2788352 23:19:59.969549986 0 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=11:41 
 2788356 23:19:59.969559697 0 wordpress (4d81cb26c662) apache2 (867684:78) > recvfrom fd=11(<4t>172.18.0.3:34630->172.18.0.2:3306) size=18595 
 2788357 23:19:59.969564319 0 wordpress (4d81cb26c662) apache2 (867684:78) < recvfrom res=3104 data=.....C....def.wordpress.wp_usermeta.wp_usermeta.user_id.user_id.?......)@...E... tuple=NULL 
@@ -7620,7 +7475,6 @@
 2788671 23:19:59.973026770 0 wordpress (4d81cb26c662) apache2 (867684:78) < mmap res=7FC1A0BDF000 vm_size=396716 vm_rss=45076 vm_swap=0 
 2789025 23:19:59.975230644 0 wordpress (4d81cb26c662) apache2 (867684:78) > access mode=0(F_OK) 
 2789026 23:19:59.975253279 0 wordpress (4d81cb26c662) apache2 (867684:78) < access res=0 name=/var/www/html/wp-content/themes/twentyseventeen/template-parts/post/content.php 
-2789165 23:19:59.976173841 0 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=19107(code) pgft_maj=0 pgft_min=1421 vm_size=396716 vm_rss=46516 vm_swap=0 
 2789680 23:19:59.979999762 3 wordpress (4d81cb26c662) apache2 (867684:78) > access mode=0(F_OK) 
 2789682 23:19:59.980022265 3 wordpress (4d81cb26c662) apache2 (867684:78) < access res=0 name=/var/www/html/wp-content/themes/twentyseventeen/sidebar.php 
 2789693 23:19:59.980050247 3 wordpress (4d81cb26c662) apache2 (867684:78) > stat 
@@ -7673,7 +7527,6 @@
 2790223 23:19:59.982314582 3 wordpress (4d81cb26c662) apache2 (867684:78) < brk res=55730400C000 vm_size=396864 vm_rss=46516 vm_swap=0 
 2790227 23:19:59.982329368 3 wordpress (4d81cb26c662) apache2 (867684:78) > brk addr=55730404C000 
 2790228 23:19:59.982330790 3 wordpress (4d81cb26c662) apache2 (867684:78) < brk res=55730404C000 vm_size=397120 vm_rss=46516 vm_swap=0 
-2790402 23:19:59.984818656 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=15198([main]>worker3) pgft_maj=0 pgft_min=1496 vm_size=397120 vm_rss=46848 vm_swap=0 
 2791174 23:19:59.989034734 3 wordpress (4d81cb26c662) apache2 (867684:78) > setitimer 
 2791175 23:19:59.989037246 3 wordpress (4d81cb26c662) apache2 (867684:78) < setitimer 
 2791184 23:19:59.989079558 3 wordpress (4d81cb26c662) apache2 (867684:78) > close fd=12(<d>/var/www/html/wp-content/plugins/leaguemanager/sports) 
@@ -7713,7 +7566,6 @@
 2791321 23:19:59.990427896 3 wordpress (4d81cb26c662) apache2 (867684:78) > shutdown fd=10(<4t>172.18.0.1:40280->172.18.0.3:80) how=1(SHUT_WR) 
 2791332 23:19:59.990455547 3 wordpress (4d81cb26c662) apache2 (867684:78) < shutdown res=0 
 2791336 23:19:59.990460634 3 wordpress (4d81cb26c662) apache2 (867684:78) > poll fds=10:41 timeout=2000 
-2791343 23:19:59.990470151 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=867466(mysqld) pgft_maj=0 pgft_min=1516 vm_size=390760 vm_rss=40776 vm_swap=0 
 2792012 23:19:59.995879744 3 wordpress (4d81cb26c662) apache2 (867684:78) < poll res=1 fds=10:421 
 2792014 23:19:59.995885945 3 wordpress (4d81cb26c662) apache2 (867684:78) > read fd=10(<4t>172.18.0.1:40280->172.18.0.3:80) size=512 
 2792015 23:19:59.995893129 3 wordpress (4d81cb26c662) apache2 (867684:78) < read res=0 data= 
@@ -7722,7 +7574,6 @@
 2792019 23:19:59.995918400 3 wordpress (4d81cb26c662) apache2 (867684:78) > read fd=4(<p>pipe:[2485261]) size=1 
 2792020 23:19:59.995920662 3 wordpress (4d81cb26c662) apache2 (867684:78) < read res=-11(EAGAIN) data= 
 2792021 23:19:59.995927811 3 wordpress (4d81cb26c662) apache2 (867684:78) > accept flags=0 
-2792022 23:19:59.995945934 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=0 pgft_maj=0 pgft_min=1516 vm_size=390760 vm_rss=40776 vm_swap=0 
 2913458 23:20:01.523762662 0 wordpress (4d81cb26c662) apache2 (867685:79) < accept fd=10(<4t>172.18.0.1:34530->172.18.0.3:80) tuple=172.18.0.1:34530->172.18.0.3:80 queuepct=0 queuelen=0 queuemax=511 
 2913468 23:20:01.523803612 0 wordpress (4d81cb26c662) apache2 (867685:79) > getsockname 
 2913470 23:20:01.523806626 0 wordpress (4d81cb26c662) apache2 (867685:79) < getsockname 
@@ -7732,7 +7583,6 @@
 2913475 23:20:01.523822518 0 wordpress (4d81cb26c662) apache2 (867685:79) < fcntl res=0(<f>/dev/null) 
 2913477 23:20:01.523831674 0 wordpress (4d81cb26c662) apache2 (867685:79) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 2913480 23:20:01.523839048 0 wordpress (4d81cb26c662) apache2 (867685:79) < mmap res=7FC1A0C93000 vm_size=383144 vm_rss=8980 vm_swap=0 
-2913485 23:20:01.523920554 0 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=867089(docker-proxy) pgft_maj=0 pgft_min=88 vm_size=383144 vm_rss=8980 vm_swap=0 
 2913491 23:20:01.523959149 0 wordpress (4d81cb26c662) apache2 (867685:79) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 2913492 23:20:01.523964046 0 wordpress (4d81cb26c662) apache2 (867685:79) < mmap res=7FC1A0C91000 vm_size=383152 vm_rss=8980 vm_swap=0 
 2913493 23:20:01.523972720 0 wordpress (4d81cb26c662) apache2 (867685:79) > read fd=10(<4t>172.18.0.1:34530->172.18.0.3:80) size=8000 
@@ -7740,7 +7590,6 @@
 2913495 23:20:01.523986447 0 wordpress (4d81cb26c662) apache2 (867685:79) > poll fds=10:41 timeout=20000 
 2913496 23:20:01.523989003 0 wordpress (4d81cb26c662) apache2 (867685:79) < poll res=1 fds=10:41 
 2913497 23:20:01.523999758 0 wordpress (4d81cb26c662) apache2 (867685:79) > shutdown fd=10(<4t>172.18.0.1:34530->172.18.0.3:80) how=1(SHUT_WR) 
-2913498 23:20:01.524058007 0 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=867089(docker-proxy) pgft_maj=0 pgft_min=89 vm_size=383152 vm_rss=8980 vm_swap=0 
 2913549 23:20:01.524208634 0 wordpress (4d81cb26c662) apache2 (867685:79) < shutdown res=0 
 2913550 23:20:01.524214098 0 wordpress (4d81cb26c662) apache2 (867685:79) > poll fds=10:41 timeout=2000 
 2913551 23:20:01.524216559 0 wordpress (4d81cb26c662) apache2 (867685:79) < poll res=1 fds=10:421 
@@ -7751,22 +7600,16 @@
 2913556 23:20:01.524233732 0 wordpress (4d81cb26c662) apache2 (867685:79) > read fd=4(<p>pipe:[2485261]) size=1 
 2913557 23:20:01.524235426 0 wordpress (4d81cb26c662) apache2 (867685:79) < read res=-11(EAGAIN) data= 
 2913558 23:20:01.524241624 0 wordpress (4d81cb26c662) apache2 (867685:79) > accept flags=0 
-2913559 23:20:01.524255864 0 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=847522 pgft_maj=0 pgft_min=89 vm_size=383152 vm_rss=8980 vm_swap=0 
-3414177 23:20:06.781397426 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=858335 pgft_maj=17 pgft_min=1558 vm_size=390764 vm_rss=43032 vm_swap=0 
 3414195 23:20:06.781460424 1 wordpress (4d81cb26c662) apache2 (867683:77) < accept fd=-512(ERESTARTSYS) tuple=NULL queuepct=0 queuelen=0 queuemax=511 
-3414206 23:20:06.781483427 1 wordpress (4d81cb26c662) apache2 (867683:77) > signaldeliver spid=1(systemd) dpid=867683(apache2) sig=15(SIGTERM) 
 3414216 23:20:06.781521670 1 wordpress (4d81cb26c662) apache2 (867683:77) > close fd=9 
 3414218 23:20:06.781525080 1 wordpress (4d81cb26c662) apache2 (867683:77) < close res=0 
 3414271 23:20:06.784282210 2 wordpress (4d81cb26c662) apache2 (867686:80) < accept fd=-512(ERESTARTSYS) tuple=NULL queuepct=0 queuelen=0 queuemax=511 
-3414272 23:20:06.784301275 2 wordpress (4d81cb26c662) apache2 (867686:80) > signaldeliver spid=1(systemd) dpid=867686(apache2) sig=15(SIGTERM) 
 3414273 23:20:06.784339671 2 wordpress (4d81cb26c662) apache2 (867686:80) > close fd=9 
 3414274 23:20:06.784342459 2 wordpress (4d81cb26c662) apache2 (867686:80) < close res=0 
-3414279 23:20:06.787514559 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=7861(Monitor) pgft_maj=17 pgft_min=1829 vm_size=390764 vm_rss=43040 vm_swap=0 
 3414304 23:20:06.788575751 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC1A0BF1000 length=65536 
 3414305 23:20:06.788660855 1 wordpress (4d81cb26c662) apache2 (867683:77) < munmap res=0 vm_size=390700 vm_rss=42984 vm_swap=0 
 3414306 23:20:06.788979291 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC18985F000 length=134217728 
 3414321 23:20:06.790986082 3 wordpress (4d81cb26c662) apache2 (867532:72) < accept fd=-512(ERESTARTSYS) tuple=NULL queuepct=0 queuelen=0 queuemax=511 
-3414322 23:20:06.790999438 3 wordpress (4d81cb26c662) apache2 (867532:72) > signaldeliver spid=1(systemd) dpid=867532(apache2) sig=15(SIGTERM) 
 3414323 23:20:06.791014929 3 wordpress (4d81cb26c662) apache2 (867532:72) > close fd=9 
 3414324 23:20:06.791016361 3 wordpress (4d81cb26c662) apache2 (867532:72) < close res=0 
 3414325 23:20:06.791052277 1 wordpress (4d81cb26c662) apache2 (867683:77) < munmap res=0 vm_size=259628 vm_rss=21764 vm_swap=0 
@@ -7784,11 +7627,7 @@
 3414343 23:20:06.791783540 2 wordpress (4d81cb26c662) apache2 (867686:80) < munmap res=0 vm_size=252064 vm_rss=11084 vm_swap=0 
 3414344 23:20:06.791798941 2 wordpress (4d81cb26c662) apache2 (867686:80) > close fd=8(<f>/tmp/.ZendSem.6x49Y0 (deleted)) 
 3414345 23:20:06.791801214 2 wordpress (4d81cb26c662) apache2 (867686:80) < close res=0 
-3414346 23:20:06.791878131 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=836593 pgft_maj=11 pgft_min=313 vm_size=383356 vm_rss=10192 vm_swap=0 
-3414347 23:20:06.791881451 2 wordpress (4d81cb26c662) apache2 (867686:80) > switch next=817052 pgft_maj=0 pgft_min=490 vm_size=252064 vm_rss=11084 vm_swap=0 
-3414348 23:20:06.791885375 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=307 pgft_maj=17 pgft_min=1889 vm_size=250248 vm_rss=21520 vm_swap=0 
 3414353 23:20:06.791904346 3 wordpress (4d81cb26c662) apache2 (867685:79) < accept fd=-512(ERESTARTSYS) tuple=NULL queuepct=0 queuelen=0 queuemax=511 
-3414357 23:20:06.791920163 3 wordpress (4d81cb26c662) apache2 (867685:79) > signaldeliver spid=1(systemd) dpid=867685(apache2) sig=15(SIGTERM) 
 3414358 23:20:06.791935213 3 wordpress (4d81cb26c662) apache2 (867685:79) > close fd=9 
 3414359 23:20:06.791936670 3 wordpress (4d81cb26c662) apache2 (867685:79) < close res=0 
 3414516 23:20:06.794671352 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC1A0C21000 length=65536 
@@ -7799,11 +7638,9 @@
 3414535 23:20:06.794817150 1 wordpress (4d81cb26c662) apache2 (867683:77) < munmap res=0 vm_size=250056 vm_rss=21816 vm_swap=0 
 3414536 23:20:06.794829768 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC1A0C31000 length=65536 
 3414537 23:20:06.794839505 1 wordpress (4d81cb26c662) apache2 (867683:77) < munmap res=0 vm_size=249992 vm_rss=21812 vm_swap=0 
-3414539 23:20:06.795177471 3 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=21045(code) pgft_maj=0 pgft_min=344 vm_size=383152 vm_rss=11356 vm_swap=0 
 3414551 23:20:06.795365884 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC192750000 length=299008 
 3414552 23:20:06.795440807 1 wordpress (4d81cb26c662) apache2 (867683:77) < munmap res=0 vm_size=249700 vm_rss=21656 vm_swap=0 
 3414561 23:20:06.795978095 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC192188000 length=2584984 
-3414569 23:20:06.796034526 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=867484(sysdig) pgft_maj=11 pgft_min=361 vm_size=383356 vm_rss=11552 vm_swap=0 
 3414572 23:20:06.796056731 1 wordpress (4d81cb26c662) apache2 (867683:77) < munmap res=0 vm_size=247172 vm_rss=21216 vm_swap=0 
 3414679 23:20:06.796839287 1 wordpress (4d81cb26c662) apache2 (867683:77) > munmap addr=7FC1A0C43000 length=299008 
 3414685 23:20:06.796870641 1 wordpress (4d81cb26c662) apache2 (867683:77) < munmap res=0 vm_size=246880 vm_rss=21028 vm_swap=0 
@@ -7851,16 +7688,9 @@
 3414780 23:20:06.797293166 1 wordpress (4d81cb26c662) apache2 (867683:77) < close res=0 
 3414783 23:20:06.797296458 1 wordpress (4d81cb26c662) apache2 (867683:77) > close fd=4(<p>pipe:[2485261]) 
 3414784 23:20:06.797297170 1 wordpress (4d81cb26c662) apache2 (867683:77) < close res=0 
-3414850 23:20:06.797680035 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=719077(alsa-sink-USB) pgft_maj=17 pgft_min=1985 vm_size=240292 vm_rss=14536 vm_swap=0 
-3414941 23:20:06.798075997 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=858335 pgft_maj=17 pgft_min=1985 vm_size=240292 vm_rss=14536 vm_swap=0 
 3414966 23:20:06.798199022 1 wordpress (4d81cb26c662) apache2 (867683:77) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 3414967 23:20:06.798201494 1 wordpress (4d81cb26c662) apache2 (867683:77) < futex res=0 
-3415002 23:20:06.798424978 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=719077(alsa-sink-USB) pgft_maj=17 pgft_min=2011 vm_size=240292 vm_rss=14536 vm_swap=0 
-3415037 23:20:06.798616649 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=741515(MediaTimer) pgft_maj=17 pgft_min=2018 vm_size=240292 vm_rss=14536 vm_swap=0 
-3415061 23:20:06.798800553 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=6113(W#03-wlp3s0) pgft_maj=17 pgft_min=2023 vm_size=240292 vm_rss=14876 vm_swap=0 
 3415214 23:20:06.799734775 1 wordpress (4d81cb26c662) apache2 (867683:77) > exit_group 
-3415352 23:20:06.800861723 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=19777(code) pgft_maj=17 pgft_min=2132 vm_size=0 vm_rss=0 vm_swap=0 
-3415580 23:20:06.802247708 1 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=19777(code) pgft_maj=17 pgft_min=2132 vm_size=0 vm_rss=0 vm_swap=0 
 3416762 23:20:06.806814819 0 wordpress (4d81cb26c662) apache2 (867686:80) > munmap addr=7FC19185F000 length=2243784 
 3416765 23:20:06.806844576 0 wordpress (4d81cb26c662) apache2 (867686:80) < munmap res=0 vm_size=249872 vm_rss=11192 vm_swap=0 
 3416776 23:20:06.806955462 0 wordpress (4d81cb26c662) apache2 (867686:80) > munmap addr=7FC191F21000 length=2517856 
@@ -7870,7 +7700,6 @@
 3416782 23:20:06.806990662 0 wordpress (4d81cb26c662) apache2 (867686:80) > munmap addr=7FC191A83000 length=2531352 
 3416784 23:20:06.807002838 0 wordpress (4d81cb26c662) apache2 (867686:80) < munmap res=0 vm_size=242684 vm_rss=11156 vm_swap=0 
 3416938 23:20:06.808275996 1 wordpress (4d81cb26c662) apache2 (867684:78) < accept fd=-512(ERESTARTSYS) tuple=NULL queuepct=0 queuelen=0 queuemax=511 
-3416940 23:20:06.808285861 1 wordpress (4d81cb26c662) apache2 (867684:78) > signaldeliver spid=1(systemd) dpid=867684(apache2) sig=15(SIGTERM) 
 3416941 23:20:06.808301156 1 wordpress (4d81cb26c662) apache2 (867684:78) > close fd=9 
 3416942 23:20:06.808302764 1 wordpress (4d81cb26c662) apache2 (867684:78) < close res=0 
 3416943 23:20:06.808590217 0 wordpress (4d81cb26c662) apache2 (867686:80) > munmap addr=7FC192188000 length=2584984 
@@ -7893,11 +7722,9 @@
 3416960 23:20:06.809133689 0 wordpress (4d81cb26c662) apache2 (867686:80) < close res=0 
 3416961 23:20:06.809135078 0 wordpress (4d81cb26c662) apache2 (867686:80) > close fd=4(<p>pipe:[2485261]) 
 3416962 23:20:06.809135397 0 wordpress (4d81cb26c662) apache2 (867686:80) < close res=0 
-3416966 23:20:06.809342230 0 wordpress (4d81cb26c662) apache2 (867686:80) > switch next=15195([main]>worker0) pgft_maj=0 pgft_min=686 vm_size=237468 vm_rss=10288 vm_swap=0 
 3416999 23:20:06.811060479 1 wordpress (4d81cb26c662) apache2 (867684:78) > munmap addr=7FC1A0BEF000 length=65536 
 3417001 23:20:06.811098016 1 wordpress (4d81cb26c662) apache2 (867684:78) < munmap res=0 vm_size=390696 vm_rss=40848 vm_swap=0 
 3417005 23:20:06.811251766 1 wordpress (4d81cb26c662) apache2 (867684:78) > munmap addr=7FC18985F000 length=134217728 
-3417021 23:20:06.811898098 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=858335 pgft_maj=0 pgft_min=1813 vm_size=390696 vm_rss=33812 vm_swap=0 
 3417023 23:20:06.811912926 2 wordpress (4d81cb26c662) apache2 (867686:80) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 3417024 23:20:06.811914321 2 wordpress (4d81cb26c662) apache2 (867686:80) < futex res=0 
 3417082 23:20:06.812811723 1 wordpress (4d81cb26c662) apache2 (867684:78) < munmap res=0 vm_size=259624 vm_rss=21696 vm_swap=0 
@@ -7931,7 +7758,6 @@
 3417119 23:20:06.814755659 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC191F21000 length=2517856 
 3417120 23:20:06.814779575 3 wordpress (4d81cb26c662) apache2 (867532:72) < munmap res=0 vm_size=247632 vm_rss=11596 vm_swap=0 
 3417121 23:20:06.814782395 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC191CEE000 length=2301968 
-3417122 23:20:06.814791109 2 wordpress (4d81cb26c662) apache2 (867686:80) > procexit status=0 
 3417123 23:20:06.814797371 3 wordpress (4d81cb26c662) apache2 (867532:72) < munmap res=0 vm_size=245380 vm_rss=11568 vm_swap=0 
 3417124 23:20:06.814799804 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC191A83000 length=2531352 
 3417125 23:20:06.814813767 3 wordpress (4d81cb26c662) apache2 (867532:72) < munmap res=0 vm_size=242904 vm_rss=11540 vm_swap=0 
@@ -7983,12 +7809,10 @@
 3417177 23:20:06.816058331 1 wordpress (4d81cb26c662) apache2 (867684:78) < close res=0 
 3417178 23:20:06.816060107 1 wordpress (4d81cb26c662) apache2 (867684:78) > close fd=4(<p>pipe:[2485261]) 
 3417179 23:20:06.816060527 1 wordpress (4d81cb26c662) apache2 (867684:78) < close res=0 
-3417183 23:20:06.816178717 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=19777(code) pgft_maj=0 pgft_min=1937 vm_size=240288 vm_rss=14532 vm_swap=0 
 3417196 23:20:06.816626812 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC192188000 length=2584984 
 3417207 23:20:06.816669178 3 wordpress (4d81cb26c662) apache2 (867532:72) < munmap res=0 vm_size=240376 vm_rss=12928 vm_swap=0 
 3417217 23:20:06.816845596 1 wordpress (4d81cb26c662) apache2 (867684:78) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 3417218 23:20:06.816846612 1 wordpress (4d81cb26c662) apache2 (867684:78) < futex res=0 
-3417223 23:20:06.817087627 1 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=19777(code) pgft_maj=0 pgft_min=1983 vm_size=240288 vm_rss=14872 vm_swap=0 
 3417230 23:20:06.817127418 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC1A0C43000 length=299008 
 3417233 23:20:06.817144633 3 wordpress (4d81cb26c662) apache2 (867532:72) < munmap res=0 vm_size=240084 vm_rss=12740 vm_swap=0 
 3417236 23:20:06.817174155 3 wordpress (4d81cb26c662) apache2 (867532:72) > munmap addr=7FC192400000 length=2097152 
@@ -8025,8 +7849,6 @@
 3417286 23:20:06.817341428 3 wordpress (4d81cb26c662) apache2 (867532:72) < close res=0 
 3417312 23:20:06.817572850 3 wordpress (4d81cb26c662) apache2 (867532:72) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 3417313 23:20:06.817573842 3 wordpress (4d81cb26c662) apache2 (867532:72) < futex res=0 
-3417322 23:20:06.817655330 3 wordpress (4d81cb26c662) apache2 (867532:72) > switch next=4716(LogStash::Runne) pgft_maj=11 pgft_min=854 vm_size=237624 vm_rss=10616 vm_swap=0 
-3417426 23:20:06.818342563 2 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=741502(MediaDe~hine) pgft_maj=0 pgft_min=390 vm_size=383152 vm_rss=11356 vm_swap=0 
 3417597 23:20:06.819403147 2 wordpress (4d81cb26c662) apache2 (867685:79) > munmap addr=7FC18985F000 length=134217728 
 3417600 23:20:06.819428689 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=252080 vm_rss=11144 vm_swap=0 
 3417601 23:20:06.819437758 2 wordpress (4d81cb26c662) apache2 (867685:79) > close fd=8(<f>/tmp/.ZendSem.6x49Y0 (deleted)) 
@@ -8037,21 +7859,15 @@
 3417687 23:20:06.819834479 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=247428 vm_rss=11272 vm_swap=0 
 3417689 23:20:06.819837465 2 wordpress (4d81cb26c662) apache2 (867685:79) > munmap addr=7FC191CEE000 length=2301968 
 3417692 23:20:06.819867006 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=245176 vm_rss=11244 vm_swap=0 
-3417694 23:20:06.819872144 2 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=14 pgft_maj=0 pgft_min=545 vm_size=245176 vm_rss=11244 vm_swap=0 
 3418139 23:20:06.823093377 3 wordpress (4d81cb26c662) apache2 (867532:72) > exit_group 
-3418282 23:20:06.824530623 3 wordpress (4d81cb26c662) apache2 (867532:72) > procexit status=0 
-3418287 23:20:06.824562343 3 wordpress (4d81cb26c662) apache2 (867683:77) > switch next=836593 pgft_maj=17 pgft_min=2132 vm_size=0 vm_rss=0 vm_swap=0 
 3418317 23:20:06.824841143 2 wordpress (4d81cb26c662) apache2 (867685:79) > munmap addr=7FC191A83000 length=2531352 
 3418319 23:20:06.824859702 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=242700 vm_rss=11216 vm_swap=0 
-3418324 23:20:06.824909930 3 wordpress (4d81cb26c662) apache2 (867683:77) > procexit status=0 
-3418331 23:20:06.824954356 3 wordpress (4d81cb26c662) apache2 (867684:78) > switch next=836593 pgft_maj=0 pgft_min=1983 vm_size=240288 vm_rss=14872 vm_swap=0 
 3418365 23:20:06.825546155 3 wordpress (4d81cb26c662) apache2 (867684:78) > exit_group 
 3418409 23:20:06.826370795 2 wordpress (4d81cb26c662) apache2 (867685:79) > munmap addr=7FC192188000 length=2584984 
 3418410 23:20:06.826408092 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=240172 vm_rss=12604 vm_swap=0 
 3418439 23:20:06.826883997 2 wordpress (4d81cb26c662) apache2 (867685:79) > munmap addr=7FC1A0C43000 length=299008 
 3418440 23:20:06.826898485 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=239880 vm_rss=12416 vm_swap=0 
 3418441 23:20:06.826927134 2 wordpress (4d81cb26c662) apache2 (867685:79) > munmap addr=7FC192400000 length=2097152 
-3418442 23:20:06.826932890 3 wordpress (4d81cb26c662) apache2 (867684:78) > procexit status=0 
 3418446 23:20:06.826992390 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=237832 vm_rss=10368 vm_swap=0 
 3418447 23:20:06.827005867 2 wordpress (4d81cb26c662) apache2 (867685:79) > munmap addr=7FC1A0CB1000 length=323584 
 3418448 23:20:06.827013977 2 wordpress (4d81cb26c662) apache2 (867685:79) < munmap res=0 vm_size=237516 vm_rss=10364 vm_swap=0 
@@ -8073,7 +7889,4 @@
 3418464 23:20:06.827068216 2 wordpress (4d81cb26c662) apache2 (867685:79) < close res=0 
 3418467 23:20:06.827322064 2 wordpress (4d81cb26c662) apache2 (867685:79) > futex addr=7FC19AA2E8EC op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
 3418468 23:20:06.827323440 2 wordpress (4d81cb26c662) apache2 (867685:79) < futex res=0 
-3418529 23:20:06.827866782 2 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=14 pgft_maj=0 pgft_min=776 vm_size=237468 vm_rss=10676 vm_swap=0 
-3418554 23:20:06.828035784 2 wordpress (4d81cb26c662) apache2 (867685:79) > switch next=6067(Suricata-Main) pgft_maj=0 pgft_min=809 vm_size=237468 vm_rss=11172 vm_swap=0 
 3418605 23:20:06.828426615 2 wordpress (4d81cb26c662) apache2 (867685:79) > exit_group 
-3418650 23:20:06.829706120 2 wordpress (4d81cb26c662) apache2 (867685:79) > procexit status=0 

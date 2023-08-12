@@ -41,7 +41,6 @@
 3174750 17:38:05.997154429 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < munmap res=0 vm_size=383120 vm_rss=9048 vm_swap=0 
 3174751 17:38:05.997157779 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > close fd=9(<f>/etc/group) 
 3174752 17:38:05.997159234 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < close res=0 
-3174753 17:38:05.997184656 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > switch next=21170([main]>worker1) pgft_maj=0 pgft_min=61 vm_size=383120 vm_rss=9048 vm_swap=0 
 3174764 17:38:05.997262237 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > setgroups 
 3174765 17:38:05.997271344 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < setgroups 
 3174767 17:38:05.997276062 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > geteuid 
@@ -185,7 +184,6 @@
 3174936 17:38:05.997797900 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 3174937 17:38:05.997802737 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < mmap res=7F2798C5A000 vm_size=383136 vm_rss=9048 vm_swap=0 
 3174940 17:38:05.997821306 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > accept flags=0 
-3174941 17:38:05.997842407 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > switch next=0 pgft_maj=0 pgft_min=79 vm_size=383136 vm_rss=9048 vm_swap=0 
 3606602 17:38:09.402769824 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=413517(apache2) pid=413517(apache2) ptid=396055(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=394832 vm_rss=16528 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-16ae8d7cd5fb26f69d2b3694871b56f03e50ad52cedd860b3... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=111 vpid=111 
 3606610 17:38:09.402803786 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) > set_robust_list 
 3606611 17:38:09.402804388 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) < set_robust_list 
@@ -434,7 +432,6 @@
 3607203 17:38:09.405046392 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/etc/nsswitch.conf) 
 3607204 17:38:09.405050694 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
 3607205 17:38:09.405052649 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/etc/nsswitch.conf) size=512 
-3607216 17:38:09.405143836 0 wordpress (16ae8d7cd5fb) sh (413517:111) > switch next=0 pgft_maj=0 pgft_min=124 vm_size=9488 vm_rss=776 vm_swap=0 
 3607280 17:38:09.405491694 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=497 data=# /etc/nsswitch.conf.#.# Example configuration of GNU Name Service Switch functi 
 3607290 17:38:09.405502680 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/etc/nsswitch.conf) size=512 
 3607294 17:38:09.405506176 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=0 data= 
@@ -601,4 +598,3 @@
 3607516 17:38:09.406178839 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigprocmask 
 3607517 17:38:09.406179205 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigprocmask 
 3607524 17:38:09.406193780 0 wordpress (16ae8d7cd5fb) sh (413517:111) > exit_group 
-3607542 17:38:09.406350495 0 wordpress (16ae8d7cd5fb) sh (413517:111) > procexit status=256 

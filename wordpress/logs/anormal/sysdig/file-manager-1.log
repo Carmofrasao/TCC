@@ -78,7 +78,6 @@
 1449098 15:18:28.377099980 1 wordpress (cdab6c786756) apache2 (337432:74) > madvise 
 1449099 15:18:28.377105849 1 wordpress (cdab6c786756) apache2 (337432:74) < madvise 
 1449100 15:18:28.377106976 1 wordpress (cdab6c786756) apache2 (337432:74) > exit 
-1449101 15:18:28.377111846 1 wordpress (cdab6c786756) apache2 (337432:74) > procexit status=0 
 3099714 15:18:46.037185769 2 wordpress (cdab6c786756) apache2 (337648:75) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=337648(apache2) pid=337648(apache2) ptid=335855(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7640 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=75 vpid=75 
 3099724 15:18:46.037221840 2 wordpress (cdab6c786756) apache2 (337648:75) > set_robust_list 
 3099725 15:18:46.037222491 2 wordpress (cdab6c786756) apache2 (337648:75) < set_robust_list 
@@ -265,7 +264,6 @@
 3100028 15:18:46.037901357 2 wordpress (cdab6c786756) apache2 (337648:75) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
 3100029 15:18:46.037903762 2 wordpress (cdab6c786756) apache2 (337648:75) < mmap res=7F797A846000 vm_size=383136 vm_rss=9024 vm_swap=0 
 3100030 15:18:46.037911482 2 wordpress (cdab6c786756) apache2 (337648:75) > accept flags=0 
-3100031 15:18:46.037923689 2 wordpress (cdab6c786756) apache2 (337648:75) > switch next=28580(AudioIP~ent) pgft_maj=0 pgft_min=81 vm_size=383136 vm_rss=9024 vm_swap=0 
 4968585 15:19:23.073030722 1 wordpress (cdab6c786756) apache2 (338144:76) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338144(apache2) pid=338144(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=76 vpid=76 
 4968602 15:19:23.073060810 1 wordpress (cdab6c786756) apache2 (338144:76) > set_robust_list 
 4968603 15:19:23.073061497 1 wordpress (cdab6c786756) apache2 (338144:76) < set_robust_list 
@@ -381,7 +379,6 @@
 4968745 15:19:23.075532977 1 wordpress (cdab6c786756) sh (338144:76) < clone res=77 exe=sh args=-c.tar --version. tid=338144(sh) pid=338144(sh) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=25 pgft_min=66 vm_size=4296 vm_rss=572 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=76 vpid=76 
 4968753 15:19:23.075546176 3 wordpress (cdab6c786756) sh (338145:77) < clone res=0 exe=sh args=-c.tar --version. tid=338145(sh) pid=338145(sh) ptid=338144(sh) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=4296 vm_rss=96 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=77 vpid=77 
 4968760 15:19:23.075564082 1 wordpress (cdab6c786756) sh (338144:76) > wait4 
-4968762 15:19:23.075569548 1 wordpress (cdab6c786756) sh (338144:76) > switch next=0 pgft_maj=25 pgft_min=70 vm_size=4296 vm_rss=572 vm_swap=0 
 4968772 15:19:23.075617514 3 wordpress (cdab6c786756) sh (338145:77) > execve filename=/bin/tar 
 4968889 15:19:23.076110348 3 wordpress (cdab6c786756) tar (338145:77) < execve res=0 exe=tar args=--version. tid=338145(tar) pid=338145(tar) ptid=338144(sh) cwd= fdlimit=1048576 pgft_maj=1 pgft_min=19 vm_size=724 vm_rss=4 vm_swap=0 comm=tar cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... env=PHP_EXTRA_CONFIGURE_ARGS=--with-apxs2.APACHE_CONFDIR=/etc/apache2.HOSTNAME=cd... tty=0 pgid=1(systemd) loginuid=-1 
 4968890 15:19:23.076146680 3 wordpress (cdab6c786756) tar (338145:77) > brk addr=0 
@@ -589,12 +586,8 @@
 4969100 15:19:23.078140980 3 wordpress (cdab6c786756) tar (338145:77) > write fd=1(<p>) size=312 
 4969101 15:19:23.078145556 3 wordpress (cdab6c786756) tar (338145:77) < write res=312 data=tar (GNU tar) 1.29.Copyright (C) 2015 Free Software Foundation, Inc..License GPL 
 4969103 15:19:23.078151175 3 wordpress (cdab6c786756) tar (338145:77) > exit_group 
-4969113 15:19:23.078253821 3 wordpress (cdab6c786756) tar (338145:77) > procexit status=0 
 4969117 15:19:23.078290195 1 wordpress (cdab6c786756) sh (338144:76) < wait4 
-4969118 15:19:23.078291967 1 wordpress (cdab6c786756) sh (338144:76) > signaldeliver spid=77 dpid=338144(sh) sig=17(SIGCHLD) 
-4969120 15:19:23.078297483 1 wordpress (cdab6c786756) sh (338144:76) > sigreturn 
 4969121 15:19:23.078309417 1 wordpress (cdab6c786756) sh (338144:76) > exit_group 
-4969122 15:19:23.078375991 1 wordpress (cdab6c786756) sh (338144:76) > procexit status=0 
 4969147 15:19:23.079226429 1 wordpress (cdab6c786756) apache2 (338146:78) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338146(apache2) pid=338146(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=78 vpid=78 
 4969166 15:19:23.079254453 1 wordpress (cdab6c786756) apache2 (338146:78) > set_robust_list 
 4969168 15:19:23.079255002 1 wordpress (cdab6c786756) apache2 (338146:78) < set_robust_list 
@@ -710,7 +703,6 @@
 4969335 15:19:23.080864607 1 wordpress (cdab6c786756) sh (338146:78) < clone res=79 exe=sh args=-c.gzip --version. tid=338146(sh) pid=338146(sh) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=70 vm_size=4296 vm_rss=592 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=78 vpid=78 
 4969343 15:19:23.080883232 2 wordpress (cdab6c786756) sh (338147:79) < clone res=0 exe=sh args=-c.gzip --version. tid=338147(sh) pid=338147(sh) ptid=338146(sh) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=4296 vm_rss=100 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=79 vpid=79 
 4969344 15:19:23.080892803 1 wordpress (cdab6c786756) sh (338146:78) > wait4 
-4969345 15:19:23.080898398 1 wordpress (cdab6c786756) sh (338146:78) > switch next=0 pgft_maj=0 pgft_min=74 vm_size=4296 vm_rss=592 vm_swap=0 
 4969346 15:19:23.080965895 2 wordpress (cdab6c786756) sh (338147:79) > execve filename=/bin/gzip 
 4969353 15:19:23.081383136 2 wordpress (cdab6c786756) gzip (338147:79) < execve res=0 exe=gzip args=--version. tid=338147(gzip) pid=338147(gzip) ptid=338146(sh) cwd= fdlimit=1048576 pgft_maj=1 pgft_min=20 vm_size=732 vm_rss=4 vm_swap=0 comm=gzip cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... env=PHP_EXTRA_CONFIGURE_ARGS=--with-apxs2.APACHE_CONFDIR=/etc/apache2.HOSTNAME=cd... tty=0 pgid=1(systemd) loginuid=-1 
 4969354 15:19:23.081419901 2 wordpress (cdab6c786756) gzip (338147:79) > brk addr=0 
@@ -771,7 +763,6 @@
 4969459 15:19:23.082067583 2 wordpress (cdab6c786756) gzip (338147:79) < close res=0 
 4969462 15:19:23.082082598 2 wordpress (cdab6c786756) gzip (338147:79) > write fd=1(<p>) size=340 
 4969464 15:19:23.082092856 2 wordpress (cdab6c786756) gzip (338147:79) < write res=340 data=gzip 1.6.Copyright (C) 2007, 2010, 2011 Free Software Foundation, Inc..Copyright 
-4969465 15:19:23.082095094 2 wordpress (cdab6c786756) gzip (338147:79) > switch next=335973(apache2) pgft_maj=16 pgft_min=65 vm_size=4596 vm_rss=552 vm_swap=0 
 4969486 15:19:23.082171973 2 wordpress (cdab6c786756) gzip (338147:79) > close fd=1(<p>) 
 4969487 15:19:23.082172722 2 wordpress (cdab6c786756) gzip (338147:79) < close res=0 
 4969488 15:19:23.082175188 2 wordpress (cdab6c786756) gzip (338147:79) > brk addr=55D036FB5000 
@@ -779,12 +770,8 @@
 4969490 15:19:23.082184838 2 wordpress (cdab6c786756) gzip (338147:79) > close fd=2(<p>) 
 4969491 15:19:23.082185417 2 wordpress (cdab6c786756) gzip (338147:79) < close res=0 
 4969492 15:19:23.082195526 2 wordpress (cdab6c786756) gzip (338147:79) > exit_group 
-4969505 15:19:23.082284572 2 wordpress (cdab6c786756) gzip (338147:79) > procexit status=0 
 4969681 15:19:23.083493624 1 wordpress (cdab6c786756) sh (338146:78) < wait4 
-4969682 15:19:23.083496482 1 wordpress (cdab6c786756) sh (338146:78) > signaldeliver spid=79 dpid=338146(sh) sig=17(SIGCHLD) 
-4969683 15:19:23.083505814 1 wordpress (cdab6c786756) sh (338146:78) > sigreturn 
 4969684 15:19:23.083516587 1 wordpress (cdab6c786756) sh (338146:78) > exit_group 
-4969711 15:19:23.083618746 1 wordpress (cdab6c786756) sh (338146:78) > procexit status=0 
 4970079 15:19:23.085545617 2 wordpress (cdab6c786756) apache2 (338148:80) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338148(apache2) pid=338148(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=80 vpid=80 
 4970087 15:19:23.085591930 2 wordpress (cdab6c786756) apache2 (338148:80) > set_robust_list 
 4970088 15:19:23.085592567 2 wordpress (cdab6c786756) apache2 (338148:80) < set_robust_list 
@@ -900,7 +887,6 @@
 4970432 15:19:23.087757893 2 wordpress (cdab6c786756) sh (338148:80) < clone res=81 exe=sh args=-c.bzip2 --version. tid=338148(sh) pid=338148(sh) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=71 vm_size=4296 vm_rss=612 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=80 vpid=80 
 4970437 15:19:23.087775004 0 wordpress (cdab6c786756) sh (338149:81) < clone res=0 exe=sh args=-c.bzip2 --version. tid=338149(sh) pid=338149(sh) ptid=338148(sh) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=4296 vm_rss=100 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=81 vpid=81 
 4970439 15:19:23.087790592 2 wordpress (cdab6c786756) sh (338148:80) > wait4 
-4970441 15:19:23.087796993 2 wordpress (cdab6c786756) sh (338148:80) > switch next=0 pgft_maj=0 pgft_min=75 vm_size=4296 vm_rss=612 vm_swap=0 
 4970448 15:19:23.087841264 0 wordpress (cdab6c786756) sh (338149:81) > execve filename=/bin/bzip2 
 4970481 15:19:23.088106641 0 wordpress (cdab6c786756) bzip2 (338149:81) < execve res=0 exe=bzip2 args=--version. tid=338149(bzip2) pid=338149(bzip2) ptid=338148(sh) cwd= fdlimit=1048576 pgft_maj=1 pgft_min=18 vm_size=348 vm_rss=4 vm_swap=0 comm=bzip2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... env=PHP_EXTRA_CONFIGURE_ARGS=--with-apxs2.APACHE_CONFDIR=/etc/apache2.HOSTNAME=cd... tty=0 pgid=1(systemd) loginuid=-1 
 4970486 15:19:23.088134411 0 wordpress (cdab6c786756) bzip2 (338149:81) > brk addr=0 
@@ -978,12 +964,8 @@
 4970643 15:19:23.088844312 0 wordpress (cdab6c786756) bzip2 (338149:81) > write fd=2(<p>pipe:[659234]) size=546 
 4970644 15:19:23.088850342 0 wordpress (cdab6c786756) bzip2 (338149:81) < write res=546 data=bzip2, a block-sorting file compressor.  Version 1.0.6, 6-Sept-2010..   .   Copy 
 4970647 15:19:23.088860336 0 wordpress (cdab6c786756) bzip2 (338149:81) > exit_group 
-4970665 15:19:23.088949034 0 wordpress (cdab6c786756) bzip2 (338149:81) > procexit status=0 
 4970679 15:19:23.088989870 0 wordpress (cdab6c786756) sh (338148:80) < wait4 
-4970680 15:19:23.088991582 0 wordpress (cdab6c786756) sh (338148:80) > signaldeliver spid=81 dpid=338148(sh) sig=17(SIGCHLD) 
-4970682 15:19:23.088998202 0 wordpress (cdab6c786756) sh (338148:80) > sigreturn 
 4970684 15:19:23.089007042 0 wordpress (cdab6c786756) sh (338148:80) > exit_group 
-4970692 15:19:23.089066337 0 wordpress (cdab6c786756) sh (338148:80) > procexit status=0 
 4970833 15:19:23.089978554 0 wordpress (cdab6c786756) apache2 (338150:82) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338150(apache2) pid=338150(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=82 vpid=82 
 4970843 15:19:23.090015712 0 wordpress (cdab6c786756) apache2 (338150:82) > set_robust_list 
 4970844 15:19:23.090016273 0 wordpress (cdab6c786756) apache2 (338150:82) < set_robust_list 
@@ -1095,7 +1077,6 @@
 4971226 15:19:23.091828591 0 wordpress (cdab6c786756) sh (338150:82) < clone res=83 exe=sh args=-c.xz --version. tid=338150(sh) pid=338150(sh) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=70 vm_size=4296 vm_rss=596 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=82 vpid=82 
 4971230 15:19:23.091841669 2 wordpress (cdab6c786756) sh (338151:83) < clone res=0 exe=sh args=-c.xz --version. tid=338151(sh) pid=338151(sh) ptid=338150(sh) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=4296 vm_rss=100 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=83 vpid=83 
 4971233 15:19:23.091859911 0 wordpress (cdab6c786756) sh (338150:82) > wait4 
-4971235 15:19:23.091865222 0 wordpress (cdab6c786756) sh (338150:82) > switch next=0 pgft_maj=0 pgft_min=74 vm_size=4296 vm_rss=596 vm_swap=0 
 4971242 15:19:23.091906881 2 wordpress (cdab6c786756) sh (338151:83) > execve filename=/usr/bin/xz 
 4971280 15:19:23.092175834 2 wordpress (cdab6c786756) xz (338151:83) < execve res=0 exe=xz args=--version. tid=338151(xz) pid=338151(xz) ptid=338150(sh) cwd= fdlimit=1048576 pgft_maj=1 pgft_min=18 vm_size=400 vm_rss=4 vm_swap=0 comm=xz cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... env=PHP_EXTRA_CONFIGURE_ARGS=--with-apxs2.APACHE_CONFDIR=/etc/apache2.HOSTNAME=cd... tty=0 pgid=1(systemd) loginuid=-1 
 4971285 15:19:23.092204502 2 wordpress (cdab6c786756) xz (338151:83) > brk addr=0 
@@ -1251,16 +1232,11 @@
 4971575 15:19:23.093131966 2 wordpress (cdab6c786756) xz (338151:83) > close fd=2(<p>) 
 4971576 15:19:23.093132351 2 wordpress (cdab6c786756) xz (338151:83) < close res=0 
 4971580 15:19:23.093139798 2 wordpress (cdab6c786756) xz (338151:83) > exit_group 
-4971604 15:19:23.093230648 2 wordpress (cdab6c786756) xz (338151:83) > procexit status=0 
 4971615 15:19:23.093275737 0 wordpress (cdab6c786756) sh (338150:82) < wait4 
-4971616 15:19:23.093277329 0 wordpress (cdab6c786756) sh (338150:82) > signaldeliver spid=83 dpid=338150(sh) sig=17(SIGCHLD) 
-4971617 15:19:23.093281751 0 wordpress (cdab6c786756) sh (338150:82) > sigreturn 
 4971620 15:19:23.093289640 0 wordpress (cdab6c786756) sh (338150:82) > exit_group 
-4971629 15:19:23.093346591 0 wordpress (cdab6c786756) sh (338150:82) > procexit status=0 
 4971798 15:19:23.094196612 0 wordpress (cdab6c786756) apache2 (338152:84) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338152(apache2) pid=338152(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=84 vpid=84 
 4971808 15:19:23.094229688 0 wordpress (cdab6c786756) apache2 (338152:84) > set_robust_list 
 4971810 15:19:23.094230168 0 wordpress (cdab6c786756) apache2 (338152:84) < set_robust_list 
-4971814 15:19:23.094247119 0 wordpress (cdab6c786756) apache2 (338152:84) > switch next=6023(dockerd) pgft_maj=0 pgft_min=8 vm_size=385924 vm_rss=10084 vm_swap=0 
 4971849 15:19:23.094304745 0 wordpress (cdab6c786756) apache2 (338152:84) > close fd=13(<p>) 
 4971850 15:19:23.094305407 0 wordpress (cdab6c786756) apache2 (338152:84) < close res=0 
 4971853 15:19:23.094311805 0 wordpress (cdab6c786756) apache2 (338152:84) > dup fd=12(<p>) 
@@ -1280,8 +1256,6 @@
 4971869 15:19:23.094323202 0 wordpress (cdab6c786756) apache2 (338152:84) > close fd=17(<p>) 
 4971870 15:19:23.094323467 0 wordpress (cdab6c786756) apache2 (338152:84) < close res=0 
 4971871 15:19:23.094325435 0 wordpress (cdab6c786756) apache2 (338152:84) > execve filename=<NA> 
-4971878 15:19:23.094337187 0 wordpress (cdab6c786756) apache2 (338152:84) > switch next=6023(dockerd) pgft_maj=0 pgft_min=15 vm_size=385924 vm_rss=10084 vm_swap=0 
-4971938 15:19:23.094655868 0 wordpress (cdab6c786756) apache2 (338152:84) > switch next=6479(dockerd) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
 4972060 15:19:23.095274905 0 wordpress (cdab6c786756) sh (338152:84) < execve res=0 exe=sh args=-c.zip -h. tid=338152(sh) pid=338152(sh) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=20 vm_size=436 vm_rss=4 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... env=APACHE_LOG_DIR=/var/log/apache2.LANG=C.HOSTNAME=cdab6c786756.APACHE_CONFDIR=/... tty=0 pgid=1(systemd) loginuid=-1 
 4972065 15:19:23.095303624 0 wordpress (cdab6c786756) sh (338152:84) > brk addr=0 
 4972066 15:19:23.095304240 0 wordpress (cdab6c786756) sh (338152:84) < brk res=555C9543F000 vm_size=436 vm_rss=4 vm_swap=0 
@@ -1360,7 +1334,6 @@
 4972214 15:19:23.095763586 0 wordpress (cdab6c786756) sh (338152:84) > rt_sigaction 
 4972215 15:19:23.095763821 0 wordpress (cdab6c786756) sh (338152:84) < rt_sigaction 
 4972217 15:19:23.095770717 0 wordpress (cdab6c786756) sh (338152:84) > stat 
-4972230 15:19:23.095823544 0 wordpress (cdab6c786756) sh (338152:84) > switch next=6122(W#04-wlp3s0) pgft_maj=0 pgft_min=69 vm_size=4296 vm_rss=576 vm_swap=0 
 4972240 15:19:23.095845804 0 wordpress (cdab6c786756) sh (338152:84) < stat res=-2(ENOENT) path=/usr/local/sbin/zip 
 4972241 15:19:23.095848518 0 wordpress (cdab6c786756) sh (338152:84) > stat 
 4972242 15:19:23.095862864 0 wordpress (cdab6c786756) sh (338152:84) < stat res=-2(ENOENT) path=/usr/local/bin/zip 
@@ -1379,7 +1352,6 @@
 4972259 15:19:23.095926227 0 wordpress (cdab6c786756) sh (338152:84) > write fd=2(<p>) size=1 
 4972261 15:19:23.095929681 0 wordpress (cdab6c786756) sh (338152:84) < write res=1 data=. 
 4972263 15:19:23.095933004 0 wordpress (cdab6c786756) sh (338152:84) > exit_group 
-4972283 15:19:23.096010648 0 wordpress (cdab6c786756) sh (338152:84) > procexit status=32512 
 4972433 15:19:23.096842449 0 wordpress (cdab6c786756) apache2 (338153:85) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338153(apache2) pid=338153(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=85 vpid=85 
 4972440 15:19:23.096877635 0 wordpress (cdab6c786756) apache2 (338153:85) > set_robust_list 
 4972441 15:19:23.096878208 0 wordpress (cdab6c786756) apache2 (338153:85) < set_robust_list 
@@ -1493,15 +1465,11 @@
 4972842 15:19:23.098324303 0 wordpress (cdab6c786756) sh (338153:85) < stat res=-2(ENOENT) path=/bin/unzip 
 4972845 15:19:23.098329658 0 wordpress (cdab6c786756) sh (338153:85) > write fd=2(<p>) size=7 
 4972852 15:19:23.098340170 0 wordpress (cdab6c786756) sh (338153:85) < write res=7 data=sh: 1:  
-4972855 15:19:23.098342135 0 wordpress (cdab6c786756) sh (338153:85) > switch next=335973(apache2) pgft_maj=0 pgft_min=68 vm_size=4296 vm_rss=616 vm_swap=0 
 4972882 15:19:23.098409027 0 wordpress (cdab6c786756) sh (338153:85) > write fd=2(<p>) size=16 
 4972883 15:19:23.098414383 0 wordpress (cdab6c786756) sh (338153:85) < write res=16 data=unzip: not found 
-4972884 15:19:23.098416081 0 wordpress (cdab6c786756) sh (338153:85) > switch next=335973(apache2) pgft_maj=0 pgft_min=68 vm_size=4296 vm_rss=616 vm_swap=0 
 4972907 15:19:23.098457511 0 wordpress (cdab6c786756) sh (338153:85) > write fd=2(<p>) size=1 
 4972909 15:19:23.098462124 0 wordpress (cdab6c786756) sh (338153:85) < write res=1 data=. 
-4972910 15:19:23.098463545 0 wordpress (cdab6c786756) sh (338153:85) > switch next=335973(apache2) pgft_maj=0 pgft_min=68 vm_size=4296 vm_rss=616 vm_swap=0 
 4972933 15:19:23.098501844 0 wordpress (cdab6c786756) sh (338153:85) > exit_group 
-4972961 15:19:23.098581021 0 wordpress (cdab6c786756) sh (338153:85) > procexit status=32512 
 4977673 15:19:23.106898255 0 wordpress (cdab6c786756) apache2 (338154:86) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338154(apache2) pid=338154(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=86 vpid=86 
 4977681 15:19:23.106951225 0 wordpress (cdab6c786756) apache2 (338154:86) > set_robust_list 
 4977682 15:19:23.106952764 0 wordpress (cdab6c786756) apache2 (338154:86) < set_robust_list 
@@ -1524,19 +1492,6 @@
 4977723 15:19:23.107030115 0 wordpress (cdab6c786756) apache2 (338154:86) > close fd=17 
 4977724 15:19:23.107030648 0 wordpress (cdab6c786756) apache2 (338154:86) < close res=0 
 4977726 15:19:23.107034094 0 wordpress (cdab6c786756) apache2 (338154:86) > execve filename=<NA> 
-4977739 15:19:23.107052568 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=27337(RemVidChild) pgft_maj=0 pgft_min=16 vm_size=385924 vm_rss=10084 vm_swap=0 
-4977870 15:19:23.107490858 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=14 pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4977909 15:19:23.107660633 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=315067(MediaPD~der) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4977944 15:19:23.107794017 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314554(MediaSu~sor) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4977977 15:19:23.107933744 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=27337(RemVidChild) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978012 15:19:23.108123252 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314557(MediaSu~sor) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978073 15:19:23.108410122 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=27337(RemVidChild) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978096 15:19:23.108475599 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314898(MediaSu~sor) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978146 15:19:23.108564675 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314553(MediaDe~ine) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978194 15:19:23.108668741 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314553(MediaDe~ine) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978224 15:19:23.108746446 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314604(MediaSu~sor) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978263 15:19:23.108819227 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314898(MediaSu~sor) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
-4978309 15:19:23.108902284 0 wordpress (cdab6c786756) apache2 (338154:86) > switch next=314553(MediaDe~ine) pgft_maj=0 pgft_min=17 vm_size=4 vm_rss=4 vm_swap=0 
 4978388 15:19:23.109357644 0 wordpress (cdab6c786756) sh (338154:86) < execve res=0 exe=sh args=-c.rar --version. tid=338154(sh) pid=338154(sh) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=20 vm_size=436 vm_rss=4 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... env=APACHE_LOG_DIR=/var/log/apache2.LANG=C.HOSTNAME=cdab6c786756.APACHE_CONFDIR=/... tty=0 pgid=1(systemd) loginuid=-1 
 4978392 15:19:23.109387841 0 wordpress (cdab6c786756) sh (338154:86) > brk addr=0 
 4978393 15:19:23.109388493 0 wordpress (cdab6c786756) sh (338154:86) < brk res=5567A6ED0000 vm_size=436 vm_rss=4 vm_swap=0 
@@ -1633,7 +1588,6 @@
 4978562 15:19:23.109945123 0 wordpress (cdab6c786756) sh (338154:86) > write fd=2(<p>pipe:[659234]) size=1 
 4978564 15:19:23.109945855 0 wordpress (cdab6c786756) sh (338154:86) < write res=1 data=. 
 4978565 15:19:23.109950586 0 wordpress (cdab6c786756) sh (338154:86) > exit_group 
-4978585 15:19:23.110023150 0 wordpress (cdab6c786756) sh (338154:86) > procexit status=32512 
 4978730 15:19:23.110842086 0 wordpress (cdab6c786756) apache2 (338155:87) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338155(apache2) pid=338155(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=87 vpid=87 
 4978737 15:19:23.110877037 0 wordpress (cdab6c786756) apache2 (338155:87) > set_robust_list 
 4978738 15:19:23.110877612 0 wordpress (cdab6c786756) apache2 (338155:87) < set_robust_list 
@@ -1752,7 +1706,6 @@
 4979077 15:19:23.112344496 0 wordpress (cdab6c786756) sh (338155:87) > write fd=2(<p>) size=1 
 4979079 15:19:23.112345340 0 wordpress (cdab6c786756) sh (338155:87) < write res=1 data=. 
 4979081 15:19:23.112350255 0 wordpress (cdab6c786756) sh (338155:87) > exit_group 
-4979101 15:19:23.112422325 0 wordpress (cdab6c786756) sh (338155:87) > procexit status=32512 
 4979235 15:19:23.113207303 0 wordpress (cdab6c786756) apache2 (338156:88) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338156(apache2) pid=338156(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=88 vpid=88 
 4979246 15:19:23.113242221 0 wordpress (cdab6c786756) apache2 (338156:88) > set_robust_list 
 4979247 15:19:23.113242753 0 wordpress (cdab6c786756) apache2 (338156:88) < set_robust_list 
@@ -1871,7 +1824,6 @@
 4979599 15:19:23.114626976 0 wordpress (cdab6c786756) sh (338156:88) > write fd=2(<p>) size=1 
 4979600 15:19:23.114627752 0 wordpress (cdab6c786756) sh (338156:88) < write res=1 data=. 
 4979602 15:19:23.114630468 0 wordpress (cdab6c786756) sh (338156:88) > exit_group 
-4979619 15:19:23.114703670 0 wordpress (cdab6c786756) sh (338156:88) > procexit status=32512 
 4979879 15:19:23.115972727 0 wordpress (cdab6c786756) apache2 (338157:89) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338157(apache2) pid=338157(apache2) ptid=335973(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=385924 vm_rss=10084 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=89 vpid=89 
 4979887 15:19:23.116007606 0 wordpress (cdab6c786756) apache2 (338157:89) > set_robust_list 
 4979888 15:19:23.116008496 0 wordpress (cdab6c786756) apache2 (338157:89) < set_robust_list 
@@ -1990,7 +1942,6 @@
 4980248 15:19:23.117469471 0 wordpress (cdab6c786756) sh (338157:89) > write fd=2(<p>) size=1 
 4980250 15:19:23.117470341 0 wordpress (cdab6c786756) sh (338157:89) < write res=1 data=. 
 4980251 15:19:23.117475098 0 wordpress (cdab6c786756) sh (338157:89) > exit_group 
-4980273 15:19:23.117547880 0 wordpress (cdab6c786756) sh (338157:89) > procexit status=32512 
 6308051 15:19:45.621146678 2 wordpress (cdab6c786756) apache2 (338338:90) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=338338(apache2) pid=335972(apache2) ptid=335855(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=0 vm_size=400588 vm_rss=44772 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=578861571(CLONE_FILES|CLONE_FS|CLONE_PARENT_SETTID|CLONE_SIGHAND|CLONE_SYSVSEM|CLONE_THREAD|CLONE_VM|CLONE_CHILD_CLEARTID|CLONE_SETTLS) uid=33 gid=33 vtid=90 vpid=70 
 6308052 15:19:45.621158837 2 wordpress (cdab6c786756) apache2 (338338:90) > set_robust_list 
 6308053 15:19:45.621159282 2 wordpress (cdab6c786756) apache2 (338338:90) < set_robust_list 
@@ -2071,4 +2022,3 @@
 6308128 15:19:45.621454714 2 wordpress (cdab6c786756) apache2 (338338:90) > madvise 
 6308129 15:19:45.621459025 2 wordpress (cdab6c786756) apache2 (338338:90) < madvise 
 6308130 15:19:45.621460097 2 wordpress (cdab6c786756) apache2 (338338:90) > exit 
-6308131 15:19:45.621465174 2 wordpress (cdab6c786756) apache2 (338338:90) > procexit status=0 

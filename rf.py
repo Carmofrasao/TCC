@@ -20,7 +20,7 @@ try:
     from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer, HashingVectorizer
     from sklearn import metrics
     from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
-    from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, plot_confusion_matrix, balanced_accuracy_score, confusion_matrix, brier_score_loss
+    from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, balanced_accuracy_score, confusion_matrix, brier_score_loss
 
     from sklearn.model_selection import cross_val_score
     from sklearn import preprocessing

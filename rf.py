@@ -69,8 +69,7 @@ class Main():
             # find . -type f -print0 | xargs -0 wc -l | sort -n
             # get files with more calls
 
-            data = pd.read_csv(self.dataset, header=0, delimiter=",", na_filter=True, index_col=False)
-            
+            data = pd.read_csv(self.dataset, header=0, delimiter=",", na_filter=True, index_col=0)
             # print(data.columns.values)
             pd.set_option('display.max_columns', None)
             pd.set_option('display.max_rows', None)
@@ -81,8 +80,8 @@ class Main():
             data = data.loc[:, (data != 0).any(axis=0)]
             print(data.describe())
 
-            y = data['id']
-            X = data.drop(columns=['id', 't']) 
+            y = data.index.values
+            X = data.drop(columns=['t']) 
             print(X.columns.values)
             
             # normalizar 

@@ -111,6 +111,7 @@ class Main():
         y_score_rfc = rfc.predict_proba(X_test)[:,1:]
         
         self.get_score_clf("rfc", y_test, y_pred_rfc, y_score_rfc)
+        # https://stackoverflow.com/questions/49055410/confusion-matrix-too-many-values-to-unpack
         tn, fp, fn, tp = confusion_matrix(y_test, y_pred_rfc).ravel()
         print("CV: tn", tn, "fp", fp, "fn", fn, "tp", tp)
 

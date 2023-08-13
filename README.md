@@ -218,3 +218,16 @@ sed -i".bak" '1,2d' *
 ```
 
 * O arquivo `trata.py` limpa as retira as chamadas que não são syscall e faz a contagem de cada syscall que é feita no log
+
+### Treinamento
+
+* Erro atual
+
+```
+Traceback (most recent call last):
+  File "/home/anderson/curso/TCC/rf.py", line 184, in <module>
+    worker.main()
+  File "/home/anderson/curso/TCC/rf.py", line 114, in main
+    tn, fp, fn, tp = confusion_matrix(y_test, y_pred_rfc).ravel()
+ValueError: too many values to unpack (expected 4)
+```

@@ -209,3 +209,12 @@ ID feature1, f2, f3
     ML <- f1,f2,f3  
     result = .predict()  
     result.XXX(ID)  
+
+### Tratamento dos dados
+
+* Retirando cabeçalho e linha em branco dos logs do sysdig
+```
+sed -i".bak" '1,2d' *
+```
+
+* O arquivo `trata.py` limpa as retira as chamadas que não são syscall e faz a contagem de cada syscall que é feita no log

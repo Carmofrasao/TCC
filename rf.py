@@ -82,7 +82,7 @@ class Main():
             print(data.describe())
 
             y = data['id']
-            X = data.drop(['id'], 1) 
+            X = data.drop(columns=['id', 't']) 
             print(X.columns.values)
             
             # normalizar 

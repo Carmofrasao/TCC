@@ -12,7 +12,7 @@ for sys in syscall:
         print(sys, end=',')
     i+=1
 i=0
-id = 1
+id = 0
 for _, _, arquivos in os.walk('./wordpress/logs/normal/sysdig'):
     for arquivo in arquivos:
         with open(f'./wordpress/logs/normal/sysdig/{arquivo}', "r") as f:

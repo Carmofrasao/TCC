@@ -217,7 +217,7 @@ ID feature1, f2, f3
 sed -i".bak" '1,2d' *
 ```
 
-* O arquivo `trata.py` limpa as retira as chamadas que não são syscall e faz a contagem de cada syscall que é feita no log
+* O arquivo `trata.py` retira as chamadas que não são syscall e faz a contagem de cada syscall que é feita no log
 
 ### Treinamento
 

@@ -1,600 +1,600 @@
-3174681 17:38:05.996185888 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=413460(apache2) pid=413460(apache2) ptid=395182(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7640 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-16ae8d7cd5fb26f69d2b3694871b56f03e50ad52cedd860b3... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=110 vpid=110 
-3174683 17:38:05.996257912 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > set_robust_list 
-3174684 17:38:05.996259116 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < set_robust_list 
-3174701 17:38:05.996496545 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174702 17:38:05.996498846 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174703 17:38:05.996502179 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174704 17:38:05.996503313 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174705 17:38:05.996506165 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174706 17:38:05.996507012 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174708 17:38:05.996510759 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > getpid 
-3174709 17:38:05.996511837 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < getpid 
-3174714 17:38:05.996541136 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > getpid 
-3174716 17:38:05.996541903 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < getpid 
-3174718 17:38:05.996609036 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3174719 17:38:05.996626554 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < mmap res=7F2798C60000 vm_size=383112 vm_rss=7640 vm_swap=0 
-3174720 17:38:05.996659519 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3174721 17:38:05.996665219 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < mmap res=7F2798C5E000 vm_size=383120 vm_rss=7640 vm_swap=0 
-3174722 17:38:05.996685396 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > geteuid 
-3174723 17:38:05.996686298 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < geteuid euid=0(root) 
-3174724 17:38:05.996691054 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > setgid gid=33(www-data) 
-3174725 17:38:05.996699721 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < setgid res=0 
-3174726 17:38:05.996702835 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > open 
-3174727 17:38:05.996745651 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < open fd=9(<f>/proc/sys/kernel/ngroups_max) name=/proc/sys/kernel/ngroups_max flags=1(O_RDONLY) mode=0 dev=60 
-3174729 17:38:05.996776831 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > read fd=9(<f>/proc/sys/kernel/ngroups_max) size=31 
-3174730 17:38:05.996788208 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < read res=6 data=65536. 
-3174731 17:38:05.996792200 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > close fd=9(<f>/proc/sys/kernel/ngroups_max) 
-3174733 17:38:05.996794519 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < close res=0 
-3174737 17:38:05.997030925 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > open 
-3174738 17:38:05.997055070 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < open fd=9(<f>/etc/group) name=/etc/group flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3174739 17:38:05.997063118 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > lseek fd=9(<f>/etc/group) offset=0 whence=1(SEEK_CUR) 
-3174740 17:38:05.997065765 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < lseek res=0 
-3174741 17:38:05.997070257 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > fstat fd=9(<f>/etc/group) 
-3174742 17:38:05.997078349 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < fstat res=0 
-3174743 17:38:05.997081452 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > mmap addr=0 length=446 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=9(<f>/etc/group) offset=0 
-3174744 17:38:05.997094471 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < mmap res=7F2798C5D000 vm_size=383124 vm_rss=7640 vm_swap=0 
-3174745 17:38:05.997097724 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > lseek fd=9(<f>/etc/group) offset=446 whence=0(SEEK_SET) 
-3174746 17:38:05.997099188 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < lseek res=446 
-3174747 17:38:05.997130765 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > fstat fd=9(<f>/etc/group) 
-3174748 17:38:05.997134449 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < fstat res=0 
-3174749 17:38:05.997139633 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > munmap addr=7F2798C5D000 length=446 
-3174750 17:38:05.997154429 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < munmap res=0 vm_size=383120 vm_rss=9048 vm_swap=0 
-3174751 17:38:05.997157779 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > close fd=9(<f>/etc/group) 
-3174752 17:38:05.997159234 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < close res=0 
-3174764 17:38:05.997262237 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > setgroups 
-3174765 17:38:05.997271344 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < setgroups 
-3174767 17:38:05.997276062 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > geteuid 
-3174768 17:38:05.997276821 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < geteuid euid=0(root) 
-3174769 17:38:05.997280234 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > setuid uid=33(www-data) 
-3174770 17:38:05.997287266 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < setuid res=0 
-3174771 17:38:05.997320316 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > getpid 
-3174772 17:38:05.997321358 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < getpid 
-3174775 17:38:05.997399338 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174776 17:38:05.997400979 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174777 17:38:05.997404233 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174778 17:38:05.997405039 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174779 17:38:05.997407895 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174780 17:38:05.997408663 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174782 17:38:05.997411418 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174784 17:38:05.997412184 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174785 17:38:05.997414914 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174786 17:38:05.997415664 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174787 17:38:05.997418418 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174788 17:38:05.997419160 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174789 17:38:05.997421981 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174790 17:38:05.997422715 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174791 17:38:05.997425484 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174792 17:38:05.997426203 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174794 17:38:05.997429094 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174795 17:38:05.997429824 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174796 17:38:05.997432568 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174797 17:38:05.997433272 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174798 17:38:05.997436003 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174799 17:38:05.997436724 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174800 17:38:05.997439654 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174801 17:38:05.997440420 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174802 17:38:05.997443336 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174803 17:38:05.997443986 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174804 17:38:05.997446791 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174805 17:38:05.997447562 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174807 17:38:05.997450304 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174808 17:38:05.997451038 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174809 17:38:05.997453975 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174810 17:38:05.997455050 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174811 17:38:05.997457691 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174812 17:38:05.997458451 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174814 17:38:05.997461185 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174815 17:38:05.997461858 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174816 17:38:05.997464820 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174817 17:38:05.997465603 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174818 17:38:05.997468243 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174819 17:38:05.997468963 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174821 17:38:05.997471608 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174822 17:38:05.997472351 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174823 17:38:05.997475327 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174825 17:38:05.997476177 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174826 17:38:05.997478990 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174827 17:38:05.997479824 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174828 17:38:05.997482687 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174829 17:38:05.997483447 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174830 17:38:05.997486245 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174831 17:38:05.997487003 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174832 17:38:05.997489795 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174833 17:38:05.997490562 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174835 17:38:05.997493307 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174836 17:38:05.997494090 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174837 17:38:05.997496854 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174839 17:38:05.997497594 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174840 17:38:05.997500429 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174841 17:38:05.997501152 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174842 17:38:05.997503921 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174843 17:38:05.997504736 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174844 17:38:05.997507576 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174845 17:38:05.997508333 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174846 17:38:05.997511321 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174847 17:38:05.997512100 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174848 17:38:05.997514762 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174849 17:38:05.997515459 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174850 17:38:05.997518238 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174851 17:38:05.997519029 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174852 17:38:05.997521863 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174853 17:38:05.997522567 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174854 17:38:05.997525367 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174855 17:38:05.997526100 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174856 17:38:05.997528831 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174857 17:38:05.997529501 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174858 17:38:05.997532185 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174859 17:38:05.997533093 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174860 17:38:05.997535976 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174861 17:38:05.997536734 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174862 17:38:05.997539556 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174863 17:38:05.997540232 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174864 17:38:05.997542943 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174865 17:38:05.997543669 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174867 17:38:05.997546435 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174868 17:38:05.997547169 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174869 17:38:05.997549948 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174870 17:38:05.997550702 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174871 17:38:05.997553511 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174872 17:38:05.997554266 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174873 17:38:05.997557035 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174874 17:38:05.997557781 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174875 17:38:05.997560557 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174876 17:38:05.997561291 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174877 17:38:05.997564179 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174878 17:38:05.997565000 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174879 17:38:05.997567883 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174880 17:38:05.997568699 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174881 17:38:05.997571529 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174882 17:38:05.997572320 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174884 17:38:05.997575134 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174885 17:38:05.997575914 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174886 17:38:05.997578667 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174887 17:38:05.997579422 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174888 17:38:05.997582259 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174889 17:38:05.997583002 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174890 17:38:05.997585741 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174891 17:38:05.997586472 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174892 17:38:05.997589204 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174893 17:38:05.997589964 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174894 17:38:05.997592753 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174895 17:38:05.997593477 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174896 17:38:05.997596210 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174897 17:38:05.997596947 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174898 17:38:05.997599614 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174899 17:38:05.997600344 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174900 17:38:05.997603178 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174901 17:38:05.997603913 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174902 17:38:05.997606981 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174903 17:38:05.997607705 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174905 17:38:05.997610503 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174906 17:38:05.997611224 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174907 17:38:05.997614002 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174909 17:38:05.997614727 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174910 17:38:05.997617452 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > rt_sigaction 
-3174911 17:38:05.997618240 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < rt_sigaction 
-3174918 17:38:05.997667744 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3174919 17:38:05.997676905 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < mmap res=7F2798C5C000 vm_size=383128 vm_rss=9048 vm_swap=0 
-3174923 17:38:05.997710533 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > getpid 
-3174924 17:38:05.997711613 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < getpid 
-3174927 17:38:05.997746991 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > epoll_create1 
-3174928 17:38:05.997756084 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < epoll_create1 
-3174929 17:38:05.997762789 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > epoll_ctl 
-3174930 17:38:05.997769130 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < epoll_ctl 
-3174936 17:38:05.997797900 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3174937 17:38:05.997802737 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) < mmap res=7F2798C5A000 vm_size=383136 vm_rss=9048 vm_swap=0 
-3174940 17:38:05.997821306 0 wordpress (16ae8d7cd5fb) apache2 (413460:110) > accept flags=0 
-3606602 17:38:09.402769824 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) < clone res=0 exe=apache2 args=-DFOREGROUND. tid=413517(apache2) pid=413517(apache2) ptid=396055(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=394832 vm_rss=16528 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-16ae8d7cd5fb26f69d2b3694871b56f03e50ad52cedd860b3... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=111 vpid=111 
-3606610 17:38:09.402803786 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) > set_robust_list 
-3606611 17:38:09.402804388 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) < set_robust_list 
-3606622 17:38:09.402836517 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) > dup fd=14 
-3606623 17:38:09.402837763 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) < dup res=1(<p>pipe:[488959]) 
-3606625 17:38:09.402839873 0 wordpress (16ae8d7cd5fb) apache2 (413517:111) > execve filename=<NA> 
-3606929 17:38:09.403986332 0 wordpress (16ae8d7cd5fb) sh (413517:111) < execve res=0 exe=sh args=-c.type -P ffmpeg. tid=413517(sh) pid=413517(sh) ptid=396055(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=22 vm_size=1420 vm_rss=4 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-16ae8d7cd5fb26f69d2b3694871b56f03e50ad52cedd860b3... env=APACHE_LOG_DIR=/var/log/apache2.LANG=C.HOSTNAME=16ae8d7cd5fb.APACHE_CONFDIR=/... tty=0 pgid=1(systemd) loginuid=-1 
-3606930 17:38:09.404019243 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=0 
-3606931 17:38:09.404019829 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FE4000 vm_size=1420 vm_rss=4 vm_swap=0 
-3606932 17:38:09.404038531 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3606933 17:38:09.404046950 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3606934 17:38:09.404049120 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3606935 17:38:09.404051242 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC171B0D000 vm_size=1432 vm_rss=4 vm_swap=0 
-3606936 17:38:09.404070948 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=4(R_OK) 
-3606937 17:38:09.404073449 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.preload 
-3606938 17:38:09.404081308 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3606939 17:38:09.404090258 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/etc/ld.so.cache) name=/etc/ld.so.cache flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3606940 17:38:09.404092104 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/etc/ld.so.cache) 
-3606941 17:38:09.404095695 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3606942 17:38:09.404096770 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=15070 prot=1(PROT_READ) flags=2(MAP_PRIVATE) fd=3(<f>/etc/ld.so.cache) offset=0 
-3606943 17:38:09.404099107 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC171B09000 vm_size=1448 vm_rss=4 vm_swap=0 
-3606944 17:38:09.404100149 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/etc/ld.so.cache) 
-3606945 17:38:09.404100530 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3606946 17:38:09.404104493 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3606947 17:38:09.404106624 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3606948 17:38:09.404111462 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3606949 17:38:09.404119024 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) name=/lib/x86_64-linux-gnu/libtinfo.so.5 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3606950 17:38:09.404120769 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) size=832 
-3606951 17:38:09.404132934 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=832 data=.ELF..............>.............@.......X...........@.8...@..................... 
-3606952 17:38:09.404134841 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) 
-3606953 17:38:09.404136483 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3606954 17:38:09.404138222 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=2267936 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) offset=0 
-3606955 17:38:09.404143435 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC1716C3000 vm_size=3664 vm_rss=4 vm_swap=0 
-3606956 17:38:09.404144556 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3606957 17:38:09.404149995 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3606958 17:38:09.404151294 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC1718E8000 length=20480 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) offset=151552 
-3606959 17:38:09.404156539 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC1718E8000 vm_size=3664 vm_rss=324 vm_swap=0 
-3606962 17:38:09.404168861 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) 
-3606963 17:38:09.404169197 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3606969 17:38:09.404175895 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3606970 17:38:09.404178601 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3606971 17:38:09.404180818 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3606974 17:38:09.404186450 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) name=/lib/x86_64-linux-gnu/libdl.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3606977 17:38:09.404188118 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) size=832 
-3606979 17:38:09.404190467 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=832 data=.ELF..............>.............@........1..........@.8...@..................... 
-3606980 17:38:09.404191817 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) 
-3606981 17:38:09.404193621 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3606983 17:38:09.404195058 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=2109680 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) offset=0 
-3606986 17:38:09.404198709 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC1714BF000 vm_size=5728 vm_rss=324 vm_swap=0 
-3606987 17:38:09.404199825 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3606989 17:38:09.404204339 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3606990 17:38:09.404205302 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC1716C1000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) offset=8192 
-3606992 17:38:09.404208929 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC1716C1000 vm_size=5728 vm_rss=396 vm_swap=0 
-3607000 17:38:09.404219523 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) 
-3607001 17:38:09.404219846 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607005 17:38:09.404224122 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3607007 17:38:09.404226569 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3607010 17:38:09.404228359 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607011 17:38:09.404233569 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) name=/lib/x86_64-linux-gnu/libc.so.6 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607012 17:38:09.404235238 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) size=832 
-3607013 17:38:09.404237727 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=832 data=.ELF..............>.............@.......P...........@.8...@.G.F.........@....... 
-3607014 17:38:09.404239169 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) 
-3607015 17:38:09.404240836 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607016 17:38:09.404245370 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=3795360 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) offset=0 
-3607017 17:38:09.404248701 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC171120000 vm_size=9436 vm_rss=396 vm_swap=0 
-3607018 17:38:09.404249740 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607019 17:38:09.404253811 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607020 17:38:09.404254903 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC1714B5000 length=24576 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) offset=1658880 
-3607021 17:38:09.404258994 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC1714B5000 vm_size=9436 vm_rss=420 vm_swap=0 
-3607022 17:38:09.404264308 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC1714BB000 length=14752 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3607023 17:38:09.404266595 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC1714BB000 vm_size=9436 vm_rss=424 vm_swap=0 
-3607024 17:38:09.404274117 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) 
-3607025 17:38:09.404274443 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607026 17:38:09.404293345 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3607027 17:38:09.404294754 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC171B07000 vm_size=9444 vm_rss=424 vm_swap=0 
-3607028 17:38:09.404301166 0 wordpress (16ae8d7cd5fb) sh (413517:111) > arch_prctl 
-3607029 17:38:09.404301662 0 wordpress (16ae8d7cd5fb) sh (413517:111) < arch_prctl 
-3607030 17:38:09.404358297 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607031 17:38:09.404362358 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607032 17:38:09.404367086 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607033 17:38:09.404369328 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607034 17:38:09.404426137 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607035 17:38:09.404429371 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607036 17:38:09.404440502 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607037 17:38:09.404443242 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607038 17:38:09.404446114 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607039 17:38:09.404449650 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607040 17:38:09.404451050 0 wordpress (16ae8d7cd5fb) sh (413517:111) > munmap addr=7FC171B09000 length=15070 
-3607041 17:38:09.404459319 0 wordpress (16ae8d7cd5fb) sh (413517:111) < munmap res=0 vm_size=9428 vm_rss=776 vm_swap=0 
-3607042 17:38:09.404514894 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607043 17:38:09.404523351 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=-6(ENXIO) name=/dev/tty flags=67(O_NONBLOCK|O_RDWR) mode=0 dev=0 
-3607044 17:38:09.404530056 0 wordpress (16ae8d7cd5fb) sh (413517:111) > ioctl fd=0(<f>/dev/null) request=5401 argument=7FFF52AF4A10 
-3607045 17:38:09.404530998 0 wordpress (16ae8d7cd5fb) sh (413517:111) < ioctl res=-25(ENOTTY) 
-3607046 17:38:09.404548447 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=0 
-3607047 17:38:09.404549005 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FE4000 vm_size=9428 vm_rss=776 vm_swap=0 
-3607048 17:38:09.404558048 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FE5000 
-3607049 17:38:09.404559466 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FE5000 vm_size=9432 vm_rss=776 vm_swap=0 
-3607050 17:38:09.404570771 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FE6000 
-3607051 17:38:09.404572305 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FE6000 vm_size=9436 vm_rss=776 vm_swap=0 
-3607052 17:38:09.404583214 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getuid 
-3607053 17:38:09.404583672 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getuid uid=33(www-data) 
-3607054 17:38:09.404585286 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getgid 
-3607055 17:38:09.404585525 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getgid gid=33(www-data) 
-3607056 17:38:09.404586995 0 wordpress (16ae8d7cd5fb) sh (413517:111) > geteuid 
-3607057 17:38:09.404587162 0 wordpress (16ae8d7cd5fb) sh (413517:111) < geteuid euid=33(www-data) 
-3607058 17:38:09.404588622 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getegid 
-3607059 17:38:09.404588789 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getegid egid=33(www-data) 
-3607060 17:38:09.404604978 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigprocmask 
-3607061 17:38:09.404605412 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigprocmask 
-3607062 17:38:09.404622957 0 wordpress (16ae8d7cd5fb) sh (413517:111) > ioctl fd=4294967295 request=540F argument=7FFF52AF4BFC 
-3607063 17:38:09.404623516 0 wordpress (16ae8d7cd5fb) sh (413517:111) < ioctl res=-9(EBADF) 
-3607064 17:38:09.404624785 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FE7000 
-3607065 17:38:09.404625770 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FE7000 vm_size=9440 vm_rss=776 vm_swap=0 
-3607066 17:38:09.404636149 0 wordpress (16ae8d7cd5fb) sh (413517:111) > sysinfo 
-3607067 17:38:09.404638289 0 wordpress (16ae8d7cd5fb) sh (413517:111) < sysinfo 
-3607068 17:38:09.404639774 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FE8000 
-3607069 17:38:09.404640403 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FE8000 vm_size=9444 vm_rss=776 vm_swap=0 
-3607070 17:38:09.404670038 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607071 17:38:09.404670974 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607072 17:38:09.404672107 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607073 17:38:09.404672437 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607074 17:38:09.404673540 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607075 17:38:09.404673815 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607076 17:38:09.404674808 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607077 17:38:09.404675080 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607078 17:38:09.404676069 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607079 17:38:09.404676338 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607080 17:38:09.404677328 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607081 17:38:09.404677571 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607082 17:38:09.404678780 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607083 17:38:09.404679026 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607084 17:38:09.404680010 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607085 17:38:09.404680253 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607086 17:38:09.404681268 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607087 17:38:09.404681510 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607088 17:38:09.404682476 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607089 17:38:09.404682722 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607090 17:38:09.404683702 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607091 17:38:09.404683946 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607092 17:38:09.404684918 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607093 17:38:09.404685168 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607094 17:38:09.404686584 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigprocmask 
-3607095 17:38:09.404686820 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigprocmask 
-3607096 17:38:09.404688233 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607097 17:38:09.404688514 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607098 17:38:09.404690350 0 wordpress (16ae8d7cd5fb) sh (413517:111) > uname 
-3607099 17:38:09.404691031 0 wordpress (16ae8d7cd5fb) sh (413517:111) < uname 
-3607100 17:38:09.404701041 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FEC000 
-3607101 17:38:09.404701764 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FEC000 vm_size=9460 vm_rss=776 vm_swap=0 
-3607102 17:38:09.404712611 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FEE000 
-3607103 17:38:09.404713304 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FEE000 vm_size=9468 vm_rss=776 vm_swap=0 
-3607104 17:38:09.404719152 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF0000 
-3607105 17:38:09.404719735 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF0000 vm_size=9476 vm_rss=776 vm_swap=0 
-3607106 17:38:09.404746190 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF1000 
-3607108 17:38:09.404771490 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF1000 vm_size=9480 vm_rss=776 vm_swap=0 
-3607111 17:38:09.404781850 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607114 17:38:09.404791700 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=/var/www/html 
-3607115 17:38:09.404795520 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607116 17:38:09.404798741 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=.(/var/www/html/wp-admin) 
-3607117 17:38:09.404800912 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF3000 
-3607118 17:38:09.404801914 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF3000 vm_size=9488 vm_rss=776 vm_swap=0 
-3607119 17:38:09.404808532 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getcwd 
-3607120 17:38:09.404809562 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getcwd res=23 path=/var/www/html/wp-admin 
-3607121 17:38:09.404817199 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getpid 
-3607122 17:38:09.404817833 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getpid 
-3607123 17:38:09.404833458 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getppid 
-3607124 17:38:09.404834090 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getppid 
-3607125 17:38:09.404840961 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607126 17:38:09.404843247 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=.(/var/www/html/wp-admin) 
-3607127 17:38:09.404848404 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607128 17:38:09.404860992 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/local/sbin/sh 
-3607129 17:38:09.404864479 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607130 17:38:09.404866229 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/local/bin/sh 
-3607131 17:38:09.404867858 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607132 17:38:09.404870027 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/sbin/sh 
-3607133 17:38:09.404871555 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607134 17:38:09.404873604 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/bin/sh 
-3607135 17:38:09.404875298 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607136 17:38:09.404877665 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/sbin/sh 
-3607137 17:38:09.404879257 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607138 17:38:09.404888075 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=/bin/sh 
-3607139 17:38:09.404890614 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607140 17:38:09.404893944 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=/bin/sh 
-3607141 17:38:09.404895297 0 wordpress (16ae8d7cd5fb) sh (413517:111) > geteuid 
-3607142 17:38:09.404895592 0 wordpress (16ae8d7cd5fb) sh (413517:111) < geteuid euid=33(www-data) 
-3607143 17:38:09.404896721 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getegid 
-3607144 17:38:09.404897014 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getegid egid=33(www-data) 
-3607145 17:38:09.404898065 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getuid 
-3607146 17:38:09.404898307 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getuid uid=33(www-data) 
-3607147 17:38:09.404899294 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getgid 
-3607148 17:38:09.404899563 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getgid gid=33(www-data) 
-3607149 17:38:09.404900538 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=1(X_OK) 
-3607150 17:38:09.404905893 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=0 name=/bin/sh 
-3607151 17:38:09.404907237 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607152 17:38:09.404910449 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=/bin/sh 
-3607153 17:38:09.404911663 0 wordpress (16ae8d7cd5fb) sh (413517:111) > geteuid 
-3607154 17:38:09.404911826 0 wordpress (16ae8d7cd5fb) sh (413517:111) < geteuid euid=33(www-data) 
-3607155 17:38:09.404912770 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getegid 
-3607156 17:38:09.404912940 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getegid egid=33(www-data) 
-3607157 17:38:09.404913881 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getuid 
-3607158 17:38:09.404914047 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getuid uid=33(www-data) 
-3607159 17:38:09.404914982 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getgid 
-3607160 17:38:09.404915150 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getgid gid=33(www-data) 
-3607161 17:38:09.404916141 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=4(R_OK) 
-3607162 17:38:09.404919064 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=0 name=/bin/sh 
-3607163 17:38:09.404920669 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607164 17:38:09.404923597 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=/bin/sh 
-3607165 17:38:09.404924791 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607166 17:38:09.404927871 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=/bin/sh 
-3607167 17:38:09.404928991 0 wordpress (16ae8d7cd5fb) sh (413517:111) > geteuid 
-3607168 17:38:09.404929162 0 wordpress (16ae8d7cd5fb) sh (413517:111) < geteuid euid=33(www-data) 
-3607169 17:38:09.404930258 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getegid 
-3607170 17:38:09.404930422 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getegid egid=33(www-data) 
-3607171 17:38:09.404931417 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getuid 
-3607172 17:38:09.404931629 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getuid uid=33(www-data) 
-3607173 17:38:09.404932587 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getgid 
-3607174 17:38:09.404933034 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getgid gid=33(www-data) 
-3607175 17:38:09.404934023 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=1(X_OK) 
-3607176 17:38:09.404937316 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=0 name=/bin/sh 
-3607177 17:38:09.404938563 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607178 17:38:09.404942057 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=/bin/sh 
-3607179 17:38:09.404943175 0 wordpress (16ae8d7cd5fb) sh (413517:111) > geteuid 
-3607180 17:38:09.404943345 0 wordpress (16ae8d7cd5fb) sh (413517:111) < geteuid euid=33(www-data) 
-3607181 17:38:09.404944339 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getegid 
-3607182 17:38:09.404944511 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getegid egid=33(www-data) 
-3607183 17:38:09.404945625 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getuid 
-3607184 17:38:09.404945783 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getuid uid=33(www-data) 
-3607185 17:38:09.404946778 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getgid 
-3607186 17:38:09.404946938 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getgid gid=33(www-data) 
-3607187 17:38:09.404947964 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=4(R_OK) 
-3607188 17:38:09.404950722 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=0 name=/bin/sh 
-3607189 17:38:09.404960981 0 wordpress (16ae8d7cd5fb) sh (413517:111) > socket domain=1(AF_LOCAL) type=526337 proto=0 
-3607190 17:38:09.404973892 0 wordpress (16ae8d7cd5fb) sh (413517:111) < socket fd=3(<u>) 
-3607191 17:38:09.404975123 0 wordpress (16ae8d7cd5fb) sh (413517:111) > connect fd=3(<u>) 
-3607192 17:38:09.404989053 0 wordpress (16ae8d7cd5fb) sh (413517:111) < connect res=-2(ENOENT) tuple=0->ffff99c4113a3fc0 /var/run/nscd/socket 
-3607193 17:38:09.404992109 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<u>) 
-3607194 17:38:09.404992844 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607195 17:38:09.405000954 0 wordpress (16ae8d7cd5fb) sh (413517:111) > socket domain=1(AF_LOCAL) type=526337 proto=0 
-3607196 17:38:09.405004265 0 wordpress (16ae8d7cd5fb) sh (413517:111) < socket fd=3(<u>) 
-3607197 17:38:09.405005400 0 wordpress (16ae8d7cd5fb) sh (413517:111) > connect fd=3(<u>) 
-3607198 17:38:09.405011452 0 wordpress (16ae8d7cd5fb) sh (413517:111) < connect res=-2(ENOENT) tuple=0->ffff99c4113a3fc0 /var/run/nscd/socket 
-3607199 17:38:09.405013419 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<u>) 
-3607200 17:38:09.405013815 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607201 17:38:09.405030683 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607202 17:38:09.405042249 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/etc/nsswitch.conf) name=/etc/nsswitch.conf flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607203 17:38:09.405046392 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/etc/nsswitch.conf) 
-3607204 17:38:09.405050694 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607205 17:38:09.405052649 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/etc/nsswitch.conf) size=512 
-3607280 17:38:09.405491694 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=497 data=# /etc/nsswitch.conf.#.# Example configuration of GNU Name Service Switch functi 
-3607290 17:38:09.405502680 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/etc/nsswitch.conf) size=512 
-3607294 17:38:09.405506176 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=0 data= 
-3607299 17:38:09.405508223 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/etc/nsswitch.conf) 
-3607300 17:38:09.405509063 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607303 17:38:09.405519627 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607305 17:38:09.405533297 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/etc/ld.so.cache) name=/etc/ld.so.cache flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607306 17:38:09.405535147 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/etc/ld.so.cache) 
-3607307 17:38:09.405539078 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607308 17:38:09.405540098 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=15070 prot=1(PROT_READ) flags=2(MAP_PRIVATE) fd=3(<f>/etc/ld.so.cache) offset=0 
-3607309 17:38:09.405546994 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC171B09000 vm_size=9504 vm_rss=776 vm_swap=0 
-3607310 17:38:09.405548162 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/etc/ld.so.cache) 
-3607311 17:38:09.405548540 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607312 17:38:09.405556047 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3607313 17:38:09.405561842 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3607314 17:38:09.405565140 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607318 17:38:09.405573075 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) name=/lib/x86_64-linux-gnu/libnss_compat.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607319 17:38:09.405574961 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) size=832 
-3607321 17:38:09.405577623 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=832 data=.ELF..............>.............@........t..........@.8...@..................... 
-3607322 17:38:09.405579193 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) 
-3607323 17:38:09.405581228 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607324 17:38:09.405583510 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=2126944 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) offset=0 
-3607325 17:38:09.405588769 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170F18000 vm_size=11584 vm_rss=776 vm_swap=0 
-3607326 17:38:09.405589900 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607330 17:38:09.405596755 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607331 17:38:09.405597835 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC17111E000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) offset=24576 
-3607332 17:38:09.405606014 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC17111E000 vm_size=11584 vm_rss=1776 vm_swap=0 
-3607333 17:38:09.405620154 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) 
-3607334 17:38:09.405620534 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607336 17:38:09.405627138 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3607338 17:38:09.405630021 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3607339 17:38:09.405632198 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607341 17:38:09.405638166 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) name=/lib/x86_64-linux-gnu/libnsl.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607342 17:38:09.405639928 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) size=832 
-3607344 17:38:09.405642444 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=832 data=.ELF..............>......?......@.......hT..........@.8...@..................... 
-3607345 17:38:09.405643800 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) 
-3607347 17:38:09.405646020 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607350 17:38:09.405649960 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF4000 
-3607351 17:38:09.405655051 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF4000 vm_size=11588 vm_rss=1776 vm_swap=0 
-3607355 17:38:09.405659936 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=2194008 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) offset=0 
-3607358 17:38:09.405663693 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170D00000 vm_size=13732 vm_rss=1776 vm_swap=0 
-3607359 17:38:09.405664737 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607361 17:38:09.405669146 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607363 17:38:09.405670143 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC170F14000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) offset=81920 
-3607364 17:38:09.405674796 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170F14000 vm_size=13732 vm_rss=1816 vm_swap=0 
-3607365 17:38:09.405679585 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC170F16000 length=6744 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3607366 17:38:09.405681849 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170F16000 vm_size=13732 vm_rss=1820 vm_swap=0 
-3607367 17:38:09.405693347 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) 
-3607369 17:38:09.405693817 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607374 17:38:09.405721894 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607377 17:38:09.405724898 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607381 17:38:09.405729273 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607382 17:38:09.405732438 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607383 17:38:09.405734419 0 wordpress (16ae8d7cd5fb) sh (413517:111) > munmap addr=7FC171B09000 length=15070 
-3607386 17:38:09.405739480 0 wordpress (16ae8d7cd5fb) sh (413517:111) < munmap res=0 vm_size=13716 vm_rss=1832 vm_swap=0 
-3607389 17:38:09.405748964 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607391 17:38:09.405753536 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/etc/ld.so.cache) name=/etc/ld.so.cache flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607392 17:38:09.405755442 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/etc/ld.so.cache) 
-3607393 17:38:09.405757017 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607394 17:38:09.405758010 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=15070 prot=1(PROT_READ) flags=2(MAP_PRIVATE) fd=3(<f>/etc/ld.so.cache) offset=0 
-3607395 17:38:09.405760319 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC171B09000 vm_size=13732 vm_rss=1832 vm_swap=0 
-3607396 17:38:09.405761325 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/etc/ld.so.cache) 
-3607397 17:38:09.405761694 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607399 17:38:09.405766038 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3607400 17:38:09.405768833 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3607401 17:38:09.405771760 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607402 17:38:09.405777641 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) name=/lib/x86_64-linux-gnu/libnss_nis.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607403 17:38:09.405779408 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) size=832 
-3607404 17:38:09.405782242 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=832 data=.ELF..............>...... ......@...................@.8...@..................... 
-3607405 17:38:09.405783814 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) 
-3607406 17:38:09.405785484 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607407 17:38:09.405787227 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=2143656 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) offset=0 
-3607408 17:38:09.405790942 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170AF4000 vm_size=15828 vm_rss=1832 vm_swap=0 
-3607409 17:38:09.405791997 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607410 17:38:09.405796672 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607411 17:38:09.405801322 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC170CFE000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) offset=40960 
-3607412 17:38:09.405804658 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170CFE000 vm_size=15828 vm_rss=1848 vm_swap=0 
-3607415 17:38:09.405815741 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) 
-3607416 17:38:09.405816211 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607417 17:38:09.405822846 0 wordpress (16ae8d7cd5fb) sh (413517:111) > access mode=0(F_OK) 
-3607418 17:38:09.405826130 0 wordpress (16ae8d7cd5fb) sh (413517:111) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
-3607419 17:38:09.405828608 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607420 17:38:09.405835496 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) name=/lib/x86_64-linux-gnu/libnss_files.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607421 17:38:09.405837277 0 wordpress (16ae8d7cd5fb) sh (413517:111) > read fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) size=832 
-3607424 17:38:09.405840478 0 wordpress (16ae8d7cd5fb) sh (413517:111) < read res=832 data=.ELF..............>......!......@...................@.8...@..................... 
-3607425 17:38:09.405841884 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) 
-3607426 17:38:09.405843722 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607428 17:38:09.405845356 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF5000 
-3607429 17:38:09.405846673 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF5000 vm_size=15832 vm_rss=1848 vm_swap=0 
-3607431 17:38:09.405851421 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=2168600 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) offset=0 
-3607432 17:38:09.405855363 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC1708E2000 vm_size=17952 vm_rss=1848 vm_swap=0 
-3607433 17:38:09.405856588 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607434 17:38:09.405861087 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607435 17:38:09.405862103 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC170AEC000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) offset=40960 
-3607436 17:38:09.405866573 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170AEC000 vm_size=17952 vm_rss=1880 vm_swap=0 
-3607437 17:38:09.405871973 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=7FC170AEE000 length=22296 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
-3607438 17:38:09.405874112 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC170AEE000 vm_size=17952 vm_rss=1884 vm_swap=0 
-3607439 17:38:09.405880937 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) 
-3607440 17:38:09.405881305 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607441 17:38:09.405897113 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607442 17:38:09.405899958 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607443 17:38:09.405903996 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mprotect 
-3607444 17:38:09.405906886 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mprotect 
-3607445 17:38:09.405908746 0 wordpress (16ae8d7cd5fb) sh (413517:111) > munmap addr=7FC171B09000 length=15070 
-3607446 17:38:09.405913248 0 wordpress (16ae8d7cd5fb) sh (413517:111) < munmap res=0 vm_size=17936 vm_rss=1896 vm_swap=0 
-3607447 17:38:09.405923222 0 wordpress (16ae8d7cd5fb) sh (413517:111) > open 
-3607448 17:38:09.405928774 0 wordpress (16ae8d7cd5fb) sh (413517:111) < open fd=3(<f>/etc/passwd) name=/etc/passwd flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
-3607449 17:38:09.405932852 0 wordpress (16ae8d7cd5fb) sh (413517:111) > lseek fd=3(<f>/etc/passwd) offset=0 whence=1(SEEK_CUR) 
-3607450 17:38:09.405934094 0 wordpress (16ae8d7cd5fb) sh (413517:111) < lseek res=0 
-3607451 17:38:09.405936393 0 wordpress (16ae8d7cd5fb) sh (413517:111) > fstat fd=3(<f>/etc/passwd) 
-3607452 17:38:09.405938664 0 wordpress (16ae8d7cd5fb) sh (413517:111) < fstat res=0 
-3607453 17:38:09.405939900 0 wordpress (16ae8d7cd5fb) sh (413517:111) > mmap addr=0 length=919 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=3(<f>/etc/passwd) offset=0 
-3607454 17:38:09.405942867 0 wordpress (16ae8d7cd5fb) sh (413517:111) < mmap res=7FC171B0C000 vm_size=17940 vm_rss=1896 vm_swap=0 
-3607455 17:38:09.405943938 0 wordpress (16ae8d7cd5fb) sh (413517:111) > lseek fd=3(<f>/etc/passwd) offset=919 whence=0(SEEK_SET) 
-3607456 17:38:09.405944338 0 wordpress (16ae8d7cd5fb) sh (413517:111) < lseek res=919 
-3607457 17:38:09.405956307 0 wordpress (16ae8d7cd5fb) sh (413517:111) > munmap addr=7FC171B0C000 length=919 
-3607458 17:38:09.405958808 0 wordpress (16ae8d7cd5fb) sh (413517:111) < munmap res=0 vm_size=17936 vm_rss=1896 vm_swap=0 
-3607459 17:38:09.405959902 0 wordpress (16ae8d7cd5fb) sh (413517:111) > close fd=3(<f>/etc/passwd) 
-3607460 17:38:09.405960219 0 wordpress (16ae8d7cd5fb) sh (413517:111) < close res=0 
-3607461 17:38:09.405978372 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getpid 
-3607462 17:38:09.405979319 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getpid 
-3607463 17:38:09.405986079 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF6000 
-3607464 17:38:09.405987281 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF6000 vm_size=17940 vm_rss=1896 vm_swap=0 
-3607465 17:38:09.405995604 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF7000 
-3607466 17:38:09.405996324 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF7000 vm_size=17944 vm_rss=1896 vm_swap=0 
-3607467 17:38:09.406002326 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getpgrp 
-3607468 17:38:09.406002952 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getpgrp 
-3607469 17:38:09.406004387 0 wordpress (16ae8d7cd5fb) sh (413517:111) > ioctl fd=2(<p>pipe:[488960]) request=540F argument=7FFF52AF4ACC 
-3607470 17:38:09.406005366 0 wordpress (16ae8d7cd5fb) sh (413517:111) < ioctl res=-25(ENOTTY) 
-3607471 17:38:09.406006875 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigaction 
-3607472 17:38:09.406007639 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigaction 
-3607473 17:38:09.406009218 0 wordpress (16ae8d7cd5fb) sh (413517:111) > ioctl fd=2(<p>pipe:[488960]) request=540F argument=7FFF52AF4AAC 
-3607474 17:38:09.406009540 0 wordpress (16ae8d7cd5fb) sh (413517:111) < ioctl res=-25(ENOTTY) 
-3607475 17:38:09.406011558 0 wordpress (16ae8d7cd5fb) sh (413517:111) > getrlimit resource=6(RLIMIT_NPROC) 
-3607476 17:38:09.406012247 0 wordpress (16ae8d7cd5fb) sh (413517:111) < getrlimit res=0 cur=-1 max=-1 
-3607477 17:38:09.406024563 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF8000 
-3607478 17:38:09.406025404 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF8000 vm_size=17948 vm_rss=1896 vm_swap=0 
-3607479 17:38:09.406077676 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigprocmask 
-3607480 17:38:09.406078102 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigprocmask 
-3607481 17:38:09.406083174 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FF9000 
-3607482 17:38:09.406083827 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FF9000 vm_size=17952 vm_rss=1896 vm_swap=0 
-3607484 17:38:09.406088219 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FFA000 
-3607485 17:38:09.406088817 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FFA000 vm_size=17956 vm_rss=1896 vm_swap=0 
-3607487 17:38:09.406094510 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigprocmask 
-3607488 17:38:09.406094798 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigprocmask 
-3607489 17:38:09.406097835 0 wordpress (16ae8d7cd5fb) sh (413517:111) > brk addr=1FFB000 
-3607490 17:38:09.406098615 0 wordpress (16ae8d7cd5fb) sh (413517:111) < brk res=1FFB000 vm_size=17960 vm_rss=1896 vm_swap=0 
-3607493 17:38:09.406128548 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607498 17:38:09.406136263 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=0 path=.(/var/www/html/wp-admin) 
-3607500 17:38:09.406139166 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607502 17:38:09.406142698 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/local/sbin/ffmpeg 
-3607503 17:38:09.406145122 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607504 17:38:09.406147395 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/local/bin/ffmpeg 
-3607505 17:38:09.406149670 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607506 17:38:09.406151762 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/sbin/ffmpeg 
-3607507 17:38:09.406153667 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607508 17:38:09.406155771 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/usr/bin/ffmpeg 
-3607509 17:38:09.406157894 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607510 17:38:09.406159703 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/sbin/ffmpeg 
-3607511 17:38:09.406161686 0 wordpress (16ae8d7cd5fb) sh (413517:111) > stat 
-3607512 17:38:09.406163427 0 wordpress (16ae8d7cd5fb) sh (413517:111) < stat res=-2(ENOENT) path=/bin/ffmpeg 
-3607514 17:38:09.406176346 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigprocmask 
-3607515 17:38:09.406177342 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigprocmask 
-3607516 17:38:09.406178839 0 wordpress (16ae8d7cd5fb) sh (413517:111) > rt_sigprocmask 
-3607517 17:38:09.406179205 0 wordpress (16ae8d7cd5fb) sh (413517:111) < rt_sigprocmask 
-3607524 17:38:09.406193780 0 wordpress (16ae8d7cd5fb) sh (413517:111) > exit_group 
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=413460(apache2) pid=413460(apache2) ptid=395182(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=7640 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-16ae8d7cd5fb26f69d2b3694871b56f03e50ad52cedd860b3... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=110 vpid=110 
+set_robust_list 
+set_robust_list 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+getpid 
+getpid 
+getpid 
+getpid 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7F2798C60000 vm_size=383112 vm_rss=7640 vm_swap=0 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7F2798C5E000 vm_size=383120 vm_rss=7640 vm_swap=0 
+geteuid 
+geteuid euid=0(root) 
+setgid gid=33(www-data) 
+setgid res=0 
+open 
+open fd=9(<f>/proc/sys/kernel/ngroups_max) name=/proc/sys/kernel/ngroups_max flags=1(O_RDONLY) mode=0 dev=60 
+read fd=9(<f>/proc/sys/kernel/ngroups_max) size=31 
+read res=6 data=65536. 
+close fd=9(<f>/proc/sys/kernel/ngroups_max) 
+close res=0 
+open 
+open fd=9(<f>/etc/group) name=/etc/group flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+lseek fd=9(<f>/etc/group) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=9(<f>/etc/group) 
+fstat res=0 
+mmap addr=0 length=446 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=9(<f>/etc/group) offset=0 
+mmap res=7F2798C5D000 vm_size=383124 vm_rss=7640 vm_swap=0 
+lseek fd=9(<f>/etc/group) offset=446 whence=0(SEEK_SET) 
+lseek res=446 
+fstat fd=9(<f>/etc/group) 
+fstat res=0 
+munmap addr=7F2798C5D000 length=446 
+munmap res=0 vm_size=383120 vm_rss=9048 vm_swap=0 
+close fd=9(<f>/etc/group) 
+close res=0 
+setgroups 
+setgroups 
+geteuid 
+geteuid euid=0(root) 
+setuid uid=33(www-data) 
+setuid res=0 
+getpid 
+getpid 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7F2798C5C000 vm_size=383128 vm_rss=9048 vm_swap=0 
+getpid 
+getpid 
+epoll_create1 
+epoll_create1 
+epoll_ctl 
+epoll_ctl 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7F2798C5A000 vm_size=383136 vm_rss=9048 vm_swap=0 
+accept flags=0 
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=413517(apache2) pid=413517(apache2) ptid=396055(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=394832 vm_rss=16528 vm_swap=0 comm=apache2 cgroups=cpuset=/system.slice/docker-16ae8d7cd5fb26f69d2b3694871b56f03e50ad52cedd860b3... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=33 gid=33 vtid=111 vpid=111 
+set_robust_list 
+set_robust_list 
+dup fd=14 
+dup res=1(<p>pipe:[488959]) 
+execve filename=<NA> 
+execve res=0 exe=sh args=-c.type -P ffmpeg. tid=413517(sh) pid=413517(sh) ptid=396055(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=22 vm_size=1420 vm_rss=4 vm_swap=0 comm=sh cgroups=cpuset=/system.slice/docker-16ae8d7cd5fb26f69d2b3694871b56f03e50ad52cedd860b3... env=APACHE_LOG_DIR=/var/log/apache2.LANG=C.HOSTNAME=16ae8d7cd5fb.APACHE_CONFDIR=/... tty=0 pgid=1(systemd) loginuid=-1 
+brk addr=0 
+brk res=1FE4000 vm_size=1420 vm_rss=4 vm_swap=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+mmap addr=0 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FC171B0D000 vm_size=1432 vm_rss=4 vm_swap=0 
+access mode=4(R_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.preload 
+open 
+open fd=3(<f>/etc/ld.so.cache) name=/etc/ld.so.cache flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+fstat fd=3(<f>/etc/ld.so.cache) 
+fstat res=0 
+mmap addr=0 length=15070 prot=1(PROT_READ) flags=2(MAP_PRIVATE) fd=3(<f>/etc/ld.so.cache) offset=0 
+mmap res=7FC171B09000 vm_size=1448 vm_rss=4 vm_swap=0 
+close fd=3(<f>/etc/ld.so.cache) 
+close res=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+open 
+open fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) name=/lib/x86_64-linux-gnu/libtinfo.so.5 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+read fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) size=832 
+read res=832 data=.ELF..............>.............@.......X...........@.8...@..................... 
+fstat fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) 
+fstat res=0 
+mmap addr=0 length=2267936 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) offset=0 
+mmap res=7FC1716C3000 vm_size=3664 vm_rss=4 vm_swap=0 
+mprotect 
+mprotect 
+mmap addr=7FC1718E8000 length=20480 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) offset=151552 
+mmap res=7FC1718E8000 vm_size=3664 vm_rss=324 vm_swap=0 
+close fd=3(<f>/lib/x86_64-linux-gnu/libtinfo.so.5) 
+close res=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+open 
+open fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) name=/lib/x86_64-linux-gnu/libdl.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+read fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) size=832 
+read res=832 data=.ELF..............>.............@........1..........@.8...@..................... 
+fstat fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) 
+fstat res=0 
+mmap addr=0 length=2109680 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) offset=0 
+mmap res=7FC1714BF000 vm_size=5728 vm_rss=324 vm_swap=0 
+mprotect 
+mprotect 
+mmap addr=7FC1716C1000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) offset=8192 
+mmap res=7FC1716C1000 vm_size=5728 vm_rss=396 vm_swap=0 
+close fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) 
+close res=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+open 
+open fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) name=/lib/x86_64-linux-gnu/libc.so.6 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+read fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) size=832 
+read res=832 data=.ELF..............>.............@.......P...........@.8...@.G.F.........@....... 
+fstat fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) 
+fstat res=0 
+mmap addr=0 length=3795360 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) offset=0 
+mmap res=7FC171120000 vm_size=9436 vm_rss=396 vm_swap=0 
+mprotect 
+mprotect 
+mmap addr=7FC1714B5000 length=24576 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) offset=1658880 
+mmap res=7FC1714B5000 vm_size=9436 vm_rss=420 vm_swap=0 
+mmap addr=7FC1714BB000 length=14752 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FC1714BB000 vm_size=9436 vm_rss=424 vm_swap=0 
+close fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) 
+close res=0 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FC171B07000 vm_size=9444 vm_rss=424 vm_swap=0 
+arch_prctl 
+arch_prctl 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+munmap addr=7FC171B09000 length=15070 
+munmap res=0 vm_size=9428 vm_rss=776 vm_swap=0 
+open 
+open fd=-6(ENXIO) name=/dev/tty flags=67(O_NONBLOCK|O_RDWR) mode=0 dev=0 
+ioctl fd=0(<f>/dev/null) request=5401 argument=7FFF52AF4A10 
+ioctl res=-25(ENOTTY) 
+brk addr=0 
+brk res=1FE4000 vm_size=9428 vm_rss=776 vm_swap=0 
+brk addr=1FE5000 
+brk res=1FE5000 vm_size=9432 vm_rss=776 vm_swap=0 
+brk addr=1FE6000 
+brk res=1FE6000 vm_size=9436 vm_rss=776 vm_swap=0 
+getuid 
+getuid uid=33(www-data) 
+getgid 
+getgid gid=33(www-data) 
+geteuid 
+geteuid euid=33(www-data) 
+getegid 
+getegid egid=33(www-data) 
+rt_sigprocmask 
+rt_sigprocmask 
+ioctl fd=4294967295 request=540F argument=7FFF52AF4BFC 
+ioctl res=-9(EBADF) 
+brk addr=1FE7000 
+brk res=1FE7000 vm_size=9440 vm_rss=776 vm_swap=0 
+sysinfo 
+sysinfo 
+brk addr=1FE8000 
+brk res=1FE8000 vm_size=9444 vm_rss=776 vm_swap=0 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigprocmask 
+rt_sigprocmask 
+rt_sigaction 
+rt_sigaction 
+uname 
+uname 
+brk addr=1FEC000 
+brk res=1FEC000 vm_size=9460 vm_rss=776 vm_swap=0 
+brk addr=1FEE000 
+brk res=1FEE000 vm_size=9468 vm_rss=776 vm_swap=0 
+brk addr=1FF0000 
+brk res=1FF0000 vm_size=9476 vm_rss=776 vm_swap=0 
+brk addr=1FF1000 
+brk res=1FF1000 vm_size=9480 vm_rss=776 vm_swap=0 
+stat 
+stat res=0 path=/var/www/html 
+stat 
+stat res=0 path=.(/var/www/html/wp-admin) 
+brk addr=1FF3000 
+brk res=1FF3000 vm_size=9488 vm_rss=776 vm_swap=0 
+getcwd 
+getcwd res=23 path=/var/www/html/wp-admin 
+getpid 
+getpid 
+getppid 
+getppid 
+stat 
+stat res=0 path=.(/var/www/html/wp-admin) 
+stat 
+stat res=-2(ENOENT) path=/usr/local/sbin/sh 
+stat 
+stat res=-2(ENOENT) path=/usr/local/bin/sh 
+stat 
+stat res=-2(ENOENT) path=/usr/sbin/sh 
+stat 
+stat res=-2(ENOENT) path=/usr/bin/sh 
+stat 
+stat res=-2(ENOENT) path=/sbin/sh 
+stat 
+stat res=0 path=/bin/sh 
+stat 
+stat res=0 path=/bin/sh 
+geteuid 
+geteuid euid=33(www-data) 
+getegid 
+getegid egid=33(www-data) 
+getuid 
+getuid uid=33(www-data) 
+getgid 
+getgid gid=33(www-data) 
+access mode=1(X_OK) 
+access res=0 name=/bin/sh 
+stat 
+stat res=0 path=/bin/sh 
+geteuid 
+geteuid euid=33(www-data) 
+getegid 
+getegid egid=33(www-data) 
+getuid 
+getuid uid=33(www-data) 
+getgid 
+getgid gid=33(www-data) 
+access mode=4(R_OK) 
+access res=0 name=/bin/sh 
+stat 
+stat res=0 path=/bin/sh 
+stat 
+stat res=0 path=/bin/sh 
+geteuid 
+geteuid euid=33(www-data) 
+getegid 
+getegid egid=33(www-data) 
+getuid 
+getuid uid=33(www-data) 
+getgid 
+getgid gid=33(www-data) 
+access mode=1(X_OK) 
+access res=0 name=/bin/sh 
+stat 
+stat res=0 path=/bin/sh 
+geteuid 
+geteuid euid=33(www-data) 
+getegid 
+getegid egid=33(www-data) 
+getuid 
+getuid uid=33(www-data) 
+getgid 
+getgid gid=33(www-data) 
+access mode=4(R_OK) 
+access res=0 name=/bin/sh 
+socket domain=1(AF_LOCAL) type=526337 proto=0 
+socket fd=3(<u>) 
+connect fd=3(<u>) 
+connect res=-2(ENOENT) tuple=0->ffff99c4113a3fc0 /var/run/nscd/socket 
+close fd=3(<u>) 
+close res=0 
+socket domain=1(AF_LOCAL) type=526337 proto=0 
+socket fd=3(<u>) 
+connect fd=3(<u>) 
+connect res=-2(ENOENT) tuple=0->ffff99c4113a3fc0 /var/run/nscd/socket 
+close fd=3(<u>) 
+close res=0 
+open 
+open fd=3(<f>/etc/nsswitch.conf) name=/etc/nsswitch.conf flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+fstat fd=3(<f>/etc/nsswitch.conf) 
+fstat res=0 
+read fd=3(<f>/etc/nsswitch.conf) size=512 
+read res=497 data=# /etc/nsswitch.conf.#.# Example configuration of GNU Name Service Switch functi 
+read fd=3(<f>/etc/nsswitch.conf) size=512 
+read res=0 data= 
+close fd=3(<f>/etc/nsswitch.conf) 
+close res=0 
+open 
+open fd=3(<f>/etc/ld.so.cache) name=/etc/ld.so.cache flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+fstat fd=3(<f>/etc/ld.so.cache) 
+fstat res=0 
+mmap addr=0 length=15070 prot=1(PROT_READ) flags=2(MAP_PRIVATE) fd=3(<f>/etc/ld.so.cache) offset=0 
+mmap res=7FC171B09000 vm_size=9504 vm_rss=776 vm_swap=0 
+close fd=3(<f>/etc/ld.so.cache) 
+close res=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+open 
+open fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) name=/lib/x86_64-linux-gnu/libnss_compat.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+read fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) size=832 
+read res=832 data=.ELF..............>.............@........t..........@.8...@..................... 
+fstat fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) 
+fstat res=0 
+mmap addr=0 length=2126944 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) offset=0 
+mmap res=7FC170F18000 vm_size=11584 vm_rss=776 vm_swap=0 
+mprotect 
+mprotect 
+mmap addr=7FC17111E000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) offset=24576 
+mmap res=7FC17111E000 vm_size=11584 vm_rss=1776 vm_swap=0 
+close fd=3(<f>/lib/x86_64-linux-gnu/libnss_compat.so.2) 
+close res=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+open 
+open fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) name=/lib/x86_64-linux-gnu/libnsl.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+read fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) size=832 
+read res=832 data=.ELF..............>......?......@.......hT..........@.8...@..................... 
+fstat fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) 
+fstat res=0 
+brk addr=1FF4000 
+brk res=1FF4000 vm_size=11588 vm_rss=1776 vm_swap=0 
+mmap addr=0 length=2194008 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) offset=0 
+mmap res=7FC170D00000 vm_size=13732 vm_rss=1776 vm_swap=0 
+mprotect 
+mprotect 
+mmap addr=7FC170F14000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) offset=81920 
+mmap res=7FC170F14000 vm_size=13732 vm_rss=1816 vm_swap=0 
+mmap addr=7FC170F16000 length=6744 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FC170F16000 vm_size=13732 vm_rss=1820 vm_swap=0 
+close fd=3(<f>/lib/x86_64-linux-gnu/libnsl.so.1) 
+close res=0 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+munmap addr=7FC171B09000 length=15070 
+munmap res=0 vm_size=13716 vm_rss=1832 vm_swap=0 
+open 
+open fd=3(<f>/etc/ld.so.cache) name=/etc/ld.so.cache flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+fstat fd=3(<f>/etc/ld.so.cache) 
+fstat res=0 
+mmap addr=0 length=15070 prot=1(PROT_READ) flags=2(MAP_PRIVATE) fd=3(<f>/etc/ld.so.cache) offset=0 
+mmap res=7FC171B09000 vm_size=13732 vm_rss=1832 vm_swap=0 
+close fd=3(<f>/etc/ld.so.cache) 
+close res=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+open 
+open fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) name=/lib/x86_64-linux-gnu/libnss_nis.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+read fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) size=832 
+read res=832 data=.ELF..............>...... ......@...................@.8...@..................... 
+fstat fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) 
+fstat res=0 
+mmap addr=0 length=2143656 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) offset=0 
+mmap res=7FC170AF4000 vm_size=15828 vm_rss=1832 vm_swap=0 
+mprotect 
+mprotect 
+mmap addr=7FC170CFE000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) offset=40960 
+mmap res=7FC170CFE000 vm_size=15828 vm_rss=1848 vm_swap=0 
+close fd=3(<f>/lib/x86_64-linux-gnu/libnss_nis.so.2) 
+close res=0 
+access mode=0(F_OK) 
+access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+open 
+open fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) name=/lib/x86_64-linux-gnu/libnss_files.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+read fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) size=832 
+read res=832 data=.ELF..............>......!......@...................@.8...@..................... 
+fstat fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) 
+fstat res=0 
+brk addr=1FF5000 
+brk res=1FF5000 vm_size=15832 vm_rss=1848 vm_swap=0 
+mmap addr=0 length=2168600 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) offset=0 
+mmap res=7FC1708E2000 vm_size=17952 vm_rss=1848 vm_swap=0 
+mprotect 
+mprotect 
+mmap addr=7FC170AEC000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) offset=40960 
+mmap res=7FC170AEC000 vm_size=17952 vm_rss=1880 vm_swap=0 
+mmap addr=7FC170AEE000 length=22296 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FC170AEE000 vm_size=17952 vm_rss=1884 vm_swap=0 
+close fd=3(<f>/lib/x86_64-linux-gnu/libnss_files.so.2) 
+close res=0 
+mprotect 
+mprotect 
+mprotect 
+mprotect 
+munmap addr=7FC171B09000 length=15070 
+munmap res=0 vm_size=17936 vm_rss=1896 vm_swap=0 
+open 
+open fd=3(<f>/etc/passwd) name=/etc/passwd flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=5E 
+lseek fd=3(<f>/etc/passwd) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=3(<f>/etc/passwd) 
+fstat res=0 
+mmap addr=0 length=919 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=3(<f>/etc/passwd) offset=0 
+mmap res=7FC171B0C000 vm_size=17940 vm_rss=1896 vm_swap=0 
+lseek fd=3(<f>/etc/passwd) offset=919 whence=0(SEEK_SET) 
+lseek res=919 
+munmap addr=7FC171B0C000 length=919 
+munmap res=0 vm_size=17936 vm_rss=1896 vm_swap=0 
+close fd=3(<f>/etc/passwd) 
+close res=0 
+getpid 
+getpid 
+brk addr=1FF6000 
+brk res=1FF6000 vm_size=17940 vm_rss=1896 vm_swap=0 
+brk addr=1FF7000 
+brk res=1FF7000 vm_size=17944 vm_rss=1896 vm_swap=0 
+getpgrp 
+getpgrp 
+ioctl fd=2(<p>pipe:[488960]) request=540F argument=7FFF52AF4ACC 
+ioctl res=-25(ENOTTY) 
+rt_sigaction 
+rt_sigaction 
+ioctl fd=2(<p>pipe:[488960]) request=540F argument=7FFF52AF4AAC 
+ioctl res=-25(ENOTTY) 
+getrlimit resource=6(RLIMIT_NPROC) 
+getrlimit res=0 cur=-1 max=-1 
+brk addr=1FF8000 
+brk res=1FF8000 vm_size=17948 vm_rss=1896 vm_swap=0 
+rt_sigprocmask 
+rt_sigprocmask 
+brk addr=1FF9000 
+brk res=1FF9000 vm_size=17952 vm_rss=1896 vm_swap=0 
+brk addr=1FFA000 
+brk res=1FFA000 vm_size=17956 vm_rss=1896 vm_swap=0 
+rt_sigprocmask 
+rt_sigprocmask 
+brk addr=1FFB000 
+brk res=1FFB000 vm_size=17960 vm_rss=1896 vm_swap=0 
+stat 
+stat res=0 path=.(/var/www/html/wp-admin) 
+stat 
+stat res=-2(ENOENT) path=/usr/local/sbin/ffmpeg 
+stat 
+stat res=-2(ENOENT) path=/usr/local/bin/ffmpeg 
+stat 
+stat res=-2(ENOENT) path=/usr/sbin/ffmpeg 
+stat 
+stat res=-2(ENOENT) path=/usr/bin/ffmpeg 
+stat 
+stat res=-2(ENOENT) path=/sbin/ffmpeg 
+stat 
+stat res=-2(ENOENT) path=/bin/ffmpeg 
+rt_sigprocmask 
+rt_sigprocmask 
+rt_sigprocmask 
+rt_sigprocmask 
+exit_group 

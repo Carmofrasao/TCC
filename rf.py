@@ -78,11 +78,11 @@ class Main():
             # Remove columns with only 0
             # https://stackoverflow.com/questions/21164910/how-do-i-delete-a-column-that-contains-only-zeros-in-pandas
             data = data.loc[:, (data != 0).any(axis=0)]
-            print(data.describe())
+            # print(data.describe())
 
             y = data['t']
             X = data.drop(columns=['t']) 
-            print(X.columns.values)
+            # print(X.columns.values)
             
             # normalizar 
             X_normalized = preprocessing.normalize(X, norm='l1')
@@ -117,7 +117,7 @@ class Main():
         # https://stackoverflow.com/questions/38151615/specific-cross-validation-with-random-forest
         # rfc_1 = RandomForestClassifier(class_weight='balanced', random_state=42)
         # print(cross_val_score(rfc_1, X, y, cv=10))
-"""
+
         xgb = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=4)
         xgb.fit(X_train, y_train)
         y_pred_xgb = xgb.predict(X_test)
@@ -165,7 +165,7 @@ class Main():
         y_pred_sgdc = sgdc.predict(X_test)
         y_score_sgdc = sgdc.predict_proba(X_test)[:,1:]
         self.get_score_clf("sgdc", y_test, y_pred_sgdc, y_score_sgdc)
-"""
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='.')
     parser.add_argument('--version', '-v', '-vvv', '-version', action='version', version=str('Base 2.1'))

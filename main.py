@@ -62,13 +62,13 @@ def sliding_window_filter(input_file):
 
 def sliding_window_raw(seq):
     it = iter(seq)
-    result = tuple(syscalls[line.split(" ")[1] if line.startswith("---") else line.split("(")[0]]["id"] for line in islice(it, WINDOW_SIZE))
+    result = tuple(syscalls[line.split(" ")[1] if line.startswith("---") else line.split(" ")[0]]["id"] for line in islice(it, WINDOW_SIZE))
     if len(result) == WINDOW_SIZE:
         yield result
     for elem in it:
         if (elem.startswith("---")):
             elem = elem.split(" ")[1]
-        result = result[1:] + (syscalls[elem.split("(")[0]]["id"],)
+        result = result[1:] + (syscalls[elem.split(" ")[0]]["id"],)
         yield result
 
 
@@ -100,14 +100,14 @@ def define_labels(base_normal, base_exec, multi):
 
 def get_features(version, filter="raw"):
 
-    path = FILES_PATH.format(v=version, b="normal")
+    path = FILES_PATH.format(v=version, b="normal/sysdig")
     base_normal = []
     base_exec = []
 
     for file in os.listdir(path):
         base_normal.extend(retrieve_dataset(os.path.join(path, file), filter))
 
-    path = FILES_PATH.format(v=version, b="exec")
+    path = FILES_PATH.format(v=version, b="anormal/sysdig")
 
     for file_exec in os.listdir(path):
         base_exec.extend(retrieve_dataset(os.path.join(path, file_exec), filter))
@@ -366,7 +366,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("window_size", help="Window size", type=int)
-    parser.add_argument("-d", "--dataset", help="Dataset version to use", choices=["sbseg", "iscc"], default="iscc")
+    parser.add_argument("-d", "--dataset", help="Dataset version to use", choices=["logs"], default="logs")
     parser.add_argument("-f", "--filter", help="Filter mode", choices=["raw", "filter"], default="raw")
     args = parser.parse_args()
 

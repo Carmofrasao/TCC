@@ -379,11 +379,11 @@ if __name__ == "__main__":
 
     base_normal, base_exec = get_features(args.dataset, args.filter)
 
-    naive_bayes(base_normal, base_exec)
-    kneighbors(base_normal, base_exec)
-    random_forest(base_normal, base_exec)
-    multilayer_perceptron(base_normal, base_exec)
-    ada_boost(base_normal, base_exec)
+    # naive_bayes(base_normal, base_exec)
+    # kneighbors(base_normal, base_exec)
+    # random_forest(base_normal, base_exec)
+    # multilayer_perceptron(base_normal, base_exec)
+    # ada_boost(base_normal, base_exec)
 
     one_class_svm(base_normal, base_exec)
     isolation_forest(base_normal, base_exec)

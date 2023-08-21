@@ -41,23 +41,23 @@ def sliding_window_filter(input_file):
     for elem in it:
         if (elem.startswith("---")):
             elem = elem.split(" ")[1]
-        if ("threat" in syscalls[elem.split("(")[0]]):
-            if (syscalls[elem.split("(")[0]]["threat"] != 4):
-                result = result + (syscalls[elem.split("(")[0]]["id"],)
+        if ("threat" in syscalls[elem.split(" ")[0]]):
+            if (syscalls[elem.split(" ")[0]]["threat"] != 4):
+                result = result + (syscalls[elem.split(" ")[0]]["id"],)
         else:
-            raise Exception(f"Threat para {elem.split('(')[0]} não encontrada")
+            raise Exception(f"Threat para {elem.split(' ')[0]} não encontrada")
         if len(result) == WINDOW_SIZE:
             yield result
             break
     for elem in it:
         if (elem.startswith("---")):
             elem = elem.split(" ")[1]
-        if ("threat" in syscalls[elem.split("(")[0]]):
+        if ("threat" in syscalls[elem.split(" ")[0]]):
             if (syscalls[elem.split("(")[0]]["threat"] != 4):
-                result = result[1:] + (syscalls[elem.split("(")[0]]["id"],)
+                result = result[1:] + (syscalls[elem.split(" ")[0]]["id"],)
                 yield result
         else:
-            raise Exception(f"Threat para {elem.split('(')[0]} não encontrada")
+            raise Exception(f"Threat para {elem.split(' ')[0]} não encontrada")
 
 
 def sliding_window_raw(seq):

@@ -53,7 +53,7 @@ def sliding_window_filter(input_file):
         if (elem.startswith("---")):
             elem = elem.split(" ")[1]
         if ("threat" in syscalls[elem.split(" ")[0]]):
-            if (syscalls[elem.split("(")[0]]["threat"] != 4):
+            if (syscalls[elem.split(" ")[0]]["threat"] != 4):
                 result = result[1:] + (syscalls[elem.split(" ")[0]]["id"],)
                 yield result
         else:
@@ -381,8 +381,8 @@ if __name__ == "__main__":
 
     # naive_bayes(base_normal, base_exec)
     # kneighbors(base_normal, base_exec)
-    # random_forest(base_normal, base_exec)
-    # multilayer_perceptron(base_normal, base_exec)
+    random_forest(base_normal, base_exec)
+    multilayer_perceptron(base_normal, base_exec)
     # ada_boost(base_normal, base_exec)
 
     one_class_svm(base_normal, base_exec)

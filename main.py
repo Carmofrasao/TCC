@@ -42,7 +42,7 @@ def sliding_window_filter(input_file):
         if (elem.startswith("---")):
             elem = elem.split(" ")[1]
         if ("threat" in syscalls[elem.split(" ")[0]]):
-            if (syscalls[elem.split(" ")[0]]["threat"] != 4):
+            if (syscalls[elem.split(" ")[0]]["threat"] != 4 and syscalls[elem.split(" ")[0]]["threat"] != 5):
                 result = result + (syscalls[elem.split(" ")[0]]["id"],)
         else:
             raise Exception(f"Threat para {elem.split(' ')[0]} não encontrada")
@@ -53,7 +53,7 @@ def sliding_window_filter(input_file):
         if (elem.startswith("---")):
             elem = elem.split(" ")[1]
         if ("threat" in syscalls[elem.split(" ")[0]]):
-            if (syscalls[elem.split(" ")[0]]["threat"] != 4):
+            if (syscalls[elem.split(" ")[0]]["threat"] != 4 and syscalls[elem.split(" ")[0]]["threat"] != 5):
                 result = result[1:] + (syscalls[elem.split(" ")[0]]["id"],)
                 yield result
         else:

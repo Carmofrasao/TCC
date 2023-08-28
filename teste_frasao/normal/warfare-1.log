@@ -1,0 +1,2572 @@
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=494385(apache2) pid=494385(apache2) ptid=135077(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=2620 vm_swap=3012 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=1448 vpid=1448 
+set_robust_list 
+set_robust_list 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+getpid 
+getpid 
+getpid 
+getpid 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B53B000 vm_size=383112 vm_rss=2620 vm_swap=3012 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B539000 vm_size=383120 vm_rss=2620 vm_swap=3012 
+geteuid 
+geteuid euid=0(root) 
+setgid gid=33(www-data) 
+setgid res=0 
+open 
+open fd=9(<f>/proc/sys/kernel/ngroups_max) name=/proc/sys/kernel/ngroups_max flags=1(O_RDONLY) mode=0 dev=79 
+read fd=9(<f>/proc/sys/kernel/ngroups_max) size=31 
+read res=6 data=65536. 
+close fd=9(<f>/proc/sys/kernel/ngroups_max) 
+close res=0 
+open 
+open fd=9(<f>/etc/group) name=/etc/group flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=77 
+lseek fd=9(<f>/etc/group) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=9(<f>/etc/group) 
+fstat res=0 
+mmap addr=0 length=464 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=9(<f>/etc/group) offset=0 
+mmap res=7FA41B538000 vm_size=383124 vm_rss=2620 vm_swap=3012 
+lseek fd=9(<f>/etc/group) offset=464 whence=0(SEEK_SET) 
+lseek res=464 
+fstat fd=9(<f>/etc/group) 
+fstat res=0 
+munmap addr=7FA41B538000 length=464 
+munmap res=0 vm_size=383120 vm_rss=3840 vm_swap=2968 
+close fd=9(<f>/etc/group) 
+close res=0 
+setgroups 
+setgroups 
+geteuid 
+geteuid euid=0(root) 
+setuid uid=33(www-data) 
+setuid res=0 
+getpid 
+getpid 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B537000 vm_size=383128 vm_rss=3840 vm_swap=2968 
+getpid 
+getpid 
+epoll_create1 
+epoll_create1 
+epoll_ctl 
+epoll_ctl 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B535000 vm_size=383136 vm_rss=3840 vm_swap=2968 
+accept flags=0 
+accept fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) tuple=172.18.0.1:48174->172.18.0.2:80 queuepct=0 queuelen=0 queuemax=511 
+getsockname 
+getsockname 
+fcntl fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) cmd=4(F_GETFL) 
+fcntl res=2(<p>pipe:[172409]) 
+fcntl fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) cmd=5(F_SETFL) 
+fcntl res=0(<f>/dev/null) 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B533000 vm_size=383144 vm_rss=3840 vm_swap=2968 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B531000 vm_size=383152 vm_rss=3840 vm_swap=2968 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=1806 data=GET /wp-admin/load-scripts.php?c=0&load%5B%5D=hoverIntent,common,admin-bar,heart 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B52F000 vm_size=383160 vm_rss=3840 vm_swap=2968 
+stat 
+stat res=0 path=/var/www/html/wp-admin/load-scripts.php 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B52D000 vm_size=383168 vm_rss=3840 vm_swap=2968 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-admin/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-admin/load-scripts.php/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-admin/load-scripts.php 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4E1000 vm_size=383176 vm_rss=4728 vm_swap=2920 
+brk addr=564501442000 
+brk res=564501442000 vm_size=383336 vm_rss=4728 vm_swap=2920 
+brk addr=564501463000 
+brk res=564501463000 vm_size=383468 vm_rss=5944 vm_swap=2868 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+setitimer 
+setitimer 
+rt_sigaction 
+rt_sigaction 
+rt_sigprocmask 
+rt_sigprocmask 
+mmap addr=0 length=65536 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4D1000 vm_size=383532 vm_rss=6556 vm_swap=2808 
+getcwd 
+getcwd res=14 path=/var/www/html 
+chdir 
+chdir res=0 path=/var/www/html/wp-admin 
+fcntl fd=8(<f>/tmp/.ZendSem.XFIhQQ (deleted)) cmd=8(F_SETLK) 
+fcntl res=0(<f>/dev/null) 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/load-scripts.php 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin 
+lstat 
+lstat res=0 path=/var/www/html 
+lstat 
+lstat res=0 path=/var/www 
+lstat 
+lstat res=0 path=/var 
+stat 
+stat res=0 path=/var/www/html/wp-admin/load-scripts.php 
+mmap addr=0 length=65536 prot=7(PROT_READ|PROT_WRITE|PROT_EXEC) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4C1000 vm_size=383596 vm_rss=7444 vm_swap=2744 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/hoverIntent.min.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/hoverIntent.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/hoverIntent.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) name=/var/www/html/wp-includes/js/hoverIntent.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) size=8192 
+read res=1115 data=!function(a){a.fn.hoverIntent=function(b,c,d){var e={interval:100,sensitivity:6, 
+read fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/hoverIntent.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/common.min.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/common.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/common.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/common.min.js) name=/var/www/html/wp-admin/js/common.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/common.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/common.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/common.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/common.min.js) size=8192 
+read res=8192 data=var showNotice,adminMenu,columns,validateForm,screenMeta;!function(a,b,c){functi 
+read fd=11(<f>/var/www/html/wp-admin/js/common.min.js) size=8192 
+read res=7229 data=sub").removeClass("opensub"),c.addClass("opensub"))})),B||C||(G.find("li.wp-has- 
+read fd=11(<f>/var/www/html/wp-admin/js/common.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/common.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/common.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/admin-bar.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/admin-bar.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/admin-bar.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) name=/var/www/html/wp-includes/js/admin-bar.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) size=8192 
+read res=7188 data="undefined"!=typeof jQuery?("undefined"==typeof jQuery.fn.hoverIntent&&!function 
+read fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/admin-bar.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/heartbeat.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/heartbeat.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/heartbeat.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) name=/var/www/html/wp-includes/js/heartbeat.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) size=8192 
+read res=5531 data=!function(a,b,c){var d=function(){function d(){var c,d,f,h;"string"==typeof b.pa 
+read fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/heartbeat.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/autosave.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/autosave.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/autosave.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) name=/var/www/html/wp-includes/js/autosave.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) size=8192 
+read res=5646 data=window.autosave=function(){return!0},function(a,b){function c(){function c(b){va 
+read fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/autosave.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/suggest.min.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/suggest.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/suggest.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) name=/var/www/html/wp-includes/js/jquery/suggest.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) size=8192 
+read res=2993 data=!function(a){a.suggest=function(b,c){function d(){var a=o.offset();p.css({top:a. 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/suggest.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wp-ajax-response.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wp-ajax-response.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wp-ajax-response.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) name=/var/www/html/wp-includes/js/wp-ajax-response.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) size=8192 
+read res=2081 data=var wpAjax=jQuery.extend({unserialize:function(a){var b,c,d,e,f={};if(!a)return  
+read fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wp-ajax-response.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/jquery.color.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/jquery.color.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/jquery.color.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) name=/var/www/html/wp-includes/js/jquery/jquery.color.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) size=8192 
+read res=8192 data=/*! jQuery Color v@2.1.1 with SVG Color Names http://github.com/jquery/jquery-co 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) size=8192 
+read res=1103 data=#ffffe0",limegreen:"#32cd32",linen:"#faf0e6",mediumaquamarine:"#66cdaa",mediumbl 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.color.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wp-lists.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wp-lists.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wp-lists.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) name=/var/www/html/wp-includes/js/wp-lists.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) size=8192 
+read res=7413 data=!function(a){var b,c={add:"ajaxAdd",del:"ajaxDel",dim:"ajaxDim",process:"process 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wp-lists.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/core.min.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/core.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/core.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) name=/var/www/html/wp-includes/js/jquery/ui/core.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) size=8192 
+read res=4000 data=/*!. * jQuery UI Core 1.11.4. * http://jqueryui.com. *. * Copyright jQuery Found 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/core.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/widget.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/widget.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/widget.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) name=/var/www/html/wp-includes/js/jquery/ui/widget.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) size=8192 
+read res=6908 data=/*!. * jQuery UI Widget 1.11.4. * http://jqueryui.com. *. * Copyright jQuery Fou 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/widget.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/mouse.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/mouse.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/mouse.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) name=/var/www/html/wp-includes/js/jquery/ui/mouse.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) size=8192 
+read res=3148 data=/*!. * jQuery UI Mouse 1.11.4. * http://jqueryui.com. *. * Copyright jQuery Foun 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/mouse.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/sortable.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/sortable.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/sortable.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) name=/var/www/html/wp-includes/js/jquery/ui/sortable.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) size=8192 
+read res=8192 data=/*!. * jQuery UI Sortable 1.11.4. * http://jqueryui.com. *. * Copyright jQuery F 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) size=8192 
+read res=8192 data=is.currentItem):a(this.domPosition.parent).prepend(this.currentItem)),this},seri 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) size=8192 
+read res=8192 data=er.apply(this.element[0],[b,this.currentItem])):"clone"===c.helper?this.currentI 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) size=8192 
+read res=323 data=lHelperRemoval},_trigger:function(){a.Widget.prototype._trigger.apply(this,argum 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/sortable.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/postbox.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/postbox.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/postbox.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) name=/var/www/html/wp-admin/js/postbox.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) size=8192 
+read res=4192 data=var postboxes;!function(a){var b=a(document);postboxes={handle_click:function(){ 
+read fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/postbox.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/position.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/position.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/position.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) name=/var/www/html/wp-includes/js/jquery/ui/position.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) size=8192 
+read res=6527 data=/*!. * jQuery UI Position 1.11.4. * http://jqueryui.com. *. * Copyright jQuery F 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/position.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/menu.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/menu.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/menu.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) name=/var/www/html/wp-includes/js/jquery/ui/menu.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) size=8192 
+read res=8192 data=/*!. * jQuery UI Menu 1.11.4. * http://jqueryui.com. *. * Copyright jQuery Found 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) size=8192 
+read res=1408 data=l":"nextAll"](".ui-menu-item").eq(-1):this.active[a+"All"](".ui-menu-item").eq(0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/menu.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wp-a11y.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wp-a11y.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wp-a11y.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) name=/var/www/html/wp-includes/js/wp-a11y.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) size=8192 
+read res=653 data=window.wp=window.wp||{},function(a,b){"use strict";function c(a,c){e(),a=b("<p>" 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wp-a11y.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/autocomplete.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) name=/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) size=8192 
+read res=8192 data=/*!. * jQuery UI Autocomplete 1.11.4. * http://jqueryui.com. *. * Copyright jQue 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) size=8192 
+read res=91 data=ion.children().hide(),a("<div>").text(c).appendTo(this.liveRegion))}}),a.ui.auto 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/autocomplete.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/tags-suggest.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/tags-suggest.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/tags-suggest.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) name=/var/www/html/wp-admin/js/tags-suggest.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) size=8192 
+read res=2173 data=!function(a){function b(a){return a.split(new RegExp(e+"\\s*"))}function c(a){re 
+read fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/tags-suggest.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/tags-box.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/tags-box.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/tags-box.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) name=/var/www/html/wp-admin/js/tags-box.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) size=8192 
+read res=3163 data=var tagBox,array_unique_noempty;!function(a){var b=window.tagsSuggestL10n&&windo 
+read fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/tags-box.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/underscore.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/underscore.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/underscore.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) name=/var/www/html/wp-includes/js/underscore.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) size=8192 
+read res=8192 data=//     Underscore.js 1.8.3.//     http://underscorejs.org.//     (c) 2009-2015 J 
+read fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) size=8192 
+read res=8192 data=emoize=function(n,t){var r=function(e){var u=r.cache,i=""+(t?t.apply(this,argume 
+read fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) size=8192 
+read res=26 data={return m})}).call(this);. 
+read fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/underscore.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/word-count.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/word-count.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/word-count.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) name=/var/www/html/wp-admin/js/word-count.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) size=8192 
+read res=1508 data=!function(){function a(a){var b,c;if(a)for(b in a)a.hasOwnProperty(b)&&(this.set 
+read fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/word-count.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/post.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/post.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/post.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/post.min.js) name=/var/www/html/wp-admin/js/post.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/post.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/post.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/post.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/post.min.js) size=8192 
+read res=8192 data=var commentsBox,WPSetThumbnailHTML,WPSetThumbnailID,WPRemoveThumbnail,wptitlehin 
+read fd=11(<f>/var/www/html/wp-admin/js/post.min.js) size=8192 
+read res=8192 data=ction(b){if(m&&(!b.target||"#document"==b.target.nodeName)){var c=a("#post_ID"). 
+read fd=11(<f>/var/www/html/wp-admin/js/post.min.js) size=8192 
+read res=1995 data=start"in window?void a("#content-resize-handle").hide():void g.on("mousedown.wp- 
+read fd=11(<f>/var/www/html/wp-admin/js/post.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/post.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/post.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/editor-expand.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/editor-expand.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/editor-expand.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) name=/var/www/html/wp-admin/js/editor-expand.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) size=8192 
+read res=8192 data=!function(a,b,c){"use strict";var d=b(a),e=b(document),f=b("#wpadminbar"),g=b("# 
+read fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) size=8192 
+read res=5326 data=m(),a.setUserSetting("editor_expand","on")):(n(),a.setUserSetting("editor_expand 
+read fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/editor-expand.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/thickbox/thickbox.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/thickbox 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/thickbox/thickbox.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/thickbox/thickbox.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/thickbox 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) name=/var/www/html/wp-includes/js/thickbox/thickbox.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) size=8192 
+read res=8192 data=/*. * Thickbox 3.1 - One Box To Rule Them All.. * By Cody Lindley (http://www.co 
+read fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) size=8192 
+read res=4971 data=me='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' 
+read fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/thickbox/thickbox.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/shortcode.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/shortcode.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/shortcode.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) name=/var/www/html/wp-includes/js/shortcode.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) size=8192 
+read res=2613 data=window.wp=window.wp||{},function(){wp.shortcode={next:function(a,b,c){var d,e,f= 
+read fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/shortcode.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/backbone.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/backbone.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/backbone.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) name=/var/www/html/wp-includes/js/backbone.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) size=8192 
+read res=8192 data=(function(t){var e=typeof self=="object"&&self.self===self&&self||typeof global= 
+read fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) size=8192 
+read res=8192 data=end({},this.attributes,t);var r=this.validationError=this.validate(t,e)||null;if 
+read fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) size=8192 
+read res=6934 data=l=i.result(r,"url")||F()}if(n.data==null&&r&&(t==="create"||t==="update"||t==="p 
+read fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/backbone.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wp-util.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wp-util.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wp-util.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) name=/var/www/html/wp-includes/js/wp-util.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) size=8192 
+read res=1046 data=window.wp=window.wp||{},function(a){var b="undefined"==typeof _wpUtilSettings?{} 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wp-util.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wp-backbone.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wp-backbone.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wp-backbone.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) name=/var/www/html/wp-includes/js/wp-backbone.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) size=8192 
+read res=3020 data=window.wp=window.wp||{},function(a){wp.Backbone={},wp.Backbone.Subviews=function 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wp-backbone.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/media-models.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/media-models.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/media-models.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) name=/var/www/html/wp-includes/js/media-models.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) size=8192 
+read res=8192 data=!function(a){function b(d){if(c[d])return c[d].exports;var e=c[d]={i:d,l:!1,expo 
+read fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) size=8192 
+read res=5271 data=,this._hasMore=!0,this.created=new Date,this.filters.order=function(a){var b=thi 
+read fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/media-models.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/plupload/wp-plupload.min.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/plupload 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/plupload/wp-plupload.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/plupload/wp-plupload.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/plupload 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) name=/var/www/html/wp-includes/js/plupload/wp-plupload.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) size=8192 
+read res=4920 data=window.wp=window.wp||{},function(a,b){var c;"undefined"!=typeof _wpPluploadSetti 
+read fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/plupload/wp-plupload.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/mediaelement/wp-mediaelement.min.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/mediaelement 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/mediaelement 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) name=/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) size=8192 
+read res=733 data=!function(a,b){function c(){function a(){"undefined"!=typeof _wpmejsSettings&&(c 
+read fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/mediaelement/wp-mediaelement.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/api-request.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/api-request.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/api-request.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) name=/var/www/html/wp-includes/js/api-request.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) size=8192 
+read res=697 data=!function(a){function b(a){return a=b.buildAjaxOptions(a),b.transport(a)}var c=w 
+read fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/api-request.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/media-views.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/media-views.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/media-views.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) name=/var/www/html/wp-includes/js/media-views.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=!function(a){function b(d){if(c[d])return c[d].exports;var e=c[d]={i:d,l:!1,expo 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=.set("selection",new wp.media.model.Selection(null,{multiple:this.get("multiple" 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=lection(),this.frame.on("open",this.updateSelection,this),e.prototype.activate.a 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=this},triggerModeEvents:function(a,b,c){var d,e,f={add:"activate",remove:"deacti 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=ply(this,arguments),this.on("activate",this.activate,this),b=_.find(this.counts, 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=),this.options.selection=new wp.media.model.Selection(this.image.attachment,{mul 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=.slice(3,-5)),this.workflow?(this.workflow.state().reset(),this.addFiles.apply(t 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=abled",b.disabled),this.$el.text(this.model.get("text")),this},click:function(a) 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=:b.full&&(c=b.full),c)?_.clone(c):{url:this.model.get("url"),width:this.model.ge 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=ilters:function(){var a={};_.each(wp.media.view.settings.mimeTypes||{},function( 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=ntroller:this.controller,model:b,priority:120})),this.options.display&&a.set("di 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=8192 data=c=wp.media.View.extend({className:"media-embed",initialize:function(){this.url=n 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=2215 data=his))},addSidebar:function(){this.sidebar=new wp.media.view.Sidebar({controller: 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/media-views.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/media-editor.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/media-editor.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/media-editor.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) name=/var/www/html/wp-includes/js/media-editor.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) size=8192 
+read res=8192 data=!function(a,b){var c={};wp.media.coerce=function(a,c){return b.isUndefined(a[c]) 
+read fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) size=8192 
+read res=2713 data= this.send.attachment(b,a.toJSON())},this)).done(function(){wp.media.editor.inse 
+read fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/media-editor.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/media-audiovideo.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/media-audiovideo.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/media-audiovideo.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) name=/var/www/html/wp-includes/js/media-audiovideo.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) size=8192 
+read res=8192 data=!function(a){function b(d){if(c[d])return c[d].exports;var e=c[d]={i:d,l:!1,expo 
+read fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) size=8192 
+read res=4181 data=ia,menu:"video-details"}),new e({type:"video",id:"add-video-source",title:f.vide 
+read fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/media-audiovideo.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/mce-view.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/mce-view.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/mce-view.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) name=/var/www/html/wp-includes/js/mce-view.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) size=8192 
+read res=8192 data=!function(a,b,c,d){"use strict";var e={},f={};b.mce=b.mce||{},b.mce.views={regis 
+read fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) size=8192 
+read res=1552 data=e=c.embed.shortcode({url:this.text})),a.editor&&(b=a.editor.getBody().clientWidt 
+read fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/mce-view.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/imgareaselect/jquery.imgareaselect.min.js 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/imgareaselect 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/imgareaselect 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) name=/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) size=8192 
+read res=8192 data=!function(e){function t(){return e("<div/>")}var o=Math.abs,i=Math.max,s=Math.mi 
+read fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) size=8192 
+read res=1695 data=lt&&(e.altKey||e.originalEvent.altKey)){switch(r){case 37:t=-t;case 39:o=i(et,ot 
+read fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/image-edit.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/image-edit.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/image-edit.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) name=/var/www/html/wp-admin/js/image-edit.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) size=8192 
+read res=8192 data=!function(a){var b=window.imageEdit={iasapi:{},hold:{},postid:"",_view:!1,intval 
+read fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) size=8192 
+read res=1545 data="#image-redo-"+b).focus()}))},redo:function(b,c){var d=this,e=a("#image-redo-"+b 
+read fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/image-edit.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/svg-painter.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/svg-painter.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/svg-painter.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) name=/var/www/html/wp-admin/js/svg-painter.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) size=8192 
+read res=5484 data=/**. * Attempt to re-color SVG icons used in the admin menu or the toolbar. *. * 
+read fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/svg-painter.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wp-auth-check.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wp-auth-check.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wp-auth-check.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) name=/var/www/html/wp-includes/js/wp-auth-check.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) size=8192 
+read res=1783 data=!function(a){function b(){var b,d=a("#wp-auth-check"),f=a("#wp-auth-check-form") 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wp-auth-check.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/draggable.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/draggable.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/draggable.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) name=/var/www/html/wp-includes/js/jquery/ui/draggable.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) size=8192 
+read res=8192 data=/*!. * jQuery UI Draggable 1.11.4. * http://jqueryui.com. *. * Copyright jQuery  
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) size=8192 
+read res=8192 data=argins.top]):e.containment.constructor===Array?void(this.containment=e.containme 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) size=8192 
+read res=2521 data=aggable)":e.snap).each(function(){var b=a(this),c=b.offset();this!==d.element[0] 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/draggable.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/droppable.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/droppable.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/droppable.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) name=/var/www/html/wp-includes/js/jquery/ui/droppable.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) size=8192 
+read res=6267 data=/*!. * jQuery UI Droppable 1.11.4. * http://jqueryui.com. *. * Copyright jQuery  
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/droppable.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/resizable.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/resizable.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/resizable.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) name=/var/www/html/wp-includes/js/jquery/ui/resizable.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) size=8192 
+read res=8192 data=/*!. * jQuery UI Resizable 1.11.4. * http://jqueryui.com. *. * Copyright jQuery  
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) size=8192 
+read res=8192 data=xHeight:this._isNumber(g.maxHeight)?g.maxHeight:1/0},(this._aspectRatio||a)&&(b= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) size=8192 
+read res=2042 data=,width:d.size.width-f.width||0,top:d.position.top-g.top||0,left:d.position.left- 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/resizable.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/slider.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/slider.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/slider.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) name=/var/www/html/wp-includes/js/jquery/ui/slider.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) size=8192 
+read res=8192 data=/*!. * jQuery UI Slider 1.11.4. * http://jqueryui.com. *. * Copyright jQuery Fou 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) size=8192 
+read res=2795 data=(".");return c===-1?0:b.length-c-1},_valueMin:function(){return this.options.min 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/slider.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/button.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/button.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/button.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) name=/var/www/html/wp-includes/js/jquery/ui/button.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) size=8192 
+read res=7236 data=/*!. * jQuery UI Button 1.11.4. * http://jqueryui.com. *. * Copyright jQuery Fou 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/button.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/ui/spinner.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/ui/spinner.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/ui/spinner.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) name=/var/www/html/wp-includes/js/jquery/ui/spinner.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) size=8192 
+read res=7104 data=/*!. * jQuery UI Spinner 1.11.4. * http://jqueryui.com. *. * Copyright jQuery Fo 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/ui/spinner.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/jquery/jquery.form.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/jquery/jquery.form.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/jquery/jquery.form.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) name=/var/www/html/wp-includes/js/jquery/jquery.form.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) size=8192 
+read res=8192 data=/*!. * jQuery Form Plugin. * version: 4.2.1. * Requires jQuery v1.7 or later. *  
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) size=8192 
+read res=8192 data==(new DOMParser).parseFromString(a,"text/xml"),b&&b.documentElement&&"parsererro 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) size=8192 
+read res=214 data=is.tagName.toLowerCase()){var d=a(this).parent("select");b&&d[0]&&"select-one"== 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/jquery/jquery.form.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/editor.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/editor.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/editor.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) name=/var/www/html/wp-admin/js/editor.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) size=8192 
+read res=8192 data=window.wp=window.wp||{},function(a,b){function c(){function c(){!x&&window.tinym 
+read fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) size=8192 
+read res=5352 data=")),g.length&&(a=a.replace(/<wp-preserve>/g,function(){return g.shift()})),a):"" 
+read fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/editor.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/quicktags.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/quicktags.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/quicktags.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) name=/var/www/html/wp-includes/js/quicktags.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) size=8192 
+read res=8192 data=function quicktags(a){return new QTags(a)}function edInsertContent(a,b){return Q 
+read fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) size=8192 
+read res=2957 data=is,"link","link","","</a>","","","",a)},b.LinkButton.prototype=new b.TagButton,b 
+read fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/quicktags.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wplink.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wplink.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wplink.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) name=/var/www/html/wp-includes/js/wplink.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) size=8192 
+read res=8192 data=var wpLink;!function(a,b,c){function d(){return j||e.dom.getParent(e.selection.g 
+read fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) size=8192 
+read res=3113 data=meout(function(){return d?a.apply(f,e):void(c=!0)},b),function(){return c?a.appl 
+read fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wplink.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-admin/js/media-upload.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-admin/js/media-upload.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-admin/js/media-upload.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) name=/var/www/html/wp-admin/js/media-upload.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) size=8192 
+read res=1153 data=var wpActiveEditor,send_to_editor;send_to_editor=function(a){var b,c="undefined" 
+read fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-admin/js/media-upload.min.js) 
+close res=0 
+lstat 
+lstat res=0 path=/var/www/html//wp-includes/js/wp-embed.min.js 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/wp-embed.min.js 
+lstat 
+lstat res=0 path=/var/www/html/wp-includes/js/wp-embed.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) name=/var/www/html/wp-includes/js/wp-embed.min.js flags=1(O_RDONLY) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) 
+fstat res=0 
+lseek fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) 
+fstat res=0 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) size=8192 
+read res=1398 data=!function(a,b){"use strict";function c(){if(!e){e=!0;var a,c,d,f,g=-1!==navigato 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) size=8192 
+read res=0 data= 
+read fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) size=8192 
+read res=0 data= 
+close fd=11(<f>/var/www/html/wp-includes/js/wp-embed.min.js) 
+close res=0 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4BF000 vm_size=383604 vm_rss=10776 vm_swap=2676 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383784 vm_rss=10776 vm_swap=2676 
+brk addr=5645014D0000 
+brk res=5645014D0000 vm_size=384040 vm_rss=10776 vm_swap=2676 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4BD000 vm_size=384048 vm_rss=11164 vm_swap=2676 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4BB000 vm_size=384056 vm_rss=11164 vm_swap=2676 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4B9000 vm_size=384064 vm_rss=11164 vm_swap=2676 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8505 
+writev res=8505 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:41 GMT..Server: Apache/2.4.25 (Deb 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0...G.E......1.5......1.Kz...y....,`y.Y.^n....Z..I.TLU'F.jq._..y....$...|.{.. 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0...|.=~2x..j......a.<..e...O.]3._.,z.-..&.7xg<A`..t>.c4.?9:....3.....4|B4... 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0....A...z.......l.....A.} +..P...4.....~D..0..*./.z_...`wK..qE.\44.....q.... 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0..q.z].........LW....u.p...N.{...q.^x........V........z..+Sw-.no..-.....G.Ih 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0....yg...<<@..Tb.So%.y...O.........8....^..d..&gh.[s...'...`..lR3i..r...(.7. 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0...C.^../.ET.)..>.....Wq.^^.1....!..}...'no.VS.]u4)....A... ...z. *!3f~.t... 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0.../._.....c.......z....+G..H.%.;.......I...I...$`........qF...L.>.......t'O 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0..}f>...Go.nVo.........o............O].....qg>.S..x.[&...R.73.......4...y... 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0...<A;..J...'......._.....W.~z.....'8.r....'.z~..O.~x.&T.......2)....~z..`.X 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0..r..E~C.w..I.y......).NU.38..}L%...]h._inhtb..._...l5....|#..2Z............ 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0..'.U()........s8.U\.;....$=|...!..)...g.e....J....A.....$LD(..=YE1..O.mo... 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8104 
+writev res=8104 data=1fa0...O.1iC..(..)..6.P0..`*.....).;..kN....M~...D.T.(m....X.!`..Bv..$,..a.,.Z1. 
+chdir 
+chdir res=0 path=/var/www/html 
+setitimer 
+setitimer 
+fcntl fd=8(<f>/tmp/.ZendSem.XFIhQQ (deleted)) cmd=8(F_SETLK) 
+fcntl res=0(<f>/dev/null) 
+setitimer 
+setitimer 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4B7000 vm_size=384072 vm_rss=11424 vm_swap=2668 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4B5000 vm_size=384080 vm_rss=11424 vm_swap=2668 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4B3000 vm_size=384088 vm_rss=11424 vm_swap=2668 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4B1000 vm_size=384096 vm_rss=11424 vm_swap=2668 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383840 vm_rss=11360 vm_swap=2668 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=43013 
+writev res=43013 data=a7f8..2..,.$.......4..}...7|. ....7J.....y;..7..Xm...}..P.=Ye..9..4\..'.......=. 
+write fd=7(<p>pipe:[172408]) size=973 
+write res=973 data=172.18.0.1 - - [31/Jul/2023:22:30:41 +0000] "GET /wp-admin/load-scripts.php?c=0& 
+times 
+times 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+poll fds=10:41 timeout=5000 
+poll res=1 fds=10:41 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=1112 data=GET /wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js?wp-mc 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/social-warfare/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/social-warfare/assets/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/social-warfare/assets/js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js 
+open 
+open fd=11(<f>/var/www/html/wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js) name=/var/www/html/wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=2269 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js) offset=0 
+mmap res=7FA41B52C000 vm_size=383844 vm_rss=11360 vm_swap=2668 
+brk addr=5645014D0000 
+brk res=5645014D0000 vm_size=384100 vm_rss=11360 vm_swap=2668 
+munmap addr=7FA41B52C000 length=2269 
+munmap res=0 vm_size=384096 vm_rss=11408 vm_swap=2668 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383840 vm_rss=11392 vm_swap=2668 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=1209 
+writev res=1209 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:41 GMT..Server: Apache/2.4.25 (Deb 
+write fd=7(<p>pipe:[172408]) size=277 
+write res=277 data=172.18.0.1 - - [31/Jul/2023:22:30:41 +0000] "GET /wp-content/plugins/social-warf 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-content/plugins/social-warfare/assets/js/sw-shortcode-generator.js) 
+close res=0 
+poll fds=10:41 timeout=5000 
+poll res=1 fds=10:41 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=926 data=GET /wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js?wp-mce-4607-201711 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js) name=/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=2143 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js) offset=0 
+mmap res=7FA41B52C000 vm_size=383844 vm_rss=11392 vm_swap=2668 
+brk addr=5645014D0000 
+brk res=5645014D0000 vm_size=384100 vm_rss=11392 vm_swap=2668 
+munmap addr=7FA41B52C000 length=2143 
+munmap res=0 vm_size=384096 vm_rss=11412 vm_swap=2668 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383840 vm_rss=11392 vm_swap=2668 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=1367 
+writev res=1367 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:41 GMT..Server: Apache/2.4.25 (Deb 
+write fd=7(<p>pipe:[172408]) size=264 
+write res=264 data=172.18.0.1 - - [31/Jul/2023:22:30:41 +0000] "GET /wp-includes/js/tinymce/plugins 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/colorpicker/plugin.min.js) 
+close res=0 
+poll fds=10:41 timeout=5000 
+poll res=1 fds=10:41 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=920 data=GET /wp-includes/js/tinymce/plugins/paste/plugin.min.js?wp-mce-4607-20171116 HTT 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/paste/plugin.min.js 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/paste/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-includes/js/tinymce/plugins/paste/plugin.min.js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/paste/plugin.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/paste/plugin.min.js) name=/var/www/html/wp-includes/js/tinymce/plugins/paste/plugin.min.js flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=21373 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/paste/plugin.min.js) offset=0 
+mmap res=7FA41B4AB000 vm_size=383864 vm_rss=11392 vm_swap=2668 
+brk addr=5645014D0000 
+brk res=5645014D0000 vm_size=384120 vm_rss=11392 vm_swap=2668 
+munmap addr=7FA41B4AB000 length=21373 
+munmap res=0 vm_size=384096 vm_rss=11424 vm_swap=2668 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383840 vm_rss=11392 vm_swap=2668 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8757 
+writev res=8757 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:41 GMT..Server: Apache/2.4.25 (Deb 
+write fd=7(<p>pipe:[172408]) size=258 
+write res=258 data=172.18.0.1 - - [31/Jul/2023:22:30:41 +0000] "GET /wp-includes/js/tinymce/plugins 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/paste/plugin.min.js) 
+close res=0 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+poll fds=10:41 timeout=5000 
+poll res=1 fds=10:41 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=924 data=GET /wp-includes/js/tinymce/plugins/textcolor/plugin.min.js?wp-mce-4607-20171116 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/textcolor/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js) name=/var/www/html/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=5168 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js) offset=0 
+mmap res=7FA41B4AF000 vm_size=383848 vm_rss=11392 vm_swap=2668 
+brk addr=5645014D0000 
+brk res=5645014D0000 vm_size=384104 vm_rss=11392 vm_swap=2668 
+munmap addr=7FA41B4AF000 length=5168 
+munmap res=0 vm_size=384096 vm_rss=11412 vm_swap=2668 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383840 vm_rss=11392 vm_swap=2668 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=2534 
+writev res=2534 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:41 GMT..Server: Apache/2.4.25 (Deb 
+write fd=7(<p>pipe:[172408]) size=262 
+write res=262 data=172.18.0.1 - - [31/Jul/2023:22:30:41 +0000] "GET /wp-includes/js/tinymce/plugins 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/textcolor/plugin.min.js) 
+close res=0 
+poll fds=10:41 timeout=5000 
+poll res=1 fds=10:41 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=924 data=GET /wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js?wp-mce-4607-20171116 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js 
+open 
+open fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js) name=/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=1661 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js) offset=0 
+mmap res=7FA41B52C000 vm_size=383844 vm_rss=11392 vm_swap=2668 
+brk addr=5645014D0000 
+brk res=5645014D0000 vm_size=384100 vm_rss=11392 vm_swap=2668 
+munmap addr=7FA41B52C000 length=1661 
+munmap res=0 vm_size=384096 vm_rss=11408 vm_swap=2668 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383840 vm_rss=11392 vm_swap=2668 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=1112 
+writev res=1112 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:41 GMT..Server: Apache/2.4.25 (Deb 
+write fd=7(<p>pipe:[172408]) size=262 
+write res=262 data=172.18.0.1 - - [31/Jul/2023:22:30:41 +0000] "GET /wp-includes/js/tinymce/plugins 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js) 
+close res=0 
+poll fds=10:41 timeout=5000 
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=495290(apache2) pid=495290(apache2) ptid=135077(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=1 vm_size=383104 vm_rss=2620 vm_swap=3012 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=562036736(CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID) uid=0 gid=0 vtid=1449 vpid=1449 
+set_robust_list 
+set_robust_list 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+getpid 
+getpid 
+getpid 
+getpid 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B53B000 vm_size=383112 vm_rss=2620 vm_swap=3012 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B539000 vm_size=383120 vm_rss=2620 vm_swap=3012 
+geteuid 
+geteuid euid=0(root) 
+setgid gid=33(www-data) 
+setgid res=0 
+open 
+open fd=9(<f>/proc/sys/kernel/ngroups_max) name=/proc/sys/kernel/ngroups_max flags=1(O_RDONLY) mode=0 dev=79 
+read fd=9(<f>/proc/sys/kernel/ngroups_max) size=31 
+read res=6 data=65536. 
+close fd=9(<f>/proc/sys/kernel/ngroups_max) 
+close res=0 
+open 
+open fd=9(<f>/etc/group) name=/etc/group flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=77 
+lseek fd=9(<f>/etc/group) offset=0 whence=1(SEEK_CUR) 
+lseek res=0 
+fstat fd=9(<f>/etc/group) 
+fstat res=0 
+mmap addr=0 length=464 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=9(<f>/etc/group) offset=0 
+mmap res=7FA41B538000 vm_size=383124 vm_rss=2620 vm_swap=3012 
+lseek fd=9(<f>/etc/group) offset=464 whence=0(SEEK_SET) 
+lseek res=464 
+fstat fd=9(<f>/etc/group) 
+fstat res=0 
+munmap addr=7FA41B538000 length=464 
+munmap res=0 vm_size=383120 vm_rss=3848 vm_swap=2968 
+close fd=9(<f>/etc/group) 
+close res=0 
+setgroups 
+setgroups 
+geteuid 
+geteuid euid=0(root) 
+setuid uid=33(www-data) 
+setuid res=0 
+getpid 
+getpid 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+rt_sigaction 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B537000 vm_size=383128 vm_rss=3848 vm_swap=2968 
+getpid 
+getpid 
+epoll_create1 
+epoll_create1 
+epoll_ctl 
+epoll_ctl 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B535000 vm_size=383136 vm_rss=3848 vm_swap=2968 
+accept flags=0 
+poll res=1 fds=10:41 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=1186 data=GET /wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/butto 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/button.png 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/button.png/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/button.png 
+open 
+open fd=11(<f>/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/button.png) name=/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/button.png flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=78531 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/button.png) offset=0 
+mmap res=7FA41B49D000 vm_size=383920 vm_rss=11392 vm_swap=2668 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=78819 
+writev res=78819 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:42 GMT..Server: Apache/2.4.25 (Deb 
+munmap addr=7FA41B49D000 length=78531 
+munmap res=0 vm_size=383840 vm_rss=11392 vm_swap=2668 
+write fd=7(<p>pipe:[172408]) size=331 
+write res=331 data=172.18.0.1 - - [31/Jul/2023:22:30:42 +0000] "GET /wp-content/plugins/nex-forms-e 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-content/plugins/nex-forms-express-wp-form-builder/admin/css/images/button.png) 
+close res=0 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+poll fds=10:41 timeout=5000 
+poll res=1 fds=10:41 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=927 data=GET /wp-includes/css/dashicons.min.css?ver=4.9.2&wp-mce-4607-20171116 HTTP/1.1.. 
+stat 
+stat res=0 path=/var/www/html/wp-includes/css/dashicons.min.css 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-includes/css/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-includes/css/dashicons.min.css/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-includes/css/dashicons.min.css 
+open 
+open fd=11(<f>/var/www/html/wp-includes/css/dashicons.min.css) name=/var/www/html/wp-includes/css/dashicons.min.css flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=46360 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-includes/css/dashicons.min.css) offset=0 
+mmap res=7FA41B4A5000 vm_size=383888 vm_rss=11392 vm_swap=2668 
+brk addr=5645014D0000 
+brk res=5645014D0000 vm_size=384144 vm_rss=11392 vm_swap=2668 
+munmap addr=7FA41B4A5000 length=46360 
+munmap res=0 vm_size=384096 vm_rss=11520 vm_swap=2668 
+brk addr=564501490000 
+brk res=564501490000 vm_size=383840 vm_rss=11392 vm_swap=2668 
+writev fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=28983 
+writev res=28983 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:30:42 GMT..Server: Apache/2.4.25 (Deb 
+write fd=7(<p>pipe:[172408]) size=252 
+write res=252 data=172.18.0.1 - - [31/Jul/2023:22:30:42 +0000] "GET /wp-includes/css/dashicons.min. 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-includes/css/dashicons.min.css) 
+close res=0 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+poll fds=10:41 timeout=5000 
+poll res=0 fds= 
+shutdown fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) how=1(SHUT_WR) 
+shutdown res=0 
+poll fds=10:41 timeout=2000 
+poll res=1 fds=10:421 
+read fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) size=512 
+read res=0 data= 
+close fd=10(<4t>172.18.0.1:48174->172.18.0.2:80) 
+close res=0 
+read fd=4(<p>pipe:[173340]) size=1 
+read res=-11(EAGAIN) data= 
+accept flags=0 
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=495368(apache2) pid=420126(apache2) ptid=135077(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=0 vm_size=466204 vm_rss=41904 vm_swap=2556 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=578861571(CLONE_FILES|CLONE_FS|CLONE_PARENT_SETTID|CLONE_SIGHAND|CLONE_SYSVSEM|CLONE_THREAD|CLONE_VM|CLONE_CHILD_CLEARTID|CLONE_SETTLS) uid=33 gid=33 vtid=1450 vpid=1384 
+set_robust_list 
+set_robust_list 
+getpid 
+getpid 
+open 
+open fd=13(<f>/etc/resolv.conf) name=/etc/resolv.conf flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=13(<f>/etc/resolv.conf) 
+fstat res=0 
+read fd=13(<f>/etc/resolv.conf) size=1024 
+read res=53 data=nameserver 127.0.0.11.options edns0 trust-ad ndots:0. 
+read fd=13(<f>/etc/resolv.conf) size=1024 
+read res=0 data= 
+close fd=13(<f>/etc/resolv.conf) 
+close res=0 
+uname 
+uname 
+open 
+open fd=13(<f>/etc/hosts) name=/etc/hosts flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=13(<f>/etc/hosts) 
+fstat res=0 
+read fd=13(<f>/etc/hosts) size=512 
+read res=174 data=127.0.0.1.localhost.::1.localhost ip6-localhost ip6-loopback.fe00::0.ip6-localne 
+read fd=13(<f>/etc/hosts) size=512 
+read res=0 data= 
+close fd=13(<f>/etc/hosts) 
+close res=0 
+socket domain=16(AF_ROUTE) type=3 proto=0 
+socket fd=13(<n>) 
+bind fd=13(<n>) 
+bind res=0 addr=NULL 
+getsockname 
+getsockname 
+sendto fd=13(<n>) size=20 tuple=NULL 
+sendto res=20 data=.........6.d........ 
+recvmsg fd=13(<n>) 
+recvmsg res=164 size=164 data=L........6.dh...............................lo..............................X... tuple=NULL 
+recvmsg fd=13(<n>) 
+recvmsg res=20 size=20 data=.........6.dh....... tuple=NULL 
+close fd=13(<n>) 
+close res=0 
+socket domain=2(AF_INET) type=2 proto=0 
+socket fd=13(<4>) 
+connect fd=13(<4>) 
+connect res=0 tuple=127.0.0.1:34837->127.0.0.1:9000 
+getsockname 
+getsockname 
+close fd=13(<4u>127.0.0.1:34837->127.0.0.1:9000) 
+close res=0 
+socket domain=10(AF_INET6) type=2 proto=0 
+socket fd=13(<6>) 
+connect fd=13(<6>) 
+connect res=-99(EADDRNOTAVAIL) tuple=:::57435->::1:9000 
+close fd=13(<6>) 
+close res=0 
+madvise 
+madvise 
+exit 
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=496020(apache2) pid=141890(apache2) ptid=135077(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=0 vm_size=478996 vm_rss=50604 vm_swap=2648 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=578861571(CLONE_FILES|CLONE_FS|CLONE_PARENT_SETTID|CLONE_SIGHAND|CLONE_SYSVSEM|CLONE_THREAD|CLONE_VM|CLONE_CHILD_CLEARTID|CLONE_SETTLS) uid=33 gid=33 vtid=1452 vpid=85 
+set_robust_list 
+set_robust_list 
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=496019(apache2) pid=141890(apache2) ptid=135077(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=0 vm_size=478996 vm_rss=50604 vm_swap=2648 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=578861571(CLONE_FILES|CLONE_FS|CLONE_PARENT_SETTID|CLONE_SIGHAND|CLONE_SYSVSEM|CLONE_THREAD|CLONE_VM|CLONE_CHILD_CLEARTID|CLONE_SETTLS) uid=33 gid=33 vtid=1451 vpid=85 
+set_robust_list 
+set_robust_list 
+getpid 
+getpid 
+open 
+getpid 
+getpid 
+mmap addr=0 length=134217728 prot=0(PROT_NONE) flags=74(MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE) fd=-1(EPERM) offset=0 
+mmap res=7FA3F4000000 vm_size=610068 vm_rss=50604 vm_swap=2648 
+munmap addr=7FA3F8000000 length=67108864 
+open fd=12(<f>/etc/resolv.conf) name=/etc/resolv.conf flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=12(<f>/etc/resolv.conf) 
+fstat res=0 
+munmap res=0 vm_size=544532 vm_rss=50604 vm_swap=2648 
+read fd=12(<f>/etc/resolv.conf) size=1024 
+mprotect 
+mprotect 
+open 
+open fd=13(<f>/etc/resolv.conf) name=/etc/resolv.conf flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+read res=53 data=nameserver 127.0.0.11.options edns0 trust-ad ndots:0. 
+fstat fd=13(<f>/etc/resolv.conf) 
+fstat res=0 
+read fd=13(<f>/etc/resolv.conf) size=1024 
+read fd=12(<f>/etc/resolv.conf) size=1024 
+read res=0 data= 
+close fd=12(<f>/etc/resolv.conf) 
+close res=0 
+uname 
+uname 
+open 
+read res=53 data=nameserver 127.0.0.11.options edns0 trust-ad ndots:0. 
+open fd=12(<f>/etc/hosts) name=/etc/hosts flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=12(<f>/etc/hosts) 
+fstat res=0 
+read fd=13(<f>/etc/resolv.conf) size=1024 
+read fd=12(<f>/etc/hosts) size=512 
+read res=0 data= 
+close fd=13(<f>/etc/resolv.conf) 
+close res=0 
+uname 
+uname 
+read res=174 data=127.0.0.1.localhost.::1.localhost ip6-localhost ip6-loopback.fe00::0.ip6-localne 
+open 
+open fd=13(<f>/etc/hosts) name=/etc/hosts flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+read fd=12(<f>/etc/hosts) size=512 
+fstat fd=13(<f>/etc/hosts) 
+read res=0 data= 
+fstat res=0 
+close fd=12(<f>/etc/hosts) 
+close res=0 
+read fd=13(<f>/etc/hosts) size=512 
+read res=174 data=127.0.0.1.localhost.::1.localhost ip6-localhost ip6-loopback.fe00::0.ip6-localne 
+stat 
+read fd=13(<f>/etc/hosts) size=512 
+stat res=0 path=/etc/resolv.conf 
+read res=0 data= 
+close fd=13(<f>/etc/hosts) 
+close res=0 
+stat 
+socket domain=2(AF_INET) type=2050 proto=0 
+stat res=0 path=/etc/resolv.conf 
+socket domain=2(AF_INET) type=2050 proto=0 
+socket fd=12(<4>) 
+connect fd=12(<4>) 
+socket fd=13(<4>) 
+connect fd=13(<4>) 
+connect res=0 tuple=127.0.0.1:41490->127.0.0.11:53 
+connect res=0 tuple=127.0.0.1:58467->127.0.0.11:53 
+poll fds=13:44 timeout=0 
+poll fds=12:44 timeout=0 
+poll res=1 fds=13:44 
+poll res=1 fds=12:44 
+sendto fd=13(<4u>127.0.0.1:41490->127.0.0.11:53) size=47 tuple=NULL 
+sendto fd=12(<4u>127.0.0.1:58467->127.0.0.11:53) size=46 tuple=NULL 
+sendto res=47 data=mX...........graph.facebook.com.......)........ 
+sendto res=46 data=.............api.pinterest.com.......)........ 
+poll fds=12:41 timeout=5000 
+poll fds=13:41 timeout=5000 
+poll res=1 fds=13:41 
+ioctl fd=13(<4u>127.0.0.1:41490->127.0.0.11:53) request=541B argument=7FA4035FD0D8 
+ioctl res=0 
+recvfrom fd=13(<4u>127.0.0.1:41490->127.0.0.11:53) size=1024 
+recvfrom res=87 data=mX...........graph.facebook.com..................star.c10r...0....... ........). tuple=127.0.0.11:53->127.0.0.1:41490 
+close fd=13(<4u>127.0.0.1:41490->127.0.0.11:53) 
+close res=0 
+madvise 
+madvise 
+exit 
+poll res=1 fds=12:41 
+ioctl fd=12(<4u>127.0.0.1:58467->127.0.0.11:53) request=541B argument=7FA4029FD0D8 
+ioctl res=0 
+recvfrom fd=12(<4u>127.0.0.1:58467->127.0.0.11:53) size=1024 
+recvfrom res=216 data=.............api.pinterest.com..................api-pinterest-com.gslb.../...... tuple=127.0.0.11:53->127.0.0.1:58467 
+close fd=12(<4u>127.0.0.1:58467->127.0.0.11:53) 
+close res=0 
+madvise 
+madvise 
+exit 
+accept fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) tuple=172.18.0.1:49762->172.18.0.2:80 queuepct=0 queuelen=0 queuemax=511 
+getsockname 
+getsockname 
+fcntl fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) cmd=4(F_GETFL) 
+fcntl res=2(<p>pipe:[172409]) 
+fcntl fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) cmd=5(F_SETFL) 
+fcntl res=0(<f>/dev/null) 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B533000 vm_size=383144 vm_rss=3848 vm_swap=2968 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B531000 vm_size=383152 vm_rss=3848 vm_swap=2968 
+read fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) size=8000 
+read res=1111 data=GET /wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.m 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B52F000 vm_size=383160 vm_rss=3848 vm_swap=2968 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B52D000 vm_size=383168 vm_rss=3848 vm_swap=2968 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/wpdiscuz/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/wpdiscuz/assets/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css 
+open 
+open fd=11(<f>/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css) name=/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+mmap addr=0 length=11449 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css) offset=0 
+mmap res=7FA41B4E0000 vm_size=383180 vm_rss=4720 vm_swap=2916 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4DE000 vm_size=383188 vm_rss=4720 vm_swap=2916 
+brk addr=564501441000 
+brk res=564501441000 vm_size=383344 vm_rss=4720 vm_swap=2916 
+brk addr=564501471000 
+brk res=564501471000 vm_size=383536 vm_rss=4720 vm_swap=2916 
+munmap addr=7FA41B4E0000 length=11449 
+munmap res=0 vm_size=383524 vm_rss=5088 vm_swap=2904 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4E1000 vm_size=383532 vm_rss=5088 vm_swap=2904 
+brk addr=564501441000 
+brk res=564501441000 vm_size=383340 vm_rss=5008 vm_swap=2904 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4DC000 vm_size=383348 vm_rss=5008 vm_swap=2904 
+mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=-1(EPERM) offset=0 
+mmap res=7FA41B4DA000 vm_size=383356 vm_rss=5008 vm_swap=2904 
+read fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+writev fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) size=2839 
+writev res=2839 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:31:41 GMT..Server: Apache/2.4.25 (Deb 
+write fd=7(<p>pipe:[172408]) size=262 
+write res=262 data=172.18.0.1 - - [31/Jul/2023:22:31:41 +0000] "GET /wp-content/plugins/wpdiscuz/as 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css) 
+close res=0 
+poll fds=10:41 timeout=5000 
+poll res=0 fds= 
+shutdown fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) how=1(SHUT_WR) 
+shutdown res=0 
+poll fds=10:41 timeout=2000 
+poll res=1 fds=10:421 
+read fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) size=512 
+read res=0 data= 
+close fd=10(<4t>172.18.0.1:49762->172.18.0.2:80) 
+close res=0 
+read fd=4(<p>pipe:[173340]) size=1 
+read res=-11(EAGAIN) data= 
+accept flags=0 
+clone res=0 exe=apache2 args=-DFOREGROUND. tid=496482(apache2) pid=143570(apache2) ptid=135077(apache2) cwd= fdlimit=1048576 pgft_maj=0 pgft_min=0 vm_size=466312 vm_rss=40924 vm_swap=2696 comm=apache2 cgroups=cpuset=/system.slice/docker-cdab6c7867568b0efdd5528c0ca8ebb8898195b0d50fdd989... flags=578861571(CLONE_FILES|CLONE_FS|CLONE_PARENT_SETTID|CLONE_SIGHAND|CLONE_SYSVSEM|CLONE_THREAD|CLONE_VM|CLONE_CHILD_CLEARTID|CLONE_SETTLS) uid=33 gid=33 vtid=1453 vpid=99 
+set_robust_list 
+set_robust_list 
+getpid 
+getpid 
+open 
+open fd=13(<f>/etc/resolv.conf) name=/etc/resolv.conf flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=13(<f>/etc/resolv.conf) 
+fstat res=0 
+read fd=13(<f>/etc/resolv.conf) size=1024 
+read res=53 data=nameserver 127.0.0.11.options edns0 trust-ad ndots:0. 
+read fd=13(<f>/etc/resolv.conf) size=1024 
+read res=0 data= 
+close fd=13(<f>/etc/resolv.conf) 
+close res=0 
+uname 
+uname 
+open 
+open fd=13(<f>/etc/hosts) name=/etc/hosts flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=13(<f>/etc/hosts) 
+fstat res=0 
+read fd=13(<f>/etc/hosts) size=512 
+read res=174 data=127.0.0.1.localhost.::1.localhost ip6-localhost ip6-loopback.fe00::0.ip6-localne 
+read fd=13(<f>/etc/hosts) size=512 
+read res=0 data= 
+close fd=13(<f>/etc/hosts) 
+close res=0 
+socket domain=16(AF_ROUTE) type=3 proto=0 
+socket fd=13(<n>) 
+bind fd=13(<n>) 
+bind res=0 addr=NULL 
+getsockname 
+getsockname 
+sendto fd=13(<n>) size=20 tuple=NULL 
+sendto res=20 data=........a6.d........ 
+recvmsg fd=13(<n>) 
+recvmsg res=164 size=164 data=L.......a6.dc...............................lo..............................X... tuple=NULL 
+recvmsg fd=13(<n>) 
+recvmsg res=20 size=20 data=........a6.dc....... tuple=NULL 
+close fd=13(<n>) 
+close res=0 
+socket domain=2(AF_INET) type=2 proto=0 
+socket fd=13(<4>) 
+connect fd=13(<4>) 
+connect res=0 tuple=127.0.0.1:59932->127.0.0.1:9000 
+getsockname 
+getsockname 
+close fd=13(<4u>127.0.0.1:59932->127.0.0.1:9000) 
+close res=0 
+socket domain=10(AF_INET6) type=2 proto=0 
+socket fd=13(<6>) 
+connect fd=13(<6>) 
+connect res=-99(EADDRNOTAVAIL) tuple=:::34078->::1:9000 
+close fd=13(<6>) 
+close res=0 
+madvise 
+madvise 
+exit 
+accept fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) tuple=172.18.0.1:42088->172.18.0.2:80 queuepct=0 queuelen=0 queuemax=511 
+getsockname 
+getsockname 
+fcntl fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) cmd=4(F_GETFL) 
+fcntl res=2(<p>pipe:[172409]) 
+fcntl fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) cmd=5(F_SETFL) 
+fcntl res=0(<f>/dev/null) 
+read fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) size=8000 
+read res=1127 data=GET /wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png HTTP/1 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png 
+open 
+open fd=-2(ENOENT) name=/var/www/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=11(<f>/var/www/html/.htaccess) name=/var/www/html/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+fstat fd=11(<f>/var/www/html/.htaccess) 
+fstat res=0 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=234 data=# BEGIN WordPress.<IfModule mod_rewrite.c>.RewriteEngine On.RewriteBase /.Rewrit 
+read fd=11(<f>/var/www/html/.htaccess) size=4096 
+read res=0 data= 
+close fd=11(<f>/var/www/html/.htaccess) 
+close res=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/easy-modal/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/easy-modal/assets/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/easy-modal/assets/images/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-2(ENOENT) name=/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+open 
+open fd=-20(ENOTDIR) name=/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png/.htaccess flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=0 
+stat 
+stat res=0 path=/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png 
+open 
+open fd=11(<f>/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png) name=/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png flags=4097(O_RDONLY|O_CLOEXEC) mode=0 dev=35 
+read fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) size=8000 
+read res=-11(EAGAIN) data= 
+mmap addr=0 length=351 prot=1(PROT_READ) flags=1(MAP_SHARED) fd=11(<f>/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png) offset=0 
+mmap res=7FA41B52C000 vm_size=383844 vm_rss=11392 vm_swap=2668 
+writev fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) size=636 
+writev res=636 data=HTTP/1.1 200 OK..Date: Mon, 31 Jul 2023 22:32:01 GMT..Server: Apache/2.4.25 (Deb 
+munmap addr=7FA41B52C000 length=351 
+munmap res=0 vm_size=383840 vm_rss=11396 vm_swap=2668 
+write fd=7(<p>pipe:[172408]) size=270 
+write res=270 data=172.18.0.1 - - [31/Jul/2023:22:32:01 +0000] "GET /wp-content/plugins/easy-modal/ 
+times 
+times 
+close fd=11(<f>/var/www/html/wp-content/plugins/easy-modal/assets/images/admin/dashboard-icon.png) 
+close res=0 
+poll fds=10:41 timeout=5000 
+poll res=0 fds= 
+shutdown fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) how=1(SHUT_WR) 
+shutdown res=0 
+poll fds=10:41 timeout=2000 
+poll res=1 fds=10:421 
+read fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) size=512 
+read res=0 data= 
+close fd=10(<4t>172.18.0.1:42088->172.18.0.2:80) 
+close res=0 
+read fd=4(<p>pipe:[173340]) size=1 
+read res=-11(EAGAIN) data= 
+accept flags=0 

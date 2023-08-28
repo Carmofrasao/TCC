@@ -45,7 +45,7 @@ for _, _, arquivos in os.walk('./wordpress/logs/anormal/sysdig'):
         
 for _, _, arquivos in os.walk('./wordpress/logs/normal/sysdig'):
     for arquivo in arquivos:
-        with open(f'./wordpress/logs/anormal/sysdig/{arquivo}', "r") as f:
+        with open(f'./wordpress/logs/normal/sysdig/{arquivo}', "r") as f:
             lines = f.readlines()
 
         # Trecho para contar o numero de chamadas de cada syscall

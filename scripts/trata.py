@@ -184,7 +184,7 @@ for l in range(1, 11):
 
 a = -1
 soma = list(range(len(syscall)))
-with open(f'./histogramas/warfare-frasao.csv', "r") as f:
+with open(f'./histogramas/file-manager-frasao.csv', "r") as f:
     lines = f.readlines()
 count = 0
 # Trecho para contar o numero de chamadas de cada syscall
@@ -198,14 +198,14 @@ for line in lines:
     for i in range(len(syscall)):
         soma[i] += int(linhaAux[i+2])
     count+=1
-    if count == 5:
+    if count == 10:
         a+=1
         print(f'{a}', end=',')
         for i in range(len(syscall)):
             if i+1 == len(syscall):
-                print(soma[i]/5)
+                print(soma[i]/10)
             else:
-                print(soma[i]/5, end=',')
+                print(soma[i]/10, end=',')
             soma[i] = 0
         count = 0
     

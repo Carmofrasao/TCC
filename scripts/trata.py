@@ -210,7 +210,7 @@ for l in range(1, 11):
 #         count = 0
     
 a = -1
-with open(f'./histogramas/file-manager-frasao.csv', "r") as f:
+with open(f'./histogramas/media/file-manager-frasao.csv', "r") as f:
     lines = f.readlines()
 count = 0
 # Trecho para contar o numero de chamadas de cada syscall
@@ -222,11 +222,12 @@ for line in lines:
     linhaAux = line.split(',')
     u = 0
     for sys in syscall:
-        syscall[sys] = linhaAux[u+2]
+        syscall[sys] = linhaAux[u+1]
         u+=1
-    
-    for i in sorted(syscall, key = syscall.get, reverse=True):
-        print(i, syscall[i])
+    for sys in syscall:
+        print(sys) 
+    # for i in sorted(syscall, key = syscall.get, reverse=True):
+    #     print(i, syscall[i])
 
     # a+=1
     # print(f'{a}', end=',')

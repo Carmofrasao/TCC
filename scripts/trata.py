@@ -201,9 +201,8 @@ for l in range(1, 11):
 #                 print(soma[i]/10, end=',')
 #             soma[i] = 0
 #         count = 0
-print("t", end=',')
+
 m = 0
-pode = True
 a = -1
 with open(f'./histogramas/mediana/warfare-ruschel.csv', "r") as f:
     lines = f.readlines()
@@ -220,14 +219,14 @@ for line in lines:
         syscall[sys] = float(linhaAux[u+1])
         u+=1
     sysOrder = sorted(syscall.items(), key=operator.itemgetter(1), reverse=True)[:20]
-    if pode:
-        for sys in sysOrder:
-            if m == 19:
-                print(sys[0])
-            else:
-                print(sys[0], end=',')
-            m+=1
-        pode = False
+    print("t", end=',')
+    for sys in sysOrder:
+        if m == 19:
+            print(sys[0])
+        else:
+            print(sys[0], end=',')
+        m+=1
+    m=0
     a+=1
     print(f'{a}', end=',')
     l=0

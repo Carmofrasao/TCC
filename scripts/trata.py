@@ -205,7 +205,7 @@ for l in range(1, 11):
 m = 0
 a = -1
 passou = True
-with open(f'./histogramas/mediana/warfare-ruschel-geral.csv', "r") as f:
+with open(f'./histogramas/mediana/simple-file-ruschel-geral.csv', "r") as f:
     lines = f.readlines()
 count = 0
 # Trecho para contar o numero de chamadas de cada syscall

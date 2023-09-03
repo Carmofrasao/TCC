@@ -204,7 +204,8 @@ for l in range(1, 11):
 
 m = 0
 a = -1
-with open(f'./histogramas/mediana/warfare-ruschel.csv', "r") as f:
+passou = True
+with open(f'./histogramas/mediana/warfare-ruschel-geral.csv', "r") as f:
     lines = f.readlines()
 count = 0
 # Trecho para contar o numero de chamadas de cada syscall
@@ -216,22 +217,24 @@ for line in lines:
     linhaAux = line.split(',')
     u = 0
     for sys in syscall:
-        syscall[sys] = float(linhaAux[u+1])
+        syscall[sys] = int(linhaAux[u+1])
         u+=1
-    sysOrder = sorted(syscall.items(), key=operator.itemgetter(1), reverse=True)[:20]
-    print("t", end=',')
-    for sys in sysOrder:
-        if m == 19:
-            print(sys[0])
-        else:
-            print(sys[0], end=',')
-        m+=1
+    sysOrder = sorted(syscall.items(), key=operator.itemgetter(1), reverse=True)
+    if passou:
+        print("t", end=',')
+        for sys in sysOrder:
+            if m+1 == len(syscall):
+                print(sys[0])
+            else:
+                print(sys[0], end=',')
+            m+=1
+        passou = False
     m=0
     a+=1
     print(f'{a}', end=',')
     l=0
     for sys in sysOrder:
-        if l == 19:
+        if l+1 == len(syscall):
             print(sys[1])
         else:
             print(sys[1], end=',')

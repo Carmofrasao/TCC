@@ -204,7 +204,6 @@ for l in range(1, 11):
 
 m = 0
 a = -1
-passou = True
 with open(f'./histogramas/mediana/warfare-frasao-geral.csv', "r") as f:
     lines = f.readlines()
 count = 0
@@ -220,15 +219,13 @@ for line in lines:
         syscall[sys] = float(linhaAux[u+1])
         u+=1
     sysOrder = sorted(syscall.items(), key=operator.itemgetter(1), reverse=True)
-    if passou:
-        print("t", end=',')
-        for sys in sysOrder:
-            if m+1 == len(syscall):
-                print(sys[0])
-            else:
-                print(sys[0], end=',')
-            m+=1
-        passou = False
+    print("t", end=',')
+    for sys in sysOrder:
+        if m+1 == len(syscall):
+            print(sys[0])
+        else:
+            print(sys[0], end=',')
+        m+=1
     m=0
     a+=1
     print(f'{a}', end=',')

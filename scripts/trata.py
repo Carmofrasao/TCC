@@ -144,7 +144,7 @@ for l in range(1, 11):
 a = -1
 m=0
 i=0
-with open(f'./histogramas/simple-file-ruschel.csv', "r") as f:
+with open(f'./histogramas/warfare-frasao.csv', "r") as f:
     lines = f.readlines()
 count = 0
 # Trecho para contar o numero de chamadas de cada syscall
@@ -154,16 +154,12 @@ for line in lines:
     line = line.replace('\n', '')
     linhaAux = line.split(',')
     
-    for sys in syscallAux:
-        syscallAux[sys].append(int(linhaAux[i+2]))
+    for sys in syscall:
+        syscall[sys] += int(linhaAux[i+2])
         i+=1
     i=0
     count+=1
-    if count == 5:
-        for sys in syscallAux:
-            syscallAux[sys].sort()
-        for chave, valor in syscallAux.items():
-            syscall[chave] = valor[2]
+    if count == 10:
         a+=1
         sysOrder = sorted(syscall.items(), key=operator.itemgetter(1), reverse=True)
         print("t", end=',')
@@ -178,12 +174,12 @@ for line in lines:
         l=0
         for sys in sysOrder:
             if l+1 == len(syscall):
-                print(sys[1])
+                print(sys[1]/10)
             else:
-                print(sys[1], end=',')
+                print(sys[1]/10, end=',')
             l+=1
-        for sys in syscallAux:
-            syscallAux[sys].clear()
+        for sys in syscall:
+            syscall[sys]=0
         count = 0
 
 # a = -1

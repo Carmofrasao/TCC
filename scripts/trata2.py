@@ -3,9 +3,9 @@ import operator
 a = -1
 m=0
 i=0
-with open(f'./histogramas/media/file-manager-frasao-geral.csv', "r") as f:
+with open(f'./histogramas/media/soma-frasao-geral.csv', "r") as f:
     geral_frasao = f.readlines()
-with open(f'./histogramas/media/file-manager-ruschel-geral.csv', "r") as f:
+with open(f'./histogramas/media/soma-ruschel-geral.csv', "r") as f:
     geral_ruschel = f.readlines()
     
 passo = 0
@@ -71,10 +71,9 @@ for line in geral_ruschel:
 for sys in syscall_ruim_frasao:
     if sys == 't':
         continue
-    if syscall_ruim_ruschell[sys] == 0:
-        comp_ruim[sys] = syscall_ruim_frasao[sys]
-        continue
-    comp_ruim[sys] = syscall_ruim_frasao[sys] / syscall_ruim_ruschell[sys]
+    # if syscall_ruim_ruschell[sys] == 0:
+    #     continue
+    comp_ruim[sys] = syscall_ruim_frasao[sys] - syscall_ruim_ruschell[sys]
 
 a = 0
 comp_ruim = sorted(comp_ruim.items(), key=operator.itemgetter(1), reverse=True)
@@ -99,10 +98,9 @@ a+=1
 for sys in syscall_bom_frasao:
     if sys == 't':
         continue
-    if syscall_bom_ruschell[sys] == 0:
-        comp_bom[sys] = syscall_bom_frasao[sys]
-        continue
-    comp_bom[sys] = syscall_bom_frasao[sys] / syscall_bom_ruschell[sys]
+    # if syscall_bom_ruschell[sys] == 0:
+    #     continue
+    comp_bom[sys] = syscall_bom_frasao[sys] - syscall_bom_ruschell[sys]
 
 comp_bom = sorted(comp_bom.items(), key=operator.itemgetter(1), reverse=True)
 print("t", end=',')

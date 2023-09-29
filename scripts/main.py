@@ -32,7 +32,7 @@ LABEL_ONE_ANORMAL = -1
 
 RUNS = 10
 
-FILES_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "wordpress", "{v}", "{b}")
+FILES_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../wordpress", "{v}", "{b}")
 
 
 def sliding_window_filter(input_file):

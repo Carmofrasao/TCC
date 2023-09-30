@@ -3,11 +3,11 @@ import operator
 a = -1
 m=0
 i=0
-with open(f'./histogramas/media/file-manager-ruschel-geral.csv', "r") as f:
+with open(f'./histogramas/media/file-manager-frasao-geral.csv', "r") as f:
     file = f.readlines()
-with open(f'./histogramas/media/simple-file-ruschel-geral.csv', "r") as f:
+with open(f'./histogramas/media/simple-file-frasao-geral.csv', "r") as f:
     simple = f.readlines()
-with open(f'./histogramas/media/warfare-ruschel-geral.csv', "r") as f:
+with open(f'./histogramas/media/warfare-frasao-geral.csv', "r") as f:
     warfare = f.readlines()
     
 passo = 0
@@ -101,7 +101,7 @@ for line in warfare:
 for sys in syscall_ruim_file:
     if sys == 't':
         continue
-    ruim[sys] = syscall_ruim_file[sys] + syscall_ruim_simple[sys] + syscall_ruim_warfare[sys]
+    ruim[sys] = int((syscall_ruim_file[sys] + syscall_ruim_simple[sys] + syscall_ruim_warfare[sys])/2)
 
 a = 0
 ruim = sorted(ruim.items(), key=operator.itemgetter(1), reverse=True)
@@ -126,7 +126,7 @@ a+=1
 for sys in syscall_bom_file:
     if sys == 't':
         continue
-    bom[sys] = syscall_bom_file[sys] + syscall_bom_simple[sys] + syscall_bom_warfare[sys]
+    bom[sys] = int((syscall_bom_file[sys] + syscall_bom_simple[sys] + syscall_bom_warfare[sys])/2)
 
 bom = sorted(bom.items(), key=operator.itemgetter(1), reverse=True)
 print("t", end=',')

@@ -71,9 +71,9 @@ for line in geral_ruschel:
 for sys in syscall_ruim_frasao:
     if sys == 't':
         continue
-    # if syscall_ruim_ruschell[sys] == 0:
-    #     continue
-    comp_ruim[sys] = syscall_ruim_frasao[sys] - syscall_ruim_ruschell[sys]
+    if syscall_ruim_ruschell[sys] == 0:
+        continue
+    comp_ruim[sys] = syscall_ruim_frasao[sys] / syscall_ruim_ruschell[sys]
 
 a = 0
 comp_ruim = sorted(comp_ruim.items(), key=operator.itemgetter(1), reverse=True)
@@ -98,9 +98,9 @@ a+=1
 for sys in syscall_bom_frasao:
     if sys == 't':
         continue
-    # if syscall_bom_ruschell[sys] == 0:
-    #     continue
-    comp_bom[sys] = syscall_bom_frasao[sys] - syscall_bom_ruschell[sys]
+    if syscall_bom_ruschell[sys] == 0:
+        continue
+    comp_bom[sys] = syscall_bom_frasao[sys] / syscall_bom_ruschell[sys]
 
 comp_bom = sorted(comp_bom.items(), key=operator.itemgetter(1), reverse=True)
 print("t", end=',')

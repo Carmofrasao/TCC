@@ -3,9 +3,9 @@ import operator
 a = -1
 m=0
 i=0
-with open(f'./histogramas/media/soma-frasao-geral.csv', "r") as f:
+with open(f'./histogramas/media/warfare-frasao-geral.csv', "r") as f:
     geral_frasao = f.readlines()
-with open(f'./histogramas/media/soma-ruschel-geral.csv', "r") as f:
+with open(f'./histogramas/media/warfare-ruschel-geral.csv', "r") as f:
     geral_ruschel = f.readlines()
     
 passo = 0
@@ -71,9 +71,9 @@ for line in geral_ruschel:
 for sys in syscall_ruim_frasao:
     if sys == 't':
         continue
-    if syscall_ruim_ruschell[sys] == 0:
-        continue
-    comp_ruim[sys] = syscall_ruim_frasao[sys] / syscall_ruim_ruschell[sys]
+    # if syscall_ruim_ruschell[sys] == 0:
+    #     continue
+    comp_ruim[sys] = syscall_ruim_frasao[sys] - syscall_ruim_ruschell[sys]
 
 a = 0
 comp_ruim = sorted(comp_ruim.items(), key=operator.itemgetter(1), reverse=True)
@@ -89,18 +89,18 @@ print(f'{a}', end=',')
 l=0
 for sys in comp_ruim:
     if l+1 == len(comp_ruim):
-        print(sys[1])
+        print(abs(sys[1]))
     else:
-        print(sys[1], end=',')
+        print(abs(sys[1]), end=',')
     l+=1
 
 a+=1
 for sys in syscall_bom_frasao:
     if sys == 't':
         continue
-    if syscall_bom_ruschell[sys] == 0:
-        continue
-    comp_bom[sys] = syscall_bom_frasao[sys] / syscall_bom_ruschell[sys]
+    # if syscall_bom_ruschell[sys] == 0:
+    #     continue
+    comp_bom[sys] = syscall_bom_frasao[sys] - syscall_bom_ruschell[sys]
 
 comp_bom = sorted(comp_bom.items(), key=operator.itemgetter(1), reverse=True)
 print("t", end=',')
@@ -115,9 +115,9 @@ print(f'{a}', end=',')
 l=0
 for sys in comp_bom:
     if l+1 == len(comp_bom):
-        print(sys[1])
+        print(abs(sys[1]))
     else:
-        print(sys[1], end=',')
+        print(abs(sys[1]), end=',')
     l+=1
 
 # import operator

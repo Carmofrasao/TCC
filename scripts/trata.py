@@ -144,7 +144,7 @@ for l in range(1, 11):
 a = -1
 m=0
 i=0
-with open(f'./histogramas/warfare-frasao.csv', "r") as f:
+with open(f'./histogramas/simple-file-frasao.csv', "r") as f:
     lines = f.readlines()
 count = 0
 # Trecho para contar o numero de chamadas de cada syscall
@@ -174,9 +174,9 @@ for line in lines:
         l=0
         for sys in sysOrder:
             if l+1 == len(syscall):
-                print(sys[1]/10)
+                print((sys[1]/10)/2)
             else:
-                print(sys[1]/10, end=',')
+                print((sys[1]/10)/2, end=',')
             l+=1
         for sys in syscall:
             syscall[sys]=0

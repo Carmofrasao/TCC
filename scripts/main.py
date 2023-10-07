@@ -39,7 +39,6 @@ FILES_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../wordp
 
 
 def sliding_window_filter(input_file):
-    print(input_file)
     flag = 0
     it = iter(input_file)
     result = ()
@@ -49,7 +48,6 @@ def sliding_window_filter(input_file):
                 syscall[elem.split(" ")[0]] = 0
                 continue
             if (syscalls[elem.split(" ")[0]]["threat"] != 4 and syscalls[elem.split(" ")[0]]["threat"] != 5):
-                print(elem.split(" ")[0])
                 result = result + (syscalls[elem.split(" ")[0]]["id"],)
                 syscall[elem.split(" ")[0]] = 1
         else:
@@ -63,7 +61,6 @@ def sliding_window_filter(input_file):
                 syscall[elem.split(" ")[0]] = 0
                 continue
             if (syscalls[elem.split(" ")[0]]["threat"] != 4 and syscalls[elem.split(" ")[0]]["threat"] != 5):
-                print(elem.split(" ")[0])
                 result = result[1:] + (syscalls[elem.split(" ")[0]]["id"],)
                 syscall[elem.split(" ")[0]] = 1
                 yield result

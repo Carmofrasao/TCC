@@ -20,3 +20,15 @@ accuracy_score: 0.7058786136385785
 
 > One Class SVM
 [...] Retrieving datasets and labels
+precision_score: 0.1457379205062449
+recall_score: 0.025697225389052458
+f1_score: 0.043410147360004994
+accuracy_score: 0.6684571324786703
+
+
+> Isolation Forest
+[...] Retrieving datasets and labels
+precision_score: 0.30535344748123705
+recall_score: 0.27780967961762093
+f1_score: 0.29070444071406676
+accuracy_score: 0.6039604947240655

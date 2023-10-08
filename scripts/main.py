@@ -73,9 +73,11 @@ def sliding_window_raw(seq):
     if len(result) == WINDOW_SIZE:
         yield result
     for elem in it:
-        if (elem.startswith("---")):
-            elem = elem.split(" ")[1]
+        if syscall[elem.split(" ")[0]] == 1:
+            syscall[elem.split(" ")[0]] = 0
+            continue
         result = result[1:] + (syscalls[elem.split(" ")[0]]["id"],)
+        syscall[elem.split(" ")[0]] = 1
         yield result
 
 

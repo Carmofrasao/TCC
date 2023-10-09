@@ -42,30 +42,34 @@ FILES_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../wordp
 def sliding_window_filter(input_file):
     result = ()
     def add_to_result(elem):
+        nonlocal result
         if ("threat" in syscalls[elem.split(" ")[0]]):
             if syscall[elem.split(" ")[0]] == 1:
                 syscall[elem.split(" ")[0]] = 0
                 return
             if (syscalls[elem.split(" ")[0]]["threat"] != 4 and syscalls[elem.split(" ")[0]]["threat"] != 5):
-                result = result + (syscalls[elem.split(" ")[0]]["id"],)
+                result += (syscalls[elem.split(" ")[0]]["id"],)
                 if syscall not in PAIRLESS:
                     syscall[elem.split(" ")[0]] = 1
         else:
             raise Exception(f"Threat para {elem.split(' ')[0]} não encontrada")
 
     it = iter(input_file)
-    for elem in islice(it, WINDOW_SIZE):
-        add_to_result(elem)
-    if len(result) == WINDOW_SIZE:
-        yield result
     for elem in it:
-        result = result[1:]
         add_to_result(elem)
-        yield result
+        if len(result) == WINDOW_SIZE:
+            yield result
+            break
+    for elem in it:
+        add_to_result(elem)
+        if len(result) == WINDOW_SIZE+1:
+            result = result[1:]
+            yield result
 
 def sliding_window_raw(seq):
     result = ()
     def add_to_result(elem):
+        nonlocal result
         if syscall[elem.split(" ")[0]] == 1:
             syscall[elem.split(" ")[0]] = 0
             return
@@ -74,14 +78,16 @@ def sliding_window_raw(seq):
             syscall[elem.split(" ")[0]] = 1
 
     it = iter(seq)
-    for elem in islice(it, WINDOW_SIZE):
-        add_to_result(elem)
-    if len(result) == WINDOW_SIZE:
-        yield result
     for elem in it:
-        result = result[1:]
         add_to_result(elem)
-        yield result
+        if len(result) == WINDOW_SIZE:
+            yield result
+            break
+    for elem in it:
+        add_to_result(elem)
+        if len(result) == WINDOW_SIZE+1:
+            result = result[1:]
+            yield result
 
 
 def retrieve_dataset(filename, filter):

@@ -4,18 +4,18 @@
 
 > Random Forest
 [...] Retrieving datasets and labels
-precision_score: 0.5488229164880597
-recall_score: 0.04202793120927718
-f1_score: 0.07805889910760588
-accuracy_score: 0.7096749719078755
+precision_score: 0.5494037269002778
+recall_score: 0.0416977973255811
+f1_score: 0.077495938195988
+accuracy_score: 0.7096835986232646
 
 
 > Multilayer Perceptron
 [...] Retrieving datasets and labels
-precision_score: 0.36659878098992854
-recall_score: 0.010905949679068053
-f1_score: 0.02110974868891787
-accuracy_score: 0.7052777802355313
+precision_score: 0.40309534185489726
+recall_score: 0.009860784384323825
+f1_score: 0.01909555027980858
+accuracy_score: 0.7058422770989463
 
 
 > One Class SVM
@@ -28,7 +28,7 @@ accuracy_score: 0.6595232301961581
 
 > Isolation Forest
 [...] Retrieving datasets and labels
-precision_score: 0.3020940930364057
-recall_score: 0.28999470710801706
-f1_score: 0.2952186946520749
-accuracy_score: 0.5967470647047894
+precision_score: 0.29945820589963257
+recall_score: 0.2822697433497336
+f1_score: 0.29019402590152593
+accuracy_score: 0.597010511320905

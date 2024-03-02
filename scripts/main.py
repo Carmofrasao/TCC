@@ -1,407 +1,758 @@
-from itertools import islice
-from syscalls import syscalls
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-# from sklearn.svm import LinearSVC
-# from sklearn.svm import SVC
-from sklearn.neural_network import MLPClassifier
-from sklearn.svm import OneClassSVM
-from sklearn.ensemble import IsolationForest
-from sklearn.ensemble import AdaBoostClassifier
-
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score
-from sklearn.metrics import recall_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import accuracy_score
-
-import numpy as np
-
-import argparse
-import os
-
-syscall = { "read" : 0 , "write" : 0 , "open" : 0 , "close" : 0 , "stat" : 0 , "fstat" : 0 , "lstat" : 0 , "poll" : 0 , "lseek" : 0 , "mmap" : 0 , "mprotect" : 0 , "munmap" : 0 , "brk" : 0 , "access" : 0 , "pipe" : 0 , "select" : 0 , "sched_yield" : 0 , "mremap" : 0 , "msync" : 0 , "mincore" : 0 , "madvise" : 0 , "shmget" : 0 , "shmat" : 0 , "shmctl" : 0 , "dup" : 0 , "dup2" : 0 , "pause" : 0 , "nanosleep" : 0 , "getitimer" : 0 , "alarm" : 0 , "setitimer" : 0 , "getpid" : 0 , "sendfile" : 0 , "socket" : 0 , "connect" : 0 , "accept" : 0 , "sendto" : 0 , "rt_sigaction" : 0 , "rt_sigprocmask" : 0 , "rt_sigreturn" : 0 , "ioctl" : 0 , "pread64" : 0 , "pwrite64" : 0 , "readv" : 0 , "writev" : 0 , "recvfrom" : 0 , "sendmsg" : 0 , "recvmsg" : 0 , "shutdown" : 0 , "bind" : 0 , "listen" : 0 , "getsockname" : 0 , "getpeername" : 0 , "socketpair" : 0 , "setsockopt" : 0 , "getsockopt" : 0 , "clone" : 0 , "fork" : 0 , "vfork" : 0 , "execve" : 0 , "exit" : 0 , "wait4" : 0 , "kill" : 0 , "uname" : 0 , "semget" : 0 , "semop" : 0 , "semctl" : 0 , "shmdt" : 0 , "msgget" : 0 , "msgsnd" : 0 , "msgrcv" : 0 , "msgctl" : 0 , "fcntl" : 0 , "flock" : 0 , "fsync" : 0 , "fdatasync" : 0 , "truncate" : 0 , "ftruncate" : 0 , "getdents" : 0 , "getcwd" : 0 , "chdir" : 0 , "fchdir" : 0 , "rename" : 0 , "mkdir" : 0 , "rmdir" : 0 , "creat" : 0 , "link" : 0 , "unlink" : 0 , "symlink" : 0 , "readlink" : 0 , "chmod" : 0 , "fchmod" : 0 , "chown" : 0 , "fchown" : 0 , "lchown" : 0 , "umask" : 0 , "gettimeofday" : 0 , "getrlimit" : 0 , "getrusage" : 0 , "sysinfo" : 0 , "times" : 0 , "getuid" : 0 , "syslog" : 0 , "getgid" : 0 , "setuid" : 0 , "setgid" : 0 , "geteuid" : 0 , "getegid" : 0 , "setpgid" : 0 , "getppid" : 0 , "getpgrp" : 0 , "setsid" : 0 , "setreuid" : 0 , "setregid" : 0 , "getgroups" : 0 , "setgroups" : 0 , "setresuid" : 0 , "getresuid" : 0 , "setresgid" : 0 , "getresgid" : 0 , "getpgid" : 0 , "setfsuid" : 0 , "setfsgid" : 0 , "getsid" : 0 , "capget" : 0 , "capset" : 0 , "ptrace" : 0 , "rt_sigpending" : 0 , "rt_sigtimedwait" : 0 , "rt_sigqueueinfo" : 0 , "sigaltstack" : 0 , "uselib" : 0 , "_sysctl" : 0 , "create_module" : 0 , "rt_sigsuspend" : 0 , "utime" : 0 , "mknod" : 0 , "personality" : 0 , "ustat" : 0 , "statfs" : 0 , "fstatfs" : 0 , "sysfs" : 0 , "getpriority" : 0 , "setpriority" : 0 , "sched_setparam" : 0 , "sched_getparam" : 0 , "sched_setscheduler" : 0 , "sched_getscheduler" : 0 , "sched_get_priority_max" : 0 , "sched_get_priority_min" : 0 , "sched_rr_get_interval" : 0 , "mlock" : 0 , "munlock" : 0 , "mlockall" : 0 , "munlockall" : 0 , "vhangup" : 0 , "modify_ldt" : 0 , "pivot_root" : 0 , "prctl" : 0 , "arch_prctl" : 0 , "adjtimex" : 0 , "setrlimit" : 0 , "chroot" : 0 , "sync" : 0 , "acct" : 0 , "settimeofday" : 0 , "mount" : 0 , "umount2" : 0 , "swapon" : 0 , "swapoff" : 0 , "reboot" : 0 , "sethostname" : 0 , "setdomainname" : 0 , "iopl" : 0 , "ioperm" : 0 , "init_module" : 0 , "delete_module" : 0 , "get_kernel_syms" : 0 , "query_module" : 0 , "nfsservctl" : 0 , "set_thread_area" : 0 , "io_setup" : 0 , "io_submit" : 0 , "get_thread_area" : 0 , "epoll_ctl_old" : 0 , "epoll_wait_old" : 0 , "timer_create" : 0 , "quotactl" : 0 , "getpmsg" : 0 , "putpmsg" : 0 , "afs_syscall" : 0 , "tuxcall" : 0 , "security" : 0 , "gettid" : 0 , "readahead" : 0 , "setxattr" : 0 , "lsetxattr" : 0 , "fsetxattr" : 0 , "getxattr" : 0 , "lgetxattr" : 0 , "fgetxattr" : 0 , "listxattr" : 0 , "llistxattr" : 0 , "flistxattr" : 0 , "removexattr" : 0 , "lremovexattr" : 0 , "fremovexattr" : 0 , "tkill" : 0 , "time" : 0 , "futex" : 0 , "sched_setaffinity" : 0 , "sched_getaffinity" : 0 , "io_destroy" : 0 , "io_getevents" : 0 , "io_cancel" : 0 , "lookup_dcookie" : 0 , "epoll_create" : 0 , "remap_file_pages" : 0 , "getdents64" : 0 , "set_tid_address" : 0 , "restart_syscall" : 0 , "semtimedop" : 0 , "fadvise64" : 0 , "timer_settime" : 0 , "timer_gettime" : 0 , "timer_getoverrun" : 0 , "timer_delete" : 0 , "clock_settime" : 0 , "clock_gettime" : 0 , "clock_getres" : 0 , "clock_nanosleep" : 0 , "exit_group" : 0 , "epoll_wait" : 0 , "epoll_ctl" : 0 , "tgkill" : 0 , "utimes" : 0 , "vserver" : 0 , "mq_notify" : 0 , "kexec_load" : 0 , "waitid" : 0 , "set_robust_list" : 0 , "get_robust_list" : 0 , "vmsplice" : 0 , "move_pages" : 0 , "mbind" : 0 , "set_mempolicy" : 0 , "get_mempolicy" : 0 , "mq_open" : 0 , "mq_unlink" : 0 , "mq_timedsend" : 0 , "mq_timedreceive" : 0 , "mq_getsetattr" : 0 , "add_key" : 0 , "request_key" : 0 , "keyctl" : 0 , "ioprio_set" : 0 , "ioprio_get" : 0 , "inotify_init" : 0 , "inotify_add_watch" : 0 , "inotify_rm_watch" : 0 , "migrate_pages" : 0 , "openat" : 0 , "mkdirat" : 0 , "mknodat" : 0 , "fchownat" : 0 , "futimesat" : 0 , "newfstatat" : 0 , "unlinkat" : 0 , "renameat" : 0 , "linkat" : 0 , "symlinkat" : 0 , "readlinkat" : 0 , "fchmodat" : 0 , "faccessat" : 0 , "pselect6" : 0 , "ppoll" : 0 , "unshare" : 0 , "splice" : 0 , "tee" : 0 , "sync_file_range" : 0 , "utimensat" : 0 , "epoll_pwait" : 0 , "signalfd" : 0 , "timerfd_create" : 0 , "eventfd" : 0 , "fallocate" : 0 , "timerfd_settime" : 0 , "timerfd_gettime" : 0 , "accept4" : 0 , "signalfd4" : 0 , "eventfd2" : 0 , "epoll_create1" : 0 , "dup3" : 0 , "pipe2" : 0 , "preadv" : 0 , "pwritev" : 0 , "rt_tgsigqueueinfo" : 0 , "recvmmsg" : 0 , "sendmmsg" : 0 , "process_vm_readv" : 0 , "process_vm_writev" : 0 , "execveat" : 0 , "preadv2" : 0 , "pwritev2" : 0 , "inotify_init1" : 0 , "perf_event_open" : 0 , "fanotify_init" : 0 , "fanotify_mark" : 0 , "prlimit64" : 0 , "name_to_handle_at" : 0 , "open_by_handle_at" : 0 , "clock_adjtime" : 0 , "syncfs" : 0 , "setns" : 0 , "getcpu" : 0 , "kcmp" : 0 , "finit_module" : 0 , "sched_setattr" : 0 , "sched_getattr" : 0 , "renameat2" : 0 , "seccomp" : 0 , "getrandom" : 0 , "memfd_create" : 0 , "kexec_file_load" : 0 , "bpf" : 0 , "userfaultfd" : 0 , "membarrier" : 0 , "mlock2" : 0 , "copy_file_range" : 0 , "pkey_mprotect" : 0 , "pkey_alloc" : 0 , "pkey_free" : 0 , "statx" : 0 , "io_pgetevents" : 0 , "rseq" : 0 , "pidfd_send_signal" : 0 , "io_uring_setup" : 0 , "io_uring_enter" : 0 , "io_uring_register" : 0 , "open_tree" : 0 , "move_mount" : 0 , "fsopen" : 0 , "fsconfig" : 0 , "fsmount" : 0 , "fspick" : 0 , "pidfd_open" : 0 , "clone3" : 0 , "close_range" : 0 , "openat2" : 0 , "pidfd_getfd" : 0 , "faccessat2" : 0 , "process_madvise" : 0 , "epoll_pwait2" : 0 , "mount_setattr" : 0 , "quotactl_fd" : 0 , "landlock_create_ruleset" : 0 , "landlock_add_rule" : 0 , "landlock_restrict_self" : 0 , "memfd_secret" : 0 , "process_mrelease" : 0 , "futex_waitv" : 0 , "set_mempolicy_home_node" : 0 , "cachestat" : 0
-}
-PAIRLESS = ['clone', 'exit', 'accept', 'poll', 'exit_group']
-
-WINDOW_SIZE = 0
-N_NEIGHBORS = 3
-
-LABEL_MULT_NORMAL = 0
-LABEL_MULT_ANORMAL = 1
-
-LABEL_ONE_NORMAL = 1
-LABEL_ONE_ANORMAL = -1
-
-RUNS = 10
-
-FILES_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../wordpress", "{v}", "{b}")
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+try:
+    import numpy as np
+    import pandas as pd
+    import sys
+    import argparse
+    import re
+
+    from xgboost import XGBRegressor, XGBClassifier
+    from sklearn.neural_network import MLPClassifier
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.tree import DecisionTreeClassifier, export_graphviz
+    from sklearn import tree
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.svm import SVC
+
+    from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer, HashingVectorizer
+    from sklearn import metrics
+    from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
+    from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, plot_confusion_matrix, balanced_accuracy_score
+
+    from sklearn.preprocessing import StandardScaler, MinMaxScaler, MaxAbsScaler, OneHotEncoder, OrdinalEncoder
+
+    from sklearn.compose import ColumnTransformer
+    from sklearn.pipeline import Pipeline
+    from sklearn.impute import SimpleImputer
+    from sklearn.linear_model import LogisticRegression
+
+    import warnings
+    warnings.simplefilter(action='ignore', category=FutureWarning)
+
+except Exception as e:
+    print('Unmet dependency:', e)
+    sys.exit(1)
+
+class Titanic(object):
+    """
+        Titanic code: https://www.kaggle.com/c/spaceship-titanic/overview
+
+        Run code using:
+        python3 main.py --dataset-train ../data/train.csv --dataset-test ../data/test.csv > out.csv
+
+    """
+    def __init__(self, dataset_train, dataset_test):
+        self.datasetTrain = dataset_train
+        self.datasetTest = dataset_test
+
+       ## Config ##
+        self.testSize = 0.5
+        self.randomState = 42
+
+    def read_data(self, file1, file2):
+        try:
+            df1 = pd.read_csv(file1, header=0, delimiter=",", na_filter=True)
+            df2 = pd.read_csv(file2, header=0, delimiter=",", na_filter=True)
+
+            return df1, df2
+        except Exception as e:
+            print("read_data: ", e)
+
+    def get_score_clf(self, y_test, y_pred, y_score):
+        try:
+                return round(roc_auc_score(y_test, y_score), 4), \
+                   round(precision_score(y_test, y_pred), 4), \
+                   round(recall_score(y_test, y_pred), 4), \
+                   round(f1_score(y_test, y_pred), 4), \
+                   round(accuracy_score(y_test, y_pred), 4), \
+                   round(balanced_accuracy_score(y_test, y_pred), 4)
+        except Exception as e:
+            print("get_score_clf", e)
+
+    def convert_name(self, df):
+        try:
+            names = []
+
+            for each_name in df['Name']:
+                new_string = str(each_name).split(" ")
+                names.append(new_string[-1])
+
+            df = df.drop(['Name'], 1)
+            dfnames = pd.DataFrame(names, columns=['Names'])
+
+            result = pd.concat([df, dfnames], axis=1)
+            return result
+        except Exception as e:
+            print("convert_name",e)
+
+    def convert_ticket(self, df):
+        try:
+            ticket_name = []
+            ticket_location = []
+            for each_ticket in df['Ticket']:
+                # use only characteres
+                word1 = " ".join(re.findall("[a-zA-Z]+", each_ticket))
+                # print(each_ticket, "||", word1.replace(" ","").lower())
+                ticket_location.append(word1.replace(" ","").lower())
+
+                # use only numbers
+                word2 = " ".join(re.findall("[0-9]+", each_ticket))
+                # print(each_ticket, "||", word2.split(" ")[-1])
+                ticket_name.append(word2.split(" ")[-1])
+
+            df = df.drop(['Ticket'], 1)
+            dfticket = pd.DataFrame(ticket_name, columns=['Ticket'])
+            dflocation = pd.DataFrame(ticket_location, columns=['Location'])
+            result = pd.concat([df, dfticket, dflocation], axis=1)
+
+            return result
+        except Exception as e:
+            print("convert_ticket",e)
+
+    def convert_cabin(self, df):
+        try:
+            deck = []
+            num =[]
+            side = []
+            df['Cabin'].fillna(" / / ",inplace=True)
+            for each_cabin in df['Cabin']:
+                new = each_cabin.split("/")
+
+                deck.append(str(new[0]))
+                num.append(str(new[1]))
+                side.append(str(new[2]))
+
+            df = df.drop(['Cabin'], 1)
+            dfDeck = pd.DataFrame(deck, columns=['NewDeck'])
+            dfNum = pd.DataFrame(num, columns=['NewNum'])
+            dfSide = pd.DataFrame(side, columns=['NewSide'])
+
+            result = pd.concat([df, dfDeck, dfNum, dfSide], axis=1)
+            return result
+        except Exception as e:
+            print("convert_cabin", e)
+
+    def group_pass(self, df):
+        try:
+            NumberGroups = []
+            Groups = []
+            for each_passID in df['PassengerId']:
+                split_string = each_passID.split("_")
+                NumberGroups.append(split_string[-1])
+                Groups.append(split_string[0])
+
+            dfNumberGroups = pd.DataFrame(NumberGroups, columns=['NumberGroups'])
+            dfGroups = pd.DataFrame(Groups, columns=['Groups'])
+            result = pd.concat([df, dfGroups, dfNumberGroups], axis=1)
+            return result
+        except Exception as e:
+            print("group_pass", e)
+
+    def billed(self, df):
+        try:
+            dfBilled = pd.DataFrame(df['RoomService'] + df ['FoodCourt'] + df['ShoppingMall'] + df['Spa'] + df['VRDeck'], columns=['Billed'])
+            result = pd.concat([df, dfBilled], axis=1)
+            return result
+        except Exception as e:
+            print("billed", e)
+
+    def convert_data(self, train, test):
+        try:
+            # get label y: Transported
+            y_train = train['Transported']
+            y_test = []
+
+            # get group from PassengerId
+            train = self.group_pass(train)
+            test = self.group_pass(test)
+
+            # Add sum billed
+            train = self.billed(train)
+            test = self.billed(test)
+
+            # Convert ticket
+            #train = self.convert_ticket(train)
+            #test = self.convert_ticket(test)
+
+            # Convert cabin
+            train = self.convert_cabin(train)
+            test = self.convert_cabin(test)
+
+            # Convert names (Just using last name)
+            train = self.convert_name(train)
+            test = self.convert_name(test)
+
+            # print(train)
+            # drop: PassengerId
+            X_train = train.drop(['PassengerId', 'Transported'], 1)
+            X_test = test.drop(['PassengerId'], 1)
+
+            return X_train, y_train, X_test, y_test
+
+        except Exception as e:
+            print("convert_data: ", e)
+
+    def multilayerPerceptron(self, X_train, X_test, y_train):
+        try:
+            clf = MLPClassifier(random_state=42)
+            clf.fit(X_train, y_train)
+            y_pred = clf.predict(X_test)
+            return y_pred
+        except Exception as a:
+            print('multilayerPerceptron', a)
+
+    def get_without_na(self, df):
+        newDf = df[df.isnull().any(axis=1)]
+        return newDf
+
+    def object_to_category(self, df, column):
+        try:
+            for each_column in column:
+                # Change to categorical
+                df[str(each_column)] = df[str(each_column)].astype('category')
+                # convert category two int representation
+                df["categorical_"+str(each_column)] = df[str(each_column)].cat.codes
+            df = df.drop(column, 1)
+            return df
+        except Exception as e:
+            print("object to category", e)
+
+    def for_each_column(self, df):
+        try:
+            # get '' to NaN
+            # df = df.replace(np.nan, '', regex=True)
+
+            header = df.head()
+            for each in header:
+                # df = df[each].fillna(df[each].mode(), inplace=True)
+                df = df[each].fillna("")
+            return df
+        except Exception as e:
+            print("for_each_column", e)
+
+    def main(self):
+        print("Build data")
+        df_train, df_test = self.read_data(self.datasetTrain, self.datasetTest)
+
+        ## Fix NaN, na, and empty values
+        # drop lines with nan
+        #df_train = self.get_without_na(df_train)
+        #df_test = self.get_without_na(df_test)
+        # or replace (https://pbpython.com/categorical-encoding.html)
+        #df_train = self.for_each_column(df_train)
+        #df_test = self.for_each_column(df_test)
+
+        # Convert and create new columns (In this case y_test will be empty because we are not using the validation set in this problem)
+        X_train, y_train, X_test, y_test = self.convert_data(df_train, df_test)
+
+        # pd.set_option('display.max_columns', None)
+        # pd.set_option('display.max_rows', None)
+        # print(X_train.iloc[1])
+        # print(X_train)
+
+        # change enconding (esta errado, pq devo trocar ao mesmo tempo. Grupos podem estar faltando em um conjunto de dados)
+        # print(X_train.info())
+        #X_train = self.object_to_category(X_train, ['HomePlanet','CryoSleep','Destination','VIP','NewDeck','NewNum','NewSide','Names'])
+        #X_test = self.object_to_category(X_test, ['HomePlanet','CryoSleep','Destination','VIP','NewDeck','NewNum','NewSide','Names'])
+        # print(X_train.dtypes) #(use csv_evaluation for more information about the dataset)
+
+        # self.test_many(X_train, y_train)
+        self.train_case(df_test, X_train, X_test, y_train, y_test)
+        #self.grid_train_case(df_test, X_train, X_test, y_train, y_test)
+
+    def grid_train_case(self, df_test, X_train_org, X_test_org, y_train_org, y_test_org):
+        # https://scikit-learn.org/stable/auto_examples/compose/plot_column_transformer_mixed_types.html
+        # print(X_train.info())
+
+        # Transform Numerical Columns
+        numeric_features = ["Age", "RoomService", "FoodCourt", "ShoppingMall", "Spa", "VRDeck", "Billed"]
+        numeric_transformer_0 = Pipeline(
+                steps=[
+                    ("si", SimpleImputer(strategy="mean")), #Fix NaN, Inf
+                    ("sc", StandardScaler()),
+                    ]
+                )
+        numeric_transformer_1 = Pipeline(
+                steps=[
+                    ("si", SimpleImputer(strategy="mean")),
+                    ("mm", MinMaxScaler()),
+                    ]
+                )
+        numeric_transformer_2 = Pipeline(
+                steps=[
+                    ("si", SimpleImputer(strategy="mean")),
+                    ("mas", MaxAbsScaler()),
+                    ]
+                )
+
+        # Transform Categorical Columns
+        categorical_features = ["HomePlanet", "CryoSleep", "Destination", "VIP", "Groups", "NewDeck", "NewNum", "NewSide", "Names"]
+        categorical_transformer_0 = Pipeline(
+                steps=[
+                    ("ohe", OneHotEncoder(handle_unknown="ignore")),
+                    ]
+                )
+        categorical_transformer_1 = Pipeline(
+                steps=[
+                    ("oe", OrdinalEncoder()), # OrdinalEncoder doesn't allow NaN
+                    ]
+                )
+
+        # define the preprocessor
+        preprocessor_0 = ColumnTransformer(
+                transformers=[
+                    ("num", numeric_transformer_0, numeric_features),
+                    ("cat", categorical_transformer_0, categorical_features),
+                    ]
+                )
+        preprocessor_1 = ColumnTransformer(
+                transformers=[
+                    ("num", numeric_transformer_1, numeric_features),
+                    ("cat", categorical_transformer_0, categorical_features),
+                    ]
+                )
+        preprocessor_2 = ColumnTransformer(
+                transformers=[
+                    ("num", numeric_transformer_2, numeric_features),
+                    ("cat", categorical_transformer_0, categorical_features),
+                    ]
+                )
+
+        # Pipeline for each alg.
+        lr_pipe_0 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_0),
+                    ("classifier", LogisticRegression())
+                    ]
+                )
+        lr_pipe_1 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_1),
+                    ("classifier", LogisticRegression())
+                ]
+                )
+        lr_pipe_2 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_2),
+                    ("classifier", LogisticRegression())
+                ]
+                )
+        lr_param_grid = {
+                "preprocessor__num__si__strategy": ["mean", "median"],
+                "classifier__max_iter": [200, 500, 1000],
+                "classifier__C": [0.1, 1.0, 10, 100],
+                }
+
+        svm_pipe_0 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_0),
+                    ("classifier", SVC())
+                    ]
+                )
+        svm_pipe_1 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_1),
+                    ("classifier", SVC())
+                    ]
+                )
+        svm_pipe_2 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_2),
+                    ("classifier", SVC())
+                    ]
+                )
+        svm_param_grid = {
+                "preprocessor__num__si__strategy": ["mean", "median"],
+                "classifier__max_iter": [200, 500],
+                "classifier__class_weight": ['balanced', None],
+                "classifier__probability": [True, False],
+                "classifier__gamma": ['scale', 'auto'],
+        }
+
+        knn_pipe_0 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_0),
+                    ("classifier", KNeighborsClassifier())
+                    ]
+                )
+        knn_pipe_1 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_1),
+                    ("classifier", KNeighborsClassifier())
+                    ]
+                )
+        knn_pipe_2 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_2),
+                    ("classifier", KNeighborsClassifier())
+                    ]
+                )
+        knn_param_grid = {
+                "preprocessor__num__si__strategy": ["mean", "median"],
+                "classifier__n_neighbors": [3, 5],
+                "classifier__weights": ['uniform', 'distance'],
+        }
+
+        dtc_pipe_0 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_0),
+                    ("classifier", DecisionTreeClassifier())
+                    ]
+                )
+        dtc_pipe_1 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_1),
+                    ("classifier", DecisionTreeClassifier())
+                    ]
+                )
+        dtc_pipe_2 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_2),
+                    ("classifier", DecisionTreeClassifier())
+                    ]
+                )
+        dtc_param_grid = {
+                "preprocessor__num__si__strategy": ["mean", "median"],
+                "classifier__criterion": ['gini', 'entropy'],
+                "classifier__max_depth": [4, 6, 8],
+                "classifier__min_samples_split": [2, 8, 14, 20, 26, 32, 38],
+                "classifier__min_samples_leaf": [3, 7, 11, 17, 25, 27],
+                "classifier__class_weight": ['balanced', None],
+        }
+
+        rfc_pipe_0 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_0),
+                    ("classifier", RandomForestClassifier())
+                    ]
+                )
+        rfc_pipe_1 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_1),
+                    ("classifier", RandomForestClassifier())
+                    ]
+                )
+        rfc_pipe_2 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_2),
+                    ("classifier", RandomForestClassifier())
+                    ]
+                )
+        rfc_param_grid = {
+                "preprocessor__num__si__strategy": ["mean", "median"],
+                "classifier__criterion": ['gini', 'entropy'],
+                "classifier__max_depth": [4, 6, 8],
+                #"classifier__min_samples_split": [2, 8, 14, 20, 26, 32, 38],
+                "classifier__min_samples_split": [2, 20],
+                #"classifier__min_samples_leaf": [3, 7, 11, 17, 25, 27],
+                "classifier__min_samples_leaf": [7],
+                "classifier__class_weight": ['balanced', None],
+        }
+
+        xgbc_pipe_0 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_0),
+                    ("classifier", XGBClassifier())
+                    ]
+                )
+        xgbc_pipe_1 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_1),
+                    ("classifier", XGBClassifier())
+                    ]
+                )
+        xgbc_pipe_2 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_2),
+                    ("classifier", XGBClassifier())
+                    ]
+                )
+        xgbc_param_grid = {
+                "preprocessor__num__si__strategy": ["mean", "median"],
+                "classifier__max_depth": [4, 6, 8],
+        }
+
+        mlp_pipe_0 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_0),
+                    ("classifier", MLPClassifier())
+                    ]
+                )
+        mlp_pipe_1 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_1),
+                    ("classifier", MLPClassifier())
+                    ]
+                )
+        mlp_pipe_2 = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor_2),
+                    ("classifier", MLPClassifier())
+                    ]
+                )
+        mlp_param_grid = {
+                "preprocessor__num__si__strategy": ["mean", "median"],
+                "classifier__hidden_layer_sizes": [100, 200],
+                "classifier__activation": ['relu', 'tanh', 'logistic'],
+                "classifier__max_iter": [200, 500],
+                "classifier__learning_rate": ['constant', 'invscaling', 'adaptive'],
+                "classifier__solver": ['lbfgs', 'sgd', 'adam'],
+        }
+        warnings.warn('binary:logistic', UserWarning)
+
+        # use train data
+        X_train, X_test, y_train, y_test = train_test_split(X_train_org, y_train_org, test_size=0.25, random_state=45)
+
+        index = ['roc_auc', 'precision', 'recall', 'f1_score', 'accuracy', 'balanced_accuracy_score']
+        metrics = pd.DataFrame(index=index)
+
+        # metrics = self.grid_code('LR_0', lr_pipe_0, lr_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('LR_1', lr_pipe_1, lr_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('LR_2', lr_pipe_2, lr_param_grid, X_train, X_test, y_train, y_test, metrics)
+
+        # metrics = self.grid_code('SVM_0', svm_pipe_0, svm_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('SVM_1', svm_pipe_1, svm_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('SVM_2', svm_pipe_2, svm_param_grid, X_train, X_test, y_train, y_test, metrics)
+
+        # metrics = self.grid_code('KNN_0', knn_pipe_0, knn_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('KNN_1', knn_pipe_1, knn_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('KNN_2', knn_pipe_2, knn_param_grid, X_train, X_test, y_train, y_test, metrics)
+
+        # metrics = self.grid_code('DTC_0', dtc_pipe_0, dtc_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('DTC_1', dtc_pipe_1, dtc_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('DTC_2', dtc_pipe_2, dtc_param_grid, X_train, X_test, y_train, y_test, metrics)
+
+        #metrics = self.grid_code('RFC_0', rfc_pipe_0, rfc_param_grid, X_train, X_test, y_train, y_test, metrics)
+        #metrics = self.grid_code('RFC_1', rfc_pipe_1, rfc_param_grid, X_train, X_test, y_train, y_test, metrics)
+        #metrics = self.grid_code('RFC_2', rfc_pipe_2, rfc_param_grid, X_train, X_test, y_train, y_test, metrics)
+
+        metrics = self.grid_code('XGBC_0', xgbc_pipe_0, xgbc_param_grid, X_train, X_test, y_train, y_test, metrics)
+        metrics = self.grid_code('XGBC_1', xgbc_pipe_1, xgbc_param_grid, X_train, X_test, y_train, y_test, metrics)
+        metrics = self.grid_code('XGBC_2', xgbc_pipe_2, xgbc_param_grid, X_train, X_test, y_train, y_test, metrics)
+
+        # metrics = self.grid_code('MLP_0', mlp_pipe_0, mlp_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('MLP_1', mlp_pipe_1, mlp_param_grid, X_train, X_test, y_train, y_test, metrics)
+        # metrics = self.grid_code('MLP_2', mlp_pipe_2, mlp_param_grid, X_train, X_test, y_train, y_test, metrics)
+
+        print(metrics)
+
+    def grid_code(self, name, x_pipe, param, X_train, X_test, y_train, y_test, metrics):
+        try:
+            grid_search = GridSearchCV(x_pipe, param,
+                    scoring='f1',
+                    cv=10,
+                    verbose=1,
+                    n_jobs=2,
+                    )
+
+            grid_search.fit(X_train, y_train)
+            print("Best params:", grid_search.best_params_)
+
+            gs = grid_search.best_estimator_
+            gs.fit(X_train, y_train)
+            y_pred_gs = gs.predict(X_test)
+            y_score_gs = gs.predict_proba(X_test)[:,1:]
+            metrics[str(name)] = self.get_score_clf(y_test, y_pred_gs, y_score_gs)
+
+            return metrics
+        except Exception as e:
+            print("grid_code",e)
+
+    def train_case(self, df_test, X_train, X_test, y_train, y_test):
+        """
+            Always check functions param.
+        """
+        numeric_features = ["Age", "RoomService", "FoodCourt", "ShoppingMall", "Spa", "VRDeck", "Billed"]
+        numeric_transformer = Pipeline(
+                steps=[
+                    ("si", SimpleImputer(strategy="median")),
+                    ("sc", StandardScaler()),
+                    ]
+                )
+        categorical_features = ["HomePlanet", "CryoSleep", "Destination", "VIP", "Groups", "NewDeck", "NewNum", "NewSide", "Names"]
+        categorical_transformer = Pipeline(
+                steps=[
+                    ("ohe", OneHotEncoder(handle_unknown="ignore")),
+                    ]
+                )
+        preprocessor = ColumnTransformer(
+                transformers=[
+                    ("num", numeric_transformer, numeric_features),
+                    ("cat", categorical_transformer, categorical_features),
+                    ]
+                )
+
+        my_model = Pipeline(
+                steps=[
+                    ("preprocessor", preprocessor),
+                    ("classifier", XGBClassifier(max_depth=4))
+                    ]
+                )
+
+        my_model.fit(X_train, y_train)
+        y_pred = my_model.predict(X_test)
+
+        rr = pd.DataFrame({'Transported': y_pred})
+        print('PassengerId,Transported')
+        for idd, each in zip(df_test['PassengerId'], rr['Transported']):
+            print(idd,',',bool(each), sep = '')
+
+    def fix_nan_inf(self, df):
+        try:
+            # bad_indices = np.where(np.isnan(X_train_st))
+            # bad_indices = np.where(np.isinf(X_train_st))
+            df.fillna(df.mean(),inplace=True)
+            return df
+        except Exception as e:
+            print("fix_nan_inf", e)
+
+    def test_many(self, X_train, y_train):
+        try:
+            print("Running test function")
+            # The Frame for metrics
+            index = ['roc_auc', 'precision', 'recall', 'f1_score', 'accuracy', 'balanced_accuracy_score']
+            metrics = pd.DataFrame(index=index)
+
+            X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.25, random_state=45)
+
+            # Fix data
+            X_train = self.fix_nan_inf(X_train)
+            X_test = self.fix_nan_inf(X_test)
+
+            # SVM
+            st = StandardScaler()
+            X_train_st = st.fit_transform(X_train)
+            X_test_st = st.transform(X_test)
+            svm = SVC(class_weight='balanced', probability=True)
+            svm.fit(X_train_st, y_train)
+            y_pred_svm = svm.predict(X_test_st)
+            y_score_svm = svm.predict_proba(X_test_st)[:,1:]
+            metrics['SVM'] = self.get_score_clf(y_test, y_pred_svm, y_score_svm)
+
+            # KNN
+            sc = MinMaxScaler()
+            X_train_std = sc.fit_transform(X_train)
+            X_test_std = sc.transform(X_test)
+            knc = KNeighborsClassifier()
+            knc.fit(X_train_std, y_train)
+            y_pred_knc = knc.predict(X_test_std)
+            y_score_knc = knc.predict_proba(X_test_std)[:,1:]
+            metrics['KNN'] = self.get_score_clf(y_test, y_pred_knc, y_score_knc)
+
+            # Decision tree
+            dtc = DecisionTreeClassifier(class_weight='balanced')
+            dtc.fit(X_train, y_train)
+            y_pred_dtc = dtc.predict(X_test)
+            y_score_dtc = dtc.predict_proba(X_test)[:,1:]
+            metrics['DTC'] = self.get_score_clf(y_test, y_pred_dtc, y_score_dtc)
+
+            # GridSearch
+            params = {
+                     'criterion': ['gini', 'entropy'],
+                     'max_depth': [4, 6, 8],
+                     'min_samples_split': [2, 8, 14, 20, 26, 32, 38],
+                     'min_samples_leaf': [3, 7, 11, 17, 25, 27]
+                     }
+            dtc = DecisionTreeClassifier(class_weight='balanced')
+            cv = StratifiedKFold(n_splits=3, shuffle=True)
+            grid_cv = GridSearchCV(dtc, params, scoring='f1', cv=cv, verbose=1)
+            grid_cv.fit(X_train, y_train)
+            grid_cv.best_params_
+            gs_dtc = grid_cv.best_estimator_
+            print(grid_cv.best_params_, grid_cv.best_estimator_)
+            gs_dtc.fit(X_train, y_train)
+            y_pred_gs_dtc = gs_dtc.predict(X_test)
+            y_score_gs_dtc = gs_dtc.predict_proba(X_test)[:,1:]
+            metrics['DTC_GS'] = self.get_score_clf(y_test, y_pred_gs_dtc, y_score_gs_dtc)
+
+            # Random Forest
+            rfc = RandomForestClassifier(class_weight='balanced')
+            rfc.fit(X_train, y_train)
+            y_pred_rfc = rfc.predict(X_test)
+            y_score_rfc = rfc.predict_proba(X_test)[:,1:]
+            metrics['RFC'] = self.get_score_clf(y_test, y_pred_rfc, y_score_rfc)
+
+            # Gridsearch
+            params = {
+                     'n_estimators': [100, 200, 300],
+                     'criterion': ['gini', 'entropy'],
+                     'min_samples_leaf': [1, 2, 3],
+                     'min_samples_split': [2, 4]
+                     }
+            rfc = RandomForestClassifier(class_weight='balanced')
+            cv = StratifiedKFold(n_splits=3, shuffle=True)
+            grid_cv = GridSearchCV(rfc, params, scoring='accuracy', cv=cv, verbose=1, n_jobs=-1)
+            grid_cv.fit(X_train, y_train)
+            grid_cv.best_params_
+            gs_rfc = grid_cv.best_estimator_
+            print(grid_cv.best_params_, grid_cv.best_estimator_)
+            gs_rfc.fit(X_train, y_train)
+            y_pred_gs_rfc = gs_rfc.predict(X_test)
+            y_score_gs_rfc = gs_rfc.predict_proba(X_test)[:,1:]
+            metrics['RFC_GS'] = self.get_score_clf(y_test, y_pred_gs_rfc, y_score_gs_rfc)
+
+            # XGBoost
+            xgb = XGBClassifier()
+            xgb.fit(X_train, y_train)
+            y_pred_xgb = xgb.predict(X_test)
+            y_score_xgb = xgb.predict_proba(X_test)[:,1:]
+            metrics['XGB'] = self.get_score_clf(y_test, y_pred_xgb, y_score_xgb)
+
+            # LGBM
+            '''
+            lgbm = LGBMClassifier(class_weight='balanced')
+            lgbm.fit(X_train, y_train)
+            y_pred_lgbm = lgbm.predict(X_test)
+            y_score_lgbm = lgbm.predict_proba(X_test)[:,1:]
+            metrics['LGBM'] = self.get_score_clf(y_test, y_pred_lgbm, y_score_lgbm)
+
+            # Gridsearch
+            params = {
+                     'boosting_type': ['gbdt', 'goss'],
+                     'learning_rate': [0.005, 0.01, 0.05, 0.1, 0.3],
+                     'n_estimators': [100, 200, 300, 400],
+                     'reg_alpha': np.linspace(0.0, 20.0, 5),
+                     'reg_lambda': np.linspace(0.0, 25.0, 5),
+                     'max_depth': [-1, 4, 10]
+                     }
+            lgbm = LGBMClassifier(class_weight='balanced')
+            cv = StratifiedKFold(n_splits=3, shuffle=True)
+            grid_cv = GridSearchCV(lgbm, params, scoring='accuracy', cv=cv, verbose=1, n_jobs=-1)
+            grid_cv.fit(X_train, y_train)
+            grid_cv.best_params_
+            gs_lgb = grid_cv.best_estimator_
+            gs_lgb.fit(X_train, y_train)
+            y_pred_lg_gs = gs_lgb.predict(X_test)
+            y_score_lg_gs = gs_lgb.predict_proba(X_test)[:,1:]
+            metrics['LGBM_GS'] = self.get_score_clf(y_test, y_pred_lg_gs, y_score_lg_gs)
+            '''
+            print(metrics)
+        except Exception as e:
+            print("Test_many", e)
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='.')
+
+    parser.add_argument('--version', '-v', '-vvv', '-version', action='version', version=str('Base 2.1'))
+
+    parser.add_argument('--dataset-train', type=str, required=True, help='This option define the dataset Train.')
+
+    parser.add_argument('--dataset-test', type=str, required=True,  help='This option define the dataset Test.')
+
+    # get args
+    args = parser.parse_args()
+    kwargs = {
+        'dataset_train': args.dataset_train,
+        'dataset_test': args.dataset_test
+    }
 
-
-def sliding_window_filter(input_file):
-    result = ()
-    def add_to_result(elem):
-        nonlocal result
-        if ("threat" in syscalls[elem.split(" ")[0]]):
-            if syscall[elem.split(" ")[0]] == 1:
-                syscall[elem.split(" ")[0]] = 0
-                return
-            if (syscalls[elem.split(" ")[0]]["threat"] != 4 and syscalls[elem.split(" ")[0]]["threat"] != 5):
-                result += (syscalls[elem.split(" ")[0]]["id"],)
-                if syscall not in PAIRLESS:
-                    syscall[elem.split(" ")[0]] = 1
-        else:
-            raise Exception(f"Threat para {elem.split(' ')[0]} não encontrada")
-
-    it = iter(input_file)
-    for elem in it:
-        add_to_result(elem)
-        if len(result) == WINDOW_SIZE:
-            yield result
-            break
-    for elem in it:
-        add_to_result(elem)
-        if len(result) == WINDOW_SIZE+1:
-            result = result[1:]
-            yield result
-
-def sliding_window_raw(seq):
-    result = ()
-    def add_to_result(elem):
-        nonlocal result
-        if syscall[elem.split(" ")[0]] == 1:
-            syscall[elem.split(" ")[0]] = 0
-            return
-        result += (syscalls[elem.split(" ")[0]]["id"],)
-        if syscall not in PAIRLESS:
-            syscall[elem.split(" ")[0]] = 1
-
-    it = iter(seq)
-    for elem in it:
-        add_to_result(elem)
-        if len(result) == WINDOW_SIZE:
-            yield result
-            break
-    for elem in it:
-        add_to_result(elem)
-        if len(result) == WINDOW_SIZE+1:
-            result = result[1:]
-            yield result
-
-
-def retrieve_dataset(filename, filter):
-
-    with open(filename, "r") as input_file:
-        if filter == "raw":
-            dataset = list(sliding_window_raw(input_file))
-        else:
-            dataset = list(sliding_window_filter(input_file))
-
-    return dataset
-
-
-def define_labels(base_normal, base_exec, multi):
-    labels = []
-
-    label_normal = LABEL_MULT_NORMAL if multi else LABEL_ONE_NORMAL
-    label_anormal = LABEL_MULT_ANORMAL if multi else LABEL_ONE_ANORMAL
-
-    for window in base_normal:
-        labels.append(label_normal)
-
-    for window in base_exec:
-        labels.append(label_anormal)
-
-    return labels
-
-
-def get_features(version, filter="raw"):
-
-    path = FILES_PATH.format(v=version, b="normal/sysdig")
-    base_normal = []
-    base_exec = []
-
-    for file in os.listdir(path):
-        base_normal.extend(retrieve_dataset(os.path.join(path, file), filter))
-
-    path = FILES_PATH.format(v=version, b="anormal/sysdig")
-
-    for file_exec in os.listdir(path):
-        base_exec.extend(retrieve_dataset(os.path.join(path, file_exec), filter))
-
-    return base_normal, base_exec
-
-
-def naive_bayes(base_normal, base_exec):
-
-    print("\n> Naive Bayes")
-
-    results = []
-
-    print("[...] Retrieving datasets and labels")
-    labels = define_labels(base_normal, base_exec, True)
-    features = base_normal + base_exec
-
-    for i in range(RUNS):
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.5, random_state=2**i)
-
-        gnb = GaussianNB()
-        gnb.fit(X_train, y_train)
-        y_pred = gnb.predict(X_test)
-
-        score = (precision_score(y_test, y_pred, average="binary"), recall_score(y_test, y_pred, average="binary"), f1_score(y_test, y_pred, average="binary"), accuracy_score(y_test, y_pred))
-        results.append(list(score))
-
-    results = np.mean(results, axis=0)
-
-    print("precision_score:", results[0])
-    print("recall_score:", results[1])
-    print("f1_score:", results[2])
-    print("accuracy_score:", results[3])
-    print("")
-
-    return
-
-
-def kneighbors(base_normal, base_exec):
-
-    print("\n> K-Nearest Neighbors")
-
-    results = []
-
-    print("N_NEIGHBORS", str(N_NEIGHBORS))
-
-    print("[...] Retrieving datasets and labels")
-    labels = define_labels(base_normal, base_exec, True)
-    features = base_normal + base_exec
-
-    for i in range(RUNS):
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.5, random_state=2**i)
-
-        knn = KNeighborsClassifier(n_neighbors=N_NEIGHBORS, n_jobs=-1)
-        knn.fit(X_train, y_train)
-        y_pred = knn.predict(X_test)
-
-        score = (precision_score(y_test, y_pred, average="binary"), recall_score(y_test, y_pred, average="binary"), f1_score(y_test, y_pred, average="binary"), accuracy_score(y_test, y_pred))
-        results.append(list(score))
-
-    results = np.mean(results, axis=0)
-
-    print("precision_score:", results[0])
-    print("recall_score:", results[1])
-    print("f1_score:", results[2])
-    print("accuracy_score:", results[3])
-    print("")
-
-    return
-
-
-def random_forest(base_normal, base_exec):
-
-    print("\n> Random Forest")
-
-    results = []
-
-    print("[...] Retrieving datasets and labels")
-    labels = define_labels(base_normal, base_exec, True)
-    features = base_normal + base_exec
-
-    for i in range(RUNS):
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.5, random_state=2**i)
-
-        rfc = RandomForestClassifier(n_estimators=100, n_jobs=-1)
-
-        rfc.fit(X_train, y_train)
-        y_pred = rfc.predict(X_test)
-
-        score = (precision_score(y_test, y_pred, average="binary"), recall_score(y_test, y_pred, average="binary"), f1_score(y_test, y_pred, average="binary"), accuracy_score(y_test, y_pred))
-        results.append(list(score))
-
-    results = np.mean(results, axis=0)
-
-    print("precision_score:", results[0])
-    print("recall_score:", results[1])
-    print("f1_score:", results[2])
-    print("accuracy_score:", results[3])
-    print("")
-
-    return
-
-
-def ada_boost(base_normal, base_exec):
-    print("\n> Ada Boost")
-
-    results = []
-
-    print("[...] Retrieving datasets and labels")
-    labels = define_labels(base_normal, base_exec, True)
-    features = base_normal + base_exec
-
-    for i in range(RUNS):
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.5, random_state=2**i)
-
-        abc = AdaBoostClassifier(base_estimator=RandomForestClassifier(n_jobs=-1))
-        abc.fit(X_train, y_train)
-        y_pred = abc.predict(X_test)
-
-        score = (precision_score(y_test, y_pred, average="binary"), recall_score(y_test, y_pred, average="binary"), f1_score(y_test, y_pred, average="binary"), accuracy_score(y_test, y_pred))
-        results.append(list(score))
-
-    results = np.mean(results, axis=0)
-
-    print("precision_score:", results[0])
-    print("recall_score:", results[1])
-    print("f1_score:", results[2])
-    print("accuracy_score:", results[3])
-    print("")
-
-    return
-
-
-def multilayer_perceptron(base_normal, base_exec):
-    print("\n> Multilayer Perceptron")
-
-    results = []
-
-    print("[...] Retrieving datasets and labels")
-    labels = define_labels(base_normal, base_exec, True)
-    features = base_normal + base_exec
-
-    for i in range(RUNS):
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.5, random_state=2**i)
-
-        mlp = MLPClassifier()
-        mlp.fit(X_train, y_train)
-        y_pred = mlp.predict(X_test)
-
-        score = (precision_score(y_test, y_pred, average="binary"), recall_score(y_test, y_pred, average="binary"), f1_score(y_test, y_pred, average="binary"), accuracy_score(y_test, y_pred))
-        results.append(list(score))
-
-    results = np.mean(results, axis=0)
-
-    print("precision_score:", results[0])
-    print("recall_score:", results[1])
-    print("f1_score:", results[2])
-    print("accuracy_score:", results[3])
-    print("")
-
-    return
-
-
-# def linear_svc():
-#     print("\n> Linear SVC")
-#
-#     print("\n[...] Retrieving datasets and labels")
-#     features,labels = get_features_labels()
-#
-#     X_train,X_test,y_train,y_test = train_test_split(features, labels, test_size=0.5, random_state=42)
-#
-#     lsvc = SVC()
-#
-#     lsvc.fit(X_train, y_train)
-#     y_pred = lsvc.predict(X_test)
-#
-#     print("\nf1_score: ", f1_score(y_test, y_pred, average="binary"))
-#     print("\nrecall_score: ", recall_score(y_test, y_pred, average="binary"))
-#     print("\nprecision_score: ", precision_score(y_test, y_pred, average="binary"))
-#     print("\n")
-#
-#     return lsvc
-
-def one_class_svm(base_normal, base_exec):
-    print("\n> One Class SVM")
-
-    results = []
-
-    print("[...] Retrieving datasets and labels")
-    labels = define_labels(base_normal, base_exec, False)
-    features = base_normal + base_exec
-
-    for i in range(RUNS):
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.5, random_state=2**i)
-
-        onesvm = OneClassSVM(gamma="scale", nu=0.01)
-        trainX = []
-        for x, y in zip(X_train, y_train):
-            if (y == 1):
-                trainX.append(x)
-
-        onesvm.fit(trainX)
-        y_pred = onesvm.predict(X_test)
-
-        score = (precision_score(y_test, y_pred, average="binary", pos_label=-1), recall_score(y_test, y_pred, average="binary", pos_label=-1), f1_score(y_test, y_pred, average="binary", pos_label=-1), accuracy_score(y_test, y_pred))
-        results.append(list(score))
-
-    results = np.mean(results, axis=0)
-
-    print("precision_score:", results[0])
-    print("recall_score:", results[1])
-    print("f1_score:", results[2])
-    print("accuracy_score:", results[3])
-    print("")
-
-    return
-
-
-def isolation_forest(base_normal, base_exec):
-
-    print("\n> Isolation Forest")
-
-    results = []
-
-    print("[...] Retrieving datasets and labels")
-    labels = define_labels(base_normal, base_exec, False)
-    features = base_normal + base_exec
-
-    for i in range(RUNS):
-        X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.5, random_state=2**i)
-
-        clf = IsolationForest(n_jobs=-1)
-        trainX = []
-        for x, y in zip(X_train, y_train):
-            if (y == 1):
-                trainX.append(x)
-
-        clf.fit(trainX)
-        y_pred = clf.predict(X_test)
-
-        score = (precision_score(y_test, y_pred, average="binary", pos_label=-1), recall_score(y_test, y_pred, average="binary", pos_label=-1), f1_score(y_test, y_pred, average="binary", pos_label=-1), accuracy_score(y_test, y_pred))
-        results.append(list(score))
-
-    results = np.mean(results, axis=0)
-
-    print("precision_score:", results[0])
-    print("recall_score:", results[1])
-    print("f1_score:", results[2])
-    print("accuracy_score:", results[3])
-    print("")
-
-    return
-
-
-if __name__ == "__main__":
-
-    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("window_size", help="Window size", type=int)
-    parser.add_argument("-d", "--dataset", help="Dataset version to use", choices=["logs"], default="logs")
-    parser.add_argument("-f", "--filter", help="Filter mode", choices=["raw", "filter"], default="raw")
     args = parser.parse_args()
 
-    if args.window_size <= 0:
-        raise argparse.ArgumentTypeError("window_size must be greater than 0")
-
-    WINDOW_SIZE = args.window_size
-
-    print(" ".join(("\n --- WINDOW_SIZE =", str(WINDOW_SIZE), "({}) --- \n".format(args.filter))))
-
-    base_normal, base_exec = get_features(args.dataset, args.filter)
-
-    # naive_bayes(base_normal, base_exec)
-    # kneighbors(base_normal, base_exec)
-    random_forest(base_normal, base_exec)
-    multilayer_perceptron(base_normal, base_exec)
-    # ada_boost(base_normal, base_exec)
-
-    one_class_svm(base_normal, base_exec)
-    isolation_forest(base_normal, base_exec)
+    try:
+        worker = Titanic(**kwargs)
+        worker.main()
+    except KeyboardInterrupt as e:
+        print('Exit using ctrl^C')

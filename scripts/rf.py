@@ -131,54 +131,54 @@ class Main():
 
         # XGBClassifier
         xgb_param_grid = {
-            'learning_rate': [0.001, 0.01, 0.1, 0.3],
-            'max_depth': [1, 3, 5, 7],
-            'min_child_weight': [1, 2, 3, 4, 5],
-            'subsample': [0.1, 0.3, 0.5, 0.7, 0.9],
-            'colsample_bytree': [0.1, 0.3, 0.5, 0.7, 0.9],
-            'n_estimators': [10, 25, 50, 100, 200]
+            'learning_rate': [0.3],
+            'max_depth': [1],
+            'min_child_weight': [1],
+            'subsample': [0.7],
+            'colsample_bytree': [0.1],
+            'n_estimators': [100]
         }
         self.grid_search_classifier("xgb", XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=4), xgb_param_grid, X_train, y_train, X_test, y_test)
 
         # DecisionTreeClassifier
         dtc_param_grid = {
-            'max_depth': [None, 10, 20],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4]
+            'max_depth': [None],
+            'min_samples_split': [2],
+            'min_samples_leaf': [2]
         }
         self.grid_search_classifier("dtc", DecisionTreeClassifier(class_weight='balanced', random_state=42), dtc_param_grid, X_train, y_train, X_test, y_test)
 
         # NuSVC
         nuclf_param_grid = {
-            'kernel': ['linear', 'rbf', 'poly'],
-            'gamma': ['auto', 'scale'],
+            'kernel': ['linear'],
+            'gamma': ['auto'],
         }
         self.grid_search_classifier("nusvc", NuSVC(probability=True, random_state=42), nuclf_param_grid, X_train, y_train, X_test, y_test)
 
         # MLPClassifier
         mlpc_param_grid = {
-            'hidden_layer_sizes': [(50,50,50), (50,100,50), (100,)],
-            'activation': ['tanh', 'relu'],
-            'solver': ['sgd', 'adam'],
-            'alpha': [0.0001, 0.05],
-            'learning_rate': ['constant','adaptive'],
+            'hidden_layer_sizes': [(50,50,50)],
+            'activation': ['relu'],
+            'solver': ['sgd'],
+            'alpha': [0.00001],
+            'learning_rate': ['constant'],
         }
         self.grid_search_classifier("mlpc", MLPClassifier(random_state=42, max_iter=100), mlpc_param_grid, X_train, y_train, X_test, y_test)
 
         # AdaBoostClassifier
         ab_param_grid = {
-            'n_estimators': [50, 100, 200],
-            'learning_rate': [0.01, 0.1, 1],
-            'algorithm': ['SAMME', 'SAMME.R']
+            'n_estimators': [150],
+            'learning_rate': [1.5],
+            'algorithm': ['SAMME']
         }
         self.grid_search_classifier("ab", AdaBoostClassifier(random_state=42), ab_param_grid, X_train, y_train, X_test, y_test)
 
         # SGDClassifier
         sgdc_param_grid = {
-            'loss': ['hinge', 'log_loss', 'modified_huber'],
-            'alpha': [0.0001, 0.001, 0.01],
-            'learning_rate': ['constant', 'optimal', 'invscaling', 'adaptive'],
-            'eta0': [0.01, 0.1, 0.5]
+            'loss': ['modified_huber'],
+            'alpha': [0.00004],
+            'learning_rate': ['constant'],
+            'eta0': [0.04]
         }
         self.grid_search_classifier("sgdc", SGDClassifier(max_iter=1000, loss='modified_huber', random_state=42), sgdc_param_grid, X_train, y_train, X_test, y_test)
 

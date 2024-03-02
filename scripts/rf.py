@@ -122,23 +122,23 @@ class Main():
 
         # RandomForestClassifier
         rfc_param_grid = {
-            'max_depth': None, 
-            'min_samples_leaf': 1, 
-            'min_samples_split': 2, 
-            'n_estimators': 50
+            'max_depth': [None],
+            'min_samples_leaf': [1],
+            'min_samples_split': [2],
+            'n_estimators': [50]
         }
-        self.grid_search_classifier("rfc", RandomForestClassifier(class_weight='balanced', random_state=42, n_estimators=100, max_depth=10, min_samples_split=2, min_samples_leaf=1), rfc_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("rfc", RandomForestClassifier(class_weight='balanced', random_state=42, max_depth=3, min_samples_split=2), rfc_param_grid, X_train, y_train, X_test, y_test)
 
         # XGBClassifier
         xgb_param_grid = {
-            'learning_rate': [0.01, 0.1, 0.3],
-            'max_depth': [3, 5, 7],
-            'min_child_weight': [1, 3, 5],
-            'subsample': [0.5, 0.7, 0.9],
-            'colsample_bytree': [0.5, 0.7, 0.9],
-            'n_estimators': [50, 100, 200]
+            'learning_rate': [0.001, 0.01, 0.1, 0.3],
+            'max_depth': [1, 3, 5, 7],
+            'min_child_weight': [1, 2, 3, 4, 5],
+            'subsample': [0.1, 0.3, 0.5, 0.7, 0.9],
+            'colsample_bytree': [0.1, 0.3, 0.5, 0.7, 0.9],
+            'n_estimators': [10, 25, 50, 100, 200]
         }
-        self.grid_search_classifier("xgb", XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=4, learning_rate=0.1, max_depth=5, min_child_weight=1, subsample=0.9, colsample_bytree=0.7, n_estimators=100), xgb_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("xgb", XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=4), xgb_param_grid, X_train, y_train, X_test, y_test)
 
         # DecisionTreeClassifier
         dtc_param_grid = {
@@ -146,14 +146,14 @@ class Main():
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [1, 2, 4]
         }
-        self.grid_search_classifier("dtc", DecisionTreeClassifier(class_weight='balanced', random_state=42, max_depth=10, min_samples_split=2, min_samples_leaf=1), dtc_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("dtc", DecisionTreeClassifier(class_weight='balanced', random_state=42), dtc_param_grid, X_train, y_train, X_test, y_test)
 
         # NuSVC
         nuclf_param_grid = {
             'kernel': ['linear', 'rbf', 'poly'],
             'gamma': ['auto', 'scale'],
         }
-        self.grid_search_classifier("nusvc", NuSVC(kernel='rbf', gamma='scale', probability=True, random_state=42), nuclf_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("nusvc", NuSVC(probability=True, random_state=42), nuclf_param_grid, X_train, y_train, X_test, y_test)
 
         # MLPClassifier
         mlpc_param_grid = {
@@ -163,7 +163,7 @@ class Main():
             'alpha': [0.0001, 0.05],
             'learning_rate': ['constant','adaptive'],
         }
-        self.grid_search_classifier("mlpc", MLPClassifier(random_state=42, max_iter=100, hidden_layer_sizes=(100,), activation='relu', solver='adam', alpha=0.0001, learning_rate='constant'), mlpc_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("mlpc", MLPClassifier(random_state=42, max_iter=100), mlpc_param_grid, X_train, y_train, X_test, y_test)
 
         # AdaBoostClassifier
         ab_param_grid = {
@@ -171,7 +171,7 @@ class Main():
             'learning_rate': [0.01, 0.1, 1],
             'algorithm': ['SAMME', 'SAMME.R']
         }
-        self.grid_search_classifier("ab", AdaBoostClassifier(random_state=42, n_estimators=100, learning_rate=1, algorithm='SAMME.R'), ab_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("ab", AdaBoostClassifier(random_state=42), ab_param_grid, X_train, y_train, X_test, y_test)
 
         # SGDClassifier
         sgdc_param_grid = {
@@ -180,7 +180,7 @@ class Main():
             'learning_rate': ['constant', 'optimal', 'invscaling', 'adaptive'],
             'eta0': [0.01, 0.1, 0.5]
         }
-        self.grid_search_classifier("sgdc", SGDClassifier(max_iter=1000, loss='modified_huber', random_state=42, alpha=0.0001, learning_rate='optimal', eta0=0.01), sgdc_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("sgdc", SGDClassifier(max_iter=1000, loss='modified_huber', random_state=42), sgdc_param_grid, X_train, y_train, X_test, y_test)
 
         # Substitue essa:
         print("Original")

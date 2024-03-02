@@ -101,22 +101,87 @@ class Main():
         except Exception as e:
             print("read_data: ", e)
 
+    def grid_search_classifier(self, classifier_name, classifier, param_grid, X_train, y_train, X_test, y_test):
+        grid_search = GridSearchCV(classifier, param_grid, cv=5, scoring='accuracy')
+        grid_search.fit(X_train, y_train)
+
+        # print("Melhores parâmetros para", classifier_name, ":", grid_search.best_params_)
+        # print("Melhor pontuação para", classifier_name, ":", grid_search.best_score_)
+
+        best_classifier = grid_search.best_estimator_
+        best_classifier.fit(X_train, y_train)
+        y_pred = best_classifier.predict(X_test)
+        y_score = best_classifier.predict_proba(X_test)[:,1:]
+        self.get_score_clf(classifier_name, y_test, y_pred, y_score)
+
     def main(self):
         X_train, X_test, y_train, y_test, X, y = self.read_data()
         
+        # Essa parte:
+        print("Otimizado")
+
+        # RandomForestClassifier
+        rfc_param_grid = {
+            'n_estimators': [100, 200, 300],
+            'max_depth': [3, 5, 7],
+            'min_samples_split': [2, 5, 10],
+            'min_samples_leaf': [1, 2, 4]
+        }
+        self.grid_search_classifier("rfc", RandomForestClassifier(class_weight='balanced', random_state=42), rfc_param_grid, X_train, y_train, X_test, y_test)
+
+        # XGBClassifier
+        xgb_param_grid = {
+            'n_estimators': [100, 200, 300],
+            'max_depth': [3, 5, 7]
+        }
+        self.grid_search_classifier("xgb", XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=4), xgb_param_grid, X_train, y_train, X_test, y_test)
+
+        # DecisionTreeClassifier
+        dtc_param_grid = {
+            'max_depth': [3, 5, 7],
+            'min_samples_split': [2, 5, 10],
+            'min_samples_leaf': [1, 2, 4]
+        }
+        self.grid_search_classifier("dtc", DecisionTreeClassifier(class_weight='balanced', random_state=42), dtc_param_grid, X_train, y_train, X_test, y_test)
+
+        # NuSVC
+        nuclf_param_grid = {
+            'kernel': ['linear', 'rbf', 'poly'],
+            'gamma': ['scale', 'auto']
+        }
+        self.grid_search_classifier("nusvc", NuSVC(probability=True, random_state=42), nuclf_param_grid, X_train, y_train, X_test, y_test)
+
+        # MLPClassifier
+        mlpc_param_grid = {
+            'hidden_layer_sizes': [(100,), (50,50), (50,50,50)],
+            'activation': ['relu', 'tanh', 'logistic'],
+            'solver': ['adam', 'sgd']
+        }
+        self.grid_search_classifier("mlpc", MLPClassifier(random_state=42, max_iter=10000), mlpc_param_grid, X_train, y_train, X_test, y_test)
+
+        # AdaBoostClassifier
+        ab_param_grid = {
+            'n_estimators': [50, 100, 200],
+            'learning_rate': [0.1, 0.5, 1.0]
+        }
+        self.grid_search_classifier("ab", AdaBoostClassifier(random_state=42), ab_param_grid, X_train, y_train, X_test, y_test)
+
+        # SGDClassifier
+        sgdc_param_grid = {
+            'loss': ['hinge', 'log_loss', 'modified_huber'],
+            'penalty': ['l2', 'l1', 'elasticnet'],
+            'alpha': [0.0001, 0.001, 0.01]
+        }
+        self.grid_search_classifier("sgdc", SGDClassifier(max_iter=1000, random_state=42), sgdc_param_grid, X_train, y_train, X_test, y_test)
+
+        # Substitue essa:
+        print("Original")
+
         rfc = RandomForestClassifier(class_weight='balanced', random_state=42, max_depth=3, min_samples_split=2)
         rfc.fit(X_train, y_train)
         y_pred_rfc = rfc.predict(X_test)
         y_score_rfc = rfc.predict_proba(X_test)[:,1:]
-        
         self.get_score_clf("rfc", y_test, y_pred_rfc, y_score_rfc)
-        # https://stackoverflow.com/questions/49055410/confusion-matrix-too-many-values-to-unpack
-        tn, fp, fn, tp = confusion_matrix(y_test, y_pred_rfc).ravel()
-        print("CV: tn", tn, "fp", fp, "fn", fn, "tp", tp)
-
-        # https://stackoverflow.com/questions/38151615/specific-cross-validation-with-random-forest
-        # rfc_1 = RandomForestClassifier(class_weight='balanced', random_state=42)
-        # print(cross_val_score(rfc_1, X, y, cv=10))
 
         xgb = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=4)
         xgb.fit(X_train, y_train)
@@ -124,17 +189,11 @@ class Main():
         y_score_xgb = xgb.predict_proba(X_test)[:,1:]
         self.get_score_clf("xgb", y_test, y_pred_xgb, y_score_xgb)
 
-        # xgb_1 = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=42)
-        # print(cross_val_score(xgb_1, X, y, cv=10))
-
         dtc = DecisionTreeClassifier(class_weight='balanced', random_state=42)
         dtc.fit(X_train, y_train)
         y_pred_dtc = dtc.predict(X_test)
         y_score_dtc = dtc.predict_proba(X_test)[:,1:]
         self.get_score_clf("dtc", y_test, y_pred_dtc, y_score_dtc)
-
-        # dtc_1 = DecisionTreeClassifier(class_weight='balanced', random_state=42)
-        # print(cross_val_score(dtc_1, X, y, cv=10))
 
         nuclf = NuSVC(probability=True, random_state=42)
         nuclf.fit(X_train, y_train)

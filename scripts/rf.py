@@ -122,10 +122,10 @@ class Main():
 
         # RandomForestClassifier
         rfc_param_grid = {
-            'n_estimators': [50, 100, 200],
-            'max_depth': [None, 10, 20],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4]
+            'max_depth': None, 
+            'min_samples_leaf': 1, 
+            'min_samples_split': 2, 
+            'n_estimators': 50
         }
         self.grid_search_classifier("rfc", RandomForestClassifier(class_weight='balanced', random_state=42, n_estimators=100, max_depth=10, min_samples_split=2, min_samples_leaf=1), rfc_param_grid, X_train, y_train, X_test, y_test)
 

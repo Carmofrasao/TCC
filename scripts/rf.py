@@ -104,11 +104,11 @@ class Main():
     def grid_search_classifier(self, classifier_name, classifier, param_grid, X_train, y_train, X_test, y_test):
         print('Fazendo pesquisa exaustiva sobre valores de parâmetros especificados para um estimador.')
         grid_search = GridSearchCV(classifier, param_grid, cv=5, scoring='f1')
-        print('Ajuste com todos os conjuntos de parâmetros.')
+        print('Ajustando todos os conjuntos de parâmetros.')
         grid_search.fit(X_train, y_train)
 
         print("Melhores parâmetros para", classifier_name, ":", grid_search.best_params_)
-        print("Melhor pontuação para", classifier_name, ":", grid_search.best_score_)
+        # print("Melhor pontuação para", classifier_name, ":", grid_search.best_score_)
 
         best_classifier = grid_search.best_estimator_
         best_classifier.fit(X_train, y_train)
@@ -122,69 +122,50 @@ class Main():
         # Essa parte:
         print('Otimizado')
 
-        # Variaveis de RandomForestClassifier:
-        # n_estimators -------------> O número de árvores na floresta.
-        # criterion ----------------> A função para medir a qualidade de uma divisão.
-        # max_depth ----------------> A profundidade máxima da árvore.
-        # min_samples_split --------> O número mínimo de amostras necessárias para dividir um nó interno.
-        # min_samples_leaf ---------> O número mínimo de amostras necessárias para estar em um nó folha.
-        # min_weight_fraction_leaf -> A fração ponderada mínima da soma total dos pesos (de todas as amostras de entrada) necessária para estar em um nó folha.
-        # max_features -------------> O número de características a considerar quando se procura o melhor split.
-        # max_leaf_nodes -----------> Cultivar árvores com max_leaf_nodes da melhor forma possível.
-        # min_impurity_decrease ----> Um nó será dividido se esta divisão induzir uma diminuição da impureza maior ou igual a este valor.
-        # bootstrap ----------------> Se as amostras bootstrap são utilizadas na construção de árvores.
-        # n_jobs -------------------> O número de trabalhos a executar em paralelo.
-        # random_state -------------> Controla a aleatoriedade do bootstrapping das amostras utilizadas na construção de árvores (se bootstrap=True) e a amostragem das características a considerar ao procurar a melhor divisão em cada nó (se max_features < n_features).
-        # class_weight -------------> Pesos associados às classes na forma {class_label: weight}.
-        # max_samples --------------> Se bootstrap for Verdadeiro, o número de amostras a retirar de X para treinar cada estimador de base.
-
         # RandomForestClassifier
+        # rfc ROC 0.9634 precision 0.9167 recall 0.898 f1 0.9072 accuracy 0.91 bac 0.9098 brier 0.09
+        # tn 47 fp 4 fn 5 tp 44
         rfc_param_grid = {
-            'n_estimators': [50, 75],
-            'criterion': ['gini', 'entropy', 'log_loss'],
-            'max_depth': [None, 1, 50],
-            'min_samples_split': [2, 25],
-            'min_samples_leaf': [1, 25],
-            'min_weight_fraction_leaf': [0.1, 0.25],
-            'max_features': ['sqrt', 'log2', None],
-            'max_leaf_nodes': [1, 25],
-            'min_impurity_decrease': [0.1, 0.25],
-            'bootstrap': [True, False],
+            'n_estimators': [65],
+            'criterion': ['entropy'],
+            'max_depth': [10],
+            'min_samples_split': [3],
+            'min_samples_leaf': [2],
+            'min_weight_fraction_leaf': [0.0],
+            'max_features': ['sqrt'],
+            'max_leaf_nodes': [25],
+            'min_impurity_decrease': [0.0],
+            'bootstrap': [False],
             'n_jobs': [-1],
-            'random_state': [None, 1, 25],
-            'class_weight': ['balanced', 'balanced_subsample'],
-            'max_samples': [1, 25],
+            'random_state': [None],
+            'class_weight': ['balanced_subsample'],
+            'max_samples': [None],
         }
-        # Esses valores são bons, mas tem poucos parametros
-        #rfc_param_grid = {
-        #    'max_depth': [None],
-        #    'min_samples_leaf': [1],
-        #    'min_samples_split': [2],
-        #    'n_estimators': [50]
-        #}
-        self.grid_search_classifier("rfc", RandomForestClassifier(), rfc_param_grid, X_train, y_train, X_test, y_test)
-        exit(1)
-        # XGBClassifier
-        xgb_param_grid = {
-            'learning_rate': [0.3],
-            'max_depth': [1],
-            'min_child_weight': [1],
-            'subsample': [0.7],
-            'colsample_bytree': [0.1],
-            'n_estimators': [100]
-        }
-        self.grid_search_classifier("rfc", RandomForestClassifier(class_weight='balanced', random_state=42, max_depth=3, min_samples_split=2), rfc_param_grid, X_train, y_train, X_test, y_test)
+        # self.grid_search_classifier("rfc", RandomForestClassifier(), rfc_param_grid, X_train, y_train, X_test, y_test)
 
         # XGBClassifier
+        # xgb ROC 0.9748 precision 0.8654 recall 0.9184 f1 0.8911 accuracy 0.89 bac 0.8906 brier 0.11
+        # tn 44 fp 7 fn 4 tp 45
         xgb_param_grid = {
-            'learning_rate': [0.3],
-            'max_depth': [1],
+            'learning_rate': [0.5],
+            'max_depth': [8],
             'min_child_weight': [1],
             'subsample': [0.7],
-            'colsample_bytree': [0.1],
-            'n_estimators': [100]
+            'colsample_bytree': [0.5],
+            'n_estimators': [65],
+            'base_score': [0.1],
+            'colsample_bylevel': [1],
+            'gamma': [0],
+            'max_delta_step': [0],
+            'missing': [5],
+            'nthread': [-1],
+            'objective': ['binary:logistic'],
+            'reg_alpha': [0],
+            'reg_lambda': [5],
+            'scale_pos_weight': [5],
+            'seed': [2],
         }
-        self.grid_search_classifier("xgb", XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=4), xgb_param_grid, X_train, y_train, X_test, y_test)
+        # self.grid_search_classifier("xgb", XGBClassifier(), xgb_param_grid, X_train, y_train, X_test, y_test)
 
         # DecisionTreeClassifier
         dtc_param_grid = {
@@ -193,7 +174,7 @@ class Main():
             'min_samples_leaf': [2]
         }
         self.grid_search_classifier("dtc", DecisionTreeClassifier(class_weight='balanced', random_state=42), dtc_param_grid, X_train, y_train, X_test, y_test)
-
+        exit(1)
         # NuSVC
         nuclf_param_grid = {
             'kernel': ['linear'],

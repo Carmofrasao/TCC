@@ -168,30 +168,78 @@ class Main():
         # self.grid_search_classifier("xgb", XGBClassifier(), xgb_param_grid, X_train, y_train, X_test, y_test)
 
         # DecisionTreeClassifier
+        # dtc ROC 0.8603 precision 0.8571 recall 0.8571 f1 0.8571 accuracy 0.86 bac 0.8599 brier 0.14
+        # tn 44 fp 7 fn 7 tp 42
         dtc_param_grid = {
-            'max_depth': [None],
+            'criterion': ['log_loss'],
+            'splitter': ['random'],
+            'max_depth': [8],
             'min_samples_split': [2],
-            'min_samples_leaf': [2]
+            'min_samples_leaf': [1],
+            'min_weight_fraction_leaf': [0.0],
+            'max_features': ['log2'],
+            'random_state': [None],
+            'max_leaf_nodes': [25],
+            'min_impurity_decrease': [0.0],
+            'class_weight': ['balanced'],
+            'ccp_alpha': [0.0],
         }
-        self.grid_search_classifier("dtc", DecisionTreeClassifier(class_weight='balanced', random_state=42), dtc_param_grid, X_train, y_train, X_test, y_test)
-        exit(1)
+        # self.grid_search_classifier("dtc", DecisionTreeClassifier(), dtc_param_grid, X_train, y_train, X_test, y_test)
+
         # NuSVC
+        # nusvc ROC 0.8647 precision 0.8478 recall 0.7959 f1 0.8211 accuracy 0.83 bac 0.8293 brier 0.17
+        # tn 44 fp 7 fn 10 tp 39
         nuclf_param_grid = {
-            'kernel': ['linear'],
-            'gamma': ['auto'],
+            'nu': [0.5],
+            'kernel': ['poly'],
+            'degree': [1],
+            'gamma': ['scale'],
+            'coef0': [0.0],
+            'shrinking': [True],
+            'probability': [True],
+            'tol': [0.0001],
+            'cache_size': [0, 1],
+            'class_weight': ['balanced'],
+            'break_ties': [True],
+            'random_state': [None]
         }
-        self.grid_search_classifier("nusvc", NuSVC(probability=True, random_state=42), nuclf_param_grid, X_train, y_train, X_test, y_test)
+        # self.grid_search_classifier("nusvc", NuSVC(), nuclf_param_grid, X_train, y_train, X_test, y_test)
 
         # MLPClassifier
         mlpc_param_grid = {
-            'activation': ['relu'],
-            'alpha': [0.00001],
-            'hidden_layer_sizes': [(50, 50, 50)],
-            'learning_rate': ['constant'],
-            'solver': ['sgd']
+            'hidden_layer_sizes': [(50,),(100,)],
+            'activation': ['identity', 'logistic'],
+            # 'activation': ['identity', 'tanh'],
+            # 'activation': ['identity', 'relu'],
+            # 'activation': ['logistic', 'tanh'],
+            # 'activation': ['logistic', 'relu'],
+            # 'activation': ['tanh', 'relu'],
+            'solver': ['lbfgs', 'sgd'],
+            # 'solver': ['lbfgs', 'adam'],
+            # 'solver': ['sgd', 'adam'],
+            'alpha': [0.00001, 0.0001],
+            'batch_size': ['auto', 5],
+            'learning_rate': ['constant', 'invscaling'],
+            # 'learning_rate': ['constant', 'adaptive'],
+            # 'learning_rate': ['invscaling', 'adaptive'],
+            'learning_rate_init': [0.001, 0.005],
+            'power_t': [0.5, 0.7],
+            'max_iter': [200, 250],
+            'shuffle': [True, False],
+            'random_state': [None, 10],
+            'tol': [0.00001, 0.0001],
+            'momentum': [0.9, 1.1],
+            'nesterovs_momentum': [True, False],
+            'early_stopping': [True, False],
+            'validation_fraction': [0.1, 0.3],
+            'beta_1': [0.7, 0.9],
+            'beta_2': [0.777, 0.999],
+            'epsilon': [0.00000001, 0.00000001],
+            'n_iter_no_change': [5, 10],
+            'max_fun': [10000, 15000]
         }
-        self.grid_search_classifier("mlpc", MLPClassifier(random_state=42, max_iter=10000), mlpc_param_grid, X_train, y_train, X_test, y_test)
-
+        self.grid_search_classifier("mlpc", MLPClassifier(), mlpc_param_grid, X_train, y_train, X_test, y_test)
+        exit(1)
         # AdaBoostClassifier
         ab_param_grid = {
             'algorithm': ['SAMME'],

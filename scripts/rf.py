@@ -224,7 +224,7 @@ class Main():
             # 'learning_rate': ['invscaling', 'adaptive'],
             'learning_rate_init': [0.001, 0.005],
             'power_t': [0.5, 0.7],
-            'max_iter': [200, 250],
+            'max_iter': [10000],
             'shuffle': [True, False],
             'random_state': [None, 10],
             'tol': [0.00001, 0.0001],
@@ -238,15 +238,19 @@ class Main():
             'n_iter_no_change': [5, 10],
             'max_fun': [10000, 15000]
         }
-        self.grid_search_classifier("mlpc", MLPClassifier(), mlpc_param_grid, X_train, y_train, X_test, y_test)
-        exit(1)
+        # self.grid_search_classifier("mlpc", MLPClassifier(), mlpc_param_grid, X_train, y_train, X_test, y_test)
+        # exit(1)
         # AdaBoostClassifier
+        # ab ROC 0.9768 precision 0.9348 recall 0.8776 f1 0.9053 accuracy 0.91 bac 0.9094 brier 0.09
+        # tn 48 fp 3 fn 6 tp 43
         ab_param_grid = {
-            'algorithm': ['SAMME'],
+            'estimator': [None],
+            'n_estimators': [150],
             'learning_rate': [1.5],
-            'n_estimators': [150]
+            'algorithm': ['SAMME'],
+            'random_state': [42]
         }
-        self.grid_search_classifier("ab", AdaBoostClassifier(random_state=42), ab_param_grid, X_train, y_train, X_test, y_test)
+        # self.grid_search_classifier("ab", AdaBoostClassifier(random_state=42), ab_param_grid, X_train, y_train, X_test, y_test)
 
         # SGDClassifier
         sgdc_param_grid = {

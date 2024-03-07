@@ -124,7 +124,6 @@ class Main():
 
         # RandomForestClassifier
         # rfc ROC 0.9634 precision 0.9167 recall 0.898 f1 0.9072 accuracy 0.91 bac 0.9098 brier 0.09
-        # tn 47 fp 4 fn 5 tp 44
         rfc_param_grid = {
             'n_estimators': [65],
             'criterion': ['entropy'],
@@ -145,7 +144,6 @@ class Main():
 
         # XGBClassifier
         # xgb ROC 0.9748 precision 0.8654 recall 0.9184 f1 0.8911 accuracy 0.89 bac 0.8906 brier 0.11
-        # tn 44 fp 7 fn 4 tp 45
         xgb_param_grid = {
             'learning_rate': [0.5],
             'max_depth': [8],
@@ -169,7 +167,6 @@ class Main():
 
         # DecisionTreeClassifier
         # dtc ROC 0.8603 precision 0.8571 recall 0.8571 f1 0.8571 accuracy 0.86 bac 0.8599 brier 0.14
-        # tn 44 fp 7 fn 7 tp 42
         dtc_param_grid = {
             'criterion': ['log_loss'],
             'splitter': ['random'],
@@ -188,7 +185,6 @@ class Main():
 
         # NuSVC
         # nusvc ROC 0.8647 precision 0.8478 recall 0.7959 f1 0.8211 accuracy 0.83 bac 0.8293 brier 0.17
-        # tn 44 fp 7 fn 10 tp 39
         nuclf_param_grid = {
             'nu': [0.5],
             'kernel': ['poly'],
@@ -238,11 +234,10 @@ class Main():
             'n_iter_no_change': [5, 10],
             'max_fun': [10000, 15000]
         }
-        # self.grid_search_classifier("mlpc", MLPClassifier(), mlpc_param_grid, X_train, y_train, X_test, y_test)
-        # exit(1)
+        self.grid_search_classifier("mlpc", MLPClassifier(), mlpc_param_grid, X_train, y_train, X_test, y_test)
+        exit(1)
         # AdaBoostClassifier
         # ab ROC 0.9768 precision 0.9348 recall 0.8776 f1 0.9053 accuracy 0.91 bac 0.9094 brier 0.09
-        # tn 48 fp 3 fn 6 tp 43
         ab_param_grid = {
             'estimator': [None],
             'n_estimators': [150],
@@ -250,16 +245,29 @@ class Main():
             'algorithm': ['SAMME'],
             'random_state': [42]
         }
-        # self.grid_search_classifier("ab", AdaBoostClassifier(random_state=42), ab_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("ab", AdaBoostClassifier(), ab_param_grid, X_train, y_train, X_test, y_test)
 
         # SGDClassifier
+        # sgdc ROC 0.8856 precision 0.8302 recall 0.898 f1 0.8627 accuracy 0.86 bac 0.8607 brier 0.14
         sgdc_param_grid = {
-            'alpha': [0.00004],
-            'eta0': [0.04],
-            'learning_rate': ['constant'],
-            'loss': ['modified_huber']
+            'loss': ['modified_huber'],
+            'penalty': [None],
+            'alpha': [0.001],
+            'l1_ratio': [0.1],
+            'fit_intercept': [False],
+            'max_iter': [1000],
+            'tol': [0.0000001],
+            'shuffle': [True],
+            'epsilon': [0.01],
+            'n_jobs': [-1],
+            'random_state': [None],
+            'learning_rate': ['optimal'],
+            'power_t': [0.0],
+            'early_stopping': [True],
+            'validation_fraction': [0.3],
+            'n_iter_no_change': [5],
         }
-        self.grid_search_classifier("sgdc", SGDClassifier(max_iter=1000, loss='modified_huber', random_state=42), sgdc_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("sgdc", SGDClassifier(), sgdc_param_grid, X_train, y_train, X_test, y_test)
 
         # Substitue essa:
         print("Original")

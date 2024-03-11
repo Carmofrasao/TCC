@@ -102,12 +102,12 @@ class Main():
             print("read_data: ", e)
 
     def grid_search_classifier(self, classifier_name, classifier, param_grid, X_train, y_train, X_test, y_test):
-        print('Fazendo pesquisa exaustiva sobre valores de parâmetros especificados para um estimador.')
+        # print('Fazendo pesquisa exaustiva sobre valores de parâmetros especificados para um estimador.')
         grid_search = GridSearchCV(classifier, param_grid, cv=5, scoring='f1')
-        print('Ajustando todos os conjuntos de parâmetros.')
+        # print('Ajustando todos os conjuntos de parâmetros.')
         grid_search.fit(X_train, y_train)
 
-        print("Melhores parâmetros para", classifier_name, ":", grid_search.best_params_)
+        # print("Melhores parâmetros para", classifier_name, ":", grid_search.best_params_)
         # print("Melhor pontuação para", classifier_name, ":", grid_search.best_score_)
 
         best_classifier = grid_search.best_estimator_
@@ -140,7 +140,7 @@ class Main():
             'class_weight': ['balanced_subsample'],
             'max_samples': [None],
         }
-        # self.grid_search_classifier("rfc", RandomForestClassifier(), rfc_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("rfc", RandomForestClassifier(), rfc_param_grid, X_train, y_train, X_test, y_test)
 
         # XGBClassifier
         # xgb ROC 0.9748 precision 0.8654 recall 0.9184 f1 0.8911 accuracy 0.89 bac 0.8906 brier 0.11
@@ -163,7 +163,7 @@ class Main():
             'scale_pos_weight': [5],
             'seed': [2],
         }
-        # self.grid_search_classifier("xgb", XGBClassifier(), xgb_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("xgb", XGBClassifier(), xgb_param_grid, X_train, y_train, X_test, y_test)
 
         # DecisionTreeClassifier
         # dtc ROC 0.8603 precision 0.8571 recall 0.8571 f1 0.8571 accuracy 0.86 bac 0.8599 brier 0.14
@@ -181,7 +181,7 @@ class Main():
             'class_weight': ['balanced'],
             'ccp_alpha': [0.0],
         }
-        # self.grid_search_classifier("dtc", DecisionTreeClassifier(), dtc_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("dtc", DecisionTreeClassifier(), dtc_param_grid, X_train, y_train, X_test, y_test)
 
         # NuSVC
         # nusvc ROC 0.8647 precision 0.8478 recall 0.7959 f1 0.8211 accuracy 0.83 bac 0.8293 brier 0.17
@@ -199,35 +199,27 @@ class Main():
             'break_ties': [True],
             'random_state': [None]
         }
-        # self.grid_search_classifier("nusvc", NuSVC(), nuclf_param_grid, X_train, y_train, X_test, y_test)
+        self.grid_search_classifier("nusvc", NuSVC(), nuclf_param_grid, X_train, y_train, X_test, y_test)
 
         # MLPClassifier
+        # mlpc ROC 0.948 precision 0.9762 recall 0.8367 f1 0.9011 accuracy 0.91 bac 0.9086 brier 0.09
         mlpc_param_grid = {
-            'hidden_layer_sizes': [(50,),(100,)],
-            'activation': ['identity', 'logistic'],
-            # 'activation': ['identity', 'tanh'],
-            # 'activation': ['identity', 'relu'],
-            # 'activation': ['logistic', 'tanh'],
-            # 'activation': ['logistic', 'relu'],
-            # 'activation': ['tanh', 'relu'],
-            'solver': ['lbfgs', 'sgd'],
-            # 'solver': ['lbfgs', 'adam'],
-            # 'solver': ['sgd', 'adam'],
-            'batch_size': ['auto', 5],
-            'learning_rate': ['constant', 'invscaling'],
-            # 'learning_rate': ['constant', 'adaptive'],
-            # 'learning_rate': ['invscaling', 'adaptive'],
+            'hidden_layer_sizes': [(50,)],
+            'activation': ['logistic'],
+            'solver': ['lbfgs'],
+            'batch_size': ['auto'],
+            'learning_rate': ['invscaling'],
             'max_iter': [100000],
-            'shuffle': [True, False],
-            'random_state': [None, 10],
-            'nesterovs_momentum': [True, False],
-            'early_stopping': [True, False],
-            'validation_fraction': [0.1, 0.3],
-            'beta_1': [0.7, 0.9],
-            'beta_2': [0.777, 0.999],
+            'shuffle': [True],
+            'random_state': [None],
+            'nesterovs_momentum': [True],
+            'early_stopping': [True],
+            'validation_fraction': [0.3],
+            'beta_1': [0.7],
+            'beta_2': [0.999],
         }
         self.grid_search_classifier("mlpc", MLPClassifier(), mlpc_param_grid, X_train, y_train, X_test, y_test)
-        exit(1)
+
         # AdaBoostClassifier
         # ab ROC 0.9768 precision 0.9348 recall 0.8776 f1 0.9053 accuracy 0.91 bac 0.9094 brier 0.09
         ab_param_grid = {

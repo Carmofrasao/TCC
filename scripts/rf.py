@@ -213,26 +213,18 @@ class Main():
             'solver': ['lbfgs', 'sgd'],
             # 'solver': ['lbfgs', 'adam'],
             # 'solver': ['sgd', 'adam'],
-            'alpha': [0.00001, 0.0001],
             'batch_size': ['auto', 5],
             'learning_rate': ['constant', 'invscaling'],
             # 'learning_rate': ['constant', 'adaptive'],
             # 'learning_rate': ['invscaling', 'adaptive'],
-            'learning_rate_init': [0.001, 0.005],
-            'power_t': [0.5, 0.7],
-            'max_iter': [10000],
+            'max_iter': [100000],
             'shuffle': [True, False],
             'random_state': [None, 10],
-            'tol': [0.00001, 0.0001],
-            'momentum': [0.9, 1.1],
             'nesterovs_momentum': [True, False],
             'early_stopping': [True, False],
             'validation_fraction': [0.1, 0.3],
             'beta_1': [0.7, 0.9],
             'beta_2': [0.777, 0.999],
-            'epsilon': [0.00000001, 0.00000001],
-            'n_iter_no_change': [5, 10],
-            'max_fun': [10000, 15000]
         }
         self.grid_search_classifier("mlpc", MLPClassifier(), mlpc_param_grid, X_train, y_train, X_test, y_test)
         exit(1)

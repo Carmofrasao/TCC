@@ -14,4 +14,6 @@ mlpc_param_grid = {
   'beta_1': [0.5, 0.7, 0.9],
   'beta_2': [0.999],
 }
-
+Melhores parâmetros para mlpc : {'activation': 'identity', 'batch_size': 'auto', 'beta_1': 0.5, 'beta_2': 0.999, 'early_stopping': True, 'hidden_layer_sizes': (25,), 'learning_rate': 'constant', 'max_iter': 100000, 'nesterovs_momentum': False, 'random_state': 42, 'shuffle': True, 'solver': 'lbfgs', 'validation_fraction': 0.1}
+mlpc ROC 0.9316 precision 0.8913 recall 0.8367 f1 0.8632 accuracy 0.87 bac 0.8693 brier 0.13
+tn 46 fp 5 fn 8 tp 41

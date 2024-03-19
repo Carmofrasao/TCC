@@ -1,0 +1,17 @@
+# MLPClassifier
+mlpc_param_grid = {
+  'hidden_layer_sizes': [(25,), (50,), (100,)],
+  'activation': ['identity', 'logistic', 'tanh', 'relu'],
+  'solver': ['lbfgs', 'sgd', 'adam'],
+  'batch_size': ['auto'],
+  'learning_rate': ['constant', 'invscaling', 'adaptive'],
+  'max_iter': [100000],
+  'shuffle': [True, False],
+  'random_state': [42],
+  'nesterovs_momentum': [False, True],
+  'early_stopping': [True, False],
+  'validation_fraction': [0.1, 0.3, 0.5],
+  'beta_1': [0.5, 0.7, 0.9],
+  'beta_2': [0.999],
+}
+
